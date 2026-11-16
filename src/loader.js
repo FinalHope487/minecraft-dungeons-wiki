@@ -13,10 +13,21 @@ function showBootstrapError(error) {
 }
 
 if (location.protocol === 'file:') {
-  const script = document.createElement('script');
-  script.src = './src/file-app.js';
-  script.onerror = () => showBootstrapError(new Error('dist/src/file-app.js 不存在，請重新執行 npm run build。'));
-  document.head.append(script);
+  const bundlePaths = ['./src/file-app.js', './dist/src/file-app.js'];
+  let nextBundlePath = 0;
+  const loadFileBundle = () => {
+    const script = document.createElement('script');
+    script.src = bundlePaths[nextBundlePath++];
+    script.onerror = () => {
+      if (nextBundlePath < bundlePaths.length) {
+        loadFileBundle();
+        return;
+      }
+      showBootstrapError(new Error('找不到離線圖鑑 bundle，請先執行 npm run build。'));
+    };
+    document.head.append(script);
+  };
+  loadFileBundle();
 } else {
   import('./wiki.js').catch(showBootstrapError);
 }

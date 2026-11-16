@@ -23,11 +23,15 @@ test('HTML entry uses a classic loader with a self-contained file URL path', asy
     document: {
       createElement: (tag) => ({ tag }),
       head: { append: (script) => appendedScripts.push(script) },
+      getElementById: () => null,
     },
     console,
   });
   assert.equal(appendedScripts.length, 1);
   assert.equal(appendedScripts[0].src, './src/file-app.js');
+  appendedScripts[0].onerror();
+  assert.equal(appendedScripts.length, 2, 'root index must fall back to its generated dist bundle');
+  assert.equal(appendedScripts[1].src, './dist/src/file-app.js');
 
   const modules = Object.fromEntries(await Promise.all([
     ['routes', 'src/routes.mjs'],
