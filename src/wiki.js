@@ -11,6 +11,7 @@ import { iconAssetUrl } from './icon-assets.mjs';
 const params = new URLSearchParams(location.search);
 const lang = resolveLanguage(location.search);
 const ui = uiText[lang];
+const fileCatalog = globalThis.__WIKI_FILE_DATA__ ?? null;
 document.documentElement.dataset.layout = defaultLayout;
 const message = (text) => text[lang];
 document.documentElement.lang = lang;
@@ -181,18 +182,25 @@ function renderDetailsContent(entry, layout) {
 async function loadEntryDetails(id, retry = false) {
   if (retry) detailCache.delete(id);
   if (!detailCache.has(id)) {
-    const url = new URL(`entries/${encodeURIComponent(id)}.json`, dataDirectory);
-    const request = fetch(url, { cache: 'no-cache' }).then(async (response) => {
-      if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
-      const payload = await response.json();
+    const request = (async () => {
+      let payload;
+      if (fileCatalog) {
+        payload = fileCatalog.entries[id];
+        if (!payload) throw new Error(`離線圖鑑缺少條目資料：${id}`);
+      } else {
+        const url = new URL(`entries/${encodeURIComponent(id)}.json`, dataDirectory);
+        const response = await fetch(url, { cache: 'no-cache' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
+        payload = await response.json();
+      }
       if (payload?.schemaVersion !== 2 || payload.entry?.id !== id
         || typeof payload.entry.implemented !== 'boolean'
         || !Array.isArray(payload.entry.facts) || !Array.isArray(payload.entry.traits)
         || !Array.isArray(payload.entry.links) || !Array.isArray(payload.entry.sources)) {
-        throw new Error(`條目 JSON 格式或 ID 不符：${url}`);
+        throw new Error(`條目 JSON 格式或 ID 不符：${id}`);
       }
       return payload.entry;
-    }).catch((error) => {
+    })().catch((error) => {
       detailCache.delete(id);
       throw error;
     });
@@ -370,11 +378,17 @@ function showCatalogError(error) {
 }
 
 async function initializeCatalog() {
-  const url = new URL('catalog-index.json', dataDirectory);
   try {
-    const response = await fetch(url, { cache: 'no-cache' });
-    if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
-    const payload = await response.json();
+    let payload;
+    if (fileCatalog) {
+      payload = fileCatalog.index;
+      if (!payload) throw new Error('離線圖鑑缺少分類索引。');
+    } else {
+      const url = new URL('catalog-index.json', dataDirectory);
+      const response = await fetch(url, { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
+      payload = await response.json();
+    }
     validateIndex(payload);
     categories = payload.categories;
     entries = payload.entries;

@@ -67,7 +67,7 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 
 ### [now] 建立可公開驗收的 Wiki 首版
 
-**具體細節**：神器、食物、藥水、彈藥與其他物品已依[完整收錄計畫](docs/plans/2026-11-17-full-artifacts-consumables.md)建立條目，圖標同步與本地建置產物驗收通過。GitHub 登入與公開素材使用條件尚待確認。
+**具體細節**：神器、食物、藥水、彈藥與其他物品已依[完整收錄計畫](docs/plans/2026-11-17-full-artifacts-consumables.md)建立條目。`file://` 本機入口已依[啟動修正計畫](docs/plans/2026-11-17-file-url-bootstrap.md)補上 classic 啟動路徑與自包含資料包。GitHub 登入與公開素材使用條件尚待確認。
 **怎麼做**：依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)核對公開素材使用條件。GitHub CLI 登入與 remote 就緒後，發布並實測。
 **會改變什麼**：可從公開站瀏覽圖鑑、按需載入資料及圖片，並用獨立提交證明新增分類。
 **做後回退代價**：擴充分開提交。若要撤回，回退擴充提交並重新部署已驗證的首版，再核對公開連結。

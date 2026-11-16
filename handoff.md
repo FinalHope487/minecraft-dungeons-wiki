@@ -2,7 +2,7 @@
 
 ## 目前狀態
 
-SQLite schema v2 收錄神器、消耗品與其他物品；消耗品依食物、藥水、彈藥排序，未實裝狀態和 Wiki placeholder 已接入。`npm test` 13/13；`npm run build` 產出 7 分類、126 條目；直接檢查本地 HTML、資料和圖標，未開瀏覽器。GitHub Pages 尚未發布；後續依 [Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md) 確認素材公開條件與 GitHub 登入／remote。
+SQLite schema v2 收錄神器、消耗品與其他物品；消耗品依食物、藥水、彈藥排序，未實裝狀態和 Wiki placeholder 已接入。`file://` 啟動使用 classic loader 與建置生成 bundle；`npm test` 14/14，build 7 分類、126 條目。已檢查本地入口、bundle 語法、126 份資料與圖標；未開瀏覽器，渲染和互動未驗證。細節見[本機啟動計畫](docs/plans/2026-11-17-file-url-bootstrap.md)。GitHub Pages 尚未發布；後續依 [Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md) 確認素材公開條件與 GitHub 登入／remote。
 
 ## 已完成
 

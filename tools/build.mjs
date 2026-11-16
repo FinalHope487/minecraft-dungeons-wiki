@@ -1,6 +1,7 @@
-import { cp, mkdir, readdir, realpath, rm } from 'node:fs/promises';
+import { cp, mkdir, readFile, readdir, realpath, rm, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { loadCatalog, validateCatalog, writeCatalogArtifacts } from './catalog.mjs';
+import { createFileAppSource } from './file-app.mjs';
 
 const siteFiles = ['index.html', 'assets', 'src'];
 const root = new URL('../', import.meta.url);
@@ -23,4 +24,23 @@ for (const name of [...siteFiles, 'content', 'data']) {
   if (siteFiles.includes(name)) await cp(new URL(name, root), target, { recursive: true });
 }
 await writeCatalogArtifacts(destination, { catalog });
+
+const index = JSON.parse(await readFile(new URL('data/catalog-index.json', destination), 'utf8'));
+const entries = Object.fromEntries(await Promise.all(index.entries.map(async ({ id }) => [
+  id,
+  JSON.parse(await readFile(new URL(`data/entries/${id}.json`, destination), 'utf8')),
+])));
+const moduleFiles = {
+  routes: 'src/routes.mjs',
+  inventoryGrid: 'src/inventory-grid.mjs',
+  locale: 'src/locale.mjs',
+  iconAssets: 'src/icon-assets.mjs',
+  wiki: 'src/wiki.js',
+};
+const modules = Object.fromEntries(await Promise.all(Object.entries(moduleFiles).map(async ([key, path]) => [
+  key,
+  await readFile(new URL(path, root), 'utf8'),
+])));
+const fileApp = createFileAppSource({ modules, catalog: { index, entries } });
+await writeFile(new URL('src/file-app.js', destination), fileApp, 'utf8');
 console.log(`dist/ 已建置，${catalog.categories.length} 個分類、${catalog.entries.length} 筆條目。`);
