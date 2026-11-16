@@ -12,6 +12,7 @@
 - `index.html` 與 `src/` 是網站入口和版型。共用資料在 `content/catalog.sqlite`，資料表與編輯方式見 [SQLite 圖鑑資料庫規範](specs/catalog-storage.md)，圖標與背景來源見 [素材與資料來源](sources.md)。
 - 依 [內容契約](specs/content-contract.md) 編輯 SQLite。新增分類須登記分類、圖示與首筆資料。用小寫連字號 ID，連結到現有條目並附來源。
 - 新增物品依下方[查找與收錄流程](#查找與收錄流程)從 Wiki 彙整頁查到具體項目頁，先核實條目與效果，再更新資料庫、圖標登錄、來源表和驗收測試。
+- 建立條目關聯時，若已查證的直接關聯目標尚未收錄，且符合本輪圖鑑範圍，應在同一輪查找、核實並建立該目標條目，再建立關聯。只新增這筆關聯直接指向的條目，不沿著新條目繼續擴展關聯。目標不符合收錄範圍或無法查證時，不建立條目或關聯。
 - 先跑 `npm test` 與 `npm run build`。再以 `npm run preview` 開啟 localhost 4173，操作雙版型、兩把劍、附魔關聯、網址重新整理、鍵盤和窄螢幕。
 - 從 repo 根目錄以 Python 3 執行 `python tools/outline.py <檔案>`，可列出 Markdown 標題。
 - 每輪完成物品欄或詳情顯示變更後，透過 Codex with ChatGPT 請 GPT 對照 `docs/spec.md`、原版參考圖及兩款版型的實際畫面，審查整體物品欄與顯示風格，記錄結果及未解差異。
