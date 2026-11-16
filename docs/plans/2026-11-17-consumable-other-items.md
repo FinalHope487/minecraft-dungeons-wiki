@@ -26,4 +26,4 @@
 - Wiki 圖標 dry-run 通過；`npm run icons:sync` 同步 37 張 PNG，其中 TNT 與 Mystery Banner 圖標分別為 `File:TNT (Dungeons).png` 和 `File:Mystery Captain Banner.png`。
 - `npm test` 通過，12/12；`npm run build` 通過，7 個分類、35 筆條目。建置驗證 `#all` 仍排除兩筆非裝備條目。
 - 本地建置產物已直接檢查：HTML 引用 CSS 與 JavaScript；`catalog-index.json` 有 7 個分類、35 筆摘要，TNT 與 Mystery Banner 各位於指定分類，`#all` 的裝備清單維持 31 筆；兩筆完整 JSON 的雙語名稱、描述、來源及圖標路徑均存在，對應圖標也在 `dist/assets/`。未啟動瀏覽器；實際渲染與互動未驗證。
-- 本輪提交：待提交。
+- 本輪提交：`c6b646f`（`feat(catalog): add consumable and other item categories`）。
