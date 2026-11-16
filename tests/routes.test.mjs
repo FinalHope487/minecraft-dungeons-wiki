@@ -9,6 +9,7 @@ import { getInventoryEmptySlotCount, resolveInventoryColumnCount } from '../src/
 const { categories, entries } = loadCatalog();
 const roster = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-roster.json', import.meta.url), 'utf8'));
 const enchantmentRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-enchantment-roster.json', import.meta.url), 'utf8'));
+const gearRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-gear-roster.json', import.meta.url), 'utf8'));
 const wikiArtifactDescriptions = JSON.parse(readFileSync(new URL('./fixtures/wiki-artifact-descriptions.json', import.meta.url), 'utf8'));
 const resolve = (hash) => resolveRoute(hash, categories, entries);
 const meleeIds = [
@@ -27,13 +28,13 @@ const regularWeaponProperties = new Map(Object.entries({
   'broken-sawblade': ['Continuous attacks'],
   claymore: ['Powerful pushback'],
   'coral-blade': ['Rapid slashes'],
-  cutlass: ['Reliable Combo'],
+  cutlass: ['Reliable combo'],
   daggers: ['Dual wield'],
   'double-axe': ['Spin attack'],
   gauntlets: ['Relentless combo'],
   glaive: ['Longer melee reach'],
   'great-hammer': ['Great splash'],
-  'obsidian-claymore': ['Powerful combo'],
+  'obsidian-claymore': ['Very powerful combo'],
   rapier: ['Fast thrusts'],
   sickles: ['Dual wield'],
   'soul-knife': ['Thrust attack'],
@@ -47,6 +48,9 @@ const rosterRows = (statuses) => Object.entries(statuses).flatMap(([status, item
 const artifactRoster = rosterRows(roster.artifacts);
 const consumableRoster = Object.values(roster.consumables).flatMap(rosterRows);
 const otherItemRoster = rosterRows(roster['other-items']);
+const gearMeleeIds = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'melee').map(({ id }) => id);
+const gearRangedIds = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'ranged').map(({ id }) => id);
+const gearArmorIds = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'armor').map(({ id }) => id);
 const fullItemRoster = [
   ...artifactRoster.map((item) => ({ ...item, category: 'artifacts' })),
   ...consumableRoster.map((item) => ({ ...item, category: 'consumables' })),
@@ -58,6 +62,7 @@ const wikiPlaceholderIds = [
   'necromancers-staff', 'night-vision-potion', 'plentiful-quiver', 'rabbits-foot',
   'recycler-quiver', 'regeneration-rock', 'sanctuary-grail', 'scroll-of-heroism',
   'splash-harming-potion', 'splash-slowing-potion', 'totem-of-resistance',
+  'the-monkey-motivator', 'spider-crossbow', 'soul-mage-robes',
 ];
 
 test('首頁在全部總覽預設選取 Sword 與背包格', () => {
@@ -71,10 +76,10 @@ test('全部裝備包含所有神器，消耗品子類排序且其他物品維�
   const artifactIds = artifactRoster.map(({ id }) => id);
   const consumableIds = consumableRoster.map(({ id }) => id);
   const otherItemIds = otherItemRoster.map(({ id }) => id);
-  assert.deepEqual(ids('#all'), [...meleeIds, 'bow', 'hunters-armor', ...artifactIds]);
-  assert.deepEqual(ids('#equipment'), meleeIds);
-  assert.deepEqual(ids('#ranged'), ['bow']);
-  assert.deepEqual(ids('#armor'), ['hunters-armor']);
+  assert.deepEqual(ids('#all'), [...gearMeleeIds, ...gearRangedIds, ...gearArmorIds, ...artifactIds]);
+  assert.deepEqual(ids('#equipment'), gearMeleeIds);
+  assert.deepEqual(ids('#ranged'), gearRangedIds);
+  assert.deepEqual(ids('#armor'), gearArmorIds);
   assert.deepEqual(ids('#artifacts'), artifactIds);
   assert.deepEqual(ids('#consumables'), consumableIds);
   assert.deepEqual(ids('#other-items'), otherItemIds);
@@ -129,6 +134,60 @@ test('完整附魔名錄有唯一條目、雙語 Wiki 描述、分類與來源',
   });
 });
 
+test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、特性、來源與圖標', () => {
+  const gearCategories = ['equipment', 'ranged', 'armor'];
+  const actual = entries.filter(({ category }) => gearCategories.includes(category));
+  assert.equal(gearRoster.entries.length, 228);
+  assert.equal(new Set(gearRoster.entries.map(({ id }) => id)).size, 228);
+  assert.equal(actual.length, 228);
+  assert.deepEqual(gearRoster.counts, {
+    total: 228, melee: 83, ranged: 72, armor: 73, seasonal: 21, unimplemented: 4, placeholders: 3, builtInLinks: 141,
+  });
+  assert.deepEqual(actual.map(({ id }) => id), gearRoster.entries.map(({ id }) => id), 'gear entries keep Wiki base and variant order');
+
+  const variantsByParent = new Map();
+  for (const item of gearRoster.entries) {
+    if (!item.parentId) continue;
+    if (!variantsByParent.has(item.parentId)) variantsByParent.set(item.parentId, []);
+    variantsByParent.get(item.parentId).push(item);
+  }
+  const gearById = new Map(actual.map((item) => [item.id, item]));
+  const enchantmentsById = new Map(entries.filter(({ category }) => category === 'enchantments').map((item) => [item.id, item]));
+  for (const expected of gearRoster.entries) {
+    const entry = gearById.get(expected.id);
+    assert.ok(entry, `missing gear ${expected.name.en}`);
+    assert.equal(entry.category, expected.category, `${expected.id} category`);
+    assert.deepEqual(entry.name, expected.name, `${expected.id} name`);
+    assert.deepEqual(entry.badge, expected.badge, `${expected.id} rarity`);
+    assert.equal(entry.tone, expected.tone, `${expected.id} rarity tone`);
+    assert.equal(entry.icon, expected.icon, `${expected.id} icon`);
+    assert.equal(entry.implemented, expected.implemented, `${expected.id} implementation label`);
+    assert.equal(entry.seasonal, expected.seasonal, `${expected.id} Seasonal label`);
+    assert.deepEqual(entry.description, expected.description, `${expected.id} in-game description`);
+    assert.deepEqual(entry.facts, [{ label: { en: 'Type', 'zh-Hant': '類型' }, value: expected.type }], `${expected.id} type`);
+    assert.deepEqual(entry.traits, expected.traits.map(({ icon, en, 'zh-Hant': zhHant }) => ({ icon, label: { en, 'zh-Hant': zhHant } })), `${expected.id} fixed properties`);
+    assert.deepEqual(entry.sources, expected.sources, `${expected.id} Wiki source revisions`);
+    assert.ok(iconAssets[entry.icon], `${expected.id} registered icon`);
+    if (entry.icon !== 'wiki-placeholder') assert.equal(iconAssets[entry.icon].kind, 'equipment', `${expected.id} equipment icon kind`);
+
+    const expectedLinks = expected.builtInEnchantments.map(({ id }) => ({
+      id, label: { en: 'Related enchantment', 'zh-Hant': '相關附魔' },
+    }));
+    if (expected.parentId) expectedLinks.push({ id: expected.parentId, label: { en: 'Base item', 'zh-Hant': '基礎裝備' } });
+    for (const variant of variantsByParent.get(expected.id) ?? []) {
+      expectedLinks.push({ id: variant.id, label: { en: 'Unique variant', 'zh-Hant': '獨特變體' } });
+    }
+    assert.deepEqual(entry.links, expectedLinks, `${expected.id} gear relations`);
+    for (const enchantment of expected.builtInEnchantments) {
+      const reverse = enchantmentsById.get(enchantment.id)?.links.find(({ id }) => id === expected.id);
+      assert.deepEqual(reverse, { id: expected.id, label: { en: 'Gear with this built-in effect', 'zh-Hant': '具有此固有效果的裝備' } }, `${enchantment.id} reverse built-in relation`);
+    }
+  }
+  assert.deepEqual(actual.filter(({ implemented }) => !implemented).map(({ id }) => id),
+    ['the-monkey-motivator', 'spider-crossbow', 'ender-armor', 'soul-mage-robes']);
+  assert.deepEqual(actual.filter(({ seasonal }) => seasonal).map(({ id }) => id), gearRoster.entries.filter(({ seasonal }) => seasonal).map(({ id }) => id));
+});
+
 test('所有 Wiki 具名神器、消耗品與其他物品都有唯一條目及正確實裝狀態', () => {
   assert.equal(fullItemRoster.length, 94);
   assert.equal(new Set(fullItemRoster.map(({ id }) => id)).size, fullItemRoster.length);
@@ -174,15 +233,33 @@ test('TNT 和 Mystery Banner 保留雙語說明與 Wiki 來源', () => {
   assert.ok(banner?.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3AMystery_Banner'));
 });
 
-test('每把近戰與遠程武器都有總表及正確的具體項目頁來源', () => {
-  const weaponOverview = 'https://minecraft.wiki/w/Dungeons%3AWeapon';
-  const weapons = entries.filter(({ category }) => category === 'equipment' || category === 'ranged');
-  assert.equal(weapons.length, 29);
-  for (const weapon of weapons) {
-    const sourceUrls = weapon.sources.map(({ url }) => url);
-    const specificPage = `https://minecraft.wiki/w/Dungeons%3A${weapon.name.en.replaceAll(' ', '_')}`;
-    assert.equal(sourceUrls[0], weaponOverview, `${weapon.id} must list the weapon overview first`);
-    assert.equal(sourceUrls[1], specificPage, `${weapon.id} must list its Minecraft Wiki article second`);
+test('近戰、遠程與盔甲完整收錄並依 Wiki 基礎類型及變體相鄰排序', () => {
+  assert.equal(gearMeleeIds.length, 83);
+  assert.equal(gearRangedIds.length, 72);
+  assert.equal(gearArmorIds.length, 73);
+  const melee = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'melee');
+  assert.equal(melee.filter(({ parentId }) => !parentId).length, 27);
+  assert.equal(melee.filter(({ parentId }) => parentId).length, 56);
+  const variantsByParent = new Map();
+  for (const item of gearRoster.entries.filter(({ parentId }) => parentId)) {
+    if (!variantsByParent.has(item.parentId)) variantsByParent.set(item.parentId, []);
+    variantsByParent.get(item.parentId).push(item);
+  }
+  for (const [parentId, variants] of variantsByParent) {
+    const parentIndex = gearRoster.entries.findIndex(({ id }) => id === parentId);
+    variants.forEach((variant, offset) => {
+      const itemIndex = gearRoster.entries.findIndex(({ id }) => id === variant.id);
+      assert.equal(itemIndex, parentIndex + offset + 1, `${variant.id} is adjacent to base item ${parentId}`);
+    });
+  }
+  for (const expected of gearRoster.entries) {
+    const entry = entries.find(({ id }) => id === expected.id);
+    const categoryPage = expected.rosterGroup === 'armor' ? 'Dungeons:Armor' : 'Dungeons:Weapon';
+    assert.equal(entry.sources[0].url, expected.sources[0].url, `${entry.id} overall source`);
+    assert.equal(entry.sources[1].url, expected.sources[1].url, `${entry.id} category source`);
+    assert.equal(entry.sources[2].label, expected.englishPage.title, `${entry.id} item page`);
+    assert.match(entry.sources[1].url, new RegExp(`oldid=${categoryPage.endsWith('Armor') ? '3873342' : '3873343'}$`));
+    assert.match(entry.sources[2].url, /oldid=\d+$/);
   }
 });
 
@@ -202,7 +279,11 @@ test('Death Cap Mushroom 作為神器樣本有雙語說明、冷卻、固定效�
 
 test('既有 Seasonal 神器有標籤，已實裝神器使用 Wiki 條目原文', () => {
   assert.equal(entries.find(({ id }) => id === 'corrupted-pumpkin')?.seasonal, true);
-  assert.deepEqual(entries.filter(({ seasonal }) => seasonal).map(({ id }) => id), ['corrupted-pumpkin', 'invisible']);
+  const expectedSeasonal = [
+    ...gearRoster.entries.filter(({ seasonal }) => seasonal).map(({ id }) => id),
+    'corrupted-pumpkin', 'invisible',
+  ].sort();
+  assert.deepEqual(entries.filter(({ seasonal }) => seasonal).map(({ id }) => id).sort(), expectedSeasonal);
   const implementedArtifacts = entries.filter(({ category, implemented }) => category === 'artifacts' && implemented);
   assert.equal(implementedArtifacts.length, Object.keys(wikiArtifactDescriptions).length);
   for (const artifact of implementedArtifacts) {
@@ -213,14 +294,13 @@ test('既有 Seasonal 神器有標籤，已實裝神器使用 Wiki 條目原文'
   }
 });
 
-test('近戰分類有 27 種 Common / Rare 基礎武器並保留 Diamond Sword', () => {
+test('近戰分類收錄 83 筆並保留 27 個基礎類型與 56 個變體', () => {
   const melee = listEntries(resolve('#equipment').category, categories, entries);
-  assert.equal(melee.length, 28);
-  assert.equal(melee.filter(({ id }) => id !== 'diamond-sword').length, 27);
-  assert.deepEqual(melee.filter(({ id }) => id !== 'diamond-sword').map(({ badge, facts }) => ({
-    badge: badge.en,
-    type: facts.find(({ label }) => label.en === 'Type')?.value.en,
-  })), Array.from({ length: 27 }, () => ({ badge: 'Common / Rare', type: 'Melee weapon' })));
+  const meleeRoster = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'melee');
+  assert.equal(melee.length, 83);
+  assert.equal(meleeRoster.filter(({ parentId }) => !parentId).length, 27);
+  assert.equal(meleeRoster.filter(({ parentId }) => parentId).length, 56);
+  assert.deepEqual(melee.map(({ id }) => id), meleeRoster.map(({ id }) => id));
   assert.equal(melee.find(({ id }) => id === 'diamond-sword')?.badge.en, 'Unique');
 });
 
@@ -229,7 +309,7 @@ test('近戰武器的 Regular Bullet 固有效果與 Wiki 總表一致', () => {
   assert.equal(baseMelee.length, 27);
   assert.equal(regularWeaponProperties.size, 22);
   for (const entry of baseMelee) {
-    assert.deepEqual(entry.traits.map(({ icon, label }) => ({ icon, label: label.en })),
+    assert.deepEqual(entry.traits.filter(({ icon }) => icon === 'regular-bullet').map(({ icon, label }) => ({ icon, label: label.en })),
       (regularWeaponProperties.get(entry.id) ?? []).map((label) => ({ icon: 'regular-bullet', label })),
       entry.id);
   }
@@ -251,10 +331,12 @@ test('錯誤分類、條目與多餘路徑會顯示找不到', () => {
   }
 });
 
-test('只有 Diamond Sword 帶有 Extra damage 特性', () => {
+test('Wiki 標示 Extra damage 的武器使用 Unique 特性標記', () => {
   const withExtraDamage = entries.filter(({ traits }) => traits.some(({ label }) => label.en === 'Extra damage'));
-  assert.deepEqual(withExtraDamage.map(({ id }) => id), ['diamond-sword']);
-  assert.equal(withExtraDamage[0].traits[0].icon, 'unique-bullet');
+  assert.deepEqual(withExtraDamage.map(({ id }) => id).sort(), ['broadsword', 'diamond-sword', 'frost-slayer']);
+  for (const entry of withExtraDamage) {
+    assert.ok(entry.traits.some(({ icon, label }) => icon === 'unique-bullet' && label.en === 'Extra damage'), entry.id);
+  }
 });
 
 test('背包每列格數只接受 2 到 6，預設 3 格', () => {

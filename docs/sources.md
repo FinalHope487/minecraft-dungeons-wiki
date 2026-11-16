@@ -20,6 +20,8 @@
 
 附魔依 [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) 收錄 124 個去重名稱，保留英雄可用、固有、怪物專用、未使用與 Enchanter's Tome 分類。`description.en` 依各自附魔頁的 `In-game description` 欄核對；該欄缺漏時採總表的遊戲描述，沒有 Wiki 描述的兩項明確標示未提供。適用範圍、稀有度、實裝與 Seasonal 標記依具體頁面核對，完整驗收名錄見 [`tests/fixtures/wiki-enchantment-roster.json`](../tests/fixtures/wiki-enchantment-roster.json)。Invisible 只用於 Seasonal Trials 怪物，因此標記 Seasonal；怪物仍使用的附魔即使未供英雄取得，仍標為已實裝。
 
+近戰武器、遠程武器與盔甲依 [Dungeons:Item 修訂 3786240](https://minecraft.wiki/w/Dungeons%3AItem?oldid=3786240)、[Dungeons:Weapon 修訂 3873343](https://minecraft.wiki/w/Dungeons%3AWeapon?oldid=3873343) 及 [Dungeons:Armor 修訂 3873342](https://minecraft.wiki/w/Dungeons%3AArmor?oldid=3873342) 收錄 83、72、73 件，共 228 件具名裝備；其中 4 件未使用項目標為未實裝，21 件 Seasonal。各條目的英文遊戲說明、固定特性、稀有度、圖標、來源修訂及繁中內容見 [`tests/fixtures/wiki-gear-roster.json`](../tests/fixtures/wiki-gear-roster.json)。名稱與中文頁有提供的說明／特性依 [Dungeons:物品修訂 1265857](https://zh.minecraft.wiki/w/MCD:%E7%89%A9%E5%93%81?oldid=1265857) 及對應繁中 Wiki 頁核對；未提供中文項目頁或描述時，繁中欄由英文來源翻譯。141 個不同的固有效果關聯雙向連到裝備與附魔；同一物品上的重複附魔欄位只保留一條關聯。The Monkey Motivator、Spider Crossbow、Soul Mage Robes 沒有單品圖標，使用 Wiki placeholder。
+
 | 條目 | 來源 | 核對狀態 |
 | --- | --- | --- |
 | Sword | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3ASword) | 版本與英文原文仍待正本遊戲截圖確認。 |
@@ -64,6 +66,7 @@
 | `sharpness.png`、`swirling.png` | 各自使用 [Sharpness](https://minecraft.wiki/w/Dungeons%3ASharpness)、[Swirling](https://minecraft.wiki/w/Dungeons%3ASwirling) 附魔條目的圖標檔；檔名與同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | 附魔圖標 | 使用 [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) 中各附魔的 Wiki 圖標；圖檔與同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `unique-bullet.png` | 使用 [Diamond Sword](https://minecraft.wiki/w/Dungeons%3ADiamond_Sword) 頁面 `Extra damage` 列的 `DungeonsMiscellaneousSprite unique-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
+| `soul-bullet.png` | 使用 [DungeonsMiscellaneousSprite 模板](https://minecraft.wiki/w/Template%3ADungeonsMiscellaneousSprite) 中的 `DungeonsMiscellaneousSprite soul-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `regular-bullet.png` | 使用 [Dungeons:Weapon](https://minecraft.wiki/w/Dungeons%3AWeapon) 總表中普通武器效果的 `DungeonsMiscellaneousSprite regular-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `death-cap-mushroom.png` | 使用 [Death Cap Mushroom](https://minecraft.wiki/w/Dungeons%3ADeath_Cap_Mushroom) 項目頁的一代主圖 `Death Cap Mushroom (MCD).png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `tnt.png`、`mystery-banner.png` | 各自使用 [TNT](https://minecraft.wiki/w/Dungeons%3ATNT)、[Mystery Banner](https://minecraft.wiki/w/Dungeons%3AMystery_Banner) 條目的圖標檔；檔名與同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |

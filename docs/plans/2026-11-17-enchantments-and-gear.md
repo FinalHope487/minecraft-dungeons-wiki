@@ -4,7 +4,7 @@
 
 依 Minecraft Wiki 一代《Dungeons:Enchantment》與《Dungeons:Item》補齊全部附魔、近戰武器、遠程武器和盔甲。保留具名 Unique、Seasonal、Exclusive、Mob-only 與未使用項目；每筆資料標示 Wiki 稀有度、適用類別、實裝狀態及 Seasonal 狀態。
 
-裝備總表目前列 82 件近戰、71 件遠程、71 件盔甲，共 224 件；包含 21 件季節限定裝備及 4 件未使用裝備。附魔依名稱去重；同一附魔適用多種裝備時只建一筆，並完整列出適用類別。
+Wiki 總覽文字統計 224 件可取得裝備；具名清單另列 4 件未使用裝備。完整清單為 83 件近戰、72 件遠程、73 件盔甲，共 228 件，含 21 件 Seasonal 和 4 件未實裝項目。附魔依名稱去重；同一附魔適用多種裝備時只建一筆，並完整列出適用類別。
 
 規格：[圖鑑公開規格](../spec.md)、[條目資料契約](../specs/content-contract.md)、[SQLite 資料庫規範](../specs/catalog-storage.md)、[圖標素材規範](../specs/icon-assets.md)。彙整來源與具體條目頁見[素材與資料來源](../sources.md)。
 
@@ -21,7 +21,7 @@
 
 ### 2. 近戰、遠程武器與盔甲
 
-- 依 `Dungeons:Item` 具名表逐項收錄 82 件近戰、71 件遠程及 71 件盔甲，包含一般裝備、全部具名 Unique、21 件 Seasonal 與 4 件未使用項目。
+- 依 `Dungeons:Item` 具名表逐項收錄 83 件近戰、72 件遠程及 73 件盔甲，包含 224 件可取得裝備和 4 件未使用項目、21 件 Seasonal。
 - 各基礎類型與其變體相鄰排列；沿用既有 ID，不把同一個可掉落裝備拆成 Common、Rare 兩筆。
 - 依每個具體項目頁核對中英文名稱、`In-game description`、稀有度、固定特性和圖標；普通特性使用 Regular Bullet，Unique 特性使用 Unique Bullet。
 - 對 Unique 裝備建立到基礎裝備與已收錄固有附魔的關聯；基礎裝備列出其具名變體。附魔頁的 `Built-into` 關係也連回對應裝備，並以來源頁核對每個目標。
@@ -31,7 +31,7 @@
 ## 驗收
 
 - 附魔 fixture 與 Wiki 各區段去重後的具名清單完全一致，無重複 ID；分類、稀有度、適用類別、實裝狀態及 Seasonal 狀態有來源依據。
-- 裝備 fixture 分別精確列出 82 件近戰、71 件遠程和 71 件盔甲；所有 Seasonal 與未使用標記符合 Wiki 清單。
+- 裝備 fixture 分別精確列出 83 件近戰、72 件遠程和 73 件盔甲；其中 4 件未使用項目標為 `implemented: false`，21 件 Seasonal 標記符合 Wiki 清單。
 - 每項新增裝備的英文描述逐字符合具體頁面的 `In-game description`；每項來源可追溯至彙整頁和具體條目頁。Wiki 沒有單品圖標時才使用 `?` placeholder。
 - `npm test` 與 `npm run build` 通過；直接檢查 `dist/index.html`、`dist/src/`、`dist/data/` 和 `dist/assets/`，不啟動瀏覽器。驗證分類數、條目數、雙語內容、標籤、來源、圖標路徑和檔案存在。
 - 驗收範圍以專案指定的 Wiki 頁面和其記錄的修訂為準；不以其他《Minecraft Dungeons》續作頁面補資料。
