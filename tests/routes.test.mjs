@@ -8,6 +8,7 @@ import { getInventoryEmptySlotCount, resolveInventoryColumnCount } from '../src/
 
 const { categories, entries } = loadCatalog();
 const roster = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-roster.json', import.meta.url), 'utf8'));
+const wikiArtifactDescriptions = JSON.parse(readFileSync(new URL('./fixtures/wiki-artifact-descriptions.json', import.meta.url), 'utf8'));
 const resolve = (hash) => resolveRoute(hash, categories, entries);
 const meleeIds = [
   'sword', 'diamond-sword', 'anchor', 'axe', 'backstabber', 'battlestaff', 'boneclub',
@@ -113,6 +114,7 @@ test('所有 Wiki 具名神器、消耗品與其他物品都有唯一條目及�
   assert.equal(unimplemented.length, 25);
   assert.equal(entries.find(({ id }) => id === 'corrupted-pumpkin')?.implemented, true,
     'seasonal but implemented artifacts remain implemented');
+  for (const item of scopedEntries) assert.equal(typeof item.seasonal, 'boolean', `${item.id} seasonal flag`);
   for (const id of wikiPlaceholderIds) {
     assert.equal(entries.find((entry) => entry.id === id)?.icon, 'wiki-placeholder', `${id} uses the Wiki placeholder`);
   }
@@ -160,6 +162,19 @@ test('Death Cap Mushroom 作為神器樣本有雙語說明、冷卻、固定效�
     'Increases attack speed by 100%; increases movement speed by 20%.');
   assert.ok(artifact.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3ADeath_Cap_Mushroom'));
   assert.ok(artifact.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3AArtifact'));
+});
+
+test('既有 Seasonal 神器有標籤，已實裝神器使用 Wiki 條目原文', () => {
+  assert.equal(entries.find(({ id }) => id === 'corrupted-pumpkin')?.seasonal, true);
+  assert.deepEqual(entries.filter(({ seasonal }) => seasonal).map(({ id }) => id), ['corrupted-pumpkin']);
+  const implementedArtifacts = entries.filter(({ category, implemented }) => category === 'artifacts' && implemented);
+  assert.equal(implementedArtifacts.length, Object.keys(wikiArtifactDescriptions).length);
+  for (const artifact of implementedArtifacts) {
+    assert.equal(artifact.description.en, wikiArtifactDescriptions[artifact.id].en, `${artifact.id} English`);
+    assert.equal(artifact.description['zh-Hant'], wikiArtifactDescriptions[artifact.id]['zh-Hant'], `${artifact.id} Chinese`);
+    const wikiPage = `https://minecraft.wiki/w/Dungeons%3A${artifact.name.en.replaceAll(' ', '_')}`;
+    assert.ok(artifact.sources.some(({ url }) => url === wikiPage), `${artifact.id} item-page source`);
+  }
 });
 
 test('近戰分類有 27 種 Common / Rare 基礎武器並保留 Diamond Sword', () => {

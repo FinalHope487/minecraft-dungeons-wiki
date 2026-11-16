@@ -42,7 +42,7 @@ test('HTML entry uses a classic loader with a self-contained file URL path', asy
   ].map(async ([key, path]) => [key, await readProjectFile(path)])));
   const bundle = createFileAppSource({
     modules,
-    catalog: { index: { schemaVersion: 2, categories: [], entries: [] }, entries: {} },
+    catalog: { index: { schemaVersion: 3, categories: [], entries: [] }, entries: {} },
   });
   assert.doesNotMatch(bundle, /\bimport\.meta\b|^\s*import\s/m);
   assert.match(bundle, /globalThis\.__WIKI_FILE_DATA__/);

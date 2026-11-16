@@ -34,6 +34,11 @@ Node 建置連線啟用所有外鍵；建置也會執行外鍵檢查。`position
 
 初始支援語言為 `zh-Hant` 和 `en`。每個分類、條目、屬性、固定特性及關聯都必須具備這兩種語言且文字不可空白。新增語言需同時更新 locale、資料庫驗證及前端契約。
 
+## Schema v2 and v3
+
+- Schema v2 在 `entries` 新增 `implemented` 布林值，SQLite 使用 `0`／`1`。
+- Schema v3 在 `entries` 新增 `seasonal` 布林值，預設 `0`；季節限定與實裝狀態分開記錄。靜態索引和詳情 JSON 使用 `schemaVersion: 3`。
+
 ## 資料約束
 
 - ID 使用 `^[a-z][a-z0-9-]*$`，全表唯一；發布後不得重用已公開 ID，以維持分享網址。
@@ -46,7 +51,7 @@ Node 建置連線啟用所有外鍵；建置也會執行外鍵檢查。`position
 
 ## 靜態輸出契約
 
-- `data/catalog-index.json` 含 `schemaVersion`、分類陣列及條目清單摘要（ID、分類、名稱、圖示、標籤、色調）。
+- `data/catalog-index.json` 含 `schemaVersion`、分類陣列及條目清單摘要（ID、分類、名稱、圖示、標籤、色調、實裝狀態、seasonal 標記）。
 - `data/entries/<id>.json` 含 `schemaVersion` 及一筆完整條目，欄位映射維持既有內容契約：`id`、`category`、`name`、`icon`、`badge`、`tone`、`description`、`facts`、`traits`、`links`、`sources`。
 - JSON 只含頁面所需資料，不含資料庫欄位、建置資訊或未公開內容。刪除條目後，重新建置不得殘留其 JSON。
 - JSON 以 UTF-8 輸出，保留中英文文字及資料順序。網址使用相對路徑，支援 GitHub Pages 專案子路徑。

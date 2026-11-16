@@ -36,7 +36,7 @@ function childRows(rows, parentKey, transform) {
 
 function readDatabase(database) {
   const schemaVersion = database.prepare('PRAGMA user_version').get().user_version;
-  if (schemaVersion !== 2) throw new Error(`不支援的 SQLite schema 版本：${schemaVersion}（需要 2）。`);
+  if (schemaVersion !== 3) throw new Error(`不支援的 SQLite schema 版本：${schemaVersion}（需要 3）。`);
 
   const integrity = database.prepare('PRAGMA integrity_check').all();
   if (integrity.length !== 1 || integrity[0].integrity_check !== 'ok') {
@@ -50,7 +50,7 @@ function readDatabase(database) {
     database.prepare('SELECT category_id, language, label FROM category_translations ORDER BY category_id, language').all(),
     'category_id', ['label'],
   );
-  const entries = database.prepare('SELECT id, category_id, icon, tone, implemented, position FROM entries ORDER BY position').all();
+  const entries = database.prepare('SELECT id, category_id, icon, tone, implemented, seasonal, position FROM entries ORDER BY position').all();
   const entryTexts = translationsById(
     database.prepare('SELECT entry_id, language, name, badge, description FROM entry_translations ORDER BY entry_id, language').all(),
     'entry_id', ['name', 'badge', 'description'],
@@ -101,6 +101,7 @@ function readDatabase(database) {
       badge: localize(entryTexts, entry.id, 'badge'),
       tone: entry.tone,
       implemented: entry.implemented === 1,
+      seasonal: entry.seasonal === 1,
       description: localize(entryTexts, entry.id, 'description'),
       facts: (facts.get(entry.id) ?? []).map((fact) => ({
         label: localize(factTexts, fact.id, 'label'),
@@ -152,7 +153,7 @@ export function validateCatalog(categories, entries, assets) {
   for (const entry of entries) {
     if (!isId(entry.id) || !categoryIds.has(entry.category)
       || ![entry.name, entry.description, entry.badge].every(isLocalized) || !hasIcon(entry.icon)
-      || !supportedTones.has(entry.tone) || typeof entry.implemented !== 'boolean') {
+      || !supportedTones.has(entry.tone) || typeof entry.implemented !== 'boolean' || typeof entry.seasonal !== 'boolean') {
       throw new Error(`條目缺少必要欄位或圖標：${entry.id}`);
     }
     if (!entry.facts.every(({ label, value }) => isLocalized(label) && isLocalized(value))
@@ -187,13 +188,15 @@ export async function writeCatalogArtifacts(outputRoot, { assetsDirectory = asse
   await ensureDirectory(detailsPath);
 
   const index = {
-    schemaVersion: 2,
+    schemaVersion: 3,
     categories,
-    entries: entries.map(({ id, category, name, icon, badge, tone, implemented }) => ({ id, category, name, icon, badge, tone, implemented })),
+    entries: entries.map(({ id, category, name, icon, badge, tone, implemented, seasonal }) => ({
+      id, category, name, icon, badge, tone, implemented, seasonal,
+    })),
   };
   await writeFile(join(dataPath, 'catalog-index.json'), `${JSON.stringify(index)}\n`, 'utf8');
   for (const entry of entries) {
-    await writeFile(join(detailsPath, `${entry.id}.json`), `${JSON.stringify({ schemaVersion: 2, entry })}\n`, 'utf8');
+    await writeFile(join(detailsPath, `${entry.id}.json`), `${JSON.stringify({ schemaVersion: 3, entry })}\n`, 'utf8');
   }
   return { categories, entries };
 }

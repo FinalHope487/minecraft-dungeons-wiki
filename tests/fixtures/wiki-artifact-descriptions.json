@@ -1,0 +1,182 @@
+{
+  "blast-fungus": {
+    "en": "Only the bravest of warriors carry the Blast Fungus. Not just because of its toxic spores, but because it smells awful.",
+    "zh-Hant": "只有最勇敢的戰士才會攜帶爆裂真菌。這不只因為它帶有毒孢子，也因為它聞起來很難聞。"
+  },
+  "boots-of-swiftness": {
+    "en": "Boots blessed with enchantments to allow for swift movements. Useful in uncertain times such as these.",
+    "zh-Hant": "這雙靴子受到附魔祝福，能讓人迅速移動。在如今局勢難料的時刻尤其實用。"
+  },
+  "buzzy-nest": {
+    "en": "Bee lovers and the bee-loved alike are fans of the Buzzy Nest, but don't be fooled by the cute bees within - they pack a powerful sting!",
+    "zh-Hant": "愛蜂人士與深受蜜蜂喜愛的人都很喜歡蜂巢，但別被裡頭可愛的蜜蜂騙了——牠們的螫刺相當厲害！"
+  },
+  "corrupted-beacon": {
+    "en": "The Corrupted Beacon holds immense power within. It waits for the moment to unleash its wrath.",
+    "zh-Hant": "腐化信標蘊藏著龐大力量，正等待釋放怒火的時刻。"
+  },
+  "corrupted-pumpkin": {
+    "en": "The Corrupted Pumpkin glows with supernatural power, illuminating even the darkest nights with its powerful beacon.",
+    "zh-Hant": "腐化南瓜散發超自然力量，強光足以照亮最黑暗的夜晚。"
+  },
+  "corrupted-seeds": {
+    "en": "A pouch of poisonous, corrupted seeds which grow into spiky grapple vines, entangling and slowly draining the life from its victims.",
+    "zh-Hant": "一袋充滿毒性的腐化種子，會長成帶刺的攀爬藤蔓，纏住目標並慢慢吸取其生命。"
+  },
+  "death-cap-mushroom": {
+    "en": "Eaten by daring warriors before battle, the Death Cap Mushroom drives fighters into a frenzy.",
+    "zh-Hant": "勇敢的戰士會在戰前吃下死亡帽菇，使自己陷入狂熱狀態。"
+  },
+  "enchanted-grass": {
+    "en": "Just as there are powerful heroes who answer the call to fight, there are powerful enchanted sheep who will join the fight when summoned.",
+    "zh-Hant": "正如有強大的英雄響應戰鬥號召，召喚時也會有強大的附魔綿羊加入戰鬥。"
+  },
+  "enchanters-tome": {
+    "en": "Meant only to be wielded by Enchanters, the magic of this artifact can summon powerful enchantments.",
+    "zh-Hant": "此神器只供附魔師使用，其中的魔法能召喚強大的附魔。"
+  },
+  "eye-of-the-guardian": {
+    "en": "The Eye of the Guardian holds a power that awakens in the hands of a worthy hero.",
+    "zh-Hant": "守衛之眼蘊藏一股力量，會在有資格的英雄手中覺醒。"
+  },
+  "fireworks-arrow": {
+    "en": "The explosive power of the TNT combined with the high velocity movement of an arrow, what could possibly go wrong?",
+    "zh-Hant": "將 TNT 的爆炸威力與箭矢的高速結合，還有什麼可能出錯？"
+  },
+  "fishing-rod": {
+    "en": "The trusted companion of any true adventurer, the Fishing Rod is useful for more than just fishing.",
+    "zh-Hant": "每位真正冒險者的可靠夥伴，釣魚竿可不只用來釣魚。"
+  },
+  "flaming-quiver": {
+    "en": "This quiver is filled with the deadliest of arrows.",
+    "zh-Hant": "這個箭袋裝滿了最致命的箭矢。"
+  },
+  "ghost-cloak": {
+    "en": "The souls trapped within the Ghost Cloak are protective, but they radiate a sense of melancholy.",
+    "zh-Hant": "幽靈斗篷困住的靈魂會保護持有者，但也散發著憂傷。"
+  },
+  "golem-kit": {
+    "en": "Iron Golems have always protected the Villagers of the Overworld. Their numbers are dwindling as a result of the Arch Illager's war.",
+    "zh-Hant": "鐵魔像一直守護著主世界的村民。由於 Arch-Illager 發動戰爭，牠們的數量正逐漸減少。"
+  },
+  "gong-of-weakening": {
+    "en": "This ancient gong, marked with the symbols of a nameless kingdom, feels safe in your hands but emits a menacing hum to those nearby.",
+    "zh-Hant": "這面古老銅鑼刻著一個無名王國的符號，握在手中令人安心，卻會向附近的人發出不祥的嗡鳴。"
+  },
+  "harpoon-quiver": {
+    "en": "This quiver holds a number of harpoons that swiftly pierce through enemies on land or underwater.",
+    "zh-Hant": "這個箭袋裝有多枚魚叉，能迅速刺穿陸地上或水下的敵人。"
+  },
+  "harvester": {
+    "en": "The Harvester siphons the souls of the dead, before releasing them into a cluster hex of power.",
+    "zh-Hant": "收割者會抽取死者的靈魂，再將其釋放成一團強力的咒能。"
+  },
+  "ice-wand": {
+    "en": "The Ice Wand was trapped in a tomb of ice for ages, sealed away by those who feared its power.",
+    "zh-Hant": "冰杖被封在冰墓中多年，曾被畏懼它力量的人封存。"
+  },
+  "iron-hide-amulet": {
+    "en": "The Iron Hide Amulet is both ancient and timeless. Sand mysteriously and endlessly slips through the cracks in the iron.",
+    "zh-Hant": "鐵皮護符既古老又歷久不衰。沙粒神秘地無止盡地從鐵縫中滑落。"
+  },
+  "light-feather": {
+    "en": "No one knows what mysterious creature this feather came from, but it is as beautiful and powerful.",
+    "zh-Hant": "無人知曉這根羽毛來自什麼神秘生物，但它既美麗又強大。"
+  },
+  "lightning-rod": {
+    "en": "Crafted by Illager Geomancers, this item is enchanted with the power of a storming sky.",
+    "zh-Hant": "這件物品由掠奪者地卜師打造，並附魔了風暴天空的力量。"
+  },
+  "love-medallion": {
+    "en": "A spell radiates from this trinket, enchanting those nearby into a trance where they must protect the holder of the medallion at all costs.",
+    "zh-Hant": "這枚飾物散發著一道咒語，讓附近的人陷入恍惚，必須不惜一切代價保護護身符持有者。"
+  },
+  "powershaker": {
+    "en": "The Powershaker is a smashing good time, though it may not be as fun for your enemies.",
+    "zh-Hant": "力量搖搖棒能帶來痛快的粉碎體驗，不過對敵人而言就沒那麼有趣了。"
+  },
+  "satchel-of-elixirs": {
+    "en": "The Satchel of Elixirs always contains the exact potions you need! (Well, at least the potions it thinks you need, which is still pretty helpful.)",
+    "zh-Hant": "藥劑袋總會裝著你需要的藥水！（至少是它認為你需要的藥水；而這依然相當有幫助。）"
+  },
+  "satchel-of-elements": {
+    "en": "Mysteries surround this primordial satchel. Will it unleash fire, ice, or something a lot less nice?",
+    "zh-Hant": "這個原初小袋籠罩在謎團之中。它會釋放火焰、冰霜，還是更糟的東西？"
+  },
+  "satchel-of-snacks": {
+    "en": "The Satchel of Snacks provides a treat when you need it the most!",
+    "zh-Hant": "零食袋會在你最需要時送上一份點心！"
+  },
+  "scatter-mines": {
+    "en": "Set your enemies up for a surprise of a lifetime with the explosive power of Scatter Mines.",
+    "zh-Hant": "用散射地雷的爆炸威力，讓敵人迎來畢生難忘的驚喜。"
+  },
+  "shadow-shifter": {
+    "en": "The Shadow Shifter grants you Shadow Form, which allows you to stay out of sight.",
+    "zh-Hant": "暗影轉換器賦予你暗影形態，讓你不被人發現。"
+  },
+  "shock-powder": {
+    "en": "Shock Powder is a reliable tool for those who wish to make a swift exit.",
+    "zh-Hant": "震擊粉是想迅速脫身者可靠的工具。"
+  },
+  "soul-healer": {
+    "en": "The Soul Healer amulet is cold to the touch and trembles with the power of souls.",
+    "zh-Hant": "靈魂治療護符摸起來冰冷，並因靈魂的力量而顫動。"
+  },
+  "soul-lantern": {
+    "en": "This lantern, still covered in the sands of a far-flung place, allows those who hold it to summon a creature formed from bound souls.",
+    "zh-Hant": "這盞提燈仍覆著來自遙遠之地的沙塵，能讓持有者召喚由受縛靈魂形成的生物。"
+  },
+  "spinblade": {
+    "en": "This whirling weapon spins across the battlefield, slicing through enemies in its path.",
+    "zh-Hant": "這把旋轉武器會飛旋穿越戰場，切割路徑上的敵人。"
+  },
+  "tasty-bone": {
+    "en": "You hear distant howling as you hold the Tasty Bone in your hand.",
+    "zh-Hant": "手握美味骨頭時，你會聽見遠處傳來的嗥叫聲。"
+  },
+  "thundering-quiver": {
+    "en": "This copper quiver channels the power of lightning.",
+    "zh-Hant": "這個銅製箭袋能引導閃電的力量。"
+  },
+  "tome-of-duplication": {
+    "en": "A magical tome which when read is capable of duplicating items such as food, potions and explosives!",
+    "zh-Hant": "一本魔法書，閱讀後能複製食物、藥水、炸藥等物品！"
+  },
+  "torment-quiver": {
+    "en": "The Torment Quiver radiates powerful energy drawn from the eternal source of the Undead.",
+    "zh-Hant": "苦痛箭袋散發強大的能量，源自亡靈的永恆力量。"
+  },
+  "totem-of-casting": {
+    "en": "All who are near this totem feel an invigorating aura around their artifacts.",
+    "zh-Hant": "靠近圖騰的人都會感受到一股振奮精神的氣息，從神器散發而出。"
+  },
+  "totem-of-regeneration": {
+    "en": "This hand-crafted wooden figurine radiates a warmth like that of a crackling campfire, healing those who gather around it.",
+    "zh-Hant": "這尊手工製作的木雕散發著篝火般的溫暖，療癒聚集在它周圍的人。"
+  },
+  "totem-of-shielding": {
+    "en": "This totem radiates powerful energy that bursts forth as a protective shield around those near it.",
+    "zh-Hant": "這個圖騰散發強大能量，並釋出保護附近之人的護盾。"
+  },
+  "updraft-tome": {
+    "en": "An ancient book filled with illegible glyphs, you feel a strange breeze as you flip the pages.",
+    "zh-Hant": "一本古老的書，裡頭滿是無法辨識的字符。翻頁時，你會感到一陣奇異微風。"
+  },
+  "vexing-chant": {
+    "en": "Summon Guardian Vexes who will fight by your side for a short while.",
+    "zh-Hant": "召喚守衛惱鬼，牠們會在短時間內與你並肩作戰。"
+  },
+  "void-quiver": {
+    "en": "The Void Quiver is filled with arrows that splash Void Liquid when they hit their target.",
+    "zh-Hant": "虛空箭袋裝滿命中目標時會濺出虛空液體的箭矢。"
+  },
+  "wind-horn": {
+    "en": "When the Wind Horn echoes throughout the forests of the Overworld the creatures of the night tremble with fear.",
+    "zh-Hant": "當風之號角的聲音響徹主世界的森林，夜間生物便會驚恐顫抖。"
+  },
+  "wonderful-wheat": {
+    "en": "This item has the faint smell of an open field, baked bread, and freshly cut crops.",
+    "zh-Hant": "這件物品散發著淡淡氣味，令人想起空曠田野、烘焙麵包與剛收割的作物。"
+  }
+}

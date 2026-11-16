@@ -37,8 +37,8 @@ function replaceRequired(source, pattern, replacement, label) {
 }
 
 export function createFileAppSource({ modules, catalog }) {
-  if (!modules || !catalog?.index || !catalog?.entries || catalog.index.schemaVersion !== 2) {
-    throw new TypeError('file:// 圖鑑 bundle 缺少 schema v2 分類索引或詳情資料。');
+  if (!modules || !catalog?.index || !catalog?.entries || catalog.index.schemaVersion !== 3) {
+    throw new TypeError('file:// 圖鑑 bundle 缺少 schema v3 分類索引或詳情資料。');
   }
 
   const bundledModules = moduleDefinitions.map(({ key, names }) => {

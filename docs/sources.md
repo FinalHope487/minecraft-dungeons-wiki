@@ -16,6 +16,8 @@
 
 神器清單依 [Dungeons:Artifact](https://minecraft.wiki/w/Dungeons%3AArtifact) 各分類表格逐列核對，包含未使用區。該頁文字統計寫 46 件，但表格列出 45 件已實裝或季節限定神器及 8 件未使用神器；[Dungeons:Item](https://minecraft.wiki/w/Dungeons%3AItem) 的具名清單也列 44 件加 Corrupted Pumpkin 與 8 件未使用項目。本專案以具名表格和清單為準，固定收錄 roster 見 [`tests/fixtures/wiki-item-roster.json`](../tests/fixtures/wiki-item-roster.json)。消耗品依 [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) 的 Food、Potions、Ammo、Other 區段逐項核對；圖鑑將 Other 子類放入「其他物品」，其餘三類依序排在「消耗品」中。
 
+45 件已實裝神器的 `description.en` 逐項依各自 Wiki 條目頁的 `In-game description` 核對，文字基準見 [`tests/fixtures/wiki-artifact-descriptions.json`](../tests/fixtures/wiki-artifact-descriptions.json)；繁中為依原文所作的圖鑑翻譯。[Corrupted Pumpkin](https://minecraft.wiki/w/Dungeons%3ACorrupted_Pumpkin) 頁面標示為 `Special event item`，因此條目設 `seasonal: true`，仍維持 `implemented: true`。
+
 | 條目 | 來源 | 核對狀態 |
 | --- | --- | --- |
 | Sword | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3ASword) | 版本與英文原文仍待正本遊戲截圖確認。 |

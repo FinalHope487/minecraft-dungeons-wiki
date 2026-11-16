@@ -121,8 +121,11 @@ function renderDetailsContent(entry, layout) {
   const badge = node('span', 'rarity', message(entry.badge));
   const implementation = node('span', `implementation-status${entry.implemented ? '' : ' is-unimplemented'}`,
     entry.implemented ? ui.implemented : ui.unimplemented);
+  const seasonal = entry.seasonal ? node('span', 'seasonal-status', ui.seasonal) : null;
   const name = node('h2', 'item-name', message(entry.name));
-  identity.append(badge, implementation, name);
+  identity.append(badge, implementation);
+  if (seasonal) identity.append(seasonal);
+  identity.append(name);
   heading.append(identity, icon(entry.icon, 'item-art'));
 
   const info = node('div', 'info');
@@ -193,8 +196,9 @@ async function loadEntryDetails(id, retry = false) {
         if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
         payload = await response.json();
       }
-      if (payload?.schemaVersion !== 2 || payload.entry?.id !== id
+      if (payload?.schemaVersion !== 3 || payload.entry?.id !== id
         || typeof payload.entry.implemented !== 'boolean'
+        || typeof payload.entry.seasonal !== 'boolean'
         || !Array.isArray(payload.entry.facts) || !Array.isArray(payload.entry.traits)
         || !Array.isArray(payload.entry.links) || !Array.isArray(payload.entry.sources)) {
         throw new Error(`條目 JSON 格式或 ID 不符：${id}`);
@@ -290,6 +294,11 @@ function render() {
       status.setAttribute('aria-label', ui.unimplemented);
       anchor.append(status);
     }
+    if (item.seasonal) {
+      const seasonal = node('span', 'slot-seasonal-status', ui.seasonal);
+      seasonal.setAttribute('aria-label', ui.seasonal);
+      anchor.append(seasonal);
+    }
     if (item.id === entry?.id) anchor.setAttribute('aria-current', 'true');
     slot.append(anchor);
     return slot;
@@ -345,7 +354,7 @@ document.getElementById('skip').addEventListener('click', (event) => {
   document.getElementById('catalog').focus();
 });
 function validateIndex(payload) {
-  if (payload?.schemaVersion !== 2 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)) {
+  if (payload?.schemaVersion !== 3 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)) {
     throw new Error('圖鑑索引 schema 不符。');
   }
   const categoryIds = new Set(payload.categories.map((category) => category?.id));
@@ -356,7 +365,8 @@ function validateIndex(payload) {
     || payload.categories.some((category) => !category?.id || !hasLocalizedText(category.label) || !category?.icon)
     || payload.entries.some((entry) => !entry?.id || !categoryIds.has(entry.category)
       || !hasLocalizedText(entry.name) || !hasLocalizedText(entry.badge) || !entry?.icon
-      || !['steel', 'gold', 'violet'].includes(entry.tone) || typeof entry.implemented !== 'boolean')) {
+      || !['steel', 'gold', 'violet'].includes(entry.tone) || typeof entry.implemented !== 'boolean'
+      || typeof entry.seasonal !== 'boolean')) {
     throw new Error('圖鑑索引包含重複或不完整資料。');
   }
 }

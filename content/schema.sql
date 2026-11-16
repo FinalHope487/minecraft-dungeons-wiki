@@ -22,6 +22,7 @@ CREATE TABLE entries (
   icon TEXT NOT NULL,
   tone TEXT NOT NULL CHECK (tone IN ('steel', 'gold', 'violet')),
   implemented INTEGER NOT NULL DEFAULT 1 CHECK (implemented IN (0, 1)),
+  seasonal INTEGER NOT NULL DEFAULT 0 CHECK (seasonal IN (0, 1)),
   position INTEGER NOT NULL UNIQUE CHECK (position >= 0)
 );
 
@@ -94,6 +95,6 @@ CREATE INDEX traits_by_entry ON traits(entry_id, position);
 CREATE INDEX links_by_entry ON entry_links(entry_id, position);
 CREATE INDEX sources_by_entry ON entry_sources(entry_id, position);
 
-PRAGMA user_version = 2;
+PRAGMA user_version = 3;
 
 COMMIT;

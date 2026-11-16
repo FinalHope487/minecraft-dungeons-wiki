@@ -261,6 +261,25 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
   color: #ffe4df;
   font-size: .56rem;
 }
+.slot-seasonal-status {
+  position: absolute;
+  z-index: 1;
+  inset: 2px auto auto 2px;
+  padding: 2px 4px;
+  border: 1px solid #a88c42;
+  background: #3c3012;
+  color: #ffedb0;
+  font: 700 .56rem/1.2 var(--body-font);
+}
+.seasonal-status {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 3px 6px;
+  border: 1px solid #a88c42;
+  background: #3c3012;
+  color: #ffedb0;
+  font: 700 .68rem/1.2 var(--body-font);
+}
 .implementation-status.is-unimplemented {
   border-color: #c65a53;
   background: #4d171a;
