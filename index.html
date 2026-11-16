@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#161012">
+  <meta name="description" content="Minecraft Dungeons 一代裝備與附魔圖鑑。">
+  <title>地城圖鑑 · Minecraft Dungeons</title>
+  <link rel="icon" href="./assets/diamond-sword.webp">
+  <link rel="stylesheet" href="./src/wiki.css">
+  <script type="module" src="./src/wiki.js"></script>
+</head>
+<body>
+  <a class="skip" href="#catalog" id="skip" data-text="skip">跳至圖鑑</a>
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <div class="brand">
+        <span class="brand-mark"><img src="./assets/diamond-sword.webp" alt="" width="44" height="44"></span>
+        <div><div class="brand-series" lang="en">MINECRAFT DUNGEONS</div><h1 data-text="title">地城圖鑑</h1></div>
+      </div>
+      <div class="header-controls">
+        <fieldset class="layouts">
+          <legend class="sr-only" data-text="layout">展示版型</legend>
+          <button type="button" value="inventory" aria-pressed="true"><span data-text="inventory">背包格</span><span class="sr-only" data-text="inventoryHint">與右側詳情</span></button>
+          <button type="button" value="compact" aria-pressed="false"><span data-text="compact">橫向小方格</span><span class="sr-only" data-text="compactHint">與下方詳情</span></button>
+        </fieldset>
+        <nav class="languages" aria-label="語言">
+          <a href="?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁中</a>
+          <a href="?lang=en" hreflang="en" lang="en">English</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="scene">
+    <main class="shell" id="catalog" tabindex="-1">
+      <nav id="categories" aria-label="圖鑑分類"></nav>
+      <div id="workspace" class="workspace" data-layout="inventory">
+        <section class="collection" aria-labelledby="collection-title">
+          <div class="section-heading">
+            <h2 id="collection-title">全部裝備</h2>
+            <div class="collection-controls">
+              <label class="column-setting" id="inventory-columns-control" for="inventory-columns" hidden>
+                <span data-text="columnsLabel">每列格數</span>
+                <select id="inventory-columns"></select>
+              </label>
+              <span id="count"></span>
+              <button type="button" id="open-details" data-text="open" aria-haspopup="dialog" aria-controls="detail-dialog" hidden>查看詳情</button>
+            </div>
+          </div>
+          <ul class="slots" id="slots"></ul>
+        </section>
+        <article class="details" id="details" aria-label="條目詳情"></article>
+      </div>
+      <dialog id="detail-dialog" aria-labelledby="dialog-title">
+        <header class="dialog-header">
+          <h2 id="dialog-title" data-text="details">條目詳情</h2>
+          <form method="dialog"><button type="submit" data-text="close" autofocus>關閉詳情</button></form>
+        </header>
+      </dialog>
+      <p class="sr-only" id="announcement" role="status"></p>
+      <noscript><p>請啟用 JavaScript 以瀏覽圖鑑。 <span lang="en">Enable JavaScript to browse the codex.</span></p></noscript>
+    </main>
+    <footer class="shell footer" data-text="footer">非官方粉絲圖鑑，與 Mojang 或 Microsoft 無關。</footer>
+  </div>
+  <div class="mobile-actions" id="mobile-actions" role="group" data-aria-label="mobileActions" hidden>
+    <div class="mobile-selection">
+      <img class="icon" id="mobile-item-icon" alt="" hidden>
+      <div class="mobile-selection-copy">
+        <span class="mobile-selection-label" data-text="selectedLabel">目前選取</span>
+        <strong class="mobile-selection-name" id="mobile-item-name"></strong>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

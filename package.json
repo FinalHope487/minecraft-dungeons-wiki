@@ -1,0 +1,14 @@
+{
+  "name": "minecraft-dungeons-wiki",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "dev": "node tools/serve.mjs",
+    "preview": "node tools/serve.mjs dist",
+    "test": "node --test",
+    "build": "node tools/build.mjs",
+    "icons:sync": "node tools/sync-wiki-icons.mjs",
+    "icons:sync:dry-run": "node tools/sync-wiki-icons.mjs --dry-run"
+  }
+}
