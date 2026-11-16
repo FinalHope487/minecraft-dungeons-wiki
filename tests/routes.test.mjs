@@ -8,6 +8,7 @@ import { getInventoryEmptySlotCount, resolveInventoryColumnCount } from '../src/
 
 const { categories, entries } = loadCatalog();
 const roster = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-roster.json', import.meta.url), 'utf8'));
+const enchantmentRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-enchantment-roster.json', import.meta.url), 'utf8'));
 const wikiArtifactDescriptions = JSON.parse(readFileSync(new URL('./fixtures/wiki-artifact-descriptions.json', import.meta.url), 'utf8'));
 const resolve = (hash) => resolveRoute(hash, categories, entries);
 const meleeIds = [
@@ -83,7 +84,7 @@ test('全部裝備包含所有神器，消耗品子類排序且其他物品維�
     ...Array.from({ length: 15 }, () => 'Potion'),
     ...Array.from({ length: 4 }, () => 'Ammo'),
   ]);
-  assert.deepEqual(ids('#enchantments'), ['sharpness', 'swirling']);
+  assert.deepEqual(ids('#enchantments'), enchantmentRoster.entries.map(({ id }) => id));
   assert.equal(resolve('#all/apple').missing, true);
   assert.equal(resolve('#all/tnt').missing, true);
   assert.equal(resolve('#all/mystery-banner').missing, true);
@@ -91,6 +92,41 @@ test('全部裝備包含所有神器，消耗品子類排序且其他物品維�
   assert.equal(resolve('#equipment/bow').missing, true);
   assert.equal(resolve('#all/hunters-armor/compact').entry.id, 'hunters-armor');
   assert.equal(resolve('#all/hunters-armor/compact').layout, 'compact');
+});
+
+test('完整附魔名錄有唯一條目、雙語 Wiki 描述、分類與來源', () => {
+  const actual = entries.filter(({ category }) => category === 'enchantments');
+  assert.equal(enchantmentRoster.entries.length, 124);
+  assert.equal(new Set(enchantmentRoster.entries.map(({ id }) => id)).size, 124);
+  assert.equal(actual.length, 124);
+  for (const expected of enchantmentRoster.entries) {
+    const entry = actual.find(({ id }) => id === expected.id);
+    assert.ok(entry, `missing enchantment ${expected.name.en}`);
+    assert.deepEqual(entry.name, expected.name, `${expected.id} name`);
+    assert.deepEqual(entry.badge, expected.badge, `${expected.id} rarity label`);
+    assert.equal(entry.icon, expected.icon, `${expected.id} icon`);
+    assert.equal(entry.implemented, expected.implemented, `${expected.id} implementation`);
+    assert.equal(entry.seasonal, expected.seasonal, `${expected.id} seasonal flag`);
+    assert.deepEqual(entry.description, expected.description, `${expected.id} Wiki description`);
+    assert.deepEqual(entry.facts, expected.facts, `${expected.id} applicability and classification`);
+    assert.deepEqual(entry.sources, expected.sources, `${expected.id} source pages`);
+    assert.equal(entry.tone, 'violet', `${expected.id} enchantment tone`);
+    assert.ok(iconAssets[entry.icon]?.kind === 'enchantment', `${expected.id} icon registration`);
+    assert.equal(entry.sources[0].url, enchantmentRoster.source, `${expected.id} overview source`);
+    assert.equal(entry.sources[1].url,
+      `https://minecraft.wiki/w/Dungeons%3A${encodeURIComponent(expected.pageTitle.replaceAll(' ', '_'))}`,
+      `${expected.id} specific-page source`);
+  }
+  assert.deepEqual(actual.filter(({ implemented }) => !implemented).map(({ id }) => id), [
+    'knockback', 'bows-boon', 'barrier', 'dolphins-grace', 'shielding', 'synergy',
+  ]);
+  assert.deepEqual(actual.filter(({ seasonal }) => seasonal).map(({ id }) => id), ['invisible']);
+  assert.equal(actual.find(({ id }) => id === 'withering')?.implemented, true,
+    'Withering remains implemented because mobs use it');
+  assert.deepEqual(actual.find(({ id }) => id === 'radiance')?.facts.at(-1), {
+    label: { en: 'Ranged name', 'zh-Hant': '遠程名稱' },
+    value: { en: 'Radiance Shot', 'zh-Hant': '遠程武器稱為 Radiance Shot' },
+  });
 });
 
 test('所有 Wiki 具名神器、消耗品與其他物品都有唯一條目及正確實裝狀態', () => {
@@ -166,7 +202,7 @@ test('Death Cap Mushroom 作為神器樣本有雙語說明、冷卻、固定效�
 
 test('既有 Seasonal 神器有標籤，已實裝神器使用 Wiki 條目原文', () => {
   assert.equal(entries.find(({ id }) => id === 'corrupted-pumpkin')?.seasonal, true);
-  assert.deepEqual(entries.filter(({ seasonal }) => seasonal).map(({ id }) => id), ['corrupted-pumpkin']);
+  assert.deepEqual(entries.filter(({ seasonal }) => seasonal).map(({ id }) => id), ['corrupted-pumpkin', 'invisible']);
   const implementedArtifacts = entries.filter(({ category, implemented }) => category === 'artifacts' && implemented);
   assert.equal(implementedArtifacts.length, Object.keys(wikiArtifactDescriptions).length);
   for (const artifact of implementedArtifacts) {

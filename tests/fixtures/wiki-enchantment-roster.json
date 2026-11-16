@@ -1,0 +1,7653 @@
+{
+  "source": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+  "entryPolicy": "One entry per named enchantment; categories, rarity, Wiki section, implementation and seasonal status retain the source distinctions.",
+  "entries": [
+    {
+      "id": "ambush",
+      "name": {
+        "en": "Ambush",
+        "zh-Hant": "埋伏"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "ambush",
+      "pageTitle": "Ambush",
+      "description": {
+        "en": "Attacks on mobs that are not actively targeting you deal increased damage.",
+        "zh-Hant": "攻擊尚未主動鎖定你的怪物時會造成額外傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Ambush",
+          "url": "https://minecraft.wiki/w/Dungeons%3AAmbush"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anima-conduit",
+      "name": {
+        "en": "Anima Conduit",
+        "zh-Hant": "靈魂導流"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "anima-conduit",
+      "pageTitle": "Anima Conduit",
+      "description": {
+        "en": "Each soul you absorb grants a small amount of health.",
+        "zh-Hant": "吸收靈魂時會恢復少量生命值。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Anima Conduit",
+          "url": "https://minecraft.wiki/w/Dungeons%3AAnima_Conduit"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "artifact-synergy",
+      "name": {
+        "en": "Artifact Synergy",
+        "zh-Hant": "神器協同"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "artifact-synergy",
+      "pageTitle": "Artifact Synergy",
+      "description": {
+        "en": "Whenever you use an artifact, your next attack deals bonus damage.",
+        "zh-Hant": "使用神器後，下一次攻擊會造成額外傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Artifact Synergy",
+          "url": "https://minecraft.wiki/w/Dungeons%3AArtifact_Synergy"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "busy-bee",
+      "name": {
+        "en": "Busy Bee",
+        "zh-Hant": "忙碌蜜蜂"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "busy-bee",
+      "pageTitle": "Busy Bee",
+      "description": {
+        "en": "Chance to summon a bee after defeating a mob, with up to 3 bees joining your side.",
+        "zh-Hant": "擊敗怪物後有機率召喚蜜蜂，最多可有 3 隻蜜蜂加入你的一方。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Busy Bee",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABusy_Bee"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chains",
+      "name": {
+        "en": "Chains",
+        "zh-Hant": "鎖鏈"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "chains",
+      "pageTitle": "Chains",
+      "description": {
+        "en": "Has a 30% chance to chain a cluster of mobs together and keep them bound for a short time.",
+        "zh-Hant": "有 30% 機率將一群怪物束縛並鎖在一起一小段時間。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Chains",
+          "url": "https://minecraft.wiki/w/Dungeons%3AChains"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "committed",
+      "name": {
+        "en": "Committed",
+        "zh-Hant": "乘勝追擊"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "committed",
+      "pageTitle": "Committed",
+      "description": {
+        "en": "Deal increased damage against already wounded enemies.",
+        "zh-Hant": "對已受傷的敵人造成額外傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Committed",
+          "url": "https://minecraft.wiki/w/Dungeons%3ACommitted"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dynamo",
+      "name": {
+        "en": "Dynamo",
+        "zh-Hant": "蓄勢"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "dynamo",
+      "pageTitle": "Dynamo",
+      "description": {
+        "en": "Adds damage to the next attack after rolling.",
+        "zh-Hant": "翻滾後，下一次攻擊會增加傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Dynamo",
+          "url": "https://minecraft.wiki/w/Dungeons%3ADynamo"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "echo",
+      "name": {
+        "en": "Echo",
+        "zh-Hant": "回聲"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "echo",
+      "pageTitle": "Echo",
+      "description": {
+        "en": "Some of your attacks can be followed up by another attack in quick succession.",
+        "zh-Hant": "部分攻擊可在短時間內接續發動一次。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Echo",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEcho"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "enigma-resonator",
+      "name": {
+        "en": "Enigma Resonator",
+        "zh-Hant": "謎團共鳴"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "enigma-resonator",
+      "pageTitle": "Enigma Resonator",
+      "description": {
+        "en": "Gives a chance to deal triple damage based on the number of souls you have.",
+        "zh-Hant": "依你持有的靈魂數量，有機率造成三倍傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Enigma Resonator",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnigma_Resonator"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fire-aspect",
+      "name": {
+        "en": "Fire Aspect",
+        "zh-Hant": "火焰附加"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "fire-aspect",
+      "pageTitle": "Fire Aspect",
+      "description": {
+        "en": "Sets mobs on fire for three seconds, dealing damage over time.",
+        "zh-Hant": "使怪物著火 3 秒並造成持續傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Fire Aspect",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFire_Aspect"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "freezing",
+      "name": {
+        "en": "Freezing",
+        "zh-Hant": "冰凍"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "freezing",
+      "pageTitle": "Freezing",
+      "description": {
+        "en": "Slows mobs after hit for three seconds.",
+        "zh-Hant": "命中後使怪物減速 3 秒。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Freezing",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFreezing"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gravity",
+      "name": {
+        "en": "Gravity",
+        "zh-Hant": "重力"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "gravity",
+      "pageTitle": "Gravity",
+      "description": {
+        "en": "This effect pulls mobs in range toward's the weapon's impact point.",
+        "zh-Hant": "將範圍內的怪物拉向武器命中位置。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Gravity",
+          "url": "https://minecraft.wiki/w/Dungeons%3AGravity"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "guarding-strike",
+      "name": {
+        "en": "Guarding Strike",
+        "zh-Hant": "守護一擊"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "guarding-strike",
+      "pageTitle": "Guarding Strike",
+      "description": {
+        "en": "When you defeat a mob, you are given a temporary shield that reduces damage by 50%.",
+        "zh-Hant": "擊敗怪物後會獲得暫時護盾，受到的傷害降低 50%。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Guarding Strike",
+          "url": "https://minecraft.wiki/w/Dungeons%3AGuarding_Strike"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "illagers-bane",
+      "name": {
+        "en": "Illager's Bane",
+        "zh-Hant": "災厄剋星"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "illagers-bane",
+      "pageTitle": "Illager's Bane",
+      "description": {
+        "en": "Attacks deal extra damage to Illagers.",
+        "zh-Hant": "對災厄村民造成額外傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Illager's Bane",
+          "url": "https://minecraft.wiki/w/Dungeons%3AIllager's_Bane"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "leeching",
+      "name": {
+        "en": "Leeching",
+        "zh-Hant": "吸血"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "leeching",
+      "pageTitle": "Leeching",
+      "description": {
+        "en": "Defeating a mob heals you a small portion of the mob's max health.",
+        "zh-Hant": "擊敗怪物時，依其最大生命值恢復少量生命。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Leeching",
+          "url": "https://minecraft.wiki/w/Dungeons%3ALeeching"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "looting",
+      "name": {
+        "en": "Looting",
+        "zh-Hant": "掠奪"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "looting",
+      "pageTitle": "Looting",
+      "description": {
+        "en": "Increases the chance for mobs to drop consumables.",
+        "zh-Hant": "提高怪物掉落消耗品的機率。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Looting",
+          "url": "https://minecraft.wiki/w/Dungeons%3ALooting"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pain-cycle",
+      "name": {
+        "en": "Pain Cycle",
+        "zh-Hant": "痛苦循環"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "pain-cycle",
+      "pageTitle": "Pain Cycle",
+      "description": {
+        "en": "Attacking drains your life to grant one stack of Pain Cycle. At 5 stacks, your pain is channeled into your next attack.",
+        "zh-Hant": "攻擊會消耗生命並取得一層痛苦循環；累積 5 層後，痛苦會灌注至下一次攻擊。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Pain Cycle",
+          "url": "https://minecraft.wiki/w/Dungeons%3APain_Cycle"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poison-cloud",
+      "name": {
+        "en": "Poison Cloud",
+        "zh-Hant": "毒雲"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "poison-cloud",
+      "pageTitle": "Poison Cloud",
+      "description": {
+        "en": "Has a 30% chance to summon a poison cloud that deals damage to enemies in an area for three seconds.",
+        "zh-Hant": "有 30% 機率召喚毒雲，對範圍內敵人造成 3 秒傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Poison Cloud",
+          "url": "https://minecraft.wiki/w/Dungeons%3APoison_Cloud"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "prospector",
+      "name": {
+        "en": "Prospector",
+        "zh-Hant": "探勘者"
+      },
+      "categories": [
+        "Melee",
+        "Ranged",
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "prospector",
+      "pageTitle": "Prospector",
+      "description": {
+        "en": "Enemies you defeat have a higher chance of dropping emeralds.",
+        "zh-Hant": "擊敗敵人時更容易掉落綠寶石。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Prospector",
+          "url": "https://minecraft.wiki/w/Dungeons%3AProspector"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged, Armor",
+            "zh-Hant": "近戰武器、遠程武器、盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "radiance",
+      "name": {
+        "en": "Radiance",
+        "zh-Hant": "光輝"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common",
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "radiance",
+      "pageTitle": "Radiance",
+      "description": {
+        "en": "Has a 20% chance to spawn a circular area that heals you and all allies within the area.",
+        "zh-Hant": "有 20% 機率生成圓形治療區域，恢復你與隊友的生命。"
+      },
+      "badge": {
+        "en": "Common / Powerful",
+        "zh-Hant": "普通／強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Radiance",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARadiance"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        },
+        {
+          "label": {
+            "en": "Ranged name",
+            "zh-Hant": "遠程名稱"
+          },
+          "value": {
+            "en": "Radiance Shot",
+            "zh-Hant": "遠程武器稱為 Radiance Shot"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rampaging",
+      "name": {
+        "en": "Rampaging",
+        "zh-Hant": "狂暴"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "rampaging",
+      "pageTitle": "Rampaging",
+      "description": {
+        "en": "After defeating a mob, there is a 10% chance to increase your attack speed by +50% for a short time.",
+        "zh-Hant": "擊敗怪物後有 10% 機率短暫提高 50% 攻擊速度。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Rampaging",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARampaging"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sharpness",
+      "name": {
+        "en": "Sharpness",
+        "zh-Hant": "鋒利"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "sharpness",
+      "pageTitle": "Sharpness",
+      "description": {
+        "en": "Makes your weapon sharper, causing it to deal more damage.",
+        "zh-Hant": "使武器更鋒利，造成更多傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Sharpness",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASharpness"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "smiting",
+      "name": {
+        "en": "Smiting",
+        "zh-Hant": "懲戒"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "smiting",
+      "pageTitle": "Smiting",
+      "description": {
+        "en": "Increases damage against the Undead.",
+        "zh-Hant": "對亡靈造成額外傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Smiting",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASmiting"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "soul-siphon",
+      "name": {
+        "en": "Soul Siphon",
+        "zh-Hant": "靈魂虹吸"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "soul-siphon",
+      "pageTitle": "Soul Siphon",
+      "description": {
+        "en": "When you hit an enemy, gain a 20% chance to grant you a bunch of extra souls.",
+        "zh-Hant": "命中敵人時有 20% 機率獲得額外靈魂。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Soul Siphon",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASoul_Siphon"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "stunning",
+      "name": {
+        "en": "Stunning",
+        "zh-Hant": "擊暈"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "stunning",
+      "pageTitle": "Stunning",
+      "description": {
+        "en": "Chance to temporarily stun enemies.",
+        "zh-Hant": "有機率暫時擊暈敵人。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Stunning",
+          "url": "https://minecraft.wiki/w/Dungeons%3AStunning"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thundering",
+      "name": {
+        "en": "Thundering",
+        "zh-Hant": "雷霆"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "thundering",
+      "pageTitle": "Thundering",
+      "description": {
+        "en": "Has a 30% chance to summon a lightning strike that damages nearby enemies.",
+        "zh-Hant": "有 30% 機率召喚閃電，傷害附近敵人。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Thundering",
+          "url": "https://minecraft.wiki/w/Dungeons%3AThundering"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "unchanting",
+      "name": {
+        "en": "Unchanting",
+        "zh-Hant": "反附魔"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "unchanting",
+      "pageTitle": "Unchanting",
+      "description": {
+        "en": "Deal more damage to enchanted enemies.",
+        "zh-Hant": "對附魔敵人造成更多傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Unchanting",
+          "url": "https://minecraft.wiki/w/Dungeons%3AUnchanting"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "weakening",
+      "name": {
+        "en": "Weakening",
+        "zh-Hant": "虛弱"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "weakening",
+      "pageTitle": "Weakening",
+      "description": {
+        "en": "Your attacks decrease the attack damage of all nearby enemies for five seconds.",
+        "zh-Hant": "你的攻擊會使附近敵人的攻擊傷害降低 5 秒。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Weakening",
+          "url": "https://minecraft.wiki/w/Dungeons%3AWeakening"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "critical-hit",
+      "name": {
+        "en": "Critical Hit",
+        "zh-Hant": "暴擊"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "critical-hit",
+      "pageTitle": "Critical Hit",
+      "description": {
+        "en": "Gives you a chance to inflict critical hits dealing triple damage.",
+        "zh-Hant": "有機率造成三倍傷害的暴擊。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Critical Hit",
+          "url": "https://minecraft.wiki/w/Dungeons%3ACritical_Hit"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "exploding",
+      "name": {
+        "en": "Exploding",
+        "zh-Hant": "爆炸"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "exploding",
+      "pageTitle": "Exploding",
+      "description": {
+        "en": "Mobs explode after they are defeated.",
+        "zh-Hant": "怪物被擊敗後會爆炸。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Exploding",
+          "url": "https://minecraft.wiki/w/Dungeons%3AExploding"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "refreshment",
+      "name": {
+        "en": "Refreshment",
+        "zh-Hant": "清新"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "refreshment",
+      "pageTitle": "Refreshment",
+      "description": {
+        "en": "Defeating a mob reduces your health potion's cooldown time, allowing you to heal again more quickly.",
+        "zh-Hant": "擊敗怪物會縮短生命藥水冷卻時間，讓你更快恢復生命。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Refreshment",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARefreshment"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shockwave",
+      "name": {
+        "en": "Shockwave",
+        "zh-Hant": "衝擊波"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "shockwave",
+      "pageTitle": "Shockwave",
+      "description": {
+        "en": "The last attack in a combo launches a shockwave, damaging enemies.",
+        "zh-Hant": "連擊最後一擊會釋放衝擊波，傷害敵人。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shockwave",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShockwave"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swirling",
+      "name": {
+        "en": "Swirling",
+        "zh-Hant": "旋風"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "swirling",
+      "pageTitle": "Swirling",
+      "description": {
+        "en": "The last attack in a combo performs a swirling attack, damaging nearby enemies.",
+        "zh-Hant": "連擊最後一擊會旋轉攻擊，傷害附近敵人。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Swirling",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASwirling"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "void-strike",
+      "name": {
+        "en": "Void Strike",
+        "zh-Hant": "虛空打擊"
+      },
+      "categories": [
+        "Melee",
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "void-strike",
+      "pageTitle": "Void Strike",
+      "description": {
+        "en": "Attacking a target applies a damage multiplier that rises steadily to a max level, then is removed",
+        "zh-Hant": "攻擊目標會施加逐漸提升的傷害倍率，達到上限後移除。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Void Strike",
+          "url": "https://minecraft.wiki/w/Dungeons%3AVoid_Strike"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged",
+            "zh-Hant": "近戰武器、遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        },
+        {
+          "label": {
+            "en": "Ranged name",
+            "zh-Hant": "遠程名稱"
+          },
+          "value": {
+            "en": "Void Shot on some built-in ranged equipment",
+            "zh-Hant": "部分固有遠程武器上稱為 Void Shot"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accelerate",
+      "name": {
+        "en": "Accelerate",
+        "zh-Hant": "加速"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "accelerate",
+      "pageTitle": "Accelerate",
+      "description": {
+        "en": "Increases attack speed for each consecutive shot. Resets one second after the attack.",
+        "zh-Hant": "連續射擊會提高攻擊速度；停止攻擊 1 秒後重置。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Accelerate",
+          "url": "https://minecraft.wiki/w/Dungeons%3AAccelerate"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "artifact-charge",
+      "name": {
+        "en": "Artifact Charge",
+        "zh-Hant": "神器充能"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "artifact-charge",
+      "pageTitle": "Artifact Charge",
+      "description": {
+        "en": "Whenever you use an artifact, your next few attacks become charged.",
+        "zh-Hant": "使用神器後，接下來數次攻擊會獲得蓄力。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Artifact Charge",
+          "url": "https://minecraft.wiki/w/Dungeons%3AArtifact_Charge"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bonus-shot",
+      "name": {
+        "en": "Bonus Shot",
+        "zh-Hant": "額外射擊"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "bonus-shot",
+      "pageTitle": "Bonus Shot",
+      "description": {
+        "en": "Firing a shot also fires a second shot at a nearby enemy. The second shot has reduced damage.",
+        "zh-Hant": "射擊時還會向附近敵人發射第二支傷害較低的箭矢。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Bonus Shot",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABonus_Shot"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burst-bowstring",
+      "name": {
+        "en": "Burst Bowstring",
+        "zh-Hant": "爆裂弓弦"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "burst-bowstring",
+      "pageTitle": "Burst Bowstring",
+      "description": {
+        "en": "Shoots nearby mobs when you roll, costing one arrow per roll. Projectiles deal 40% of a charged shot's damage.",
+        "zh-Hant": "翻滾時會向附近怪物射箭，每次消耗 1 支箭；投射物造成蓄力射擊傷害的 40%。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Burst Bowstring",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABurst_Bowstring"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cooldown-shot",
+      "name": {
+        "en": "Cooldown Shot",
+        "zh-Hant": "冷卻射擊"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "cooldown-shot",
+      "pageTitle": "Cooldown Shot",
+      "description": {
+        "en": "When you attack with a charged shot, artifact cooldowns are decreased.",
+        "zh-Hant": "使用蓄力射擊攻擊時會縮短神器冷卻時間。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Cooldown Shot",
+          "url": "https://minecraft.wiki/w/Dungeons%3ACooldown_Shot"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dipping-poison",
+      "name": {
+        "en": "Dipping Poison",
+        "zh-Hant": "毒液箭"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "dipping-poison",
+      "pageTitle": "Dipping Poison",
+      "description": {
+        "en": "When you use a health potion, you are given a quiver of Poison Arrows.",
+        "zh-Hant": "使用生命藥水後會獲得一袋毒箭。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Dipping Poison",
+          "url": "https://minecraft.wiki/w/Dungeons%3ADipping_Poison"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fuse-shot",
+      "name": {
+        "en": "Fuse Shot",
+        "zh-Hant": "引信射擊"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "fuse-shot",
+      "pageTitle": "Fuse Shot",
+      "description": {
+        "en": "Every few shots has a timed charge that explodes one second after impact, dealing 100% damage to nearby mobs.",
+        "zh-Hant": "每隔數次射擊會射出定時箭矢；命中後 1 秒爆炸，對附近怪物造成 100% 傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Fuse Shot",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFuse_Shot"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "growing",
+      "name": {
+        "en": "Growing",
+        "zh-Hant": "增長"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "growing",
+      "pageTitle": "Growing",
+      "description": {
+        "en": "The fired shot grows in the air, dealing extra damage to distant targets.",
+        "zh-Hant": "射出的箭矢會在空中變大，對較遠目標造成額外傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Growing",
+          "url": "https://minecraft.wiki/w/Dungeons%3AGrowing"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "infinity",
+      "name": {
+        "en": "Infinity",
+        "zh-Hant": "無限"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "infinity",
+      "pageTitle": "Infinity",
+      "description": {
+        "en": "Chance to immediately replenish an arrow after shooting.",
+        "zh-Hant": "射擊後有機率立即補回一支箭。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Infinity",
+          "url": "https://minecraft.wiki/w/Dungeons%3AInfinity"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "multishot",
+      "name": {
+        "en": "Multishot",
+        "zh-Hant": "多重射擊"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "multishot",
+      "pageTitle": "Multishot",
+      "description": {
+        "en": "Grants the chance to fire five arrows at once.",
+        "zh-Hant": "有機率一次射出五支箭。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Multishot",
+          "url": "https://minecraft.wiki/w/Dungeons%3AMultishot"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "piercing",
+      "name": {
+        "en": "Piercing",
+        "zh-Hant": "穿透"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "piercing",
+      "pageTitle": "Piercing",
+      "description": {
+        "en": "Fired arrows sometimes gain the piercing effect, which allows them to fly through multiple mobs.",
+        "zh-Hant": "箭矢有時會獲得穿透效果，穿過多個怪物。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Piercing",
+          "url": "https://minecraft.wiki/w/Dungeons%3APiercing"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "power",
+      "name": {
+        "en": "Power",
+        "zh-Hant": "強力"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "power",
+      "pageTitle": "Power",
+      "description": {
+        "en": "Power boosts arrow damage.",
+        "zh-Hant": "提高箭矢傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Power",
+          "url": "https://minecraft.wiki/w/Dungeons%3APower"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "punch",
+      "name": {
+        "en": "Punch",
+        "zh-Hant": "衝擊"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "punch",
+      "pageTitle": "Punch",
+      "description": {
+        "en": "Boosts arrow pushback.",
+        "zh-Hant": "提高箭矢擊退效果。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Punch",
+          "url": "https://minecraft.wiki/w/Dungeons%3APunch"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rapid-fire",
+      "name": {
+        "en": "Rapid Fire",
+        "zh-Hant": "速射"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "rapid-fire",
+      "pageTitle": "Rapid Fire",
+      "description": {
+        "en": "Increases your attack speed.",
+        "zh-Hant": "提高攻擊速度。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Rapid Fire",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARapid_Fire"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ricochet",
+      "name": {
+        "en": "Ricochet",
+        "zh-Hant": "彈射"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "ricochet",
+      "pageTitle": "Ricochet",
+      "description": {
+        "en": "Small chance for arrows to ricochet off mobs.",
+        "zh-Hant": "箭矢有小機率從怪物身上彈射。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Ricochet",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARicochet"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "roll-charge",
+      "name": {
+        "en": "Roll Charge",
+        "zh-Hant": "翻滾蓄力"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "roll-charge",
+      "pageTitle": "Roll Charge",
+      "description": {
+        "en": "When you perform a roll, your next ranged attack within the timing window will automatically be fully charged.",
+        "zh-Hant": "翻滾後的時限內，下一次遠程攻擊會自動蓄滿。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Roll Charge",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARoll_Charge"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "supercharge",
+      "name": {
+        "en": "Supercharge",
+        "zh-Hant": "超級充能"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "supercharge",
+      "pageTitle": "Supercharge",
+      "description": {
+        "en": "Charged shots deal more damage and have more pushback.",
+        "zh-Hant": "蓄力射擊會造成更多傷害並提高擊退效果。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Supercharge",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASupercharge"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wild-rage",
+      "name": {
+        "en": "Wild Rage",
+        "zh-Hant": "狂野怒氣"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "wild-rage",
+      "pageTitle": "Wild Rage",
+      "description": {
+        "en": "Hitting an enemy has a chance to send it into a rage, making it hostile towards everyone.",
+        "zh-Hant": "命中敵人時有機率使其狂暴，轉而攻擊所有人。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Wild Rage",
+          "url": "https://minecraft.wiki/w/Dungeons%3AWild_Rage"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chain-reaction",
+      "name": {
+        "en": "Chain Reaction",
+        "zh-Hant": "連鎖反應"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "chain-reaction",
+      "pageTitle": "Chain Reaction",
+      "description": {
+        "en": "Has a chance to fire five arrows in all directions on impact.",
+        "zh-Hant": "有機率在命中時向四面八方射出五支箭。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Chain Reaction",
+          "url": "https://minecraft.wiki/w/Dungeons%3AChain_Reaction"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "levitation-shot",
+      "name": {
+        "en": "Levitation Shot",
+        "zh-Hant": "漂浮射擊"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "levitation-shot",
+      "pageTitle": "Levitation Shot",
+      "description": {
+        "en": "After rolling, your next attack will cause the target to levitate briefly.",
+        "zh-Hant": "翻滾後，下一次攻擊會使目標短暫漂浮。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Levitation Shot",
+          "url": "https://minecraft.wiki/w/Dungeons%3ALevitation_Shot"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "overcharge",
+      "name": {
+        "en": "Overcharge",
+        "zh-Hant": "過度充能"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "overcharge",
+      "pageTitle": "Overcharge",
+      "description": {
+        "en": "Continue to hold the ranged attack button to double, triple, or quadruple charge a bow, increasing its damage each time.",
+        "zh-Hant": "持續按住遠程攻擊可讓弓蓄力至雙倍、三倍或四倍，並逐步提高傷害。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Overcharge",
+          "url": "https://minecraft.wiki/w/Dungeons%3AOvercharge"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shock-web",
+      "name": {
+        "en": "Shock Web",
+        "zh-Hant": "電擊網"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "shock-web",
+      "pageTitle": "Shock Web",
+      "description": {
+        "en": "Beams of lightning connect the last few charged arrows fired, which deal lightning damage to enemies who touch a beam.",
+        "zh-Hant": "最近射出的數支蓄力箭會以閃電束相連，接觸電束的敵人會受到閃電傷害。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shock Web",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShock_Web"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tempo-theft",
+      "name": {
+        "en": "Tempo Theft",
+        "zh-Hant": "節奏竊取"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "tempo-theft",
+      "pageTitle": "Tempo Theft",
+      "description": {
+        "en": "Steals a small amount of a mob's movement speed and gives it to you for four seconds.",
+        "zh-Hant": "竊取怪物少量移動速度，並轉移給你 4 秒。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Tempo Theft",
+          "url": "https://minecraft.wiki/w/Dungeons%3ATempo_Theft"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "acrobat",
+      "name": {
+        "en": "Acrobat",
+        "zh-Hant": "特技"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "acrobat",
+      "pageTitle": "Acrobat",
+      "description": {
+        "en": "Reduces the cooldown time between your rolls.",
+        "zh-Hant": "縮短翻滾之間的冷卻時間。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Acrobat",
+          "url": "https://minecraft.wiki/w/Dungeons%3AAcrobat"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bag-of-souls",
+      "name": {
+        "en": "Bag of Souls",
+        "zh-Hant": "靈魂袋"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "bag-of-souls",
+      "pageTitle": "Bag of Souls",
+      "description": {
+        "en": "Increases the maximum number of souls that can be carried.",
+        "zh-Hant": "提高可攜帶的靈魂上限。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Bag of Souls",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABag_of_Souls"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "beast-boss",
+      "name": {
+        "en": "Beast Boss",
+        "zh-Hant": "野獸領袖"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "beast-boss",
+      "pageTitle": "Beast Boss",
+      "description": {
+        "en": "Your pets deal more damage.",
+        "zh-Hant": "提高寵物造成的傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Beast Boss",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABeast_Boss"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "beast-burst",
+      "name": {
+        "en": "Beast Burst",
+        "zh-Hant": "野獸爆發"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "beast-burst",
+      "pageTitle": "Beast Burst",
+      "description": {
+        "en": "Using a healing potion causes an explosion at your pets' locations, dealing damage to mobs around them.",
+        "zh-Hant": "使用治療藥水會在寵物所在位置引發爆炸，傷害附近怪物。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Beast Burst",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABeast_Burst"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "beast-surge",
+      "name": {
+        "en": "Beast Surge",
+        "zh-Hant": "野獸激增"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "beast-surge",
+      "pageTitle": "Beast Surge",
+      "description": {
+        "en": "Using your health potion boosts your pets' attack and movement speed for 10 seconds.",
+        "zh-Hant": "使用生命藥水會提高寵物的攻擊與移動速度，持續 10 秒。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Beast Surge",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABeast_Surge"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "burning",
+      "name": {
+        "en": "Burning",
+        "zh-Hant": "燃燒"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "burning",
+      "pageTitle": "Burning",
+      "description": {
+        "en": "Every 0.5 seconds damages all nearby enemies.",
+        "zh-Hant": "每 0.5 秒傷害附近所有敵人。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Burning",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABurning"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cool-down",
+      "name": {
+        "en": "Cool Down",
+        "zh-Hant": "冷卻"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "cool-down",
+      "pageTitle": "Cool Down",
+      "description": {
+        "en": "Reduces the cooldown time between uses of your artifacts.",
+        "zh-Hant": "縮短神器之間的使用冷卻時間。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Cool Down",
+          "url": "https://minecraft.wiki/w/Dungeons%3ACool_Down"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cowardice",
+      "name": {
+        "en": "Cowardice",
+        "zh-Hant": "怯懦"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "cowardice",
+      "pageTitle": "Cowardice",
+      "description": {
+        "en": "While you are at full HP, you deal increased ranged and melee damage.",
+        "zh-Hant": "生命值全滿時，提高遠程與近戰傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Cowardice",
+          "url": "https://minecraft.wiki/w/Dungeons%3ACowardice"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "deflect",
+      "name": {
+        "en": "Deflect",
+        "zh-Hant": "偏轉"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "deflect",
+      "pageTitle": "Deflect",
+      "description": {
+        "en": "Grants a small chance to deflect incoming projectiles.",
+        "zh-Hant": "有小機率偏轉來襲投射物。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Deflect",
+          "url": "https://minecraft.wiki/w/Dungeons%3ADeflect"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "electrified",
+      "name": {
+        "en": "Electrified",
+        "zh-Hant": "帶電"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "electrified",
+      "pageTitle": "Electrified",
+      "description": {
+        "en": "Rolling zaps two nearby enemies with lightning bolts, dealing damage.",
+        "zh-Hant": "翻滾時以閃電擊中附近兩名敵人並造成傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Electrified",
+          "url": "https://minecraft.wiki/w/Dungeons%3AElectrified"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "explorer",
+      "name": {
+        "en": "Explorer",
+        "zh-Hant": "探索者"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "explorer",
+      "pageTitle": "Explorer",
+      "description": {
+        "en": "For every one hundred blocks explored on the map, you regain a small amount of health.",
+        "zh-Hant": "每探索地圖上的 100 個方塊，就恢復少量生命值。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Explorer",
+          "url": "https://minecraft.wiki/w/Dungeons%3AExplorer"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fire-trail",
+      "name": {
+        "en": "Fire Trail",
+        "zh-Hant": "火焰軌跡"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "fire-trail",
+      "pageTitle": "Fire Trail",
+      "description": {
+        "en": "Rolling creates a trail of fire behind you, which deals damage to mobs for four seconds.",
+        "zh-Hant": "翻滾時會在身後留下火焰軌跡，持續傷害怪物 4 秒。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Fire Trail",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFire_Trail"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "food-reserves",
+      "name": {
+        "en": "Food Reserves",
+        "zh-Hant": "食物儲備"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "food-reserves",
+      "pageTitle": "Food Reserves",
+      "description": {
+        "en": "Whenever you use a healing potion, you also create random food items.",
+        "zh-Hant": "使用治療藥水時也會生成隨機食物。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Food Reserves",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFood_Reserves"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "frenzied",
+      "name": {
+        "en": "Frenzied",
+        "zh-Hant": "狂亂"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "frenzied",
+      "pageTitle": "Frenzied",
+      "description": {
+        "en": "While you are at less than half health, your melee and ranged attack speeds are increased.",
+        "zh-Hant": "生命值低於一半時，提高近戰與遠程攻擊速度。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Frenzied",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFrenzied"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "health-synergy",
+      "name": {
+        "en": "Health Synergy",
+        "zh-Hant": "生命協同"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "health-synergy",
+      "pageTitle": "Health Synergy",
+      "description": {
+        "en": "When activating any artifact, you regain a small amount of health.",
+        "zh-Hant": "啟動任何神器時恢復少量生命值。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Health Synergy",
+          "url": "https://minecraft.wiki/w/Dungeons%3AHealth_Synergy"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "life-boost",
+      "name": {
+        "en": "Life Boost",
+        "zh-Hant": "生命提升"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "life-boost",
+      "pageTitle": "Life Boost",
+      "description": {
+        "en": "Each time you respawn, your maximum health increases. Health goes back to normal after each mission.",
+        "zh-Hant": "每次重生時提高最大生命值；每場任務結束後恢復原狀。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Life Boost",
+          "url": "https://minecraft.wiki/w/Dungeons%3ALife_Boost"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "luck-of-the-sea",
+      "name": {
+        "en": "Luck of the Sea",
+        "zh-Hant": "海洋幸運"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "luck-of-the-sea",
+      "pageTitle": "Luck of the Sea",
+      "description": {
+        "en": "Increases your luck, which boosts the chance that rare drops become unique.",
+        "zh-Hant": "提高幸運值，增加稀有掉落物成為獨特物品的機率。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Luck of the Sea",
+          "url": "https://minecraft.wiki/w/Dungeons%3ALuck_of_the_Sea"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lucky-explorer",
+      "name": {
+        "en": "Lucky Explorer",
+        "zh-Hant": "幸運探索者"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "lucky-explorer",
+      "pageTitle": "Lucky Explorer",
+      "description": {
+        "en": "Chance to spawn emeralds with every block explored.",
+        "zh-Hant": "探索每個方塊時都有機率生成綠寶石。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Lucky Explorer",
+          "url": "https://minecraft.wiki/w/Dungeons%3ALucky_Explorer"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potion-barrier",
+      "name": {
+        "en": "Potion Barrier",
+        "zh-Hant": "藥水屏障"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "potion-barrier",
+      "pageTitle": "Potion Barrier",
+      "description": {
+        "en": "Whenever you use a healing potion, you take -90% damage for a short duration.",
+        "zh-Hant": "使用治療藥水時，短時間內受到的傷害降低 90%。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Potion Barrier",
+          "url": "https://minecraft.wiki/w/Dungeons%3APotion_Barrier"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reckless",
+      "name": {
+        "en": "Reckless",
+        "zh-Hant": "魯莽"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "reckless",
+      "pageTitle": "Reckless",
+      "description": {
+        "en": "Your health is decreased by 40%, but your melee damage is increased.",
+        "zh-Hant": "生命值降低 40%，但近戰傷害提高。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Reckless",
+          "url": "https://minecraft.wiki/w/Dungeons%3AReckless"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "recycler",
+      "name": {
+        "en": "Recycler",
+        "zh-Hant": "回收"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "recycler",
+      "pageTitle": "Recycler",
+      "description": {
+        "en": "Being hit by damage-inflicting projectiles will occasionally craft a small quiver of arrows.",
+        "zh-Hant": "受到造成傷害的投射物擊中時，有機率生成一小袋箭矢。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Recycler",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARecycler"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rush",
+      "name": {
+        "en": "Rush",
+        "zh-Hant": "急速"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "rush",
+      "pageTitle": "Rush",
+      "description": {
+        "en": "Increases movement speed for one second after taking damage.",
+        "zh-Hant": "受到傷害後提高移動速度 1 秒。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Rush",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARush"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shadow-blast",
+      "name": {
+        "en": "Shadow Blast",
+        "zh-Hant": "暗影爆破"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "shadow-blast",
+      "pageTitle": "Shadow Blast",
+      "description": {
+        "en": "Leaving Shadow Form triggers a powerful blast that damages nearby mobs.",
+        "zh-Hant": "離開暗影形態時會引發強力爆炸，傷害附近怪物。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shadow Blast",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShadow_Blast"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shadow-surge",
+      "name": {
+        "en": "Shadow Surge",
+        "zh-Hant": "暗影激增"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "shadow-surge",
+      "pageTitle": "Shadow Surge",
+      "description": {
+        "en": "Mobs defeated while in Shadow Form grant extra souls",
+        "zh-Hant": "在暗影形態下擊敗怪物可獲得額外靈魂。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shadow Surge",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShadow_Surge"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "snowball",
+      "name": {
+        "en": "Snowball",
+        "zh-Hant": "雪球"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "snowball",
+      "pageTitle": "Snowball",
+      "description": {
+        "en": "Fires a snowball at a nearby enemy every few seconds, briefly stunning it.",
+        "zh-Hant": "每隔數秒向附近敵人發射雪球，使其短暫暈眩。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Snowball",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASnowball"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "soul-speed",
+      "name": {
+        "en": "Soul Speed",
+        "zh-Hant": "靈魂疾行"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "soul-speed",
+      "pageTitle": "Soul Speed",
+      "description": {
+        "en": "When you gather a soul, you gain a 5% stacking movement speed boost for a short time.",
+        "zh-Hant": "收集靈魂時獲得可疊加的 5% 移動速度加成，持續一小段時間。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Soul Speed",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASoul_Speed"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "speed-synergy",
+      "name": {
+        "en": "Speed Synergy",
+        "zh-Hant": "速度協同"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "speed-synergy",
+      "pageTitle": "Speed Synergy",
+      "description": {
+        "en": "When activating any artifact, you gain +20% movement speed for a short time.",
+        "zh-Hant": "啟動任何神器時，短時間內提高 20% 移動速度。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Speed Synergy",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASpeed_Synergy"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "surprise-gift",
+      "name": {
+        "en": "Surprise Gift",
+        "zh-Hant": "驚喜禮物"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "surprise-gift",
+      "pageTitle": "Surprise Gift",
+      "description": {
+        "en": "Whenever you use a healing potion, you sometimes create random consumables.",
+        "zh-Hant": "使用治療藥水時，有時也會生成隨機消耗品。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Surprise Gift",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASurprise_Gift"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "swiftfooted",
+      "name": {
+        "en": "Swiftfooted",
+        "zh-Hant": "輕快步伐"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "swiftfooted",
+      "pageTitle": "Swiftfooted",
+      "description": {
+        "en": "Rolling makes you move faster for three seconds.",
+        "zh-Hant": "翻滾後移動速度提高 3 秒。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Swiftfooted",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASwiftfooted"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thorns",
+      "name": {
+        "en": "Thorns",
+        "zh-Hant": "荊棘"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "thorns",
+      "pageTitle": "Thorns",
+      "description": {
+        "en": "Whenever you take damage, you deal damage back to the attacker.",
+        "zh-Hant": "受到傷害時，會對攻擊者造成傷害。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Thorns",
+          "url": "https://minecraft.wiki/w/Dungeons%3AThorns"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tumblebee",
+      "name": {
+        "en": "Tumblebee",
+        "zh-Hant": "翻滾蜂"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "tumblebee",
+      "pageTitle": "Tumblebee",
+      "description": {
+        "en": "Chance to summon a bee when you roll, with up to 3 bees joining your side.",
+        "zh-Hant": "翻滾時有機率召喚蜜蜂，最多可有 3 隻加入你的一方。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Tumblebee",
+          "url": "https://minecraft.wiki/w/Dungeons%3ATumblebee"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chilling",
+      "name": {
+        "en": "Chilling",
+        "zh-Hant": "寒冷"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "chilling",
+      "pageTitle": "Chilling",
+      "description": {
+        "en": "Emits a blast every two seconds that reduces the movement and attack speed of nearby enemies for one second.",
+        "zh-Hant": "每 2 秒釋放一次爆發，使附近敵人的移動與攻擊速度降低 1 秒。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Chilling",
+          "url": "https://minecraft.wiki/w/Dungeons%3AChilling"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "death-barter",
+      "name": {
+        "en": "Death Barter",
+        "zh-Hant": "死亡交易"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "death-barter",
+      "pageTitle": "Death Barter",
+      "description": {
+        "en": "The first amount of emeralds collected are stored and then spent to save the player from death.",
+        "zh-Hant": "收集到的第一批綠寶石會被存起來，並在你瀕死時消耗以救你一命。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Death Barter",
+          "url": "https://minecraft.wiki/w/Dungeons%3ADeath_Barter"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "final-shout",
+      "name": {
+        "en": "Final Shout",
+        "zh-Hant": "最後吶喊"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "final-shout",
+      "pageTitle": "Final Shout",
+      "description": {
+        "en": "When your health drops below 25%, all your artifacts are used (ignoring cooldown periods).",
+        "zh-Hant": "生命值低於 25% 時，所有神器會無視冷卻時間自動使用。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Final Shout",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFinal_Shout"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fire-focus",
+      "name": {
+        "en": "Fire Focus",
+        "zh-Hant": "火焰專注"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "fire-focus",
+      "pageTitle": "Fire Focus",
+      "description": {
+        "en": "The fire damage you deal is increased.",
+        "zh-Hant": "提高你造成的火焰傷害。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Fire Focus",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFire_Focus"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gravity-pulse",
+      "name": {
+        "en": "Gravity Pulse",
+        "zh-Hant": "重力脈衝"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "gravity-pulse",
+      "pageTitle": "Gravity Pulse",
+      "description": {
+        "en": "A blast occurs every three seconds that pulls nearby enemies towards you.",
+        "zh-Hant": "每 3 秒產生一次爆發，將附近敵人拉向你。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Gravity Pulse",
+          "url": "https://minecraft.wiki/w/Dungeons%3AGravity_Pulse"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lightning-focus",
+      "name": {
+        "en": "Lightning Focus",
+        "zh-Hant": "閃電專注"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "lightning-focus",
+      "pageTitle": "Lightning Focus",
+      "description": {
+        "en": "The lightning damage you deal is increased.",
+        "zh-Hant": "提高你造成的閃電傷害。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Lightning Focus",
+          "url": "https://minecraft.wiki/w/Dungeons%3ALightning_Focus"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "multi-roll",
+      "name": {
+        "en": "Multi-Roll",
+        "zh-Hant": "多重翻滾"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "multi-roll",
+      "pageTitle": "Multi-Roll",
+      "description": {
+        "en": "Grants extra rolls.",
+        "zh-Hant": "增加可使用的翻滾次數。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Multi-Roll",
+          "url": "https://minecraft.wiki/w/Dungeons%3AMulti-Roll"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "poison-focus",
+      "name": {
+        "en": "Poison Focus",
+        "zh-Hant": "毒素專注"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "poison-focus",
+      "pageTitle": "Poison Focus",
+      "description": {
+        "en": "The poison damage you deal is increased.",
+        "zh-Hant": "提高你造成的毒素傷害。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Poison Focus",
+          "url": "https://minecraft.wiki/w/Dungeons%3APoison_Focus"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "protection",
+      "name": {
+        "en": "Protection",
+        "zh-Hant": "防護"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "protection",
+      "pageTitle": "Protection",
+      "description": {
+        "en": "Reduces damage taken.",
+        "zh-Hant": "降低受到的傷害。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Protection",
+          "url": "https://minecraft.wiki/w/Dungeons%3AProtection"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "soul-focus",
+      "name": {
+        "en": "Soul Focus",
+        "zh-Hant": "靈魂專注"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Hero-accessible"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "soul-focus",
+      "pageTitle": "Soul Focus",
+      "description": {
+        "en": "Increases the amount of soul damage you deal.",
+        "zh-Hant": "提高你造成的靈魂傷害。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Soul Focus",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASoul_Focus"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Hero-accessible",
+            "zh-Hant": "英雄可用"
+          }
+        }
+      ]
+    },
+    {
+      "id": "jungle-poison",
+      "name": {
+        "en": "Jungle Poison",
+        "zh-Hant": "叢林毒素"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "jungle-poison",
+      "pageTitle": "Jungle Poison",
+      "description": {
+        "en": "Inflicts Poison",
+        "zh-Hant": "使敵人中毒。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Jungle Poison",
+          "url": "https://minecraft.wiki/w/Dungeons%3AJungle_Poison"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rushdown",
+      "name": {
+        "en": "Rushdown",
+        "zh-Hant": "急衝"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "rushdown",
+      "pageTitle": "Rushdown",
+      "description": {
+        "en": "100% increased speed temporarily after defeating a mob.",
+        "zh-Hant": "擊敗怪物後，短暫提高 100% 移動速度。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Rushdown",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARushdown"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shared-pain",
+      "name": {
+        "en": "Shared Pain",
+        "zh-Hant": "分擔痛苦"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "shared-pain",
+      "pageTitle": "Shared Pain",
+      "description": {
+        "en": "Excess damage hits nearby mobs.",
+        "zh-Hant": "超出目標所需的傷害會波及附近怪物。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shared Pain",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShared_Pain"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reliable-ricochet",
+      "name": {
+        "en": "Reliable Ricochet",
+        "zh-Hant": "穩定彈射"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "reliable-ricochet",
+      "pageTitle": "Reliable Ricochet",
+      "description": {
+        "en": "Hits Multiple targets when charged",
+        "zh-Hant": "蓄力箭會在怪物之間彈射，最多命中三次。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Reliable Ricochet",
+          "url": "https://minecraft.wiki/w/Dungeons%3AReliable_Ricochet"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shadow-barb",
+      "name": {
+        "en": "Shadow Barb",
+        "zh-Hant": "暗影倒鉤"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Unknown"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "shadow-barb",
+      "pageTitle": "Shadow Barb",
+      "description": {
+        "en": "First shot does not break Shadow Form.",
+        "zh-Hant": "第一發射擊不會解除暗影形態。"
+      },
+      "badge": {
+        "en": "Unknown",
+        "zh-Hant": "未知"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shadow Barb",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShadow_Barb"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shadow-shot",
+      "name": {
+        "en": "Shadow Shot",
+        "zh-Hant": "暗影射擊"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "shadow-shot",
+      "pageTitle": "Shadow Shot",
+      "description": {
+        "en": "Chance of Shadow Form on kills",
+        "zh-Hant": "擊殺時有機率進入暗影形態。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shadow Shot",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShadow_Shot"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wind-bow-enchantment",
+      "name": {
+        "en": "Wind Bow (enchantment)",
+        "zh-Hant": "風弓附魔"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "wind-bow-enchantment",
+      "pageTitle": "Wind Bow (enchantment)",
+      "description": {
+        "en": "Fully charged arrows become gale arrows; hitting an enemy with one forms a helix of wind that pulls the enemy closer to the player.",
+        "zh-Hant": "完全蓄力的箭會變成疾風箭；命中敵人後形成風旋，將敵人拉近。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Wind Bow (enchantment)",
+          "url": "https://minecraft.wiki/w/Dungeons%3AWind_Bow_(enchantment)"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emerald-shield",
+      "name": {
+        "en": "Emerald Shield",
+        "zh-Hant": "綠寶石護盾"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Unknown"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "emerald-shield",
+      "pageTitle": "Emerald Shield",
+      "description": {
+        "en": "Brief damage immunity when collects an emerald",
+        "zh-Hant": "拾取綠寶石時短暫免疫傷害。"
+      },
+      "badge": {
+        "en": "Unknown",
+        "zh-Hant": "未知"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Emerald Shield",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEmerald_Shield"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "environmental-protection",
+      "name": {
+        "en": "Environmental Protection",
+        "zh-Hant": "環境防護"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Unknown"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "environmental-protection",
+      "pageTitle": "Environmental Protection",
+      "description": {
+        "en": "Environmental damage resistance.",
+        "zh-Hant": "降低環境造成的傷害。"
+      },
+      "badge": {
+        "en": "Unknown",
+        "zh-Hant": "未知"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Environmental Protection",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnvironmental_Protection"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thrive-under-pressure",
+      "name": {
+        "en": "Thrive Under Pressure",
+        "zh-Hant": "逆境求生"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Exclusive"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "thrive-under-pressure",
+      "pageTitle": "Thrive Under Pressure",
+      "description": {
+        "en": "When surrounded by 4 or more enemies, take 50% less damage.",
+        "zh-Hant": "周圍有 4 隻或更多敵人時，受到的傷害降低 50%。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Thrive Under Pressure",
+          "url": "https://minecraft.wiki/w/Dungeons%3AThrive_Under_Pressure"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Exclusive",
+            "zh-Hant": "固有附魔"
+          }
+        }
+      ]
+    },
+    {
+      "id": "knockback",
+      "name": {
+        "en": "Knockback",
+        "zh-Hant": "擊退"
+      },
+      "categories": [
+        "Melee"
+      ],
+      "sections": [
+        "Unused"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": false,
+      "seasonal": false,
+      "icon": "knockback",
+      "pageTitle": "Knockback",
+      "description": {
+        "en": "Every once in awhile, enemies will be knocked back after a melee attack.",
+        "zh-Hant": "近戰攻擊偶爾會將敵人擊退。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Knockback",
+          "url": "https://minecraft.wiki/w/Dungeons%3AKnockback"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee",
+            "zh-Hant": "近戰武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused",
+            "zh-Hant": "未使用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Not implemented; unavailable to heroes.",
+            "zh-Hant": "未實裝，英雄無法取得。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "withering",
+      "name": {
+        "en": "Withering",
+        "zh-Hant": "凋零"
+      },
+      "categories": [
+        "Melee",
+        "Ranged",
+        "Mob"
+      ],
+      "sections": [
+        "Mob-exclusive",
+        "Unused"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "withering",
+      "pageTitle": "Withering",
+      "description": {
+        "en": "Any melee weapon enchanted with Withering grants the user the ability to inflict Wither upon physical contact.",
+        "zh-Hant": "使武器使用者能透過實體接觸對目標施加凋零效果。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Withering",
+          "url": "https://minecraft.wiki/w/Dungeons%3AWithering"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Melee, Ranged, Mob",
+            "zh-Hant": "近戰武器、遠程武器、怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Mob-exclusive, Unused",
+            "zh-Hant": "怪物專用、未使用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bows-boon",
+      "name": {
+        "en": "Bow's Boon",
+        "zh-Hant": "弓之祝福"
+      },
+      "categories": [
+        "Ranged"
+      ],
+      "sections": [
+        "Unused"
+      ],
+      "rarities": [
+        "Unknown"
+      ],
+      "implemented": false,
+      "seasonal": false,
+      "icon": "bows-boon",
+      "pageTitle": "Bow's Boon",
+      "description": {
+        "en": "Arrows passing through allies gives them a small amount of damage boost.",
+        "zh-Hant": "箭矢穿過盟友時會給予少量傷害加成。"
+      },
+      "badge": {
+        "en": "Unknown",
+        "zh-Hant": "未知"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Bow's Boon",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABow's_Boon"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Ranged",
+            "zh-Hant": "遠程武器"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused",
+            "zh-Hant": "未使用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Not implemented; unavailable to heroes.",
+            "zh-Hant": "未實裝，英雄無法取得。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "barrier",
+      "name": {
+        "en": "Barrier",
+        "zh-Hant": "屏障"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Unused"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": false,
+      "seasonal": false,
+      "icon": "barrier",
+      "pageTitle": "Barrier",
+      "description": {
+        "en": "Damage resistance increases with the number of nearby enemies.",
+        "zh-Hant": "附近敵人越多，傷害抗性越高。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Barrier",
+          "url": "https://minecraft.wiki/w/Dungeons%3ABarrier"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused",
+            "zh-Hant": "未使用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Not implemented; unavailable to heroes.",
+            "zh-Hant": "未實裝，英雄無法取得。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dolphins-grace",
+      "name": {
+        "en": "Dolphin's Grace",
+        "zh-Hant": "海豚恩典"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Unused"
+      ],
+      "rarities": [
+        "Unknown"
+      ],
+      "implemented": false,
+      "seasonal": false,
+      "icon": "dolphins-grace",
+      "pageTitle": "Dolphin's Grace",
+      "description": {
+        "en": "The Wiki does not list an in-game description for this enchantment.",
+        "zh-Hant": "Wiki 未提供遊戲內說明。"
+      },
+      "badge": {
+        "en": "Unknown",
+        "zh-Hant": "未知"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Dolphin's Grace",
+          "url": "https://minecraft.wiki/w/Dungeons%3ADolphin's_Grace"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused",
+            "zh-Hant": "未使用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Not implemented; unavailable to heroes.",
+            "zh-Hant": "未實裝，英雄無法取得。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heals-allies",
+      "name": {
+        "en": "Heals Allies",
+        "zh-Hant": "治療盟友"
+      },
+      "categories": [
+        "Armor",
+        "Mob"
+      ],
+      "sections": [
+        "Unused",
+        "Mob-exclusive"
+      ],
+      "rarities": [
+        "Powerful"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "heals-allies",
+      "pageTitle": "Heals Allies",
+      "description": {
+        "en": "Whenever you take damage, you heal your allies.",
+        "zh-Hant": "你受到傷害時會治療盟友。"
+      },
+      "badge": {
+        "en": "Powerful",
+        "zh-Hant": "強力"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Heals Allies",
+          "url": "https://minecraft.wiki/w/Dungeons%3AHeals_Allies"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor, Mob",
+            "zh-Hant": "盔甲、怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused, Mob-exclusive",
+            "zh-Hant": "未使用、怪物專用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "regeneration",
+      "name": {
+        "en": "Regeneration",
+        "zh-Hant": "再生"
+      },
+      "categories": [
+        "Armor",
+        "Mob"
+      ],
+      "sections": [
+        "Unused",
+        "Mob-exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "regeneration",
+      "pageTitle": "Regeneration",
+      "description": {
+        "en": "If you avoid taking damage for 10 seconds, you will start regenerating health.",
+        "zh-Hant": "若 10 秒內未受到傷害，就會開始恢復生命。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Regeneration",
+          "url": "https://minecraft.wiki/w/Dungeons%3ARegeneration"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor, Mob",
+            "zh-Hant": "盔甲、怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused, Mob-exclusive",
+            "zh-Hant": "未使用、怪物專用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shielding",
+      "name": {
+        "en": "Shielding",
+        "zh-Hant": "護盾"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Unused"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": false,
+      "seasonal": false,
+      "icon": "shielding",
+      "pageTitle": "Shielding",
+      "description": {
+        "en": "Adds damage resistance to you and nearby allies.",
+        "zh-Hant": "為你和附近盟友增加傷害抗性。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Shielding",
+          "url": "https://minecraft.wiki/w/Dungeons%3AShielding"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused",
+            "zh-Hant": "未使用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Not implemented; unavailable to heroes.",
+            "zh-Hant": "未實裝，英雄無法取得。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "synergy",
+      "name": {
+        "en": "Synergy",
+        "zh-Hant": "協同"
+      },
+      "categories": [
+        "Armor"
+      ],
+      "sections": [
+        "Unused"
+      ],
+      "rarities": [
+        "Unknown"
+      ],
+      "implemented": false,
+      "seasonal": false,
+      "icon": "synergy",
+      "pageTitle": "Synergy",
+      "description": {
+        "en": "The Wiki does not list an in-game description for this enchantment.",
+        "zh-Hant": "Wiki 未提供遊戲內說明。"
+      },
+      "badge": {
+        "en": "Unknown",
+        "zh-Hant": "未知"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Synergy",
+          "url": "https://minecraft.wiki/w/Dungeons%3ASynergy"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Armor",
+            "zh-Hant": "盔甲"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Unused",
+            "zh-Hant": "未使用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Not implemented; unavailable to heroes.",
+            "zh-Hant": "未實裝，英雄無法取得。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "invisible",
+      "name": {
+        "en": "Invisible",
+        "zh-Hant": "隱形"
+      },
+      "categories": [
+        "Mob"
+      ],
+      "sections": [
+        "Mob-exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": true,
+      "icon": "invisible",
+      "pageTitle": "Invisible",
+      "description": {
+        "en": "Makes the mob invisible and invincible unless it is attacking or casting.",
+        "zh-Hant": "使怪物隱形並免於被攻擊，直到牠攻擊或施法。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Invisible",
+          "url": "https://minecraft.wiki/w/Dungeons%3AInvisible"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Mob",
+            "zh-Hant": "怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Mob-exclusive",
+            "zh-Hant": "怪物專用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Only used by seasonal event mobs; unavailable to heroes.",
+            "zh-Hant": "只用於季節活動怪物，英雄無法取得。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decal-trail",
+      "name": {
+        "en": "Decal Trail",
+        "zh-Hant": "虛空軌跡"
+      },
+      "categories": [
+        "Mob"
+      ],
+      "sections": [
+        "Mob-exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "decal-trail",
+      "pageTitle": "Decal Trail",
+      "description": {
+        "en": "Allows the Heart of Ender to leave a trail of void-like substance when it walks.",
+        "zh-Hant": "使心之末影在行走時留下虛空狀物質的軌跡。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Decal Trail",
+          "url": "https://minecraft.wiki/w/Dungeons%3ADecal_Trail"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Mob",
+            "zh-Hant": "怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Mob-exclusive",
+            "zh-Hant": "怪物專用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "huge",
+      "name": {
+        "en": "Huge",
+        "zh-Hant": "巨大"
+      },
+      "categories": [
+        "Mob"
+      ],
+      "sections": [
+        "Mob-exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "huge",
+      "pageTitle": "Huge",
+      "description": {
+        "en": "Makes a mob larger; its damage and health remain unchanged.",
+        "zh-Hant": "使怪物體型變大，但不提高其傷害或生命值。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Huge",
+          "url": "https://minecraft.wiki/w/Dungeons%3AHuge"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Mob",
+            "zh-Hant": "怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Mob-exclusive",
+            "zh-Hant": "怪物專用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mob-resurrection-aura",
+      "name": {
+        "en": "Mob Resurrection Aura",
+        "zh-Hant": "怪物復活光環"
+      },
+      "categories": [
+        "Mob"
+      ],
+      "sections": [
+        "Mob-exclusive"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "mob-resurrection-aura",
+      "pageTitle": "Mob Resurrection Aura",
+      "description": {
+        "en": "Allows the aura bearer to revive nearby mobs.",
+        "zh-Hant": "光環攜帶者能復活附近死亡的怪物。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Mob Resurrection Aura",
+          "url": "https://minecraft.wiki/w/Dungeons%3AMob_Resurrection_Aura"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Mob",
+            "zh-Hant": "怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Mob-exclusive",
+            "zh-Hant": "怪物專用"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "double-damage",
+      "name": {
+        "en": "Double Damage",
+        "zh-Hant": "雙倍傷害"
+      },
+      "categories": [
+        "Mob"
+      ],
+      "sections": [
+        "Enchanter's Tome"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "double-damage",
+      "pageTitle": "Double Damage",
+      "description": {
+        "en": "Doubles the damage dealt by the mob to the hero.",
+        "zh-Hant": "使怪物對英雄造成的傷害加倍。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Double Damage",
+          "url": "https://minecraft.wiki/w/Dungeons%3ADouble_Damage"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Mob",
+            "zh-Hant": "怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Enchanter's Tome",
+            "zh-Hant": "附魔師之書可施加"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fast-attack",
+      "name": {
+        "en": "Fast Attack",
+        "zh-Hant": "快速攻擊"
+      },
+      "categories": [
+        "Mob"
+      ],
+      "sections": [
+        "Enchanter's Tome"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "fast-attack",
+      "pageTitle": "Fast Attack",
+      "description": {
+        "en": "Grants mobs fast and quick attacks.",
+        "zh-Hant": "使怪物能以更快的速度攻擊。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Fast Attack",
+          "url": "https://minecraft.wiki/w/Dungeons%3AFast_Attack"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Mob",
+            "zh-Hant": "怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Enchanter's Tome",
+            "zh-Hant": "附魔師之書可施加"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "quick",
+      "name": {
+        "en": "Quick",
+        "zh-Hant": "迅捷"
+      },
+      "categories": [
+        "Mob"
+      ],
+      "sections": [
+        "Enchanter's Tome"
+      ],
+      "rarities": [
+        "Common"
+      ],
+      "implemented": true,
+      "seasonal": false,
+      "icon": "quick",
+      "pageTitle": "Quick",
+      "description": {
+        "en": "Grants the mob increased speed, similar to Swiftness.",
+        "zh-Hant": "提高怪物的移動速度。"
+      },
+      "badge": {
+        "en": "Common",
+        "zh-Hant": "普通"
+      },
+      "sources": [
+        {
+          "label": "Minecraft Wiki · Enchantment",
+          "url": "https://minecraft.wiki/w/Dungeons%3AEnchantment"
+        },
+        {
+          "label": "Minecraft Wiki · Quick",
+          "url": "https://minecraft.wiki/w/Dungeons%3AQuick"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Applicable to",
+            "zh-Hant": "適用類別"
+          },
+          "value": {
+            "en": "Mob",
+            "zh-Hant": "怪物"
+          }
+        },
+        {
+          "label": {
+            "en": "Wiki section",
+            "zh-Hant": "Wiki 分類"
+          },
+          "value": {
+            "en": "Enchanter's Tome",
+            "zh-Hant": "附魔師之書可施加"
+          }
+        },
+        {
+          "label": {
+            "en": "Hero availability",
+            "zh-Hant": "英雄可用性"
+          },
+          "value": {
+            "en": "Unavailable to heroes; the effect is active on mobs.",
+            "zh-Hant": "英雄無法取得；此效果會在怪物身上生效。"
+          }
+        }
+      ]
+    }
+  ]
+}

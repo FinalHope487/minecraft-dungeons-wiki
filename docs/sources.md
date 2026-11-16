@@ -10,13 +10,15 @@
 | 神器 | [Dungeons:Artifact](https://minecraft.wiki/w/Dungeons%3AArtifact) | 神器清單，依用途分類。 |
 | 消耗品 | [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) | 食物、藥水、彈藥和其他任務消耗品。 |
 | 其他物品 | [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) | 消耗品總表中的 Other 子類；本圖鑑獨立列為分類。 |
-| 附魔 | [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) | 近戰、遠程、盔甲、特殊與未使用附魔清單。 |
+| 附魔 | [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) | 英雄可用的近戰、遠程、盔甲附魔，以及 Exclusive、Mob-exclusive、Unused 清單。 |
 
 查找時先從這些整頁入口進入，再開對應項目條目；專案記錄頁面連結，不以單張圖片 URL 作為唯一來源。Wiki 頁面取得的圖檔依使用者指示視為該 Wiki 目前最新版，不另與舊圖逐位元比對。
 
 神器清單依 [Dungeons:Artifact](https://minecraft.wiki/w/Dungeons%3AArtifact) 各分類表格逐列核對，包含未使用區。該頁文字統計寫 46 件，但表格列出 45 件已實裝或季節限定神器及 8 件未使用神器；[Dungeons:Item](https://minecraft.wiki/w/Dungeons%3AItem) 的具名清單也列 44 件加 Corrupted Pumpkin 與 8 件未使用項目。本專案以具名表格和清單為準，固定收錄 roster 見 [`tests/fixtures/wiki-item-roster.json`](../tests/fixtures/wiki-item-roster.json)。消耗品依 [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) 的 Food、Potions、Ammo、Other 區段逐項核對；圖鑑將 Other 子類放入「其他物品」，其餘三類依序排在「消耗品」中。
 
 45 件已實裝神器的 `description.en` 逐項依各自 Wiki 條目頁的 `In-game description` 核對，文字基準見 [`tests/fixtures/wiki-artifact-descriptions.json`](../tests/fixtures/wiki-artifact-descriptions.json)；繁中為依原文所作的圖鑑翻譯。[Corrupted Pumpkin](https://minecraft.wiki/w/Dungeons%3ACorrupted_Pumpkin) 頁面標示為 `Special event item`，因此條目設 `seasonal: true`，仍維持 `implemented: true`。
+
+附魔依 [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) 收錄 124 個去重名稱，保留英雄可用、固有、怪物專用、未使用與 Enchanter's Tome 分類。`description.en` 依各自附魔頁的 `In-game description` 欄核對；該欄缺漏時採總表的遊戲描述，沒有 Wiki 描述的兩項明確標示未提供。適用範圍、稀有度、實裝與 Seasonal 標記依具體頁面核對，完整驗收名錄見 [`tests/fixtures/wiki-enchantment-roster.json`](../tests/fixtures/wiki-enchantment-roster.json)。Invisible 只用於 Seasonal Trials 怪物，因此標記 Seasonal；怪物仍使用的附魔即使未供英雄取得，仍標為已實裝。
 
 | 條目 | 來源 | 核對狀態 |
 | --- | --- | --- |
@@ -60,6 +62,7 @@
 | --- | --- |
 | `sword.png`、`diamond-sword.png`、`bow.png`、`hunters-armor.png` | 各自使用 [Sword](https://minecraft.wiki/w/Dungeons%3ASword)、[Diamond Sword](https://minecraft.wiki/w/Dungeons%3ADiamond_Sword)、[Bow](https://minecraft.wiki/w/Dungeons%3ABow)、[Hunter's Armor](https://minecraft.wiki/w/Dungeons%3AHunter%27s_Armor) 條目的圖標檔。Wiki 檔名與實際同步時間記在 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `sharpness.png`、`swirling.png` | 各自使用 [Sharpness](https://minecraft.wiki/w/Dungeons%3ASharpness)、[Swirling](https://minecraft.wiki/w/Dungeons%3ASwirling) 附魔條目的圖標檔；檔名與同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
+| 附魔圖標 | 使用 [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) 中各附魔的 Wiki 圖標；圖檔與同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `unique-bullet.png` | 使用 [Diamond Sword](https://minecraft.wiki/w/Dungeons%3ADiamond_Sword) 頁面 `Extra damage` 列的 `DungeonsMiscellaneousSprite unique-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `regular-bullet.png` | 使用 [Dungeons:Weapon](https://minecraft.wiki/w/Dungeons%3AWeapon) 總表中普通武器效果的 `DungeonsMiscellaneousSprite regular-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `death-cap-mushroom.png` | 使用 [Death Cap Mushroom](https://minecraft.wiki/w/Dungeons%3ADeath_Cap_Mushroom) 項目頁的一代主圖 `Death Cap Mushroom (MCD).png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
