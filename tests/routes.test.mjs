@@ -44,18 +44,37 @@ test('首頁在全部總覽預設選取 Sword 與背包格', () => {
   assert.equal(resolve('').layout, 'inventory');
 });
 
-test('全部裝備合併近戰、遠程、盔甲與神器，附魔獨立', () => {
+test('全部裝備合併裝備類條目，其他物品與附魔維持獨立分類', () => {
   const ids = (hash) => listEntries(resolve(hash).category, categories, entries).map(({ id }) => id);
   assert.deepEqual(ids('#all'), [...meleeIds, 'bow', 'hunters-armor', 'death-cap-mushroom']);
   assert.deepEqual(ids('#equipment'), meleeIds);
   assert.deepEqual(ids('#ranged'), ['bow']);
   assert.deepEqual(ids('#armor'), ['hunters-armor']);
   assert.deepEqual(ids('#artifacts'), ['death-cap-mushroom']);
+  assert.deepEqual(ids('#consumables'), ['tnt']);
+  assert.deepEqual(ids('#other-items'), ['mystery-banner']);
   assert.deepEqual(ids('#enchantments'), ['sharpness', 'swirling']);
+  assert.equal(resolve('#all/tnt').missing, true);
+  assert.equal(resolve('#all/mystery-banner').missing, true);
   assert.equal(resolve('#all/sharpness').missing, true);
   assert.equal(resolve('#equipment/bow').missing, true);
   assert.equal(resolve('#all/hunters-armor/compact').entry.id, 'hunters-armor');
   assert.equal(resolve('#all/hunters-armor/compact').layout, 'compact');
+});
+
+test('消耗品和其他物品分類只收錄已實裝樣本且保留中英文來源', () => {
+  const tnt = entries.find(({ id }) => id === 'tnt');
+  const banner = entries.find(({ id }) => id === 'mystery-banner');
+  assert.equal(tnt?.category, 'consumables');
+  assert.equal(tnt?.name.en, 'TNT');
+  assert.equal(tnt?.description.en, 'Explodes when thrown, damaging everyone in a circular area.');
+  assert.equal(tnt?.facts.find(({ label }) => label.en === 'Type')?.value.en, 'Consumable');
+  assert.ok(tnt?.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3ATNT'));
+  assert.equal(banner?.category, 'other-items');
+  assert.equal(banner?.name.en, 'Mystery Banner');
+  assert.equal(banner?.description.en, 'Collecting a Mystery Banner instantly adds a random modifier to the mission!');
+  assert.equal(banner?.facts.find(({ label }) => label.en === 'Type')?.value.en, 'Consumable');
+  assert.ok(banner?.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3AMystery_Banner'));
 });
 
 test('每把近戰與遠程武器都有總表及正確的具體項目頁來源', () => {

@@ -7,7 +7,7 @@
 | `id`、`category` | 全站唯一的小寫連字號 ID，分類必須存在。發布後保留 ID 以維持網址。 |
 | `name`、`badge`、`description` | 名稱、稀有度標籤與說明。裝備的英語短引文見來源表。 |
 | `icon`、`tone` | 已在來源表登記的穩定語意圖標 ID，以及現有 `steel`、`gold` 或 `violet` 外觀。實際檔名和類型由 `src/icon-assets.mjs` 登錄表解析。 |
-| `facts` | 依序顯示的 `{ label, value }`。裝備可用類型，附魔可用適用類型與觸發條件，神器可用冷卻及已核對的固定效果。 |
+| `facts` | 依序顯示的 `{ label, value }`。裝備與物品可用類型、出現任務或已核實用途；附魔可用適用類型與觸發條件，神器可用冷卻及已核對的固定效果。 |
 | `traits` | 固有效果的 `{ icon, label }`。Wiki 武器總表列出的普通效果使用 `Regular Bullet`（ID：`regular-bullet`），Unique 效果使用 `Unique Bullet`（ID：`unique-bullet`）；個別掉落物的附魔槽不納入。 |
 | `links` | `{ id, label }`。用標籤說明關係，例如固定特性對應的機制。關聯目標須已收錄且有來源；若本輪依據已查證的直接關聯新增目標條目，該條目也須符合圖鑑範圍並有來源。 |
 | `sources` | 至少一筆 `{ label, url }`，連結至可查核的 HTTPS 來源。 |

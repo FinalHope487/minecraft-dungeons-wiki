@@ -1,7 +1,7 @@
 {
   "wiki": "Minecraft Wiki",
   "api": "https://minecraft.wiki/api.php",
-  "syncedAt": "2026-11-16T13:38:03.366Z",
+  "syncedAt": "2026-11-16T18:17:55.013Z",
   "assets": [
     {
       "id": "anchor",
@@ -298,6 +298,20 @@
       "localFile": "assets/mace.png"
     },
     {
+      "id": "mystery-banner",
+      "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMystery_Banner",
+      "wikiFilePage": "https://minecraft.wiki/w/File:MCD_Mystery_Captain_Banner.png",
+      "wikiFileTitle": "File:Mystery Captain Banner.png",
+      "uploadedAt": "2022-06-29T09:04:30Z",
+      "wikiSha1": "8fed585681412288bfb819771ad07ac8849efa66",
+      "wikiBytes": 6629,
+      "wikiMime": "image/png",
+      "downloadedSha1": "8fed585681412288bfb819771ad07ac8849efa66",
+      "downloadedBytes": 6629,
+      "downloadedMime": "image/png",
+      "localFile": "assets/mystery-banner.png"
+    },
+    {
       "id": "obsidian-claymore",
       "sourcePage": "https://minecraft.wiki/w/Dungeons%3AObsidian_Claymore",
       "wikiFilePage": "https://minecraft.wiki/w/File:MCD_Obsidian_Claymore.png",
@@ -436,6 +450,20 @@
       "downloadedBytes": 9686,
       "downloadedMime": "image/png",
       "localFile": "assets/tempest-knife.png"
+    },
+    {
+      "id": "tnt",
+      "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATNT",
+      "wikiFilePage": "https://minecraft.wiki/w/File:MCD_TNT.png",
+      "wikiFileTitle": "File:TNT (Dungeons).png",
+      "uploadedAt": "2022-10-12T03:54:43Z",
+      "wikiSha1": "064a92220111330bed5858901b0f24ed972badab",
+      "wikiBytes": 118439,
+      "wikiMime": "image/png",
+      "downloadedSha1": "43a2df28334e4bdb8303f1c19924554568c3b4a2",
+      "downloadedBytes": 72276,
+      "downloadedMime": "image/png",
+      "localFile": "assets/tnt.png"
     },
     {
       "id": "void-touched-blades",

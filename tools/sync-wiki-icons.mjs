@@ -36,6 +36,7 @@ const sourceEntries = [
   { id: 'hunters-armor', page: "Dungeons:Hunter's Armor", fileTitle: "File:MCD_Hunter's_Armor.png" },
   { id: 'katana', page: 'Dungeons:Katana', fileTitle: 'File:MCD_Katana.png' },
   { id: 'mace', page: 'Dungeons:Mace', fileTitle: 'File:MCD_Mace.png' },
+  { id: 'mystery-banner', page: 'Dungeons:Mystery Banner', fileTitle: 'File:Mystery Captain Banner.png' },
   { id: 'obsidian-claymore', page: 'Dungeons:Obsidian Claymore', fileTitle: 'File:MCD_Obsidian_Claymore.png' },
   { id: 'pickaxe', page: 'Dungeons:Pickaxe', fileTitle: 'File:MCD_Pickaxe.png' },
   { id: 'rapier', page: 'Dungeons:Rapier', fileTitle: 'File:MCD_Rapier.png' },
@@ -46,6 +47,7 @@ const sourceEntries = [
   { id: 'spear', page: 'Dungeons:Spear', fileTitle: 'File:MCD_Spear.png' },
   { id: 'swirling', page: 'Dungeons:Swirling', fileTitle: 'File:T_Swirling_Icon.png' },
   { id: 'tempest-knife', page: 'Dungeons:Tempest Knife', fileTitle: 'File:MCD_Tempest_Knife.png' },
+  { id: 'tnt', page: 'Dungeons:TNT', fileTitle: 'File:TNT (Dungeons).png' },
   { id: 'void-touched-blades', page: 'Dungeons:Void Touched Blades', fileTitle: 'File:MCD_Void_Touched_Blades.png' },
   { id: 'whip', page: 'Dungeons:Whip', fileTitle: 'File:MCD_Whip.png' },
   {

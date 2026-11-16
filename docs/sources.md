@@ -8,6 +8,8 @@
 | 武器 | [Dungeons:Weapon](https://minecraft.wiki/w/Dungeons%3AWeapon) | 同一頁整理近戰與遠程武器清單及各項屬性。 |
 | 盔甲 | [Dungeons:Armor](https://minecraft.wiki/w/Dungeons%3AArmor) | 盔甲清單、固定特性與分類。 |
 | 神器 | [Dungeons:Artifact](https://minecraft.wiki/w/Dungeons%3AArtifact) | 神器清單，依用途分類。 |
+| 消耗品 | [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) | 食物、藥水、彈藥和其他任務消耗品。 |
+| 其他物品 | [Dungeons:Item](https://minecraft.wiki/w/Dungeons%3AItem) | 物品總覽中的 Other 子類；本圖鑑獨立列為分類。 |
 | 附魔 | [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) | 近戰、遠程、盔甲、特殊與未使用附魔清單。 |
 
 查找時先從這些整頁入口進入，再開對應項目條目；專案記錄頁面連結，不以單張圖片 URL 作為唯一來源。Wiki 頁面取得的圖檔依使用者指示視為該 Wiki 目前最新版，不另與舊圖逐位元比對。
@@ -21,6 +23,8 @@
 | Bow | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3ABow) | 一代條目圖檔已同步；依使用者指示採用 Wiki 當前檔案，不與舊圖比對。 |
 | Hunter's Armor | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3AHunter%27s_Armor) | 一代條目圖檔已同步；依使用者指示採用 Wiki 當前檔案，不與舊圖比對。 |
 | Death Cap Mushroom | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3ADeath_Cap_Mushroom)、[神器總表](https://minecraft.wiki/w/Dungeons%3AArtifact)、[Minecraft 官方神器介紹](https://www.minecraft.net/en-us/article/minecraft-dungeons--9-essential-artifacts) | 一代神器首筆樣本。核對遊戲內描述、30 秒冷卻、固定攻擊速度與移動速度效果；持續時間隨物品強度變動，不納入展示。繁中名稱與描述為圖鑑翻譯。圖標從項目頁同步。 |
+| TNT | [消耗品總表](https://minecraft.wiki/w/Dungeons%3AConsumable)、[Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3ATNT) | 遊戲內投擲消耗品；採用條目所列遊戲描述。繁中名稱與描述為圖鑑翻譯。 |
+| Mystery Banner | [物品總覽](https://minecraft.wiki/w/Dungeons%3AItem)、[消耗品總表](https://minecraft.wiki/w/Dungeons%3AConsumable)、[Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3AMystery_Banner) | Wiki Other 子類中的任務消耗品；頁面歷史記載於 1.9.1.0 加入。繁中名稱與描述為圖鑑翻譯。 |
 | Anchor | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3AAnchor) | Common / Rare 與英文遊戲原文；繁中為圖鑑翻譯。圖標依該項目頁同步。 |
 | Axe | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3AAxe) | Common / Rare 與英文遊戲原文；繁中為圖鑑翻譯。圖標依該項目頁同步。 |
 | Backstabber | [Minecraft Wiki](https://minecraft.wiki/w/Dungeons%3ABackstabber) | Common / Rare 與英文遊戲原文；繁中為圖鑑翻譯。圖標依該項目頁同步。 |
@@ -55,6 +59,7 @@
 | `unique-bullet.png` | 使用 [Diamond Sword](https://minecraft.wiki/w/Dungeons%3ADiamond_Sword) 頁面 `Extra damage` 列的 `DungeonsMiscellaneousSprite unique-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `regular-bullet.png` | 使用 [Dungeons:Weapon](https://minecraft.wiki/w/Dungeons%3AWeapon) 總表中普通武器效果的 `DungeonsMiscellaneousSprite regular-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `death-cap-mushroom.png` | 使用 [Death Cap Mushroom](https://minecraft.wiki/w/Dungeons%3ADeath_Cap_Mushroom) 項目頁的一代主圖 `Death Cap Mushroom (MCD).png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
+| `tnt.png`、`mystery-banner.png` | 各自使用 [TNT](https://minecraft.wiki/w/Dungeons%3ATNT)、[Mystery Banner](https://minecraft.wiki/w/Dungeons%3AMystery_Banner) 條目的圖標檔；檔名與同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | 圖檔同步方法 | 執行 `npm run icons:sync`。腳本以 Wiki 整頁條目作來源，檢查檔案仍列在條目中，取得目前圖檔 URL 並更新來源清單；不直接把圖片網址當唯一來源，也不與舊圖做位元比對。先預覽可執行 `npm run icons:sync:dry-run`；`wiki-icon-sync.json` 分別記錄 Imageinfo 的上傳 metadata，以及實際下載檔的大小、MIME 與 SHA-1。方法依 MediaWiki 官方 [Images API](https://www.mediawiki.org/wiki/API:Images) 與 [Imageinfo API](https://www.mediawiki.org/wiki/API:Imageinfo)。 |
 
 | 畫面素材 | 來源 |

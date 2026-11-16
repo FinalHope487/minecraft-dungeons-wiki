@@ -11,7 +11,7 @@ export const uiText = {
     related: '相關條目', original: '英文原文', sources: '來源：', open: '查看詳情', close: '關閉詳情',
     loading: '載入中…', loadError: '無法載入圖鑑資料', detailError: '無法載入條目詳情', retry: '重試',
     footer: '非官方粉絲圖鑑，與 Mojang 或 Microsoft 無關。',
-    meta: 'Minecraft Dungeons 一代裝備與附魔圖鑑。',
+    meta: 'Minecraft Dungeons 一代物品圖鑑，收錄裝備、附魔、消耗品與其他物品。',
     count: (n) => `${n} 筆`, selected: (name) => `目前條目：${name}`,
   },
   en: {
@@ -24,7 +24,7 @@ export const uiText = {
     related: 'Related entries', original: 'Original English', sources: 'Sources:', open: 'View details', close: 'Close details',
     loading: 'Loading…', loadError: 'Could not load the codex data', detailError: 'Could not load this entry', retry: 'Retry',
     footer: 'Unofficial fan codex. Independent of Mojang and Microsoft.',
-    meta: 'Gear and enchantments from the original Minecraft Dungeons.',
+    meta: 'Gear, enchantments, consumables, and other items from the original Minecraft Dungeons.',
     count: (n) => `${n} ${n === 1 ? 'entry' : 'entries'}`, selected: (name) => `Selected item: ${name}`,
   },
 };

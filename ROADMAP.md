@@ -53,9 +53,9 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 
 | 層 | 指令 | 2026-11-17 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 通過，11/11 |
-| 建置 | `npm run build` | 未跑 |
-| user 層 | `npm run preview` + Chromium | 未跑 |
+| 內層 | `npm test` | 通過，12/12 |
+| 建置 | `npm run build` | 通過，7 個分類、35 筆條目 |
+| user 層 | 本地建置產物檢查 | 通過；直接檢查 HTML、分類索引、兩筆條目 JSON 與圖標路徑；實際渲染未驗證 |
 | 公開 | GitHub Pages | 未跑 |
 | 文件 | `git diff --check` | 通過 |
 
@@ -67,7 +67,7 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 
 ### [now] 建立可公開驗收的 Wiki 首版
 
-**具體細節**：SQLite 資料儲存與本機瀏覽器驗收已完成；神器分類及 Death Cap Mushroom 樣本依[擴充計畫](docs/plans/2026-11-16-artifact-category.md)建立。GitHub 登入、remote 和公開素材使用條件尚待確認。  
-**怎麼做**：依 [圖標素材計畫](docs/plans/2026-11-16-icon-assets.md) 統一圖標登錄並更新 Extra damage；再依 [Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md) 核對公開素材使用條件。GitHub CLI 登入與 remote 就緒後，發布並實測。
+**具體細節**：SQLite 資料儲存與本地建置產物檢查已完成；神器分類及 Death Cap Mushroom 樣本依[擴充計畫](docs/plans/2026-11-16-artifact-category.md)建立。消耗品和其他物品首筆條目依[分類計畫](docs/plans/2026-11-17-consumable-other-items.md)建立。GitHub 登入與公開素材使用條件尚待確認。
+**怎麼做**：依 [圖標素材計畫](docs/plans/2026-11-16-icon-assets.md) 統一圖標登錄並更新 Extra damage；再依 [Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md) 核對公開素材使用條件。依專案規格直接檢查新增分類的本地建置產物；GitHub CLI 登入與 remote 就緒後，發布並實測。
 **會改變什麼**：可從公開站瀏覽圖鑑、按需載入資料及圖片，並用獨立提交證明新增分類。
 **做後回退代價**：擴充分開提交。若要撤回，回退擴充提交並重新部署已驗證的首版，再核對公開連結。
