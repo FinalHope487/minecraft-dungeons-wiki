@@ -48,14 +48,14 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`eb514f9`（repo 根目錄 index.html 載入建置 bundle）
+**commit**：`d248cb5`（神器 Wiki 原文與 Seasonal 標籤）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-17 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 通過，14/14 |
+| 內層 | `npm test` | 通過，15/15 |
 | 建置 | `npm run build` | 通過，7 個分類、126 筆條目 |
-| user 層 | 本地建置產物檢查 | 通過；file:// bundle 語法與 126 份詳情資料一致，root index 回退路徑測試通過，126 個圖標引用皆存在；未開瀏覽器，實際渲染未驗證 |
+| user 層 | 本地建置產物檢查 | 通過；schema v3、126 筆條目與 Seasonal 標籤正確；45 件神器中英文說明和來源一致；file:// loader 載入 bundle；資料庫完整性通過、外鍵錯誤 0；未開瀏覽器，實際渲染未驗證 |
 | 公開 | GitHub Pages | 未跑 |
 | 文件 | `git diff --check` | 通過，exit 0 |
 
