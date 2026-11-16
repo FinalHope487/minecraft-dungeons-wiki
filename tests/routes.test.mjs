@@ -58,6 +58,18 @@ test('全部裝備合併近戰、遠程、盔甲與神器，附魔獨立', () =>
   assert.equal(resolve('#all/hunters-armor/compact').layout, 'compact');
 });
 
+test('每把近戰與遠程武器都有總表及正確的具體項目頁來源', () => {
+  const weaponOverview = 'https://minecraft.wiki/w/Dungeons%3AWeapon';
+  const weapons = entries.filter(({ category }) => category === 'equipment' || category === 'ranged');
+  assert.equal(weapons.length, 29);
+  for (const weapon of weapons) {
+    const sourceUrls = weapon.sources.map(({ url }) => url);
+    const specificPage = `https://minecraft.wiki/w/Dungeons%3A${weapon.name.en.replaceAll(' ', '_')}`;
+    assert.equal(sourceUrls[0], weaponOverview, `${weapon.id} must list the weapon overview first`);
+    assert.equal(sourceUrls[1], specificPage, `${weapon.id} must list its Minecraft Wiki article second`);
+  }
+});
+
 test('Death Cap Mushroom 作為神器樣本有雙語說明、冷卻、固定效果與 Wiki 來源', () => {
   const artifact = entries.find(({ id }) => id === 'death-cap-mushroom');
   assert.ok(artifact);
