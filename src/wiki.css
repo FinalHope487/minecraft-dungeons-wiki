@@ -243,6 +243,29 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 .slot-link:hover, .slot-link:focus-visible { z-index: 2; }
 .slot-link:focus-visible { outline-offset: 7px; }
 .slot-link > .icon { width: 90%; height: auto; aspect-ratio: 1; image-rendering: pixelated; }
+.slot-status, .implementation-status {
+  display: inline-block;
+  width: fit-content;
+  padding: 3px 6px;
+  border: 1px solid #71927c;
+  background: #18352a;
+  color: #d8f2dc;
+  font: 700 .68rem/1.2 var(--body-font);
+}
+.slot-status {
+  position: absolute;
+  z-index: 1;
+  inset: 2px 2px auto auto;
+  border-color: #c65a53;
+  background: #4d171a;
+  color: #ffe4df;
+  font-size: .56rem;
+}
+.implementation-status.is-unimplemented {
+  border-color: #c65a53;
+  background: #4d171a;
+  color: #ffe4df;
+}
 .slot-name {
   position: absolute;
   z-index: 1;

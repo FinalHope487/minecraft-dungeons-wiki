@@ -21,6 +21,7 @@ CREATE TABLE entries (
   category_id TEXT NOT NULL REFERENCES categories(id) ON DELETE RESTRICT,
   icon TEXT NOT NULL,
   tone TEXT NOT NULL CHECK (tone IN ('steel', 'gold', 'violet')),
+  implemented INTEGER NOT NULL DEFAULT 1 CHECK (implemented IN (0, 1)),
   position INTEGER NOT NULL UNIQUE CHECK (position >= 0)
 );
 
@@ -93,6 +94,6 @@ CREATE INDEX traits_by_entry ON traits(entry_id, position);
 CREATE INDEX links_by_entry ON entry_links(entry_id, position);
 CREATE INDEX sources_by_entry ON entry_sources(entry_id, position);
 
-PRAGMA user_version = 1;
+PRAGMA user_version = 2;
 
 COMMIT;

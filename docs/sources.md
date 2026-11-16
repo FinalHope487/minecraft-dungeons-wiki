@@ -9,10 +9,12 @@
 | 盔甲 | [Dungeons:Armor](https://minecraft.wiki/w/Dungeons%3AArmor) | 盔甲清單、固定特性與分類。 |
 | 神器 | [Dungeons:Artifact](https://minecraft.wiki/w/Dungeons%3AArtifact) | 神器清單，依用途分類。 |
 | 消耗品 | [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) | 食物、藥水、彈藥和其他任務消耗品。 |
-| 其他物品 | [Dungeons:Item](https://minecraft.wiki/w/Dungeons%3AItem) | 物品總覽中的 Other 子類；本圖鑑獨立列為分類。 |
+| 其他物品 | [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) | 消耗品總表中的 Other 子類；本圖鑑獨立列為分類。 |
 | 附魔 | [Dungeons:Enchantment](https://minecraft.wiki/w/Dungeons%3AEnchantment) | 近戰、遠程、盔甲、特殊與未使用附魔清單。 |
 
 查找時先從這些整頁入口進入，再開對應項目條目；專案記錄頁面連結，不以單張圖片 URL 作為唯一來源。Wiki 頁面取得的圖檔依使用者指示視為該 Wiki 目前最新版，不另與舊圖逐位元比對。
+
+神器清單依 [Dungeons:Artifact](https://minecraft.wiki/w/Dungeons%3AArtifact) 各分類表格逐列核對，包含未使用區。該頁文字統計寫 46 件，但表格列出 45 件已實裝或季節限定神器及 8 件未使用神器；[Dungeons:Item](https://minecraft.wiki/w/Dungeons%3AItem) 的具名清單也列 44 件加 Corrupted Pumpkin 與 8 件未使用項目。本專案以具名表格和清單為準，固定收錄 roster 見 [`tests/fixtures/wiki-item-roster.json`](../tests/fixtures/wiki-item-roster.json)。消耗品依 [Dungeons:Consumable](https://minecraft.wiki/w/Dungeons%3AConsumable) 的 Food、Potions、Ammo、Other 區段逐項核對；圖鑑將 Other 子類放入「其他物品」，其餘三類依序排在「消耗品」中。
 
 | 條目 | 來源 | 核對狀態 |
 | --- | --- | --- |
@@ -60,6 +62,7 @@
 | `regular-bullet.png` | 使用 [Dungeons:Weapon](https://minecraft.wiki/w/Dungeons%3AWeapon) 總表中普通武器效果的 `DungeonsMiscellaneousSprite regular-bullet.png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `death-cap-mushroom.png` | 使用 [Death Cap Mushroom](https://minecraft.wiki/w/Dungeons%3ADeath_Cap_Mushroom) 項目頁的一代主圖 `Death Cap Mushroom (MCD).png`；同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | `tnt.png`、`mystery-banner.png` | 各自使用 [TNT](https://minecraft.wiki/w/Dungeons%3ATNT)、[Mystery Banner](https://minecraft.wiki/w/Dungeons%3AMystery_Banner) 條目的圖標檔；檔名與同步時間見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
+| 神器、消耗品與其他物品圖標 | 以 Wiki 條目頁的主圖或 `DungeonsItemSprite` 單品圖標為來源；若兩者皆無，使用 [`DungeonsMiscellaneousSprite ?`](https://minecraft.wiki/w/Template%3ADungeonsMiscellaneousSprite) placeholder。實際檔名、來源頁與同步雜湊見 [`wiki-icon-sync.json`](wiki-icon-sync.json)。 |
 | 圖檔同步方法 | 執行 `npm run icons:sync`。腳本以 Wiki 整頁條目作來源，檢查檔案仍列在條目中，取得目前圖檔 URL 並更新來源清單；不直接把圖片網址當唯一來源，也不與舊圖做位元比對。先預覽可執行 `npm run icons:sync:dry-run`；`wiki-icon-sync.json` 分別記錄 Imageinfo 的上傳 metadata，以及實際下載檔的大小、MIME 與 SHA-1。方法依 MediaWiki 官方 [Images API](https://www.mediawiki.org/wiki/API:Images) 與 [Imageinfo API](https://www.mediawiki.org/wiki/API:Imageinfo)。 |
 
 | 畫面素材 | 來源 |

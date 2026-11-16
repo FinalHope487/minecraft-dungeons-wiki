@@ -1,10 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 import { loadCatalog } from '../tools/catalog.mjs';
+import { iconAssets } from '../src/icon-assets.mjs';
 import { entryHash, listEntries, resolveRoute } from '../src/routes.mjs';
 import { getInventoryEmptySlotCount, resolveInventoryColumnCount } from '../src/inventory-grid.mjs';
 
 const { categories, entries } = loadCatalog();
+const roster = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-roster.json', import.meta.url), 'utf8'));
 const resolve = (hash) => resolveRoute(hash, categories, entries);
 const meleeIds = [
   'sword', 'diamond-sword', 'anchor', 'axe', 'backstabber', 'battlestaff', 'boneclub',
@@ -37,6 +40,23 @@ const regularWeaponProperties = new Map(Object.entries({
   'void-touched-blades': ['Applies rising damage multiplier'],
   whip: ['Longer melee reach'],
 }));
+const rosterRows = (statuses) => Object.entries(statuses).flatMap(([status, items]) =>
+  items.map(([id, , name]) => ({ id, name, implemented: status === 'implemented' })));
+const artifactRoster = rosterRows(roster.artifacts);
+const consumableRoster = Object.values(roster.consumables).flatMap(rosterRows);
+const otherItemRoster = rosterRows(roster['other-items']);
+const fullItemRoster = [
+  ...artifactRoster.map((item) => ({ ...item, category: 'artifacts' })),
+  ...consumableRoster.map((item) => ({ ...item, category: 'consumables' })),
+  ...otherItemRoster.map((item) => ({ ...item, category: 'other-items' })),
+];
+const wikiPlaceholderIds = [
+  'blightbearer', 'burning-oil-vial', 'callers-bane', 'enchantment-scroll', 'ender-pearl',
+  'fire-scroll', 'flint-and-steel', 'harming-potion', 'invisibility-potion', 'key',
+  'necromancers-staff', 'night-vision-potion', 'plentiful-quiver', 'rabbits-foot',
+  'recycler-quiver', 'regeneration-rock', 'sanctuary-grail', 'scroll-of-heroism',
+  'splash-harming-potion', 'splash-slowing-potion', 'totem-of-resistance',
+];
 
 test('首頁在全部總覽預設選取 Sword 與背包格', () => {
   assert.equal(resolve('').category.id, 'all');
@@ -44,16 +64,26 @@ test('首頁在全部總覽預設選取 Sword 與背包格', () => {
   assert.equal(resolve('').layout, 'inventory');
 });
 
-test('全部裝備合併裝備類條目，其他物品與附魔維持獨立分類', () => {
+test('全部裝備包含所有神器，消耗品子類排序且其他物品維持獨立分類', () => {
   const ids = (hash) => listEntries(resolve(hash).category, categories, entries).map(({ id }) => id);
-  assert.deepEqual(ids('#all'), [...meleeIds, 'bow', 'hunters-armor', 'death-cap-mushroom']);
+  const artifactIds = artifactRoster.map(({ id }) => id);
+  const consumableIds = consumableRoster.map(({ id }) => id);
+  const otherItemIds = otherItemRoster.map(({ id }) => id);
+  assert.deepEqual(ids('#all'), [...meleeIds, 'bow', 'hunters-armor', ...artifactIds]);
   assert.deepEqual(ids('#equipment'), meleeIds);
   assert.deepEqual(ids('#ranged'), ['bow']);
   assert.deepEqual(ids('#armor'), ['hunters-armor']);
-  assert.deepEqual(ids('#artifacts'), ['death-cap-mushroom']);
-  assert.deepEqual(ids('#consumables'), ['tnt']);
-  assert.deepEqual(ids('#other-items'), ['mystery-banner']);
+  assert.deepEqual(ids('#artifacts'), artifactIds);
+  assert.deepEqual(ids('#consumables'), consumableIds);
+  assert.deepEqual(ids('#other-items'), otherItemIds);
+  assert.deepEqual(listEntries(resolve('#consumables').category, categories, entries).map((entry) =>
+    entry.facts.find(({ label }) => label.en === 'Type')?.value.en), [
+    ...Array.from({ length: 10 }, () => 'Food'),
+    ...Array.from({ length: 15 }, () => 'Potion'),
+    ...Array.from({ length: 4 }, () => 'Ammo'),
+  ]);
   assert.deepEqual(ids('#enchantments'), ['sharpness', 'swirling']);
+  assert.equal(resolve('#all/apple').missing, true);
   assert.equal(resolve('#all/tnt').missing, true);
   assert.equal(resolve('#all/mystery-banner').missing, true);
   assert.equal(resolve('#all/sharpness').missing, true);
@@ -62,15 +92,44 @@ test('全部裝備合併裝備類條目，其他物品與附魔維持獨立分�
   assert.equal(resolve('#all/hunters-armor/compact').layout, 'compact');
 });
 
-test('消耗品和其他物品分類只收錄已實裝樣本且保留中英文來源', () => {
+test('所有 Wiki 具名神器、消耗品與其他物品都有唯一條目及正確實裝狀態', () => {
+  assert.equal(fullItemRoster.length, 94);
+  assert.equal(new Set(fullItemRoster.map(({ id }) => id)).size, fullItemRoster.length);
+  const scopedEntries = entries.filter(({ category }) => ['artifacts', 'consumables', 'other-items'].includes(category));
+  assert.equal(scopedEntries.length, fullItemRoster.length);
+  for (const expected of fullItemRoster) {
+    const matches = scopedEntries.filter(({ id }) => id === expected.id);
+    assert.equal(matches.length, 1, `expected exactly one entry for ${expected.name}`);
+    assert.equal(matches[0].category, expected.category, expected.name);
+    assert.equal(matches[0].implemented, expected.implemented, expected.name);
+  }
+  for (const item of scopedEntries) {
+    if (item.icon !== 'wiki-placeholder') {
+      const expectedKind = item.category === 'artifacts' ? 'artifact' : 'consumable';
+      assert.equal(iconAssets[item.icon]?.kind, expectedKind, `${item.id} icon kind`);
+    }
+  }
+  const unimplemented = scopedEntries.filter(({ implemented }) => !implemented);
+  assert.equal(unimplemented.length, 25);
+  assert.equal(entries.find(({ id }) => id === 'corrupted-pumpkin')?.implemented, true,
+    'seasonal but implemented artifacts remain implemented');
+  for (const id of wikiPlaceholderIds) {
+    assert.equal(entries.find((entry) => entry.id === id)?.icon, 'wiki-placeholder', `${id} uses the Wiki placeholder`);
+  }
+  assert.equal(iconAssets['wiki-placeholder']?.file, 'wiki-placeholder.png');
+});
+
+test('TNT 和 Mystery Banner 保留雙語說明與 Wiki 來源', () => {
   const tnt = entries.find(({ id }) => id === 'tnt');
   const banner = entries.find(({ id }) => id === 'mystery-banner');
   assert.equal(tnt?.category, 'consumables');
+  assert.equal(tnt?.implemented, true);
   assert.equal(tnt?.name.en, 'TNT');
   assert.equal(tnt?.description.en, 'Explodes when thrown, damaging everyone in a circular area.');
-  assert.equal(tnt?.facts.find(({ label }) => label.en === 'Type')?.value.en, 'Consumable');
+  assert.equal(tnt?.facts.find(({ label }) => label.en === 'Type')?.value.en, 'Ammo');
   assert.ok(tnt?.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3ATNT'));
   assert.equal(banner?.category, 'other-items');
+  assert.equal(banner?.implemented, true);
   assert.equal(banner?.name.en, 'Mystery Banner');
   assert.equal(banner?.description.en, 'Collecting a Mystery Banner instantly adds a random modifier to the mission!');
   assert.equal(banner?.facts.find(({ label }) => label.en === 'Type')?.value.en, 'Consumable');
@@ -94,6 +153,7 @@ test('Death Cap Mushroom 作為神器樣本有雙語說明、冷卻、固定效�
   assert.ok(artifact);
   assert.equal(artifact.category, 'artifacts');
   assert.equal(artifact.name.en, 'Death Cap Mushroom');
+  assert.equal(artifact.implemented, true);
   assert.equal(artifact.badge.en, 'Artifact');
   assert.equal(artifact.facts.find(({ label }) => label.en === 'Cooldown')?.value.en, '30 seconds');
   assert.equal(artifact.facts.find(({ label }) => label.en === 'Fixed effects')?.value.en,

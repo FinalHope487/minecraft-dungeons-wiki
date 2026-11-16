@@ -1,0 +1,127 @@
+{
+  "artifacts": {
+    "implemented": [
+      ["blast-fungus", "爆裂真菌", "Blast Fungus"],
+      ["boots-of-swiftness", "迅捷靴", "Boots of Swiftness"],
+      ["buzzy-nest", "嗡嗡蜂巢", "Buzzy Nest"],
+      ["corrupted-beacon", "腐化信標", "Corrupted Beacon"],
+      ["corrupted-pumpkin", "腐化南瓜", "Corrupted Pumpkin"],
+      ["corrupted-seeds", "腐化種子", "Corrupted Seeds"],
+      ["death-cap-mushroom", "死帽蘑菇", "Death Cap Mushroom"],
+      ["enchanted-grass", "附魔草", "Enchanted Grass"],
+      ["enchanters-tome", "附魔師之書", "Enchanter's Tome"],
+      ["eye-of-the-guardian", "守護者之眼", "Eye of the Guardian"],
+      ["fireworks-arrow", "煙火箭", "Fireworks Arrow"],
+      ["fishing-rod", "釣竿", "Fishing Rod"],
+      ["flaming-quiver", "烈焰箭袋", "Flaming Quiver"],
+      ["ghost-cloak", "幽靈斗篷", "Ghost Cloak"],
+      ["golem-kit", "魔像套組", "Golem Kit"],
+      ["gong-of-weakening", "虛弱之鑼", "Gong of Weakening"],
+      ["harpoon-quiver", "魚叉箭袋", "Harpoon Quiver"],
+      ["harvester", "收割者", "Harvester"],
+      ["ice-wand", "冰杖", "Ice Wand"],
+      ["iron-hide-amulet", "鐵甲護符", "Iron Hide Amulet"],
+      ["light-feather", "輕羽", "Light Feather"],
+      ["lightning-rod", "避雷針", "Lightning Rod"],
+      ["love-medallion", "愛心護符", "Love Medallion"],
+      ["powershaker", "力量震波器", "Powershaker"],
+      ["satchel-of-elixirs", "靈藥袋", "Satchel of Elixirs"],
+      ["satchel-of-elements", "元素袋", "Satchel of Elements"],
+      ["satchel-of-snacks", "點心袋", "Satchel of Snacks"],
+      ["scatter-mines", "散射地雷", "Scatter Mines"],
+      ["shadow-shifter", "暗影轉移器", "Shadow Shifter"],
+      ["shock-powder", "震撼粉", "Shock Powder"],
+      ["soul-healer", "靈魂治療器", "Soul Healer"],
+      ["soul-lantern", "靈魂燈", "Soul Lantern"],
+      ["spinblade", "旋刃", "Spinblade"],
+      ["tasty-bone", "美味骨頭", "Tasty Bone"],
+      ["thundering-quiver", "雷鳴箭袋", "Thundering Quiver"],
+      ["tome-of-duplication", "複製之書", "Tome of Duplication"],
+      ["torment-quiver", "苦痛箭袋", "Torment Quiver"],
+      ["totem-of-casting", "施法圖騰", "Totem of Casting"],
+      ["totem-of-regeneration", "再生圖騰", "Totem of Regeneration"],
+      ["totem-of-shielding", "護盾圖騰", "Totem of Shielding"],
+      ["updraft-tome", "上升氣流之書", "Updraft Tome"],
+      ["vexing-chant", "煩擾詠唱", "Vexing Chant"],
+      ["void-quiver", "虛空箭袋", "Void Quiver"],
+      ["wind-horn", "風之號角", "Wind Horn"],
+      ["wonderful-wheat", "神奇小麥", "Wonderful Wheat"]
+    ],
+    "unimplemented": [
+      ["blightbearer", "枯腐承載者", "Blightbearer"],
+      ["callers-bane", "呼喚者剋星", "Caller's Bane"],
+      ["plentiful-quiver", "豐饒箭袋", "Plentiful Quiver"],
+      ["recycler-quiver", "回收箭袋", "Recycler Quiver"],
+      ["regeneration-rock", "再生之石", "Regeneration Rock"],
+      ["sanctuary-grail", "庇護聖杯", "Sanctuary Grail"],
+      ["totem-of-resistance", "抵抗圖騰", "Totem of Resistance"],
+      ["totem-of-soul-protection", "靈魂防護圖騰", "Totem of Soul Protection"]
+    ]
+  },
+  "consumables": {
+    "food": {
+      "implemented": [
+        ["apple", "蘋果", "Apple"],
+        ["bread", "麵包", "Bread"],
+        ["chorus-fruit", "歌萊果", "Chorus Fruit"],
+        ["cooked-salmon", "熟鮭魚", "Cooked Salmon"],
+        ["melon", "西瓜", "Melon"],
+        ["pork", "豬肉", "Pork"],
+        ["sweet-berries", "甜莓", "Sweet Berries"],
+        ["tropical-fish", "熱帶魚", "Tropical Fish"]
+      ],
+      "unimplemented": [
+        ["dried-kelp", "乾海帶", "Dried Kelp"],
+        ["rabbits-foot", "兔子腳", "Rabbit's Foot"]
+      ]
+    },
+    "potions": {
+      "implemented": [
+      ["burning-brew", "燃燒藥水", "Burning Brew"],
+      ["dense-brew", "濃縮藥水", "Dense Brew"],
+      ["oakwood-brew", "橡木藥水", "Oakwood Brew"],
+      ["potion-of-water-breathing", "水下呼吸藥水", "Potion of Water Breathing"],
+      ["shadow-brew", "暗影藥水", "Shadow Brew"],
+      ["strength-potion", "力量藥水", "Strength Potion"],
+      ["sweet-brew", "甜味藥水", "Sweet Brew"],
+        ["swiftness-potion", "迅捷藥水", "Swiftness Potion"]
+      ],
+      "unimplemented": [
+      ["burning-oil-vial", "燃燒油瓶", "Burning Oil Vial"],
+      ["harming-potion", "傷害藥水", "Harming Potion"],
+      ["health-potion-consumable", "生命藥水（消耗品）", "Health Potion (consumable)"],
+      ["invisibility-potion", "隱形藥水", "Invisibility Potion"],
+      ["night-vision-potion", "夜視藥水", "Night Vision Potion"],
+      ["splash-harming-potion", "噴濺型傷害藥水", "Splash Harming Potion"],
+      ["splash-slowing-potion", "噴濺型緩速藥水", "Splash Slowing Potion"]
+      ]
+    },
+    "ammo": {
+      "implemented": [
+        ["arrow-bundle", "箭矢束", "Arrow Bundle"],
+        ["conduit", "導管", "Conduit"],
+        ["trident", "三叉戟", "Trident"],
+        ["tnt", "TNT", "TNT"]
+      ],
+      "unimplemented": []
+    }
+  },
+  "other-items": {
+    "implemented": [
+      ["elytra", "鞘翅", "Elytra"],
+      ["eye-of-ender", "終界之眼", "Eye of Ender"],
+      ["mystery-banner", "神秘旗幟", "Mystery Banner"],
+      ["threat-banner", "威脅旗幟", "Threat Banner"]
+    ],
+    "unimplemented": [
+      ["enchantment-scroll", "附魔卷軸", "Enchantment Scroll"],
+      ["ender-pearl", "終界珍珠", "Ender Pearl"],
+      ["fire-scroll", "火焰卷軸", "Fire Scroll"],
+      ["flint-and-steel", "打火石", "Flint and Steel"],
+      ["icon-map", "圖標地圖", "Icon Map"],
+      ["key", "鑰匙", "Key"],
+      ["necromancers-staff", "死靈法師法杖", "Necromancer's Staff"],
+      ["scroll-of-heroism", "英雄卷軸", "Scroll of Heroism"]
+    ]
+  }
+}

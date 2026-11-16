@@ -60,6 +60,81 @@ const sourceEntries = [
     page: 'Dungeons:Diamond Sword',
     fileTitle: 'File:DungeonsMiscellaneousSprite unique-bullet.png',
   },
+  {
+    id: 'wiki-placeholder',
+    page: 'Template:DungeonsMiscellaneousSprite',
+    fileTitle: 'File:DungeonsMiscellaneousSprite ?.png',
+  },
+  { id: "apple", page: "Dungeons:Apple", fileTitle: "File:MCD_Apple_(inventory_icon).png" },
+  { id: "arrow-bundle", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite arrow-bundle.png" },
+  { id: "blast-fungus", page: "Dungeons:Blast Fungus", fileTitle: "File:MCD_Blast_Fungus.png" },
+  { id: "boots-of-swiftness", page: "Dungeons:Boots of Swiftness", fileTitle: "File:MCD_Boots_of_Swiftness.png" },
+  { id: "bread", page: "Dungeons:Bread", fileTitle: "File:MCD_Bread_(inventory_icon).png" },
+  { id: "burning-brew", page: "Dungeons:Burning Brew", fileTitle: "File:MCD_Burning_Brew.png" },
+  { id: "buzzy-nest", page: "Dungeons:Buzzy Nest", fileTitle: "File:MCD_Buzzy_Nest.png" },
+  { id: "chorus-fruit", page: "Dungeons:Chorus Fruit", fileTitle: "File:MCD_Chorus_Fruit.png" },
+  { id: "conduit", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite conduit.png" },
+  { id: "cooked-salmon", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite cooked-salmon.png" },
+  { id: "corrupted-beacon", page: "Dungeons:Corrupted Beacon", fileTitle: "File:MCD_Corrupted_Beacon.png" },
+  { id: "corrupted-pumpkin", page: "Dungeons:Corrupted Pumpkin", fileTitle: "File:MCD_Corrupted_Pumpkin.png" },
+  { id: "corrupted-seeds", page: "Dungeons:Corrupted Seeds", fileTitle: "File:MCD_Corrupted_Seeds.png" },
+  { id: "dense-brew", page: "Dungeons:Dense Brew", fileTitle: "File:MCD_Dense_Brew.png" },
+  { id: "dried-kelp", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite dried-kelp.png" },
+  { id: "elytra", page: "Dungeons:Elytra", fileTitle: "File:MCD_Elytra.png" },
+  { id: "enchanted-grass", page: "Dungeons:Enchanted Grass", fileTitle: "File:MCD_Enchanted_Grass.png" },
+  { id: "enchanters-tome", page: "Dungeons:Enchanter's Tome", fileTitle: "File:MCD_Enchanter's_Tome.png" },
+  { id: "eye-of-ender", page: "Dungeons:Eye of Ender", fileTitle: "File:Eye_of_Ender_(Dungeons).png" },
+  { id: "eye-of-the-guardian", page: "Dungeons:Eye of the Guardian", fileTitle: "File:MCD_Eye_of_the_Guardian.png" },
+  { id: "fireworks-arrow", page: "Dungeons:Fireworks Arrow", fileTitle: "File:MCD_Fireworks_Arrow.png" },
+  { id: "fishing-rod", page: "Dungeons:Fishing Rod", fileTitle: "File:MCD_Fishing_Rod.png" },
+  { id: "flaming-quiver", page: "Dungeons:Flaming Quiver", fileTitle: "File:MCD_Flaming_Quiver.png" },
+  { id: "ghost-cloak", page: "Dungeons:Ghost Cloak", fileTitle: "File:MCD_Ghost_Cloak.png" },
+  { id: "golem-kit", page: "Dungeons:Golem Kit", fileTitle: "File:MCD_Golem_Kit.png" },
+  { id: "gong-of-weakening", page: "Dungeons:Gong of Weakening", fileTitle: "File:MCD_Gong_of_Weakening.png" },
+  { id: "harpoon-quiver", page: "Dungeons:Harpoon Quiver", fileTitle: "File:MCD_Harpoon_Quiver.png" },
+  { id: "harvester", page: "Dungeons:Harvester", fileTitle: "File:MCD_Harvester.png" },
+  { id: "health-potion-consumable", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite health-potion-(consumable).png" },
+  { id: "ice-wand", page: "Dungeons:Ice Wand", fileTitle: "File:MCD_Ice_Wand.png" },
+  { id: "icon-map", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite icon-map.png" },
+  { id: "iron-hide-amulet", page: "Dungeons:Iron Hide Amulet", fileTitle: "File:MCD_Iron_Hide_Amulet.png" },
+  { id: "light-feather", page: "Dungeons:Light Feather", fileTitle: "File:MCD_Light_Feather.png" },
+  { id: "lightning-rod", page: "Dungeons:Lightning Rod", fileTitle: "File:MCD_Lightning_Rod.png" },
+  { id: "love-medallion", page: "Dungeons:Love Medallion", fileTitle: "File:MCD_Love_Medallion.png" },
+  { id: "melon", page: "Dungeons:Melon", fileTitle: "File:MCD_Melon_(inventory_icon).png" },
+  { id: "oakwood-brew", page: "Dungeons:Oakwood Brew", fileTitle: "File:MCD_Oakwood_Brew.png" },
+  { id: "pork", page: "Dungeons:Pork", fileTitle: "File:MCD_Pork_(inventory_icon).png" },
+  { id: "potion-of-water-breathing", page: "Dungeons:Potion of Water Breathing", fileTitle: "File:MCD_Potion_of_Water_Breathing.png" },
+  { id: "powershaker", page: "Dungeons:Powershaker", fileTitle: "File:MCD_Powershaker.png" },
+  { id: "satchel-of-elements", page: "Dungeons:Satchel of Elements", fileTitle: "File:MCD_Satchel_of_Elements.png" },
+  { id: "satchel-of-elixirs", page: "Dungeons:Satchel of Elixirs", fileTitle: "File:MCD_Satchel_of_Elixirs.png" },
+  { id: "satchel-of-snacks", page: "Dungeons:Satchel of Snacks", fileTitle: "File:MCD_Satchel_of_Snacks.png" },
+  { id: "scatter-mines", page: "Dungeons:Scatter Mines", fileTitle: "File:MCD_Scatter_Mines.png" },
+  { id: "shadow-brew", page: "Dungeons:Shadow Brew", fileTitle: "File:MCD_Shadow_Brew.png" },
+  { id: "shadow-shifter", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite shadow-shifter.png" },
+  { id: "shock-powder", page: "Dungeons:Shock Powder", fileTitle: "File:MCD_Shock_Powder.png" },
+  { id: "soul-healer", page: "Dungeons:Soul Healer", fileTitle: "File:MCD_Soul_Healer.png" },
+  { id: "soul-lantern", page: "Dungeons:Soul Lantern", fileTitle: "File:MCD_Soul_Lantern.png" },
+  { id: "spinblade", page: "Dungeons:Spinblade", fileTitle: "File:MCD_Spinblade.png" },
+  { id: "strength-potion", page: "Dungeons:Strength Potion", fileTitle: "File:MCD_Strength_Potion.png" },
+  { id: "sweet-berries", page: "Dungeons:Sweet Berries", fileTitle: "File:MCD_Sweet_Berries_(inventory_icon).png" },
+  { id: "sweet-brew", page: "Dungeons:Sweet Brew", fileTitle: "File:MCD_Sweet_Brew.png" },
+  { id: "swiftness-potion", page: "Dungeons:Swiftness Potion", fileTitle: "File:MCD_Swiftness_Potion.png" },
+  { id: "tasty-bone", page: "Dungeons:Tasty Bone", fileTitle: "File:MCD_Tasty_Bone.png" },
+  { id: "threat-banner", page: "Template:DungeonsItemSprite", fileTitle: "File:DungeonsItemSprite threat-banner.png" },
+  { id: "thundering-quiver", page: "Dungeons:Thundering Quiver", fileTitle: "File:MCD_Thundering_Quiver.png" },
+  { id: "tome-of-duplication", page: "Dungeons:Tome of Duplication", fileTitle: "File:MCD_Tome_of_Duplication.png" },
+  { id: "torment-quiver", page: "Dungeons:Torment Quiver", fileTitle: "File:MCD_Torment_Quiver.png" },
+  { id: "totem-of-casting", page: "Dungeons:Totem of Casting", fileTitle: "File:MCD_Totem_of_Casting.png" },
+  { id: "totem-of-regeneration", page: "Dungeons:Totem of Regeneration", fileTitle: "File:MCD_Totem_of_Regeneration.png" },
+  { id: "totem-of-shielding", page: "Dungeons:Totem of Shielding", fileTitle: "File:MCD_Totem_of_Shielding.png" },
+  { id: "totem-of-soul-protection", page: "Dungeons:Totem of Soul Protection", fileTitle: "File:MCD_Totem_of_Soul_Protection.png" },
+  { id: "trident", page: "Dungeons:Trident", fileTitle: "File:MCD_Trident.png" },
+  { id: "tropical-fish", page: "Dungeons:Tropical Fish", fileTitle: "File:MCD_Tropical_Fish_(item).png" },
+  { id: "updraft-tome", page: "Dungeons:Updraft Tome", fileTitle: "File:MCD_Updraft_Tome.png" },
+  { id: "vexing-chant", page: "Dungeons:Vexing Chant", fileTitle: "File:MCD_Vexing_Chant.png" },
+  { id: "void-quiver", page: "Dungeons:Void Quiver", fileTitle: "File:Void_Quiver_(MCD).png" },
+  { id: "wind-horn", page: "Dungeons:Wind Horn", fileTitle: "File:MCD_Wind_Horn.png" },
+  { id: "wonderful-wheat", page: "Dungeons:Wonderful Wheat", fileTitle: "File:MCD_Wonderful_Wheat.png" },
 ];
 
 function pageUrl(pageTitle) {
@@ -145,20 +220,24 @@ async function findPageImage(entry) {
 }
 
 async function loadCurrentFileInfo(fileTitles) {
-  const data = await readApiJson({
-    action: 'query',
-    format: 'json',
-    iiprop: 'url|timestamp|sha1|size|mime',
-    prop: 'imageinfo',
-    titles: fileTitles.join('|'),
-  });
-  const pages = Object.values(data.query?.pages ?? {});
   const result = new Map();
 
-  for (const page of pages) {
-    const info = page.imageinfo?.[0];
-    if (page.missing || !info?.url) throw new Error('Wiki file is missing or has no original URL: ' + page.title);
-    result.set(normalizeTitle(page.title), { title: page.title, ...info });
+  for (let offset = 0; offset < fileTitles.length; offset += 50) {
+    const titles = fileTitles.slice(offset, offset + 50);
+    const data = await readApiJson({
+      action: 'query',
+      format: 'json',
+      iiprop: 'url|timestamp|sha1|size|mime',
+      prop: 'imageinfo',
+      titles: titles.join('|'),
+    });
+    const pages = Object.values(data.query?.pages ?? {});
+
+    for (const page of pages) {
+      const info = page.imageinfo?.[0];
+      if (page.missing || !info?.url) throw new Error('Wiki file is missing or has no original URL: ' + page.title);
+      result.set(normalizeTitle(page.title), { title: page.title, ...info });
+    }
   }
   return result;
 }
