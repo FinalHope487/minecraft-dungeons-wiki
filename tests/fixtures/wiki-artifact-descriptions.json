@@ -20,7 +20,7 @@
     "zh-Hant": "腐化南瓜散發超自然力量，強光足以照亮最黑暗的夜晚。"
   },
   "corrupted-seeds": {
-    "en": "A pouch of poisonous, corrupted seeds which grow into spiky grapple vines, entangling and slowly draining the life from its victims.",
+    "en": "A pouch of poisonous corrupted seeds which grow into spiky grapple vines, entangling and slowly draining the life from its victims.",
     "zh-Hant": "一袋充滿毒性的腐化種子，會長成帶刺的攀爬藤蔓，纏住目標並慢慢吸取其生命。"
   },
   "death-cap-mushroom": {
@@ -40,7 +40,7 @@
     "zh-Hant": "守衛之眼蘊藏一股力量，會在有資格的英雄手中覺醒。"
   },
   "fireworks-arrow": {
-    "en": "The explosive power of the TNT combined with the high velocity movement of an arrow, what could possibly go wrong?",
+    "en": "The explosive power of the TNT combined with the high velocity movement of an arrow - what could possibly go wrong?",
     "zh-Hant": "將 TNT 的爆炸威力與箭矢的高速結合，還有什麼可能出錯？"
   },
   "fishing-rod": {
@@ -104,11 +104,11 @@
     "zh-Hant": "這個原初小袋籠罩在謎團之中。它會釋放火焰、冰霜，還是更糟的東西？"
   },
   "satchel-of-snacks": {
-    "en": "The Satchel of Snacks provides a treat when you need it the most!",
+    "en": "The Satchel of Snacks provides a treat when you need it most!",
     "zh-Hant": "零食袋會在你最需要時送上一份點心！"
   },
   "scatter-mines": {
-    "en": "Set your enemies up for a surprise of a lifetime with the explosive power of Scatter Mines.",
+    "en": "Set your enemies up for the surprise of a lifetime with the explosive power of Scatter Mines.",
     "zh-Hant": "用散射地雷的爆炸威力，讓敵人迎來畢生難忘的驚喜。"
   },
   "shadow-shifter": {
@@ -124,8 +124,8 @@
     "zh-Hant": "靈魂治療護符摸起來冰冷，並因靈魂的力量而顫動。"
   },
   "soul-lantern": {
-    "en": "This lantern, still covered in the sands of a far-flung place, allows those who hold it to summon a creature formed from bound souls.",
-    "zh-Hant": "這盞提燈仍覆著來自遙遠之地的沙塵，能讓持有者召喚由受縛靈魂形成的生物。"
+    "en": "This lantern, still covered in the sands of some far-flung place, allows those who hold it to summon a creature formed from bound souls.",
+    "zh-Hant": "這盞提燈仍覆著來自某個遙遠之地的沙塵，能讓持有者召喚由受縛靈魂形成的生物。"
   },
   "spinblade": {
     "en": "This whirling weapon spins across the battlefield, slicing through enemies in its path.",
@@ -160,11 +160,11 @@
     "zh-Hant": "這個圖騰散發強大能量，並釋出保護附近之人的護盾。"
   },
   "updraft-tome": {
-    "en": "An ancient book filled with illegible glyphs, you feel a strange breeze as you flip the pages.",
+    "en": "An ancient book filled with illegible glyphs, you feel a strange breeze as you flip through the pages.",
     "zh-Hant": "一本古老的書，裡頭滿是無法辨識的字符。翻頁時，你會感到一陣奇異微風。"
   },
   "vexing-chant": {
-    "en": "Summon Guardian Vexes who will fight by your side for a short while.",
+    "en": "Summons Guardian Vexes who will fight by your side for a short time.",
     "zh-Hant": "召喚守衛惱鬼，牠們會在短時間內與你並肩作戰。"
   },
   "void-quiver": {
