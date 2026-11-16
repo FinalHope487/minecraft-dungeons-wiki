@@ -48,14 +48,14 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`9f850c5`（file:// 本機 HTML 載入修正）
+**commit**：`eb514f9`（repo 根目錄 index.html 載入建置 bundle）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-17 實跑 |
 | --- | --- | --- |
 | 內層 | `npm test` | 通過，14/14 |
 | 建置 | `npm run build` | 通過，7 個分類、126 筆條目 |
-| user 層 | 本地建置產物檢查 | 通過；file:// classic bundle 語法、索引與 126 份詳情資料一致，126 個圖標引用皆存在；未開瀏覽器，實際渲染未驗證 |
+| user 層 | 本地建置產物檢查 | 通過；file:// bundle 語法與 126 份詳情資料一致，root index 回退路徑測試通過，126 個圖標引用皆存在；未開瀏覽器，實際渲染未驗證 |
 | 公開 | GitHub Pages | 未跑 |
 | 文件 | `git diff --check` | 通過，exit 0 |
 

@@ -23,4 +23,4 @@
 
 ## 執行結果
 
-先前入口測試在 `type="module"` 斷言失敗；改用 classic loader 後通過。`npm test` 通過 14/14；`npm run build` 產出 7 個分類、126 筆條目。直接檢查 `dist/index.html` 和生成的 classic bundle：JavaScript 語法有效，bundle 內嵌索引與 126 份詳情 JSON 完全一致，所有圖標檔存在。實作 commit：`9f850c5`。未開瀏覽器；畫面渲染與互動未驗證。
+先前入口測試在 `type="module"` 斷言失敗；改用 classic loader 後通過。根目錄 `index.html` 直接開啟時，會回退載入最近一次建置的 `dist/src/file-app.js`。`npm test` 通過 14/14；`npm run build` 產出 7 個分類、126 筆條目。直接檢查 `dist/index.html` 和生成的 classic bundle：JavaScript 語法有效，bundle 內嵌索引與 126 份詳情 JSON 完全一致，所有圖標檔存在。實作 commit：`9f850c5`、`eb514f9`。未開瀏覽器；畫面渲染與互動未驗證。
