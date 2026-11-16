@@ -27,3 +27,5 @@ schema v2 只在既有條目上新增預設為 1 的欄位，保留原有條目 
 Wiki roster 收錄 53 件神器、10 件食物、15 件藥水、4 件彈藥與 12 件其他物品，共 94 筆。季節限定 Corrupted Pumpkin 標為已實裝；未實裝項目共 25 件。21 件沒有單品圖標的物品使用 Wiki `?` placeholder。
 
 `npm test` 通過 13/13；`npm run build` 產出 7 個分類、126 筆條目。直接檢查 `dist/index.html`、CSS／JS、126 份詳情 JSON，以及每筆引用圖標的類型與檔案。未開瀏覽器；實際渲染與互動未驗證。功能提交：`320d7e3`。
+
+2026-11-17 重新逐項比對 45 件已實裝神器的 Wiki `In-game description`，修正 7 筆英文原文及 Soul Lantern 繁中翻譯，提交 `f24bb39`。`npm test` 通過 18/18；`npm run build` 產出 7 個分類、446 筆條目。本地檢查確認入口 loader、自包含 bundle、45 筆神器雙語說明與 fixture 一致，SQLite 完整性正常、外鍵錯誤 0；未開瀏覽器。
