@@ -115,6 +115,54 @@ function link(href, label, className) {
   return anchor;
 }
 
+const inferredEnchantmentFacts = new Set(['Audience', 'Evidence confidence']);
+// Collapse only pairs whose player and mob effects share the same core effect.
+const sameEffectEnchantments = new Set([
+  'burning', 'chilling', 'cowardice', 'fire-aspect', 'growing', 'gravity', 'jungle-poison', 'power',
+  'rapid-fire', 'weakening',
+]);
+
+function factValue(entry, label) {
+  return entry.facts.find((fact) => fact.label.en === label)?.value.en ?? '';
+}
+
+function renderEnchantmentEffects(entry, info) {
+  const heroAvailability = factValue(entry, 'Hero availability');
+  const mobAvailability = factValue(entry, 'Mob availability');
+  const playerEffect = entry.facts.find((fact) => fact.label.en === 'Player effect');
+  const mobEffect = entry.facts.find((fact) => fact.label.en === 'Mob effect');
+  const playerAvailable = heroAvailability
+    && !/^(Unavailable|Unconfirmed|Not available)/i.test(heroAvailability);
+  const mobAvailable = mobAvailability
+    && !/^(No enemy|No mob|Unconfirmed)/i.test(mobAvailability);
+  const showPlayer = playerAvailable && playerEffect
+    && !/not available to heroes|unavailable to heroes/i.test(playerEffect.value.en);
+  const showMob = mobAvailable && mobEffect
+    && !/no mob-side effect is listed|unconfirmed/i.test(mobEffect.value.en);
+
+  if (showPlayer) {
+    const effect = node('p', 'enchantment-effect');
+    effect.append(node('strong', 'effect-label', ui.playerEffect),
+      document.createTextNode(' '), document.createTextNode(playerEffect.value[lang]));
+    info.append(effect);
+  }
+  if (showMob) {
+    const note = node('p', showPlayer ? 'effect-note' : 'enchantment-effect');
+    if (showPlayer && sameEffectEnchantments.has(entry.id)) {
+      note.append(node('strong', 'effect-label', ui.mobNote),
+        document.createTextNode(' '), document.createTextNode(ui.sameMobEffect));
+    } else {
+      note.append(node('strong', 'effect-label', ui.mobEffect),
+        document.createTextNode(' '), document.createTextNode(mobEffect.value[lang]));
+    }
+    info.append(note);
+  }
+}
+
+function isWikiDescription(entry) {
+  return !/^Wiki does not provide an in-game description\.?$/i.test(entry.description.en.trim());
+}
+
 function renderDetailsContent(entry, layout) {
   const heading = node('header', 'detail-heading');
   const identity = node('div', 'identity');
@@ -129,13 +177,20 @@ function renderDetailsContent(entry, layout) {
   heading.append(identity, icon(entry.icon, 'item-art'));
 
   const info = node('div', 'info');
+  const moreContent = node('div', 'more-info-content');
   const facts = node('dl', 'facts');
   for (const fact of entry.facts) {
+    if (entry.category === 'enchantments' && inferredEnchantmentFacts.has(fact.label.en)) continue;
+    if (entry.category === 'enchantments' && ['Player effect', 'Mob effect'].includes(fact.label.en)) continue;
+    if (entry.category === 'enchantments'
+      && ['Hero availability', 'Mob availability'].includes(fact.label.en)
+      && /^(Unavailable|No enemy|No mob|Unconfirmed)/i.test(fact.value.en)) continue;
     const pair = node('div', 'fact');
     pair.append(node('dt', '', message(fact.label)), node('dd', '', message(fact.value)));
     facts.append(pair);
   }
-  if (facts.children.length) info.append(facts);
+  if (entry.category === 'enchantments') renderEnchantmentEffects(entry, info);
+  if (facts.children.length) moreContent.append(facts);
   for (const trait of entry.traits) {
     const line = node('p', 'trait');
     line.dataset.traitIcon = trait.icon;
@@ -143,15 +198,15 @@ function renderDetailsContent(entry, layout) {
     line.append(icon(trait.icon), label);
     info.append(line);
   }
-  if (entry.category !== 'enchantments') {
+  if (entry.category !== 'enchantments' && isWikiDescription(entry)) {
     info.append(node('p', 'description', message(entry.description)));
   }
-  if (lang === 'zh-Hant' && entry.category !== 'enchantments') {
+  if (isWikiDescription(entry) && (lang === 'zh-Hant' || entry.category === 'enchantments')) {
     const original = node('details', 'original');
     const quote = node('p', 'description', entry.description.en);
     quote.lang = 'en';
-    original.append(node('summary', '', ui.original), quote);
-    info.append(original);
+    original.append(node('summary', '', entry.category === 'enchantments' ? ui.wikiDescription : ui.original), quote);
+    moreContent.append(original);
   }
 
   const related = node('div', 'related');
@@ -172,6 +227,7 @@ function renderDetailsContent(entry, layout) {
       list.append(item);
     }
     related.append(list);
+    moreContent.append(related);
   }
   const sources = node('div', 'sources');
   sources.append(node('span', 'source-caption', ui.sources));
@@ -180,8 +236,13 @@ function renderDetailsContent(entry, layout) {
     anchor.lang = 'en';
     sources.append(anchor);
   }
+  if (sources.children.length > 1) moreContent.append(sources);
+  const moreInfo = node('details', 'more-info');
+  if (moreContent.children.length) moreInfo.append(node('summary', '', ui.moreInfo), moreContent);
   elements.details.dataset.tone = entry.tone;
-  elements.details.replaceChildren(heading, info, related, sources);
+  const content = [heading, info];
+  if (moreInfo.children.length) content.push(moreInfo);
+  elements.details.replaceChildren(...content);
 }
 
 async function loadEntryDetails(id, retry = false) {

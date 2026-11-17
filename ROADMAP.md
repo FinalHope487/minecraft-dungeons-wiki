@@ -48,14 +48,14 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`a4e2157`（本輪附魔效用更新前的基準）
+**commit**：`b9f23b9`（本輪驗收所依據的起始 commit）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-17 實跑 |
 | --- | --- | --- |
 | 內層 | `npm test` | 通過：21/21，失敗 0 |
 | 建置 | `npm run build` | 通過：7 個分類、446 筆條目 |
-| user 層 | 本地 `dist` 檢查 | 通過：124 筆附魔、744 個效用欄位、Critical Hit 雙側效果、file URL bundle；未開瀏覽器 |
+| user 層 | 本地 `dist` 檢查 | 通過：`index.html` 3,911 bytes、446 個條目資料檔、詳情程式及 CSS 已輸出；Critical Hit 保留雙側來源效果、附魔 Wiki 原文可在更多資訊展開；未開瀏覽器、未驗實際渲染 |
 | 公開 | GitHub Pages | 未跑 |
 | 文件 | `git diff --check` | 通過，exit 0 |
 
@@ -68,6 +68,6 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 ### [now] 建立可公開驗收的 Wiki 首版
 
 **具體細節**：神器、消耗品與其他物品已有條目；47 筆通用佔位說明已替換為 Wiki 原文或有來源的已知資訊，未記載效果者標明未知。124 個附魔及 228 件近戰、遠程與盔甲已按 Wiki 名錄收錄；附魔逐條區分英雄／怪物可用性與效果，可信度為 high 44、medium 70、low 10；低可信條目及衝突見[附魔玩家與怪物效用規格](docs/specs/enchantment-availability.md)。近戰 Sword 系列已排在 Spear 後、Tempest Knife 前，遠程與盔甲順序已核對。45 件已實裝神器原文已逐項核對並修正 7 筆。`file://` 本機入口已依[啟動修正計畫](docs/plans/2026-11-17-file-url-bootstrap.md)補上 classic 啟動路徑與自包含資料包。GitHub 登入與公開素材使用條件尚待確認。
-**怎麼做**：依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)核對公開素材使用條件。GitHub CLI 登入與 remote 就緒後，發布並實測。
+**怎麼做**：依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)核對公開素材使用條件；Wiki 內容缺漏及收錄優先序見[盤點紀錄](docs/content-coverage-audit.md)，詳情呈現及附魔來源篩選見[呈現規格](docs/specs/detail-presentation.md)與[附魔效用規格](docs/specs/enchantment-availability.md)。GitHub CLI 登入與 remote 就緒後，發布並實測。
 **會改變什麼**：公開圖鑑涵蓋 Wiki 列出的附魔、武器與盔甲，並能顯示稀有度、實裝與 Seasonal 標籤。
 **做後回退代價**：擴充分階段提交。若要撤回，回退相關擴充提交並重新部署已驗證的首版，再核對公開連結。
