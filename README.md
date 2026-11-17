@@ -2,6 +2,8 @@
 
 Minecraft Dungeons 一代的非官方物品圖鑑，收錄裝備、附魔、消耗品與其他物品。可以從物品格切換詳情，也可用網址分享目前的條目與版型。
 
+收錄依據：[Minecraft Wiki 物品總覽](https://minecraft.wiki/w/Dungeons%3AItem) 與[附魔總表](https://minecraft.wiki/w/Dungeons%3AEnchantment)；分類及個別條目的完整來源見[素材與資料來源](docs/sources.md)。
+
 ## 本機執行
 
 需要 Node.js 22.13 以上。專案無 npm 相依套件；建置使用 Node 內建 SQLite API。
