@@ -1,0 +1,45 @@
+{
+  "source": {
+    "title": "Dungeons:Weapon",
+    "revision": 3873343,
+    "url": "https://minecraft.wiki/w/Dungeons%3AWeapon?oldid=3873343"
+  },
+  "regularBullet": [
+    "anchor:gravity",
+    "encrusted-anchor:gravity",
+    "backstabber:ambush",
+    "swift-striker:ambush",
+    "tempest-knife:rushdown",
+    "chill-gale-knife:rushdown",
+    "resolute-tempest-knife:rushdown",
+    "void-touched-blades:void-strike",
+    "the-beginning-and-the-end:void-strike",
+    "void-bow:void-strike",
+    "call-of-the-void:void-strike",
+    "shadow-crossbow:shadow-shot",
+    "shrieking-crossbow:shadow-shot",
+    "veiled-crossbow:shadow-shot",
+    "trickbow:ricochet",
+    "the-green-menace:ricochet",
+    "the-pink-scoundrel:ricochet",
+    "sugar-rush:ricochet",
+    "red-snake:supercharge",
+    "phantom-bow:supercharge"
+  ],
+  "unranked": [
+    "encrusted-anchor:jungle-poison",
+    "vine-whip:jungle-poison",
+    "bubble-burster:reliable-ricochet",
+    "gloopy-bow:reliable-ricochet",
+    "shadow-crossbow:shadow-shot",
+    "shrieking-crossbow:shadow-shot",
+    "shrieking-crossbow:shadow-barb",
+    "veiled-crossbow:shadow-shot",
+    "veiled-crossbow:shadow-barb",
+    "the-starless-night:shared-pain"
+  ],
+  "tierOverrides": {
+    "guardian-bow:supercharge": 2,
+    "nautical-crossbow:piercing": 3
+  }
+}

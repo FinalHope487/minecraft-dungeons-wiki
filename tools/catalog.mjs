@@ -36,7 +36,7 @@ function childRows(rows, parentKey, transform) {
 
 function readDatabase(database) {
   const schemaVersion = database.prepare('PRAGMA user_version').get().user_version;
-  if (schemaVersion !== 3) throw new Error(`不支援的 SQLite schema 版本：${schemaVersion}（需要 3）。`);
+  if (schemaVersion !== 4) throw new Error(`不支援的 SQLite schema 版本：${schemaVersion}（需要 4）。`);
 
   const integrity = database.prepare('PRAGMA integrity_check').all();
   if (integrity.length !== 1 || integrity[0].integrity_check !== 'ok') {
@@ -77,9 +77,16 @@ function readDatabase(database) {
     'link_id', ['label'],
   );
   const links = childRows(
-    database.prepare(`SELECT id, entry_id, target_entry_id, position
-      FROM entry_links ORDER BY entry_id, position`).all(),
-    'entry_id', (row) => ({ id: row.id, target: row.target_entry_id, position: row.position }),
+    database.prepare(`SELECT entry_links.id, entry_links.entry_id, entry_links.target_entry_id, entry_links.position,
+        built_in.property_icon, built_in.tier
+      FROM entry_links LEFT JOIN entry_built_in_enchantments AS built_in ON built_in.link_id = entry_links.id
+      ORDER BY entry_links.entry_id, entry_links.position`).all(),
+    'entry_id', (row) => ({
+      id: row.id,
+      target: row.target_entry_id,
+      position: row.position,
+      ...(row.property_icon ? { builtInEnchantment: { tier: row.tier, propertyIcon: row.property_icon } } : {}),
+    }),
   );
   const sources = childRows(
     database.prepare('SELECT id, entry_id, label, url, position FROM entry_sources ORDER BY entry_id, position').all(),
@@ -114,6 +121,7 @@ function readDatabase(database) {
       links: (links.get(entry.id) ?? []).map((link) => ({
         id: link.target,
         label: localize(linkTexts, link.id, 'label'),
+        ...(link.builtInEnchantment ? { builtInEnchantment: link.builtInEnchantment } : {}),
       })),
       sources: (sources.get(entry.id) ?? []).map(({ label, url }) => ({ label, url })),
     })),
@@ -135,6 +143,7 @@ export function loadCatalog(path = databaseFile) {
 export function validateCatalog(categories, entries, assets) {
   const categoryIds = new Set(categories.map(({ id }) => id));
   const entryIds = new Set(entries.map(({ id }) => id));
+  const entriesById = new Map(entries.map((entry) => [entry.id, entry]));
   const hasIcon = (id) => {
     const asset = iconAssets[id];
     return Boolean(asset && assets.has(asset.file));
@@ -160,6 +169,16 @@ export function validateCatalog(categories, entries, assets) {
       || !entry.traits.every((trait) => isLocalized(trait.label) && hasIcon(trait.icon))
       || !entry.links.every((relation) => isLocalized(relation.label) && entryIds.has(relation.id))) {
       throw new Error(`條目的固定特性或關聯無效：${entry.id}`);
+    }
+    for (const relation of entry.links) {
+      const target = entriesById.get(relation.id);
+      const weaponEnchantmentLink = ['equipment', 'ranged'].includes(entry.category) && target.category === 'enchantments';
+      const metadata = relation.builtInEnchantment;
+      if (weaponEnchantmentLink !== Boolean(metadata)
+        || (metadata && (!['regular-bullet', 'unique-bullet'].includes(metadata.propertyIcon)
+          || !(metadata.tier === null || Number.isInteger(metadata.tier) && metadata.tier >= 1 && metadata.tier <= 3)))) {
+        throw new Error(`武器內建附魔標記無效：${entry.id} → ${relation.id}`);
+      }
     }
     if (!entry.sources.length || entry.sources.some((source) => {
       let url;
@@ -188,7 +207,7 @@ export async function writeCatalogArtifacts(outputRoot, { assetsDirectory = asse
   await ensureDirectory(detailsPath);
 
   const index = {
-    schemaVersion: 3,
+    schemaVersion: 4,
     categories,
     entries: entries.map(({ id, category, name, icon, badge, tone, implemented, seasonal }) => ({
       id, category, name, icon, badge, tone, implemented, seasonal,
@@ -196,7 +215,7 @@ export async function writeCatalogArtifacts(outputRoot, { assetsDirectory = asse
   };
   await writeFile(join(dataPath, 'catalog-index.json'), `${JSON.stringify(index)}\n`, 'utf8');
   for (const entry of entries) {
-    await writeFile(join(detailsPath, `${entry.id}.json`), `${JSON.stringify({ schemaVersion: 3, entry })}\n`, 'utf8');
+    await writeFile(join(detailsPath, `${entry.id}.json`), `${JSON.stringify({ schemaVersion: 4, entry })}\n`, 'utf8');
   }
   return { categories, entries };
 }

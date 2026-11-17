@@ -34,20 +34,29 @@
   background: #09080b;
   --muted: #c7b0a9;
   --ember: #ffbd85;
+  --scrollbar-track: #171114;
+  --scrollbar-thumb: #a87758;
   --body-font: "Noto Sans", "Noto Sans TC", sans-serif;
   --display-font: "Minecraft Ten", "Noto Sans TC", sans-serif;
 }
 
 * { box-sizing: border-box; }
+html { height: 100%; overflow: hidden; }
 body {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .scene {
-  display: flow-root;
-  flex: 1;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
   background: linear-gradient(180deg, #09080b12, #09080b 34rem),
     url("../assets/inventory-background.png") center top / 100% 36rem no-repeat;
 }
@@ -69,7 +78,15 @@ a:focus-visible, button:focus-visible, #catalog:focus-visible {
 }
 .skip { position: absolute; z-index: 3; inset: .5rem auto auto .5rem; padding: .5rem; background: #1d1417; }
 .shell { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+#catalog {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+}
+#catalog:focus-visible { outline-offset: -4px; }
 .masthead {
+  flex: 0 0 auto;
   border-bottom: 2px solid #624a45;
   background: #181215;
   box-shadow: inset 0 -3px #0d090c;
@@ -150,7 +167,7 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 }
 .layouts button:hover, .languages a:hover { border-color: #c28766; color: white; }
 .header-controls :focus-visible { position: relative; z-index: 1; outline-offset: -4px; }
-#categories { display: flex; gap: 10px; flex-wrap: wrap; margin: 30px 0 16px; }
+#categories { display: flex; flex: 0 0 auto; gap: 10px; flex-wrap: wrap; margin: 30px 0 16px; }
 .category {
   display: inline-flex;
   align-items: center;
@@ -168,8 +185,45 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 .icon { width: 24px; height: 24px; flex: 0 0 auto; object-fit: contain; image-rendering: pixelated; }
 .workspace {
   display: grid;
+  flex: 1 1 0;
   grid-template-columns: minmax(290px, .9fr) minmax(0, 1.35fr);
+  grid-template-rows: minmax(0, 1fr);
+  min-height: 0;
+  overflow: hidden;
   border: 1px solid #5e4844;
+}
+.collection, .details, #detail-dialog {
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding: 12px;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+.collection:focus-visible {
+  outline: 2px dashed #ffdab0;
+  outline-offset: -4px;
+}
+.collection::-webkit-scrollbar, .details::-webkit-scrollbar, #detail-dialog::-webkit-scrollbar { width: 12px; }
+.collection::-webkit-scrollbar-track, .details::-webkit-scrollbar-track, #detail-dialog::-webkit-scrollbar-track {
+  border-inline-start: 1px solid #5e4844;
+  background: var(--scrollbar-track);
+}
+.collection::-webkit-scrollbar-thumb, .details::-webkit-scrollbar-thumb, #detail-dialog::-webkit-scrollbar-thumb {
+  min-height: 36px;
+  border: 2px solid #211719;
+  border-radius: 0;
+  background: repeating-linear-gradient(180deg, #bf8966 0 4px, #895d45 4px 8px);
+}
+.collection::-webkit-scrollbar-thumb:hover, .details::-webkit-scrollbar-thumb:hover, #detail-dialog::-webkit-scrollbar-thumb:hover {
+  background: repeating-linear-gradient(180deg, #e1b58e 0 4px, #a97757 4px 8px);
+}
+@supports selector(::-webkit-scrollbar) {
+  .collection, .details, #detail-dialog {
+    scrollbar-color: auto;
+    scrollbar-width: auto;
+  }
 }
 .collection {
   min-width: 0;
@@ -304,6 +358,7 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 .details {
   --tone: #b8aea6;
   min-width: 0;
+  overflow-y: auto;
   border-left: 1px solid #824e42;
   padding: clamp(16px, 2.5vw, 28px);
   background-color: #09080b22;
@@ -344,11 +399,20 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 .related-link:hover { border-color: var(--ember); }
 .related-link strong, .related-link small { display: block; }
 .related-link small { color: #cdb6af; font-size: .72rem; }
+.built-in-enchantment-icon { position: relative; display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; }
+.built-in-property-icon { width: 36px; height: 36px; object-fit: contain; image-rendering: pixelated; }
+.built-in-enchantment-icon-overlay { position: absolute; width: 22px; height: 22px; object-fit: contain; image-rendering: pixelated; }
+.relation-tier { margin-top: 2px; color: #f2c39e !important; font-weight: 800; }
+.assessment { margin-top: 4px; }
+.assessment-title { margin: 0 0 10px; color: #e2c9bd; font-size: .9rem; }
 .sources { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; margin-top: 17px; }
 .source-caption { color: var(--muted); font-size: .79rem; }
 .source { color: #dfb4a0; font-size: .79rem; text-underline-offset: 3px; }
-.footer { margin-block: 24px; font-size: .8rem; color: #c7b0a9; }
-.workspace[data-layout="compact"] { grid-template-columns: minmax(0, 1fr); }
+.footer { flex: 0 0 auto; margin-block: 12px; font-size: .8rem; color: #c7b0a9; }
+.workspace[data-layout="compact"] {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+}
 [data-layout="compact"] .details { border-left: 0; border-top: 1px solid #824e42; }
 [data-layout="compact"] .collection {
   padding-block: 20px 25px;
@@ -377,10 +441,14 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
   max-width: 100%;
   max-height: 85dvh;
   margin: 0 auto;
+  overflow: auto;
+  overscroll-behavior: contain;
   padding: 0;
   color: inherit;
   background: linear-gradient(#120c10cc, #100b10), url("../assets/inventory-background.png") center top / cover;
   border: 1px solid #b78061;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
 }
 #detail-dialog::backdrop { background: #09070ac4; }
 .dialog-header {
@@ -398,6 +466,7 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 @media (max-width: 720px) {
   .shell { width: calc(100% - 32px); }
   .workspace { grid-template-columns: minmax(0, 1fr); }
+  .workspace[data-layout="compact"] { grid-template-rows: minmax(0, 1fr); }
   .details { border-left: 0; border-top: 1px solid #824e42; }
   .masthead-inner { align-items: flex-start; flex-direction: column; gap: 11px; }
   .brand { gap: 10px; }

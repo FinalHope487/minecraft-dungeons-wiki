@@ -35,7 +35,7 @@ function updateLanguageLinks() {
 }
 
 const elements = Object.fromEntries(
-  ['categories', 'workspace', 'collection-title', 'count', 'slots', 'details', 'announcement']
+  ['categories', 'workspace', 'collection', 'collection-title', 'count', 'slots', 'details', 'announcement']
     .map((id) => [id, document.getElementById(id)]),
 );
 const layoutButtons = [...document.querySelectorAll('.layouts button')];
@@ -62,6 +62,7 @@ for (const count of inventoryColumnCounts) {
 }
 inventoryColumnsSelect.value = String(inventoryColumnCount);
 elements.categories.setAttribute('aria-label', ui.categories);
+elements.collection.setAttribute('aria-label', ui.itemList);
 elements.details.setAttribute('aria-label', ui.details);
 
 function syncMobileActionPlacement() {
@@ -109,13 +110,19 @@ function icon(id, className = 'icon') {
   return image;
 }
 
+function builtInEnchantmentIcon(enchantmentIcon, propertyIcon) {
+  const stack = node('span', 'built-in-enchantment-icon');
+  stack.setAttribute('aria-hidden', 'true');
+  stack.append(icon(propertyIcon, 'built-in-property-icon'), icon(enchantmentIcon, 'built-in-enchantment-icon-overlay'));
+  return stack;
+}
+
 function link(href, label, className) {
   const anchor = node('a', className, label);
   anchor.href = href;
   return anchor;
 }
 
-const inferredEnchantmentFacts = new Set(['Audience', 'Evidence confidence']);
 // Collapse only pairs whose player and mob effects share the same core effect.
 const sameEffectEnchantments = new Set([
   'burning', 'chilling', 'cowardice', 'fire-aspect', 'growing', 'gravity', 'jungle-poison', 'power',
@@ -180,17 +187,20 @@ function renderDetailsContent(entry, layout) {
   const moreContent = node('div', 'more-info-content');
   const facts = node('dl', 'facts');
   for (const fact of entry.facts) {
-    if (entry.category === 'enchantments' && inferredEnchantmentFacts.has(fact.label.en)) continue;
-    if (entry.category === 'enchantments' && ['Player effect', 'Mob effect'].includes(fact.label.en)) continue;
-    if (entry.category === 'enchantments'
-      && ['Hero availability', 'Mob availability'].includes(fact.label.en)
-      && /^(Unavailable|No enemy|No mob|Unconfirmed)/i.test(fact.value.en)) continue;
     const pair = node('div', 'fact');
     pair.append(node('dt', '', message(fact.label)), node('dd', '', message(fact.value)));
     facts.append(pair);
   }
   if (entry.category === 'enchantments') renderEnchantmentEffects(entry, info);
-  if (facts.children.length) moreContent.append(facts);
+  if (facts.children.length) {
+    if (entry.category === 'enchantments') {
+      const assessment = node('section', 'assessment');
+      assessment.append(node('h3', 'assessment-title', ui.assessment), facts);
+      moreContent.append(assessment);
+    } else {
+      moreContent.append(facts);
+    }
+  }
   for (const trait of entry.traits) {
     const line = node('p', 'trait');
     line.dataset.traitIcon = trait.icon;
@@ -222,7 +232,16 @@ function renderDetailsContent(entry, layout) {
       const label = node('span');
       const targetName = node('strong', '', message(target.name));
       label.append(targetName, node('small', '', message(relation.label)));
-      anchor.append(icon(target.icon), label);
+      if (relation.builtInEnchantment) {
+        anchor.append(builtInEnchantmentIcon(target.icon, relation.builtInEnchantment.propertyIcon));
+        const rankLabel = relation.builtInEnchantment.tier === null
+          ? ui.unranked
+          : ui.tier(relation.builtInEnchantment.tier);
+        label.append(node('small', 'relation-tier', rankLabel));
+      } else {
+        anchor.append(icon(target.icon));
+      }
+      anchor.append(label);
       item.append(anchor);
       list.append(item);
     }
@@ -238,6 +257,7 @@ function renderDetailsContent(entry, layout) {
   }
   if (sources.children.length > 1) moreContent.append(sources);
   const moreInfo = node('details', 'more-info');
+  moreInfo.open = true;
   if (moreContent.children.length) moreInfo.append(node('summary', '', ui.moreInfo), moreContent);
   elements.details.dataset.tone = entry.tone;
   const content = [heading, info];
@@ -259,7 +279,7 @@ async function loadEntryDetails(id, retry = false) {
         if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
         payload = await response.json();
       }
-      if (payload?.schemaVersion !== 3 || payload.entry?.id !== id
+      if (payload?.schemaVersion !== 4 || payload.entry?.id !== id
         || typeof payload.entry.implemented !== 'boolean'
         || typeof payload.entry.seasonal !== 'boolean'
         || !Array.isArray(payload.entry.facts) || !Array.isArray(payload.entry.traits)
@@ -375,6 +395,7 @@ function render() {
     }
   }
   elements.slots.replaceChildren(...slots);
+  elements.slots.querySelector('[aria-current]')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   if (!entry) delete elements.details.dataset.tone;
   void renderDetails(entry, layout, missing);
   const sameControl = [...document.querySelectorAll('[data-focus-key]')]
@@ -417,7 +438,7 @@ document.getElementById('skip').addEventListener('click', (event) => {
   document.getElementById('catalog').focus();
 });
 function validateIndex(payload) {
-  if (payload?.schemaVersion !== 3 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)) {
+  if (payload?.schemaVersion !== 4 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)) {
     throw new Error('圖鑑索引 schema 不符。');
   }
   const categoryIds = new Set(payload.categories.map((category) => category?.id));

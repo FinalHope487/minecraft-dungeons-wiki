@@ -10,6 +10,7 @@ const { categories, entries } = loadCatalog();
 const roster = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-roster.json', import.meta.url), 'utf8'));
 const enchantmentRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-enchantment-roster.json', import.meta.url), 'utf8'));
 const gearRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-gear-roster.json', import.meta.url), 'utf8'));
+const builtInMarkerRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-built-in-enchantment-markers.json', import.meta.url), 'utf8'));
 const wikiArtifactDescriptions = JSON.parse(readFileSync(new URL('./fixtures/wiki-artifact-descriptions.json', import.meta.url), 'utf8'));
 const wikiItemDescriptions = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-descriptions.json', import.meta.url), 'utf8'));
 const resolve = (hash) => resolveRoute(hash, categories, entries);
@@ -253,9 +254,18 @@ test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、
     assert.ok(iconAssets[entry.icon], `${expected.id} registered icon`);
     if (entry.icon !== 'wiki-placeholder') assert.equal(iconAssets[entry.icon].kind, 'equipment', `${expected.id} equipment icon kind`);
 
-    const expectedLinks = expected.builtInEnchantments.map(({ id }) => ({
-      id, label: { en: 'Related enchantment', 'zh-Hant': '相關附魔' },
-    }));
+    const expectedLinks = expected.builtInEnchantments.map(({ id }) => {
+      const key = `${expected.id}:${id}`;
+      const tier = builtInMarkerRoster.unranked.includes(key)
+        ? null
+        : builtInMarkerRoster.tierOverrides[key] ?? 1;
+      const propertyIcon = builtInMarkerRoster.regularBullet.includes(key) ? 'regular-bullet' : 'unique-bullet';
+      return {
+        id,
+        label: { en: 'Related enchantment', 'zh-Hant': '相關附魔' },
+        ...(expected.rosterGroup === 'armor' ? {} : { builtInEnchantment: { tier, propertyIcon } }),
+      };
+    });
     if (expected.parentId) expectedLinks.push({ id: expected.parentId, label: { en: 'Base item', 'zh-Hant': '基礎裝備' } });
     for (const variant of variantsByParent.get(expected.id) ?? []) {
       expectedLinks.push({ id: variant.id, label: { en: 'Unique variant', 'zh-Hant': '獨特變體' } });
@@ -266,6 +276,19 @@ test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、
       assert.deepEqual(reverse, { id: expected.id, label: { en: 'Gear with this built-in effect', 'zh-Hant': '具有此固有效果的裝備' } }, `${enchantment.id} reverse built-in relation`);
     }
   }
+  const weaponBuiltIns = actual.filter(({ category }) => ['equipment', 'ranged'].includes(category))
+    .flatMap((entry) => entry.links.filter(({ builtInEnchantment }) => builtInEnchantment)
+      .map(({ id, builtInEnchantment }) => ({ entry: entry.id, id, ...builtInEnchantment })));
+  assert.equal(weaponBuiltIns.length, 117);
+  assert.equal(weaponBuiltIns.filter(({ propertyIcon }) => propertyIcon === 'regular-bullet').length, 20);
+  assert.equal(weaponBuiltIns.filter(({ propertyIcon }) => propertyIcon === 'unique-bullet').length, 97);
+  assert.equal(weaponBuiltIns.filter(({ tier }) => tier === 1).length, 105);
+  assert.deepEqual(weaponBuiltIns.filter(({ tier }) => tier === 2).map(({ entry, id }) => `${entry}:${id}`), ['guardian-bow:supercharge']);
+  assert.deepEqual(weaponBuiltIns.filter(({ tier }) => tier === 3).map(({ entry, id }) => `${entry}:${id}`), ['nautical-crossbow:piercing']);
+  assert.deepEqual(weaponBuiltIns.filter(({ tier }) => tier === null).map(({ entry, id }) => `${entry}:${id}`).sort(),
+    [...builtInMarkerRoster.unranked].sort());
+  assert.equal(gearById.get('call-of-the-void').traits.find(({ label }) => label.en === 'Applies rising damage multiplier')?.icon,
+    'regular-bullet', 'the weapon overview is the source of truth for Call of the Void properties');
   assert.deepEqual(actual.filter(({ implemented }) => !implemented).map(({ id }) => id),
     ['the-monkey-motivator', 'spider-crossbow', 'ender-armor', 'soul-mage-robes']);
   assert.deepEqual(actual.filter(({ seasonal }) => seasonal).map(({ id }) => id), orderedGearRosterEntries.filter(({ seasonal }) => seasonal).map(({ id }) => id));

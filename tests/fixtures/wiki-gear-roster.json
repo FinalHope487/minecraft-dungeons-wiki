@@ -10960,7 +10960,7 @@
                         "descriptionFromWiki":  true,
                         "traits":  [
                                        {
-                                           "icon":  "unique-bullet",
+                                           "icon":  "regular-bullet",
                                            "en":  "Applies rising damage multiplier",
                                            "zh-Hant":  "攻擊后施加傷害倍數"
                                        },
