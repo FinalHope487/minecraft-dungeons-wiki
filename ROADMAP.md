@@ -48,16 +48,16 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`6105099`（本輪測試、建置與本地產物驗收的 commit）
+**commit**：`b3c1f90`（本輪測試、建置與本地產物驗收的 commit）
 **CI run**：未跑
 
-| 層 | 指令 | 2026-11-17 實跑 |
+| 層 | 指令 | 2026-11-18 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 通過：23/23，失敗 0；包含 117 筆內建附魔特性列映射 |
+| 內層 | `npm test` | 通過：23/23，失敗 0；包含 117 筆內建附魔特性列映射及 124 筆附魔來源 fixture 核對 |
 | 建置 | `npm run build` | 通過：7 個分類、446 筆條目 |
-| user 層 | 本地 `dist` 檢查 | 通過：`index.html` 3,981 bytes、446 個條目資料檔、schema v5；117 筆關聯（20 Regular、97 Unique）均有有效特性列索引，Anchor → Gravity 指到「Pulls in enemies」；靜態 JS/CSS 確認疊圖在特性列、底下關聯使用原圖標；未開瀏覽器、未驗實際渲染 |
+| user 層 | 本地 `dist` 檢查 | 通過：`index.html` 3,981 bytes、446 個條目資料檔、schema v5；Ambush 英文怪物效果及繁中翻譯、`[verify]` 註記與來源衝突資料已輸出；靜態 JS 確認不同效果同層、推論 facts 置於預設收合區、相關條目 → 更多資訊 → 來源順序；未開瀏覽器、未驗實際渲染 |
 | 公開 | GitHub Pages | 未跑 |
-| 文件 | `git diff --check` | 通過，exit 0 |
+| 文件 | `git diff --cached --check` | 通過，exit 0；差異檢查無憑證樣式命中 |
 
 ---
 
