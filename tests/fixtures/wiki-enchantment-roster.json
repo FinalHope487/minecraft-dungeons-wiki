@@ -104,8 +104,8 @@
             "zh-Hant": "怪物可用性"
           },
           "value": {
-            "en": "Daily Trial melee mobs are listed; Mystery Banner use appears on the mob page but is marked unverified, and the main enchantment table says ✖.",
-            "zh-Hant": "每日試煉清單列有近戰怪物；怪物頁另列神秘旗幟用途但標為待查，附魔總表則標為「✖」。"
+            "en": "The Ambush page says mobs can receive Ambush in daily trials or from Mystery Banners carried by Raid Captains. Daily Trial lists Ambush for melee mobs; the enchantment overview marks mob obtainability ✖. Enchanted Mobs lists the Mystery Banner mob effect and marks it [verify].",
+            "zh-Hant": "Ambush 頁稱怪物可在每日試煉或透過掠奪隊長的神秘旗幟獲得；每日試煉頁將埋伏列為近戰怪物附魔，但附魔總表的怪物可用性標示「✖」。《附魔怪物》頁列出神秘旗幟下的怪物效果，並標為 [verify]。"
           }
         },
         {
@@ -114,8 +114,8 @@
             "zh-Hant": "怪物效果"
           },
           "value": {
-            "en": "Mobs deal extra damage to unsuspecting heroes.",
-            "zh-Hant": "怪物會對尚未鎖定牠們的英雄造成額外傷害。"
+            "en": "Mob inflicts extra damage on unsuspecting heroes.",
+            "zh-Hant": "怪物會對未察覺的英雄造成額外傷害。"
           }
         },
         {
@@ -124,8 +124,8 @@
             "zh-Hant": "查證可信度"
           },
           "value": {
-            "en": "Low — the Wiki marks this for verification, omits the mob effect, or its pages conflict.",
-            "zh-Hant": "低：Wiki 將資料標為待查、未提供怪物效果，或不同頁面說法不一。"
+            "en": "Low — the Wiki marks the Mystery Banner mob effect [verify], and its overview's mob-obtainability ✖ conflicts with the Ambush and Daily Trial pages.",
+            "zh-Hant": "低：Wiki 將神秘旗幟怪物效果標為 [verify]，且附魔總表的怪物可用性「✖」與 Ambush 及每日試煉頁的記載衝突。"
           }
         }
       ],
@@ -137,16 +137,16 @@
           "一般裝備附魔選項"
         ],
         "mobs": [
-          "Daily Trial melee mobs are listed; Mystery Banner use appears on the mob page but is marked unverified, and the main enchantment table says ✖.",
-          "每日試煉清單列有近戰怪物；怪物頁另列神秘旗幟用途但標為待查，附魔總表則標為「✖」。"
+          "The Ambush page says mobs can receive Ambush in daily trials or from Mystery Banners carried by Raid Captains. Daily Trial lists Ambush for melee mobs; the enchantment overview marks mob obtainability ✖. Enchanted Mobs lists the Mystery Banner mob effect and marks it [verify].",
+          "Ambush 頁稱怪物可在每日試煉或透過掠奪隊長的神秘旗幟獲得；每日試煉頁將埋伏列為近戰怪物附魔，但附魔總表的怪物可用性標示「✖」。《附魔怪物》頁列出神秘旗幟下的怪物效果，並標為 [verify]。"
         ],
         "playerEffect": [
           "Attacks on mobs that are not actively targeting you deal increased damage.",
           "攻擊尚未主動鎖定你的怪物時會造成額外傷害。"
         ],
         "mobEffect": [
-          "Mobs deal extra damage to unsuspecting heroes.",
-          "怪物會對尚未鎖定牠們的英雄造成額外傷害。"
+          "Mob inflicts extra damage on unsuspecting heroes.",
+          "怪物會對未察覺的英雄造成額外傷害。"
         ],
         "evidenceIds": [
           "enchantment-overview",

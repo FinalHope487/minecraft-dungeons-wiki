@@ -384,6 +384,7 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 .enchantment-effect { margin: 12px 0 0; color: #f0ddd3; line-height: 1.6; }
 .effect-label { color: #f5ccad; }
 .effect-note { margin: 7px 0 0 12px; border-left: 2px solid #80594e; padding-left: 9px; color: #c9b6ae; font-size: .86rem; line-height: 1.55; }
+.effect-verification { color: #e9ad79; font-size: .78em; font-weight: 700; }
 .more-info { margin-top: 17px; border-top: 1px solid #795047; }
 .more-info > summary { width: fit-content; min-height: 38px; padding: 9px 4px 7px 0; color: #e2c9bd; font-weight: 800; cursor: pointer; }
 .more-info > summary:focus-visible { outline: 2px dashed #ffdab0; outline-offset: 4px; }

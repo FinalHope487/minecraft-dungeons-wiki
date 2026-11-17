@@ -141,6 +141,7 @@ function renderEnchantmentEffects(entry, info) {
   const mobAvailability = factValue(entry, 'Mob availability');
   const playerEffect = entry.facts.find((fact) => fact.label.en === 'Player effect');
   const mobEffect = entry.facts.find((fact) => fact.label.en === 'Mob effect');
+  const wikiVerification = /\[verify\]/i.test(factValue(entry, 'Evidence confidence'));
   const playerAvailable = heroAvailability
     && !/^(Unavailable|Unconfirmed|Not available)/i.test(heroAvailability);
   const mobAvailable = mobAvailability
@@ -157,15 +158,18 @@ function renderEnchantmentEffects(entry, info) {
     info.append(effect);
   }
   if (showMob) {
-    const note = node('p', showPlayer ? 'effect-note' : 'enchantment-effect');
-    if (showPlayer && sameEffectEnchantments.has(entry.id)) {
-      note.append(node('strong', 'effect-label', ui.mobNote),
+    const sameEffect = showPlayer && sameEffectEnchantments.has(entry.id);
+    const effect = node('p', sameEffect ? 'effect-note' : 'enchantment-effect');
+    if (sameEffect) {
+      effect.append(node('strong', 'effect-label', ui.mobNote),
         document.createTextNode(' '), document.createTextNode(ui.sameMobEffect));
     } else {
-      note.append(node('strong', 'effect-label', ui.mobEffect),
+      effect.append(node('strong', 'effect-label', ui.mobEffect),
         document.createTextNode(' '), document.createTextNode(mobEffect.value[lang]));
+      if (wikiVerification) effect.append(document.createTextNode(' '),
+        node('small', 'effect-verification', ui.wikiVerify));
     }
-    info.append(note);
+    info.append(effect);
   }
 }
 
@@ -189,22 +193,22 @@ function renderDetailsContent(entry, layout) {
 
   const info = node('div', 'info');
   const moreContent = node('div', 'more-info-content');
-  const facts = node('dl', 'facts');
+  const primaryFacts = node('dl', 'facts');
+  const assessmentFacts = node('dl', 'facts');
+  const inferredFactLabels = new Set(['Audience', 'Evidence confidence', 'Mob availability']);
   for (const fact of entry.facts) {
+    const isEffect = entry.category === 'enchantments'
+      && ['Player effect', 'Mob effect'].includes(fact.label.en);
     const pair = node('div', 'fact');
     pair.append(node('dt', '', message(fact.label)), node('dd', '', message(fact.value)));
-    facts.append(pair);
-  }
-  if (entry.category === 'enchantments') renderEnchantmentEffects(entry, info);
-  if (facts.children.length) {
-    if (entry.category === 'enchantments') {
-      const assessment = node('section', 'assessment');
-      assessment.append(node('h3', 'assessment-title', ui.assessment), facts);
-      moreContent.append(assessment);
-    } else {
-      moreContent.append(facts);
+    if (entry.category === 'enchantments' && inferredFactLabels.has(fact.label.en)) {
+      assessmentFacts.append(pair);
+    } else if (!isEffect) {
+      primaryFacts.append(pair);
     }
   }
+  if (entry.category === 'enchantments') renderEnchantmentEffects(entry, info);
+  if (primaryFacts.children.length) info.append(primaryFacts);
   for (const trait of presentation.traits) {
     const line = node('p', 'trait');
     line.dataset.traitIcon = trait.icon;
@@ -220,12 +224,36 @@ function renderDetailsContent(entry, layout) {
   if (entry.category !== 'enchantments' && isWikiDescription(entry)) {
     info.append(node('p', 'description', message(entry.description)));
   }
-  if (isWikiDescription(entry) && (lang === 'zh-Hant' || entry.category === 'enchantments')) {
-    const original = node('details', 'original');
-    const quote = node('p', 'description', entry.description.en);
-    quote.lang = 'en';
-    original.append(node('summary', '', entry.category === 'enchantments' ? ui.wikiDescription : ui.original), quote);
-    moreContent.append(original);
+  if (entry.category === 'enchantments' || (isWikiDescription(entry) && lang === 'zh-Hant')) {
+    const original = node('section', 'original');
+    original.append(node('h3', 'assessment-title', entry.category === 'enchantments' ? ui.wikiDescription : ui.original));
+    const addQuote = (label, value, verified = false) => {
+      const quote = node('p', 'description');
+      quote.lang = 'en';
+      quote.append(node('strong', 'effect-label', `${label}: `), document.createTextNode(value));
+      if (verified) quote.append(document.createTextNode(' [verify]'));
+      original.append(quote);
+    };
+    if (entry.category === 'enchantments') {
+      const playerEffect = entry.facts.find((fact) => fact.label.en === 'Player effect');
+      const mobEffect = entry.facts.find((fact) => fact.label.en === 'Mob effect');
+      if (isWikiDescription(entry)) addQuote('In-game description', entry.description.en);
+      if (playerEffect && (!isWikiDescription(entry) || playerEffect.value.en !== entry.description.en)) {
+        addQuote('Player effect', playerEffect.value.en);
+      }
+      if (mobEffect && !/no mob-side effect is listed|unconfirmed/i.test(mobEffect.value.en)) {
+        addQuote('Mob effect', mobEffect.value.en, /\[verify\]/i.test(factValue(entry, 'Evidence confidence')));
+      }
+    } else if (isWikiDescription(entry)) {
+      addQuote('Original', entry.description.en);
+    }
+    if (original.children.length > 1) moreContent.append(original);
+  }
+
+  if (assessmentFacts.children.length) {
+    const assessment = node('section', 'assessment');
+    assessment.append(node('h3', 'assessment-title', ui.assessment), assessmentFacts);
+    moreContent.append(assessment);
   }
 
   const related = node('div', 'related');
@@ -252,7 +280,7 @@ function renderDetailsContent(entry, layout) {
       list.append(item);
     }
     related.append(list);
-    moreContent.append(related);
+    info.append(related);
   }
   const sources = node('div', 'sources');
   sources.append(node('span', 'source-caption', ui.sources));
@@ -261,13 +289,13 @@ function renderDetailsContent(entry, layout) {
     anchor.lang = 'en';
     sources.append(anchor);
   }
-  if (sources.children.length > 1) moreContent.append(sources);
+  const hasSources = sources.children.length > 1;
   const moreInfo = node('details', 'more-info');
-  moreInfo.open = true;
   if (moreContent.children.length) moreInfo.append(node('summary', '', ui.moreInfo), moreContent);
   elements.details.dataset.tone = entry.tone;
   const content = [heading, info];
   if (moreInfo.children.length) content.push(moreInfo);
+  if (hasSources) content.push(sources);
   elements.details.replaceChildren(...content);
 }
 

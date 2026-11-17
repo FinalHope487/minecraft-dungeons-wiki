@@ -1,6 +1,6 @@
 # Wiki 內容缺漏盤點
 
-盤點日期：2026-11-17
+盤點日期：2026-11-18
 
 ## 範圍與現況
 
@@ -45,3 +45,23 @@ Wiki 的 Damage 頁提供基礎傷害、傷害區間與傷害加成資料，但�
 10 筆關聯使用沒有階級的 Exclusive 效果：Jungle Poison 2 筆、Shared Pain 1 筆、Reliable Ricochet 2 筆、Shadow Shot 3 筆、Shadow Barb 2 筆。它們不能標成 I 級。Wiki 說內建附魔在裝備屬性列以附魔圖標加橘色邊框顯示；圖鑑目前的 trait 另以 Regular Bullet 或 Unique Bullet 表示效果種類。[附魔總表與內建附魔說明](https://minecraft.wiki/w/Dungeons%3AEnchantment)
 
 同一把 Unique 武器可同時有 Regular Bullet 與 Unique Bullet 效果，內建附魔可能對應其中任一效果。Minecraft Wiki 說內建附魔均以原附魔圖標加橘色邊框顯示，未列 Regular／Unique 例外；本圖鑑保留 Bullet 底圖，再疊上橘框附魔原圖標。依 117 筆關聯逐一比對屬性文字，97 筆使用 Unique Bullet、20 筆使用 Regular Bullet；105 筆為 I 級、Guardian Bow 的 Supercharge 為 II 級、Nautical Crossbow 的 Piercing 為 III 級；10 筆 Exclusive 效果無階級。執行資料及可重跑 SQL 見 [v3→v4 migration](../content/migrations/v3-to-v4-built-in-enchantment-markers.sql) 與 [v4→v5 migration](../content/migrations/v4-to-v5-built-in-enchantment-trait.sql)。Call of the Void 單品頁將傷害倍數效果標 Unique，武器總表標 Regular；依專案規則採總表，修正 trait 並標記 Void Strike 關聯為 Regular。[武器總表](https://minecraft.wiki/w/Dungeons%3AWeapon) [附魔總表](https://minecraft.wiki/w/Dungeons%3AEnchantments) [Call of the Void](https://minecraft.wiki/w/Dungeons%3ACall_of_the_Void)
+
+## Ambush 詳情頁事實與判讀
+
+盤點基準：Minecraft Wiki 的 [Ambush](https://minecraft.wiki/w/Dungeons%3AAmbush)、[Enchanted Mobs](https://minecraft.wiki/w/Enchanted_Mobs)、[Daily Trial](https://minecraft.wiki/w/Dungeons%3ADaily_Trial) 與[附魔總表](https://minecraft.wiki/w/Dungeons%3AEnchantments)。
+
+| 頁面資訊 | 來源性質 | 說明 |
+| --- | --- | --- |
+| 名稱 Ambush、Common、Melee Weapon | Wiki 明載；繁中為翻譯 | Ambush 頁直接列出名稱、稀有度與適用類別。 |
+| 玩家效果 | Wiki 原文；繁中為翻譯 | In-game description 寫明攻擊未主動鎖定玩家的怪物會增加傷害。 |
+| 怪物效果 | Wiki 原文；繁中為翻譯，來源標 `[verify]` | Enchanted Mobs 寫 `Mob inflicts extra damage on unsuspecting heroes.`；待查標記也必須保留。中文應譯為「怪物會對未察覺的英雄造成額外傷害」，不能改成「尚未鎖定英雄」。 |
+| 固有效果裝備 Backstabber、Swift Striker 與階級 I | Wiki 明載；關聯提示為圖鑑翻譯 | Ambush 頁的 Built-into 區段直接列出這兩件武器及 Tier I。 |
+| 英雄附魔槽可用 | Wiki 明載後整理成欄位 | Ambush 頁稱它可能出現在近戰武器的任一附魔槽；「一般裝備附魔選項」是圖鑑摘要。 |
+| 怪物可用性 | 多個 Wiki 頁面記載互有衝突 | Ambush 頁與 Daily Trial 頁列出怪物可用情境；附魔總表的怪物可用性欄標「✖」；Enchanted Mobs 頁將神秘旗幟下的怪物效果標為 `[verify]`。應在「更多資訊」逐項呈現，不合併為單一確定結論。 |
+| Audience：Player and mob | 圖鑑判讀 | 由玩家側與怪物側來源資料歸納；Wiki 沒有提供此欄作為明確結論。 |
+| Evidence confidence：Low | 圖鑑可信度判斷 | 根據怪物效果的 `[verify]` 標記及怪物可用性來源衝突評為低；不是 Wiki 給出的評級。 |
+| 已實裝 | 圖鑑狀態分類 | Wiki 條目明載可在近戰武器附魔槽出現；`implemented` 是本圖鑑資料欄，不是 Wiki 原文欄位。 |
+| 非 Seasonal | 由清單標記狀態判定 | Wiki 沒有在此頁明載「非季節限定」；本圖鑑未發現季節標記，因此 `seasonal=false` 是目錄分類，不是原文。 |
+| 英文原文、相關條目、來源連結 | Wiki 原文或引用資料 | 英文效果原文置於收合的「更多資訊」；Backstabber 與 Swift Striker 列於相關條目；來源連結置於整個詳情最後。 |
+
+顯示順序：主資料與來源明載效果、相關條目、預設收合的「更多資訊」（Wiki 原文、跨頁衝突與圖鑑判讀）、來源連結。不同的玩家／怪物效果同層級呈現；Wiki 標 `[verify]` 時在效果旁保留註記。決策見[附魔詳情層級](decisions/2026-11-18-enchantment-detail-information-hierarchy.md)。
