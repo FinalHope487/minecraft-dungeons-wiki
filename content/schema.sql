@@ -83,7 +83,8 @@ CREATE TABLE entry_link_translations (
 CREATE TABLE entry_built_in_enchantments (
   link_id INTEGER PRIMARY KEY REFERENCES entry_links(id) ON DELETE CASCADE,
   property_icon TEXT NOT NULL CHECK (property_icon IN ('regular-bullet', 'unique-bullet')),
-  tier INTEGER CHECK (tier IS NULL OR tier BETWEEN 1 AND 3)
+  tier INTEGER CHECK (tier IS NULL OR tier BETWEEN 1 AND 3),
+  property_trait_id INTEGER NOT NULL REFERENCES traits(id) ON DELETE RESTRICT
 );
 
 CREATE TABLE entry_sources (
@@ -101,6 +102,6 @@ CREATE INDEX traits_by_entry ON traits(entry_id, position);
 CREATE INDEX links_by_entry ON entry_links(entry_id, position);
 CREATE INDEX sources_by_entry ON entry_sources(entry_id, position);
 
-PRAGMA user_version = 4;
+PRAGMA user_version = 5;
 
 COMMIT;

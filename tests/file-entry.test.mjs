@@ -38,11 +38,12 @@ test('HTML entry uses a classic loader with a self-contained file URL path', asy
     ['inventoryGrid', 'src/inventory-grid.mjs'],
     ['locale', 'src/locale.mjs'],
     ['iconAssets', 'src/icon-assets.mjs'],
+    ['builtInEnchantmentPresentation', 'src/built-in-enchantment-presentation.mjs'],
     ['wiki', 'src/wiki.js'],
   ].map(async ([key, path]) => [key, await readProjectFile(path)])));
   const bundle = createFileAppSource({
     modules,
-    catalog: { index: { schemaVersion: 4, categories: [], entries: [] }, entries: {} },
+    catalog: { index: { schemaVersion: 5, categories: [], entries: [] }, entries: {} },
   });
   assert.doesNotMatch(bundle, /\bimport\.meta\b|^\s*import\s/m);
   assert.match(bundle, /globalThis\.__WIKI_FILE_DATA__/);

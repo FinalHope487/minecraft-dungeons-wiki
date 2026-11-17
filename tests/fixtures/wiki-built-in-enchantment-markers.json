@@ -41,5 +41,9 @@
   "tierOverrides": {
     "guardian-bow:supercharge": 2,
     "nautical-crossbow:piercing": 3
+  },
+  "propertyTraitPositions": {
+    "anchor:gravity": 2,
+    "encrusted-anchor:gravity": 2
   }
 }

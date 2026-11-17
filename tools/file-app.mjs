@@ -15,6 +15,10 @@ const moduleDefinitions = [
     key: 'iconAssets',
     names: ['iconAssetUrl'],
   },
+  {
+    key: 'builtInEnchantmentPresentation',
+    names: ['buildBuiltInEnchantmentPresentation'],
+  },
 ];
 
 function removeImports(source, label) {
@@ -37,8 +41,8 @@ function replaceRequired(source, pattern, replacement, label) {
 }
 
 export function createFileAppSource({ modules, catalog }) {
-  if (!modules || !catalog?.index || !catalog?.entries || catalog.index.schemaVersion !== 4) {
-    throw new TypeError('file:// 圖鑑 bundle 缺少 schema v4 分類索引或詳情資料。');
+  if (!modules || !catalog?.index || !catalog?.entries || catalog.index.schemaVersion !== 5) {
+    throw new TypeError('file:// 圖鑑 bundle 缺少 schema v5 分類索引或詳情資料。');
   }
 
   const bundledModules = moduleDefinitions.map(({ key, names }) => {

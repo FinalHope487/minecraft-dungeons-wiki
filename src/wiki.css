@@ -399,9 +399,10 @@ html:lang(en) h1 { font-family: var(--display-font); font-weight: 400; }
 .related-link:hover { border-color: var(--ember); }
 .related-link strong, .related-link small { display: block; }
 .related-link small { color: #cdb6af; font-size: .72rem; }
-.built-in-enchantment-icon { position: relative; display: grid; place-items: center; flex: 0 0 36px; width: 36px; height: 36px; }
-.built-in-property-icon { width: 36px; height: 36px; object-fit: contain; image-rendering: pixelated; }
-.built-in-enchantment-icon-overlay { position: absolute; width: 22px; height: 22px; object-fit: contain; image-rendering: pixelated; }
+.built-in-enchantment-trait-icon { position: relative; display: grid; place-items: center; flex: 0 0 23px; width: 23px; height: 23px; }
+.built-in-property-icon { width: 23px; height: 23px; object-fit: contain; image-rendering: pixelated; }
+.built-in-enchantment-overlay-frame { position: absolute; display: grid; place-items: center; width: 15px; height: 15px; border: 1px solid #e79531; box-sizing: border-box; background: #1c1310; }
+.built-in-enchantment-overlay { width: 11px; height: 11px; object-fit: contain; image-rendering: pixelated; }
 .relation-tier { margin-top: 2px; color: #f2c39e !important; font-weight: 800; }
 .assessment { margin-top: 4px; }
 .assessment-title { margin: 0 0 10px; color: #e2c9bd; font-size: .9rem; }

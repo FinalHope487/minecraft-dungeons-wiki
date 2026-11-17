@@ -15,6 +15,7 @@
 - Schema v2 在條目列新增 `implemented` 布林欄位；匯出的 JSON `schemaVersion` 同步為 2。舊資料預設為已實裝。
 - Schema v3 在條目列新增 `seasonal` 布林欄位，預設為 `false`；匯出的索引摘要及條目 JSON 同步提供此欄位並使用 `schemaVersion` 3。
 - Schema v4 新增 `entry_built_in_enchantments` 關聯中繼資料表，記錄 Bullet 圖標及可空的附魔階級；遷移 SQL 見 [v3→v4](../../content/migrations/v3-to-v4-built-in-enchantment-markers.sql)。HTTP JSON 與 `file://` bundle 的 `schemaVersion` 同步為 4。
+- Schema v5 在內建附魔關聯加入 `property_trait_id`，明確連到武器的 Bullet 特性列；匯出的 `propertyTraitIndex` 是該列在條目 `traits` 中的零起始索引。遷移 SQL 見 [v4→v5](../../content/migrations/v4-to-v5-built-in-enchantment-trait.sql)。HTTP JSON 與 `file://` bundle 的 `schemaVersion` 同步為 5。
 - 建置啟用並檢查外鍵。資料採 UTF-8；翻譯欄位按語言分列，必須提供非空白的繁中與英文。新增語言需同步更新 locale、資料庫驗證及前端契約。
 
 ## 資料約束

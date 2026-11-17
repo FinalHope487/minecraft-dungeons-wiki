@@ -7,6 +7,7 @@ import {
 } from './inventory-grid.mjs';
 import { resolveLanguage, uiText } from './locale.mjs';
 import { iconAssetUrl } from './icon-assets.mjs';
+import { buildBuiltInEnchantmentPresentation } from './built-in-enchantment-presentation.mjs';
 
 const params = new URLSearchParams(location.search);
 const lang = resolveLanguage(location.search);
@@ -110,10 +111,12 @@ function icon(id, className = 'icon') {
   return image;
 }
 
-function builtInEnchantmentIcon(enchantmentIcon, propertyIcon) {
-  const stack = node('span', 'built-in-enchantment-icon');
+function builtInEnchantmentTraitIcon(enchantmentIcon, propertyIcon) {
+  const stack = node('span', 'built-in-enchantment-trait-icon');
   stack.setAttribute('aria-hidden', 'true');
-  stack.append(icon(propertyIcon, 'built-in-property-icon'), icon(enchantmentIcon, 'built-in-enchantment-icon-overlay'));
+  const frame = node('span', 'built-in-enchantment-overlay-frame');
+  frame.append(icon(enchantmentIcon, 'built-in-enchantment-overlay'));
+  stack.append(icon(propertyIcon, 'built-in-property-icon'), frame);
   return stack;
 }
 
@@ -171,6 +174,7 @@ function isWikiDescription(entry) {
 }
 
 function renderDetailsContent(entry, layout) {
+  const presentation = buildBuiltInEnchantmentPresentation(entry, entries);
   const heading = node('header', 'detail-heading');
   const identity = node('div', 'identity');
   const badge = node('span', 'rarity', message(entry.badge));
@@ -201,11 +205,16 @@ function renderDetailsContent(entry, layout) {
       moreContent.append(facts);
     }
   }
-  for (const trait of entry.traits) {
+  for (const trait of presentation.traits) {
     const line = node('p', 'trait');
     line.dataset.traitIcon = trait.icon;
     const label = node('span', '', message(trait.label));
-    line.append(icon(trait.icon), label);
+    if (trait.builtInEnchantmentIcon) {
+      line.append(builtInEnchantmentTraitIcon(trait.builtInEnchantmentIcon.icon,
+        trait.builtInEnchantmentIcon.propertyIcon), label);
+    } else {
+      line.append(icon(trait.icon), label);
+    }
     info.append(line);
   }
   if (entry.category !== 'enchantments' && isWikiDescription(entry)) {
@@ -223,23 +232,20 @@ function renderDetailsContent(entry, layout) {
   if (entry.links.length) {
     related.append(node('h3', '', ui.related));
     const list = node('ul', 'related-list');
-    for (const relation of entry.links) {
-      const target = entries.find((item) => item.id === relation.id);
-      if (!target) throw new Error(`條目 ${entry.id} 的關聯目標不存在：${relation.id}`);
+    for (const relation of presentation.related) {
+      const { target } = relation;
       const item = node('li');
       const anchor = link(entryHash(target, layout), '', 'related-link');
       anchor.dataset.focusTarget = `entry-${target.id}`;
       const label = node('span');
       const targetName = node('strong', '', message(target.name));
       label.append(targetName, node('small', '', message(relation.label)));
+      anchor.append(icon(target.icon));
       if (relation.builtInEnchantment) {
-        anchor.append(builtInEnchantmentIcon(target.icon, relation.builtInEnchantment.propertyIcon));
         const rankLabel = relation.builtInEnchantment.tier === null
           ? ui.unranked
           : ui.tier(relation.builtInEnchantment.tier);
         label.append(node('small', 'relation-tier', rankLabel));
-      } else {
-        anchor.append(icon(target.icon));
       }
       anchor.append(label);
       item.append(anchor);
@@ -279,7 +285,7 @@ async function loadEntryDetails(id, retry = false) {
         if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
         payload = await response.json();
       }
-      if (payload?.schemaVersion !== 4 || payload.entry?.id !== id
+      if (payload?.schemaVersion !== 5 || payload.entry?.id !== id
         || typeof payload.entry.implemented !== 'boolean'
         || typeof payload.entry.seasonal !== 'boolean'
         || !Array.isArray(payload.entry.facts) || !Array.isArray(payload.entry.traits)
@@ -438,7 +444,7 @@ document.getElementById('skip').addEventListener('click', (event) => {
   document.getElementById('catalog').focus();
 });
 function validateIndex(payload) {
-  if (payload?.schemaVersion !== 4 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)) {
+  if (payload?.schemaVersion !== 5 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)) {
     throw new Error('圖鑑索引 schema 不符。');
   }
   const categoryIds = new Set(payload.categories.map((category) => category?.id));

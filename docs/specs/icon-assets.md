@@ -22,7 +22,7 @@
 
 依 Wiki 武器總表標記固有效果。普通效果使用灰色菱形 `regular-bullet`（Regular Bullet）與灰色文字；Unique 效果使用橘色菱形 `unique-bullet`（Unique Bullet）與橘色文字。只呈現已核對的效果。
 
-武器內建附魔關聯使用對應的 Bullet 圖標作底層，疊上關聯附魔圖標；依已查證階級顯示 I、II 或 III。無階級的 Exclusive 效果顯示「無階級」，不得預設標為 I。底圖與階級記在關聯中繼資料，不改動附魔條目本身的圖標。
+武器內建附魔在對應特性列以 Regular／Unique Bullet 為底，疊上帶橘框的附魔原圖標；底下關聯只顯示附魔原圖標。所有內建附魔都套用此呈現，不依 Bullet 類型區分。關聯中繼資料記錄 Bullet 類型、對應特性列與階級；無階級的 Exclusive 效果顯示「無階級」，不得預設標為 I。
 
 ## 來源、命名與呈現
 

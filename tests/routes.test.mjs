@@ -260,10 +260,12 @@ test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、
         ? null
         : builtInMarkerRoster.tierOverrides[key] ?? 1;
       const propertyIcon = builtInMarkerRoster.regularBullet.includes(key) ? 'regular-bullet' : 'unique-bullet';
+      const propertyTraitIndex = builtInMarkerRoster.propertyTraitPositions[key]
+        ?? expected.traits.findIndex((trait) => trait.icon === propertyIcon);
       return {
         id,
         label: { en: 'Related enchantment', 'zh-Hant': '相關附魔' },
-        ...(expected.rosterGroup === 'armor' ? {} : { builtInEnchantment: { tier, propertyIcon } }),
+        ...(expected.rosterGroup === 'armor' ? {} : { builtInEnchantment: { tier, propertyIcon, propertyTraitIndex } }),
       };
     });
     if (expected.parentId) expectedLinks.push({ id: expected.parentId, label: { en: 'Base item', 'zh-Hant': '基礎裝備' } });

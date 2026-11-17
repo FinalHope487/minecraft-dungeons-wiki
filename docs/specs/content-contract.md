@@ -11,7 +11,7 @@
 | `seasonal` | 布林值，預設 `false`。`true` 表示 Wiki 標示為季節限定；詳情及物品格顯示 Seasonal 標籤，與 `implemented` 狀態分開呈現。 |
 | `facts` | 依序顯示的 `{ label, value }`。裝備與物品可用類型、出現任務或已核實用途；附魔可用適用類型與觸發條件，神器可用冷卻及已核對的固定效果。 |
 | `traits` | 固有效果的 `{ icon, label }`。依[圖標素材規範](icon-assets.md#類型與重用)選擇標記。 |
-| `links` | `{ id, label, builtInEnchantment? }`。用標籤說明關係，例如固定特性對應的機制。關聯目標須已收錄且有來源。近戰／遠程武器指向附魔的每筆關聯都須附 `{ tier, propertyIcon }`；`tier` 為 `1`、`2`、`3` 或 `null`，`null` 用於無階級的 Exclusive 效果；`propertyIcon` 為 `regular-bullet` 或 `unique-bullet`，決定附魔圖標的底圖。其他關聯省略此欄。 |
+| `links` | `{ id, label, builtInEnchantment? }`。用標籤說明關係，例如固定特性對應的機制。關聯目標須已收錄且有來源。近戰／遠程武器指向附魔的每筆關聯都須附 `{ tier, propertyIcon, propertyTraitIndex }`；`tier` 為 `1`、`2`、`3` 或 `null`，`null` 用於無階級的 Exclusive 效果；`propertyIcon` 為 `regular-bullet` 或 `unique-bullet`，記錄 Wiki 特性類型並決定疊圖底圖；`propertyTraitIndex` 為武器 `traits` 陣列中對應 Bullet 特性列的零起始索引。其他關聯省略此欄。 |
 | `sources` | 至少一筆 `{ label, url }`，連結至可查核的 HTTPS 來源。 |
 
 分類名稱、條目名稱、稀有度、描述、事實欄位的標籤與值，以及固定特性和關聯的標籤，都使用 `{ "zh-Hant": "...", en: "..." }`。來源標籤保留原始頁名。裝備與神器描述的 `en` 欄逐字保留 Wiki 具體條目頁原文；神器以 `In-game description` 欄為準，繁中由英文原文翻譯。尚未核對遊戲繁中用語時使用圖鑑翻譯。

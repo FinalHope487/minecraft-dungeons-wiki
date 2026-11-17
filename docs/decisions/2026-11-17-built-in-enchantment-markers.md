@@ -2,7 +2,7 @@
 
 **決策者**：使用者核准依盤點結果標記。
 
-**決策**：在武器對附魔的關聯上記錄 Bullet 圖標與階級；詳情以 Bullet 為底疊上附魔圖標，並標出 I、II、III 或無階級。盔甲和一般關聯不套用此標記。
+**決策**：在武器對附魔的關聯上記錄 Bullet 類型與階級；詳情在對應特性列以 Bullet 類型為底疊上帶橘框的附魔原圖標，底下關聯只顯示原圖標、關聯文字與階級。盔甲和一般關聯不套用武器用的 Bullet 關聯標記。顯示細節依[後續決策](2026-11-17-built-in-enchantment-trait-placement.md)調整。
 
 **依據**：Wiki 武器總表逐件標出 Regular／Unique Bullet；117 筆關聯盤點為 97 筆 Unique、20 筆 Regular。Guardian Bow 的 Supercharge 為 II；Nautical Crossbow 的 Piercing 為 III；10 筆 Exclusive 效果沒有階級，不能預設成 I。
 

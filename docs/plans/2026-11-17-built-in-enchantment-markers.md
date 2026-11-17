@@ -15,7 +15,7 @@
 
 1. 建立附魔關聯中繼資料表，遷移 117 筆關聯；驗證 97 Unique、20 Regular、105 階級 I、1 階級 II、1 階級 III、10 筆無階級。
 2. 匯出 `builtInEnchantment` 契約並將 JSON schema 升至 4；驗證一般關聯未帶入內建附魔中繼資料。
-3. 詳情以 Bullet 圖標為底疊上附魔圖標，並顯示階級或無階級標籤；維持關聯項目位於「更多資訊」。
+3. 在對應特性列以 Bullet 圖標為底疊上帶橘框的附魔原圖標；所有 built-in 連結都套用，不區分 Regular／Unique。「更多資訊」內關聯只顯示附魔原圖標、關聯文字與階級。
 4. 更新逐筆 fixture 與契約測試；執行 `npm test`、`npm run build`，靜態檢查本地 `dist` 的 schema、資料、中繼資料與圖標登錄。
 
 ## 切換與回退
@@ -24,4 +24,4 @@
 
 ## 執行結果
 
-`npm test` 通過 21/21；`npm run build` 產出 7 個分類、446 筆條目。`dist` 有 schema v4 的 446 筆詳情，117 筆 weapon metadata（97 Unique、20 Regular；階級 I 105、II 1、III 1、無階級 10），所有 Bullet 與目標附魔素材都存在。靜態 CSS／JS 檢查確認列表和詳情各自捲動、緊湊版上下固定面板、更多資訊預設展開並顯示判讀欄位。未開瀏覽器，因此未驗證實際捲動手感或像素視覺。遷移 SQL 已在暫存 v3 副本重播成功，外鍵錯誤 0、SQLite integrity `ok`。
+`npm test` 與 `npm run build` 的本輪結果記於 ROADMAP 基線。schema v5 為 117 筆關聯保存 Bullet 特性列關聯；特性列以 Bullet 為底疊橘框附魔圖標，底下關聯使用無框原圖標。未開瀏覽器，實際渲染仍未驗證。

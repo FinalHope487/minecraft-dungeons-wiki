@@ -35,6 +35,7 @@ const moduleFiles = {
   inventoryGrid: 'src/inventory-grid.mjs',
   locale: 'src/locale.mjs',
   iconAssets: 'src/icon-assets.mjs',
+  builtInEnchantmentPresentation: 'src/built-in-enchantment-presentation.mjs',
   wiki: 'src/wiki.js',
 };
 const modules = Object.fromEntries(await Promise.all(Object.entries(moduleFiles).map(async ([key, path]) => [
