@@ -1,0 +1,286 @@
+{
+  "items": [
+    {
+      "id": "blightbearer",
+      "source": "https://minecraft.wiki/w/Dungeons%3ABlightbearer",
+      "basis": "in-game-description",
+      "description": { "en": "The Blightbearer has been twisted by Illager witches to spread plague and disease.", "zh-Hant": "瘟疫使者遭到刌民女巫扭曲，會散播瘟疫與疾病。" }
+    },
+    {
+      "id": "callers-bane",
+      "source": "https://minecraft.wiki/w/Dungeons%3ACaller's_Bane",
+      "basis": "wiki-note",
+      "description": { "en": "The Wiki does not document what this unused artifact was meant to do.", "zh-Hant": "Wiki 未記載這件未使用神器原本的用途。" }
+    },
+    {
+      "id": "plentiful-quiver",
+      "source": "https://minecraft.wiki/w/Dungeons%3APlentiful_Quiver",
+      "basis": "in-game-description",
+      "description": { "en": "[PASSIVE] When equipped, slowly replenishes your arrows up to 20.", "zh-Hant": "[被動] 裝備時會逐漸補充箭矢，最多補至 20 支。" }
+    },
+    {
+      "id": "recycler-quiver",
+      "source": "https://minecraft.wiki/w/Dungeons%3ARecycler_Quiver",
+      "basis": "in-game-description",
+      "description": { "en": "[PASSIVE] When equipped, getting hit by arrows gives you a chance to gain that arrow.", "zh-Hant": "[被動] 裝備時，受到箭矢攻擊有機會獲得該箭矢。" }
+    },
+    {
+      "id": "regeneration-rock",
+      "source": "https://minecraft.wiki/w/Dungeons%3ARegeneration_Rock",
+      "basis": "wiki-note",
+      "description": { "en": "This unused artifact's function was replaced by the Totem of Regeneration.", "zh-Hant": "這件未使用神器的功能後來由再生圖騰取代。" }
+    },
+    {
+      "id": "sanctuary-grail",
+      "source": "https://minecraft.wiki/w/Dungeons%3ASanctuary_Grail",
+      "basis": "wiki-note",
+      "description": { "en": "The Wiki does not document what this unused artifact was meant to do.", "zh-Hant": "Wiki 未記載這件未使用神器原本的用途。" }
+    },
+    {
+      "id": "totem-of-resistance",
+      "source": "https://minecraft.wiki/w/Dungeons%3ATotem_of_Resistance",
+      "basis": "in-game-description",
+      "description": { "en": "The Totem of Resistance buzzes with self-destructive energy that bursts forth to protect you, at all costs.", "zh-Hant": "抗性圖騰嗡鳴著自我毀滅的能量，會不惜一切代價爆發力量保護你。" }
+    },
+    {
+      "id": "totem-of-soul-protection",
+      "source": "https://minecraft.wiki/w/Dungeons%3ATotem_of_Soul_Protection",
+      "basis": "in-game-description",
+      "description": { "en": "This totem radiates powerful protective magic.", "zh-Hant": "這座圖騰散發著強大的防護魔法。" }
+    },
+    {
+      "id": "apple",
+      "source": "https://minecraft.wiki/w/Dungeons%3AApple",
+      "basis": "in-game-description",
+      "description": { "en": "Heals 20% over 3 seconds", "zh-Hant": "在 3 秒內恢復 20% 生命值。" }
+    },
+    {
+      "id": "bread",
+      "source": "https://minecraft.wiki/w/Dungeons%3ABread",
+      "basis": "in-game-description",
+      "description": { "en": "Heals 100% over 30 seconds", "zh-Hant": "在 30 秒內恢復 100% 生命值。" }
+    },
+    {
+      "id": "chorus-fruit",
+      "source": "https://minecraft.wiki/w/Dungeons%3AChorus_Fruit",
+      "basis": "in-game-description",
+      "description": { "en": "Heals 30% over 1 second", "zh-Hant": "在 1 秒內恢復 30% 生命值。" }
+    },
+    {
+      "id": "cooked-salmon",
+      "source": "https://minecraft.wiki/w/Dungeons%3ACooked_Salmon",
+      "basis": "wiki-behavior",
+      "description": { "en": "Heals 35% over 8 seconds", "zh-Hant": "在 8 秒內恢復 35% 生命值。" }
+    },
+    {
+      "id": "melon",
+      "source": "https://minecraft.wiki/w/Dungeons%3AMelon",
+      "basis": "in-game-description",
+      "description": { "en": "Heals 75% over 15 seconds", "zh-Hant": "在 15 秒內恢復 75% 生命值。" }
+    },
+    {
+      "id": "pork",
+      "source": "https://minecraft.wiki/w/Dungeons%3APork",
+      "basis": "in-game-description",
+      "description": { "en": "Heals 50% over 10 seconds", "zh-Hant": "在 10 秒內恢復 50% 生命值。" }
+    },
+    {
+      "id": "sweet-berries",
+      "source": "https://minecraft.wiki/w/Dungeons%3ASweet_Berries",
+      "basis": "wiki-behavior",
+      "description": { "en": "Heals 20% over 8 seconds and grants Swiftness for 5 seconds", "zh-Hant": "在 8 秒內恢復 20% 生命值，並獲得 5 秒迅捷效果。" }
+    },
+    {
+      "id": "tropical-fish",
+      "source": "https://minecraft.wiki/w/Dungeons%3ATropical_Fish",
+      "basis": "in-game-description",
+      "description": { "en": "Heals 20% over 2 seconds and replenishes 10% oxygen", "zh-Hant": "在 2 秒內恢復 20% 生命值，並補充 10% 氧氣。" }
+    },
+    {
+      "id": "dried-kelp",
+      "source": "https://minecraft.wiki/w/Dungeons%3ADried_Kelp",
+      "basis": "wiki-note",
+      "description": { "en": "This unused food was planned for the Hidden Depths DLC; the Wiki does not record its intended effect.", "zh-Hant": "這種未使用食物原定加入隱藏深淵 DLC；Wiki 未記載其預定效果。" }
+    },
+    {
+      "id": "rabbits-foot",
+      "source": "https://minecraft.wiki/w/Dungeons%3ARabbit's_Foot",
+      "basis": "wiki-note",
+      "description": { "en": "Its use sound echoes the Swiftness Potion effect, suggesting it may have increased movement speed.", "zh-Hant": "使用音效帶有迅捷藥水效果的旋律，顯示它可能原本會提高移動速度。" }
+    },
+    {
+      "id": "burning-brew",
+      "source": "https://minecraft.wiki/w/Dungeons%3ABurning_Brew",
+      "basis": "in-game-description",
+      "description": { "en": "A spicy sip will set you aflame! Damages enemies that get too close.", "zh-Hant": "辛辣一飲，讓你燃起火焰！傷害靠得太近的敵人。" }
+    },
+    {
+      "id": "dense-brew",
+      "source": "https://minecraft.wiki/w/Dungeons%3ADense_Brew",
+      "basis": "in-game-description",
+      "description": { "en": "Grants resistance to pushbacks and melee damage.", "zh-Hant": "獲得擊退抗性，並減少近戰傷害。" }
+    },
+    {
+      "id": "oakwood-brew",
+      "source": "https://minecraft.wiki/w/Dungeons%3AOakwood_Brew",
+      "basis": "in-game-description",
+      "description": { "en": "Briefly boosts defense", "zh-Hant": "短暫提高防禦。" }
+    },
+    {
+      "id": "potion-of-water-breathing",
+      "source": "https://minecraft.wiki/w/Dungeons%3APotion_of_Water_Breathing",
+      "basis": "in-game-description",
+      "description": { "en": "Grants the ability to breathe freely underwater for a limited time.", "zh-Hant": "在有限時間內可於水下自由呼吸。" }
+    },
+    {
+      "id": "shadow-brew",
+      "source": "https://minecraft.wiki/w/Dungeons%3AShadow_Brew",
+      "basis": "in-game-description",
+      "description": { "en": "Grants invisibility and boosts your next melee attack", "zh-Hant": "獲得隱形效果，並強化下一次近戰攻擊。" }
+    },
+    {
+      "id": "strength-potion",
+      "source": "https://minecraft.wiki/w/Dungeons%3AStrength_Potion",
+      "basis": "in-game-description",
+      "description": { "en": "Briefly boosts attack damage.", "zh-Hant": "短暫提高攻擊傷害。" }
+    },
+    {
+      "id": "sweet-brew",
+      "source": "https://minecraft.wiki/w/Dungeons%3ASweet_Brew",
+      "basis": "in-game-description",
+      "description": { "en": "Grants a small defense boost and resistance to freezing effects.", "zh-Hant": "小幅提高防禦，並獲得冰凍抗性。" }
+    },
+    {
+      "id": "swiftness-potion",
+      "source": "https://minecraft.wiki/w/Dungeons%3ASwiftness_Potion",
+      "basis": "in-game-description",
+      "description": { "en": "Briefly boosts movement speed.", "zh-Hant": "短暫提高移動速度。" }
+    },
+    {
+      "id": "burning-oil-vial",
+      "source": "https://minecraft.wiki/w/Dungeons%3ABurning_Oil_Vial",
+      "basis": "in-game-description",
+      "description": { "en": "Sets your arrows on fire and makes them pierce through enemies, making them vastly more dangerous.", "zh-Hant": "讓你的箭矢燃起火焰並貫穿敵人，使它們危險得多。" }
+    },
+    {
+      "id": "harming-potion",
+      "source": "https://minecraft.wiki/w/Dungeons%3AHarming_Potion",
+      "basis": "wiki-note",
+      "description": { "en": "This unused potion would have dropped during missions, but its intended status effect is unknown.", "zh-Hant": "這種未使用藥水原定於任務中掉落，但其預定狀態效果未知。" }
+    },
+    {
+      "id": "health-potion-consumable",
+      "source": "https://minecraft.wiki/w/Dungeons%3AHealth_Potion_(consumable)",
+      "basis": "in-game-description",
+      "description": { "en": "A potion that restores health.", "zh-Hant": "一瓶可恢復生命值的藥水。" }
+    },
+    {
+      "id": "invisibility-potion",
+      "source": "https://minecraft.wiki/w/Dungeons%3AInvisibility_Potion",
+      "basis": "wiki-note",
+      "description": { "en": "This unused potion would have dropped during missions; its intended status effect is unknown.", "zh-Hant": "這種未使用藥水原定於任務中掉落；其預定狀態效果未知。" }
+    },
+    {
+      "id": "night-vision-potion",
+      "source": "https://minecraft.wiki/w/Dungeons%3ANight_Vision_Potion",
+      "basis": "wiki-note",
+      "description": { "en": "This unused potion would have dropped during missions; its intended status effect is unknown.", "zh-Hant": "這種未使用藥水原定於任務中掉落；其預定狀態效果未知。" }
+    },
+    {
+      "id": "splash-harming-potion",
+      "source": "https://minecraft.wiki/w/Dungeons%3ASplash_Harming_Potion",
+      "basis": "wiki-note",
+      "description": { "en": "This unused throwable potion would have dropped during missions, but its intended status effect is unknown.", "zh-Hant": "這種未使用投擲藥水原定於任務中掉落，但其預定狀態效果未知。" }
+    },
+    {
+      "id": "splash-slowing-potion",
+      "source": "https://minecraft.wiki/w/Dungeons%3ASplash_Slowing_Potion",
+      "basis": "in-game-description",
+      "description": { "en": "When thrown, slows all enemies in an area.", "zh-Hant": "投擲後會使範圍內所有敵人減速。" }
+    },
+    {
+      "id": "arrow-bundle",
+      "source": "https://minecraft.wiki/w/Dungeons%3AArrow_Bundle",
+      "basis": "in-game-description",
+      "description": { "en": "A small bundle of arrows", "zh-Hant": "一小捆箭矢。" }
+    },
+    {
+      "id": "conduit",
+      "source": "https://minecraft.wiki/w/Dungeons%3AConduit",
+      "basis": "in-game-description",
+      "description": { "en": "Creates a sphere of oxygenated water, protecting players from drowning.", "zh-Hant": "形成一個充滿氧氣的水球，保護玩家免於溺水。" }
+    },
+    {
+      "id": "trident",
+      "source": "https://minecraft.wiki/w/Dungeons%3ATrident",
+      "basis": "in-game-description",
+      "description": { "en": "Sticks to the first target it hits, then explodes a few seconds later.", "zh-Hant": "黏附於第一個命中的目標，並在數秒後爆炸。" }
+    },
+    {
+      "id": "elytra",
+      "source": "https://minecraft.wiki/w/Dungeons%3AElytra",
+      "basis": "in-game-description",
+      "description": { "en": "Grants the ability to blast off and glide.", "zh-Hant": "可讓你彈射升空並滑翔。" }
+    },
+    {
+      "id": "enchantment-scroll",
+      "source": "https://minecraft.wiki/w/Dungeons%3AEnchantment_Scroll",
+      "basis": "wiki-note",
+      "description": { "en": "One of three unused scroll consumables; its intended use is unknown.", "zh-Hant": "三種未使用捲軸消耗品之一；預定用途未知。" }
+    },
+    {
+      "id": "ender-pearl",
+      "source": "https://minecraft.wiki/w/Dungeons%3AEnder_Pearl",
+      "basis": "wiki-note",
+      "description": { "en": "This unused item's function was replaced by the hotbar ability to teleport to other players.", "zh-Hant": "這件未使用物品的功能後來由快捷列傳送至其他玩家的能力取代。" }
+    },
+    {
+      "id": "eye-of-ender",
+      "source": "https://minecraft.wiki/w/Dungeons%3AEye_of_Ender",
+      "basis": "wiki-behavior",
+      "description": { "en": "In The Stronghold, collecting all six Eyes of Ender opens the End portal and grants access to the End Wilds.", "zh-Hant": "在要塞中收集全部六顆終界之眼即可開啟終界傳送門，前往終界荒野。" }
+    },
+    {
+      "id": "fire-scroll",
+      "source": "https://minecraft.wiki/w/Dungeons%3AFire_Scroll",
+      "basis": "wiki-note",
+      "description": { "en": "One of three unused scroll consumables; its intended use is unknown.", "zh-Hant": "三種未使用捲軸消耗品之一；預定用途未知。" }
+    },
+    {
+      "id": "flint-and-steel",
+      "source": "https://minecraft.wiki/w/Dungeons%3AFlint_and_Steel",
+      "basis": "wiki-note",
+      "description": { "en": "This unused consumable's intended function is unknown.", "zh-Hant": "這件未使用消耗品的預定功能未知。" }
+    },
+    {
+      "id": "icon-map",
+      "source": "https://minecraft.wiki/w/Dungeons%3AIcon_Map",
+      "basis": "wiki-note",
+      "description": { "en": "Planned for the Echoing Void DLC, this unused item's intended function is unknown.", "zh-Hant": "這件未使用物品原定加入回音虛空 DLC，但預定功能未知。" }
+    },
+    {
+      "id": "key",
+      "source": "https://minecraft.wiki/w/Dungeons%3AKey",
+      "basis": "wiki-note",
+      "description": { "en": "Its function was likely replaced by the Gold Key Golem and Diamond Key Golem.", "zh-Hant": "它的功能很可能後來由金鑰匙魔像與鑽石鑰匙魔像取代。" }
+    },
+    {
+      "id": "necromancers-staff",
+      "source": "https://minecraft.wiki/w/Dungeons%3ANecromancer's_Staff",
+      "basis": "wiki-note",
+      "description": { "en": "This unused staff is mentioned in the opening and ending cinematics of Desert Temple; its function is unknown.", "zh-Hant": "這支未使用法杖曾在沙漠神殿的開場與結尾動畫中提及；其功能未知。" }
+    },
+    {
+      "id": "scroll-of-heroism",
+      "source": "https://minecraft.wiki/w/Dungeons%3AScroll_of_Heroism",
+      "basis": "wiki-note",
+      "description": { "en": "One of three unused scroll consumables; the Wiki does not record its intended effect.", "zh-Hant": "三種未使用捲軸消耗品之一；Wiki 未記載其預定效果。" }
+    },
+    {
+      "id": "threat-banner",
+      "source": "https://minecraft.wiki/w/Dungeons%3AThreat_Banner",
+      "basis": "in-game-description",
+      "description": { "en": "Collecting a Threat Banner increases the threat level of the mission instantly!", "zh-Hant": "取得威脅旗幟會立即提高任務的威脅等級！" }
+    }
+  ]
+}

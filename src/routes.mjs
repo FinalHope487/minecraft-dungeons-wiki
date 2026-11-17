@@ -20,7 +20,8 @@ export function resolveRoute(hash, categories, entries) {
   const listed = listEntries(category, categories, entries);
   const entry = listed.find((item) => item.id === entryId);
   if (!hash || hash === '#') {
-    return { category: allCategory, entry: listEntries(allCategory, categories, entries)[0], layout };
+    const allEntries = listEntries(allCategory, categories, entries);
+    return { category: allCategory, entry: allEntries.find((item) => item.id === 'sword') ?? allEntries[0], layout };
   }
   if (!category || extra !== undefined || (entryId && !entry)) {
     return { category, layout, missing: true };

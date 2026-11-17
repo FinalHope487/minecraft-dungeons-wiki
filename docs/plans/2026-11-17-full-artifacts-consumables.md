@@ -29,3 +29,5 @@ Wiki roster 收錄 53 件神器、10 件食物、15 件藥水、4 件彈藥與 1
 `npm test` 通過 13/13；`npm run build` 產出 7 個分類、126 筆條目。直接檢查 `dist/index.html`、CSS／JS、126 份詳情 JSON，以及每筆引用圖標的類型與檔案。未開瀏覽器；實際渲染與互動未驗證。功能提交：`320d7e3`。
 
 2026-11-17 重新逐項比對 45 件已實裝神器的 Wiki `In-game description`，修正 7 筆英文原文及 Soul Lantern 繁中翻譯，提交 `f24bb39`。`npm test` 通過 18/18；`npm run build` 產出 7 個分類、446 筆條目。本地檢查確認入口 loader、自包含 bundle、45 筆神器雙語說明與 fixture 一致，SQLite 完整性正常、外鍵錯誤 0；未開瀏覽器。
+
+2026-11-17 將 47 筆神器、消耗品與其他物品的通用佔位說明改為 Wiki 條目原文或有來源的已知資訊；Wiki 未記載效果時明確標示未知。近戰 Sword 系列移至 Spear 後、Tempest Knife 前；獨立驗收確認遠程與盔甲原順序正確。`npm test` 通過 20/20；`npm run build` 產出 7 個分類、446 筆條目。本地檢查 `dist/index.html`、loader、內嵌資料 bundle、47 筆雙語說明及裝備排序；SQLite 完整性正常、外鍵錯誤 0；未開瀏覽器。

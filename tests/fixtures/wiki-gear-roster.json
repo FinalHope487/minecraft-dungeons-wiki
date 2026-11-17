@@ -41,7 +41,7 @@
                         "id":  "sword",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  0,
+                        "order":  72,
                         "name":  {
                                      "en":  "Sword",
                                      "zh-Hant":  "劍"
@@ -104,7 +104,7 @@
                         "id":  "diamond-sword",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  1,
+                        "order":  73,
                         "name":  {
                                      "en":  "Diamond Sword",
                                      "zh-Hant":  "鉆石劍"
@@ -174,7 +174,7 @@
                         "id":  "hawkbrand",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  2,
+                        "order":  74,
                         "name":  {
                                      "en":  "Hawkbrand",
                                      "zh-Hant":  "鷹身大劍"
@@ -244,7 +244,7 @@
                         "id":  "sinister-sword",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  3,
+                        "order":  75,
                         "name":  {
                                      "en":  "Sinister Sword",
                                      "zh-Hant":  "邪惡之劍"
@@ -314,7 +314,7 @@
                         "id":  "anchor",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  4,
+                        "order":  0,
                         "name":  {
                                      "en":  "Anchor",
                                      "zh-Hant":  "船錨"
@@ -394,7 +394,7 @@
                         "id":  "encrusted-anchor",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  5,
+                        "order":  1,
                         "name":  {
                                      "en":  "Encrusted Anchor",
                                      "zh-Hant":  "覆藤船錨"
@@ -483,7 +483,7 @@
                         "id":  "axe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  6,
+                        "order":  2,
                         "name":  {
                                      "en":  "Axe",
                                      "zh-Hant":  "斧"
@@ -550,7 +550,7 @@
                         "id":  "firebrand",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  7,
+                        "order":  3,
                         "name":  {
                                      "en":  "Firebrand",
                                      "zh-Hant":  "烙火"
@@ -625,7 +625,7 @@
                         "id":  "highland-axe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  8,
+                        "order":  4,
                         "name":  {
                                      "en":  "Highland Axe",
                                      "zh-Hant":  "高地之斧"
@@ -700,7 +700,7 @@
                         "id":  "backstabber",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  9,
+                        "order":  5,
                         "name":  {
                                      "en":  "Backstabber",
                                      "zh-Hant":  "背刺利刃"
@@ -770,7 +770,7 @@
                         "id":  "swift-striker",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  10,
+                        "order":  6,
                         "name":  {
                                      "en":  "Swift Striker",
                                      "zh-Hant":  "迅捷刺刃"
@@ -849,7 +849,7 @@
                         "id":  "battlestaff",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  11,
+                        "order":  7,
                         "name":  {
                                      "en":  "Battlestaff",
                                      "zh-Hant":  "戰斗之杖"
@@ -916,7 +916,7 @@
                         "id":  "battlestaff-of-terror",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  12,
+                        "order":  8,
                         "name":  {
                                      "en":  "Battlestaff of Terror",
                                      "zh-Hant":  "恐怖之杖"
@@ -991,7 +991,7 @@
                         "id":  "growing-staff",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  13,
+                        "order":  9,
                         "name":  {
                                      "en":  "Growing Staff",
                                      "zh-Hant":  "生長之杖"
@@ -1066,7 +1066,7 @@
                         "id":  "boneclub",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  14,
+                        "order":  10,
                         "name":  {
                                      "en":  "Boneclub",
                                      "zh-Hant":  "大骨棍"
@@ -1133,7 +1133,7 @@
                         "id":  "bone-cudgel",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  15,
+                        "order":  11,
                         "name":  {
                                      "en":  "Bone Cudgel",
                                      "zh-Hant":  "大骨棒"
@@ -1208,7 +1208,7 @@
                         "id":  "broken-sawblade",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  16,
+                        "order":  12,
                         "name":  {
                                      "en":  "Broken Sawblade",
                                      "zh-Hant":  "破損鋸劍"
@@ -1275,7 +1275,7 @@
                         "id":  "mechanized-sawblade",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  17,
+                        "order":  13,
                         "name":  {
                                      "en":  "Mechanized Sawblade",
                                      "zh-Hant":  "機械鋸劍"
@@ -1342,7 +1342,7 @@
                         "id":  "claymore",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  18,
+                        "order":  14,
                         "name":  {
                                      "en":  "Claymore",
                                      "zh-Hant":  "闊劍"
@@ -1409,7 +1409,7 @@
                         "id":  "broadsword",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  19,
+                        "order":  15,
                         "name":  {
                                      "en":  "Broadsword",
                                      "zh-Hant":  "大劍"
@@ -1484,7 +1484,7 @@
                         "id":  "frost-slayer",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  20,
+                        "order":  16,
                         "name":  {
                                      "en":  "Frost Slayer",
                                      "zh-Hant":  "冰霜殺手"
@@ -1559,7 +1559,7 @@
                         "id":  "great-axeblade",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  21,
+                        "order":  17,
                         "name":  {
                                      "en":  "Great Axeblade",
                                      "zh-Hant":  "斧闊劍"
@@ -1634,7 +1634,7 @@
                         "id":  "heartstealer",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  22,
+                        "order":  18,
                         "name":  {
                                      "en":  "Heartstealer",
                                      "zh-Hant":  "竊心者"
@@ -1709,7 +1709,7 @@
                         "id":  "coral-blade",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  23,
+                        "order":  19,
                         "name":  {
                                      "en":  "Coral Blade",
                                      "zh-Hant":  "珊瑚之刃"
@@ -1776,7 +1776,7 @@
                         "id":  "sponge-striker",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  24,
+                        "order":  20,
                         "name":  {
                                      "en":  "Sponge Striker",
                                      "zh-Hant":  "海綿刺刃"
@@ -1848,7 +1848,7 @@
                         "id":  "cutlass",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  25,
+                        "order":  21,
                         "name":  {
                                      "en":  "Cutlass",
                                      "zh-Hant":  "彎刀"
@@ -1915,7 +1915,7 @@
                         "id":  "dancers-sword",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  26,
+                        "order":  22,
                         "name":  {
                                      "en":  "Dancer\u0027s Sword",
                                      "zh-Hant":  "舞者之劍"
@@ -1990,7 +1990,7 @@
                         "id":  "nameless-blade",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  27,
+                        "order":  23,
                         "name":  {
                                      "en":  "Nameless Blade",
                                      "zh-Hant":  "無名之刃"
@@ -2065,7 +2065,7 @@
                         "id":  "sparkler",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  28,
+                        "order":  24,
                         "name":  {
                                      "en":  "Sparkler",
                                      "zh-Hant":  "煙花棒"
@@ -2140,7 +2140,7 @@
                         "id":  "daggers",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  29,
+                        "order":  25,
                         "name":  {
                                      "en":  "Daggers",
                                      "zh-Hant":  "雙持匕首"
@@ -2207,7 +2207,7 @@
                         "id":  "fangs-of-frost",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  30,
+                        "order":  26,
                         "name":  {
                                      "en":  "Fangs of Frost",
                                      "zh-Hant":  "寒霜獠牙"
@@ -2282,7 +2282,7 @@
                         "id":  "moon-daggers",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  31,
+                        "order":  27,
                         "name":  {
                                      "en":  "Moon Daggers",
                                      "zh-Hant":  "月之匕首"
@@ -2362,7 +2362,7 @@
                         "id":  "sheer-daggers",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  32,
+                        "order":  28,
                         "name":  {
                                      "en":  "Sheer Daggers",
                                      "zh-Hant":  "純正匕首"
@@ -2437,7 +2437,7 @@
                         "id":  "double-axe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  33,
+                        "order":  29,
                         "name":  {
                                      "en":  "Double Axe",
                                      "zh-Hant":  "雙刃斧"
@@ -2504,7 +2504,7 @@
                         "id":  "cursed-axe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  34,
+                        "order":  30,
                         "name":  {
                                      "en":  "Cursed Axe",
                                      "zh-Hant":  "詛咒之斧"
@@ -2579,7 +2579,7 @@
                         "id":  "whirlwind",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  35,
+                        "order":  31,
                         "name":  {
                                      "en":  "Whirlwind",
                                      "zh-Hant":  "旋風斧"
@@ -2654,7 +2654,7 @@
                         "id":  "gauntlets",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  36,
+                        "order":  32,
                         "name":  {
                                      "en":  "Gauntlets",
                                      "zh-Hant":  "護手"
@@ -2721,7 +2721,7 @@
                         "id":  "fighters-bindings",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  37,
+                        "order":  33,
                         "name":  {
                                      "en":  "Fighter\u0027s Bindings",
                                      "zh-Hant":  "戰士之縛"
@@ -2788,7 +2788,7 @@
                         "id":  "maulers",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  38,
+                        "order":  34,
                         "name":  {
                                      "en":  "Maulers",
                                      "zh-Hant":  "撕裂者"
@@ -2863,7 +2863,7 @@
                         "id":  "soul-fists",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  39,
+                        "order":  35,
                         "name":  {
                                      "en":  "Soul Fists",
                                      "zh-Hant":  "靈魂拳套"
@@ -2943,7 +2943,7 @@
                         "id":  "glaive",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  40,
+                        "order":  36,
                         "name":  {
                                      "en":  "Glaive",
                                      "zh-Hant":  "長柄刀"
@@ -3010,7 +3010,7 @@
                         "id":  "cackling-broom",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  41,
+                        "order":  37,
                         "name":  {
                                      "en":  "Cackling Broom",
                                      "zh-Hant":  "咯笑掃帚"
@@ -3085,7 +3085,7 @@
                         "id":  "grave-bane",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  42,
+                        "order":  38,
                         "name":  {
                                      "en":  "Grave Bane",
                                      "zh-Hant":  "弒墓者"
@@ -3160,7 +3160,7 @@
                         "id":  "venom-glaive",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  43,
+                        "order":  39,
                         "name":  {
                                      "en":  "Venom Glaive",
                                      "zh-Hant":  "劇毒長刀"
@@ -3235,7 +3235,7 @@
                         "id":  "great-hammer",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  44,
+                        "order":  40,
                         "name":  {
                                      "en":  "Great Hammer",
                                      "zh-Hant":  "大錘"
@@ -3302,7 +3302,7 @@
                         "id":  "bonehead-hammer",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  45,
+                        "order":  41,
                         "name":  {
                                      "en":  "Bonehead Hammer",
                                      "zh-Hant":  "頭骨錘"
@@ -3377,7 +3377,7 @@
                         "id":  "hammer-of-gravity",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  46,
+                        "order":  42,
                         "name":  {
                                      "en":  "Hammer of Gravity",
                                      "zh-Hant":  "引力之錘"
@@ -3452,7 +3452,7 @@
                         "id":  "stormlander",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  47,
+                        "order":  43,
                         "name":  {
                                      "en":  "Stormlander",
                                      "zh-Hant":  "雷霆之錘"
@@ -3527,7 +3527,7 @@
                         "id":  "katana",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  48,
+                        "order":  44,
                         "name":  {
                                      "en":  "Katana",
                                      "zh-Hant":  "武士刀"
@@ -3590,7 +3590,7 @@
                         "id":  "dark-katana",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  49,
+                        "order":  45,
                         "name":  {
                                      "en":  "Dark Katana",
                                      "zh-Hant":  "暗黑武士刀"
@@ -3660,7 +3660,7 @@
                         "id":  "masters-katana",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  50,
+                        "order":  46,
                         "name":  {
                                      "en":  "Master\u0027s Katana",
                                      "zh-Hant":  "大師的武士刀"
@@ -3730,7 +3730,7 @@
                         "id":  "mace",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  51,
+                        "order":  47,
                         "name":  {
                                      "en":  "Mace",
                                      "zh-Hant":  "錘子"
@@ -3793,7 +3793,7 @@
                         "id":  "flail",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  52,
+                        "order":  48,
                         "name":  {
                                      "en":  "Flail",
                                      "zh-Hant":  "鏈錘"
@@ -3863,7 +3863,7 @@
                         "id":  "suns-grace",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  53,
+                        "order":  49,
                         "name":  {
                                      "en":  "Sun\u0027s Grace",
                                      "zh-Hant":  "日之恩惠"
@@ -3933,7 +3933,7 @@
                         "id":  "obsidian-claymore",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  54,
+                        "order":  50,
                         "name":  {
                                      "en":  "Obsidian Claymore",
                                      "zh-Hant":  "黑曜石闊劍"
@@ -4000,7 +4000,7 @@
                         "id":  "the-starless-night",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  55,
+                        "order":  51,
                         "name":  {
                                      "en":  "The Starless Night",
                                      "zh-Hant":  "無星之夜"
@@ -4075,7 +4075,7 @@
                         "id":  "pickaxe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  56,
+                        "order":  52,
                         "name":  {
                                      "en":  "Pickaxe",
                                      "zh-Hant":  "鎬"
@@ -4138,7 +4138,7 @@
                         "id":  "diamond-pickaxe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  57,
+                        "order":  53,
                         "name":  {
                                      "en":  "Diamond Pickaxe",
                                      "zh-Hant":  "鉆石鎬"
@@ -4208,7 +4208,7 @@
                         "id":  "the-monkey-motivator",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  58,
+                        "order":  54,
                         "name":  {
                                      "en":  "The Monkey Motivator",
                                      "zh-Hant":  "招猴靈鎬"
@@ -4271,7 +4271,7 @@
                         "id":  "rapier",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  59,
+                        "order":  55,
                         "name":  {
                                      "en":  "Rapier",
                                      "zh-Hant":  "西洋劍"
@@ -4338,7 +4338,7 @@
                         "id":  "bee-stinger",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  60,
+                        "order":  56,
                         "name":  {
                                      "en":  "Bee Stinger",
                                      "zh-Hant":  "蜂之螫針"
@@ -4413,7 +4413,7 @@
                         "id":  "freezing-foil",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  61,
+                        "order":  57,
                         "name":  {
                                      "en":  "Freezing Foil",
                                      "zh-Hant":  "霜凍花劍"
@@ -4488,7 +4488,7 @@
                         "id":  "sickles",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  62,
+                        "order":  58,
                         "name":  {
                                      "en":  "Sickles",
                                      "zh-Hant":  "鐮刀"
@@ -4555,7 +4555,7 @@
                         "id":  "nightmares-bite",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  63,
+                        "order":  59,
                         "name":  {
                                      "en":  "Nightmare\u0027s Bite",
                                      "zh-Hant":  "夢魘之噬"
@@ -4630,7 +4630,7 @@
                         "id":  "the-last-laugh",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  64,
+                        "order":  60,
                         "name":  {
                                      "en":  "The Last Laugh",
                                      "zh-Hant":  "笑到最后"
@@ -4705,7 +4705,7 @@
                         "id":  "soul-knife",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  65,
+                        "order":  61,
                         "name":  {
                                      "en":  "Soul Knife",
                                      "zh-Hant":  "靈魂之刃"
@@ -4777,7 +4777,7 @@
                         "id":  "eternal-knife",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  66,
+                        "order":  62,
                         "name":  {
                                      "en":  "Eternal Knife",
                                      "zh-Hant":  "永恒之刃"
@@ -4857,7 +4857,7 @@
                         "id":  "truthseeker",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  67,
+                        "order":  63,
                         "name":  {
                                      "en":  "Truthseeker",
                                      "zh-Hant":  "求真者"
@@ -4937,7 +4937,7 @@
                         "id":  "soul-scythe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  68,
+                        "order":  64,
                         "name":  {
                                      "en":  "Soul Scythe",
                                      "zh-Hant":  "靈魂長鐮"
@@ -5004,7 +5004,7 @@
                         "id":  "frost-scythe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  69,
+                        "order":  65,
                         "name":  {
                                      "en":  "Frost Scythe",
                                      "zh-Hant":  "冰霜長鐮"
@@ -5079,7 +5079,7 @@
                         "id":  "jailors-scythe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  70,
+                        "order":  66,
                         "name":  {
                                      "en":  "Jailor\u0027s Scythe",
                                      "zh-Hant":  "獄卒之鐮"
@@ -5154,7 +5154,7 @@
                         "id":  "skull-scythe",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  71,
+                        "order":  67,
                         "name":  {
                                      "en":  "Skull Scythe",
                                      "zh-Hant":  "骷髏長鐮"
@@ -5229,7 +5229,7 @@
                         "id":  "spear",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  72,
+                        "order":  68,
                         "name":  {
                                      "en":  "Spear",
                                      "zh-Hant":  "長矛"
@@ -5296,7 +5296,7 @@
                         "id":  "fortune-spear",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  73,
+                        "order":  69,
                         "name":  {
                                      "en":  "Fortune Spear",
                                      "zh-Hant":  "幸運長矛"
@@ -5371,7 +5371,7 @@
                         "id":  "spine-chill-spear",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  74,
+                        "order":  70,
                         "name":  {
                                      "en":  "Spine-Chill Spear",
                                      "zh-Hant":  "脊寒矛"
@@ -5446,7 +5446,7 @@
                         "id":  "whispering-spear",
                         "category":  "equipment",
                         "rosterGroup":  "melee",
-                        "order":  75,
+                        "order":  71,
                         "name":  {
                                      "en":  "Whispering Spear",
                                      "zh-Hant":  "呢喃矛"

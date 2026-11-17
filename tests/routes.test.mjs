@@ -11,14 +11,42 @@ const roster = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-roster.json
 const enchantmentRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-enchantment-roster.json', import.meta.url), 'utf8'));
 const gearRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-gear-roster.json', import.meta.url), 'utf8'));
 const wikiArtifactDescriptions = JSON.parse(readFileSync(new URL('./fixtures/wiki-artifact-descriptions.json', import.meta.url), 'utf8'));
+const wikiItemDescriptions = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-descriptions.json', import.meta.url), 'utf8'));
 const resolve = (hash) => resolveRoute(hash, categories, entries);
 const meleeIds = [
-  'sword', 'diamond-sword', 'anchor', 'axe', 'backstabber', 'battlestaff', 'boneclub',
+  'anchor', 'axe', 'backstabber', 'battlestaff', 'boneclub',
   'broken-sawblade', 'claymore', 'coral-blade', 'cutlass', 'daggers', 'double-axe',
   'gauntlets', 'glaive', 'great-hammer', 'katana', 'mace', 'obsidian-claymore', 'pickaxe',
-  'rapier', 'sickles', 'soul-knife', 'soul-scythe', 'spear', 'tempest-knife',
+  'rapier', 'sickles', 'soul-knife', 'soul-scythe', 'spear', 'sword', 'diamond-sword', 'tempest-knife',
   'void-touched-blades', 'whip',
 ];
+const wikiGearRootOrder = {
+  melee: [
+    'anchor', 'axe', 'backstabber', 'battlestaff', 'boneclub', 'broken-sawblade', 'claymore',
+    'coral-blade', 'cutlass', 'daggers', 'double-axe', 'gauntlets', 'glaive', 'great-hammer',
+    'katana', 'mace', 'obsidian-claymore', 'pickaxe', 'rapier', 'sickles', 'soul-knife',
+    'soul-scythe', 'spear', 'sword', 'tempest-knife', 'void-touched-blades', 'whip',
+  ],
+  ranged: [
+    'bow', 'bubble-bow', 'burst-crossbow', 'cog-crossbow', 'crossbow', 'dual-crossbows',
+    'exploding-crossbow', 'harpoon-crossbow', 'heavy-crossbow', 'hunting-bow', 'longbow',
+    'power-bow', 'rapid-crossbow', 'scatter-crossbow', 'shadow-crossbow', 'shortbow', 'snow-bow',
+    'soul-bow', 'soul-crossbow', 'spider-crossbow', 'trickbow', 'twisting-vine-bow', 'void-bow',
+    'wind-bow',
+  ],
+  armor: [
+    'battle-robe', 'beenest-armor', 'champions-armor', 'climbing-gear', 'dark-armor', 'emerald-gear',
+    'entertainers-garb', 'evocation-robe', 'ghostly-armor', 'grim-armor', 'guards-armor',
+    'hunters-armor', 'mercenary-armor', 'mystery-armor', 'ocelot-armor', 'phantom-armor',
+    'piglin-armor', 'plate-armor', 'reinforced-mail', 'root-rot-armor', 'scale-mail',
+    'shulker-armor', 'snow-armor', 'soul-mage-robes', 'soul-robe', 'spelunker-armor',
+    'sprout-armor', 'squid-armor', 'teleportation-robes', 'thief-armor', 'turtle-armor', 'wolf-armor',
+  ],
+};
+const orderedGearEntries = (group) => gearRoster.entries
+  .filter(({ rosterGroup }) => rosterGroup === group)
+  .sort((a, b) => a.order - b.order);
+const orderedGearRosterEntries = ['melee', 'ranged', 'armor'].flatMap(orderedGearEntries);
 const regularWeaponProperties = new Map(Object.entries({
   anchor: ['Slow but powerful', 'Absorbs some knockback', 'Pulls in enemies'],
   axe: ['Spin attack move'],
@@ -48,9 +76,9 @@ const rosterRows = (statuses) => Object.entries(statuses).flatMap(([status, item
 const artifactRoster = rosterRows(roster.artifacts);
 const consumableRoster = Object.values(roster.consumables).flatMap(rosterRows);
 const otherItemRoster = rosterRows(roster['other-items']);
-const gearMeleeIds = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'melee').map(({ id }) => id);
-const gearRangedIds = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'ranged').map(({ id }) => id);
-const gearArmorIds = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'armor').map(({ id }) => id);
+const gearMeleeIds = orderedGearEntries('melee').map(({ id }) => id);
+const gearRangedIds = orderedGearEntries('ranged').map(({ id }) => id);
+const gearArmorIds = orderedGearEntries('armor').map(({ id }) => id);
 const fullItemRoster = [
   ...artifactRoster.map((item) => ({ ...item, category: 'artifacts' })),
   ...consumableRoster.map((item) => ({ ...item, category: 'consumables' })),
@@ -143,7 +171,7 @@ test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、
   assert.deepEqual(gearRoster.counts, {
     total: 228, melee: 83, ranged: 72, armor: 73, seasonal: 21, unimplemented: 4, placeholders: 3, builtInLinks: 141,
   });
-  assert.deepEqual(actual.map(({ id }) => id), gearRoster.entries.map(({ id }) => id), 'gear entries keep Wiki base and variant order');
+  assert.deepEqual(actual.map(({ id }) => id), orderedGearRosterEntries.map(({ id }) => id), 'gear entries keep Wiki base and variant order');
 
   const variantsByParent = new Map();
   for (const item of gearRoster.entries) {
@@ -185,7 +213,17 @@ test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、
   }
   assert.deepEqual(actual.filter(({ implemented }) => !implemented).map(({ id }) => id),
     ['the-monkey-motivator', 'spider-crossbow', 'ender-armor', 'soul-mage-robes']);
-  assert.deepEqual(actual.filter(({ seasonal }) => seasonal).map(({ id }) => id), gearRoster.entries.filter(({ seasonal }) => seasonal).map(({ id }) => id));
+  assert.deepEqual(actual.filter(({ seasonal }) => seasonal).map(({ id }) => id), orderedGearRosterEntries.filter(({ seasonal }) => seasonal).map(({ id }) => id));
+});
+
+test('近戰、遠程與盔甲的基礎物品依 Wiki 分類順序排列', () => {
+  for (const [group, expected] of Object.entries(wikiGearRootOrder)) {
+    const actual = gearRoster.entries
+      .filter((item) => item.rosterGroup === group && !item.parentId)
+      .sort((a, b) => a.order - b.order)
+      .map(({ id }) => id);
+    assert.deepEqual(actual, expected, `${group} base-item order`);
+  }
 });
 
 test('所有 Wiki 具名神器、消耗品與其他物品都有唯一條目及正確實裝狀態', () => {
@@ -216,6 +254,32 @@ test('所有 Wiki 具名神器、消耗品與其他物品都有唯一條目及�
   assert.equal(iconAssets['wiki-placeholder']?.file, 'wiki-placeholder.png');
 });
 
+test('神器、消耗品與其他物品的說明逐條符合 Wiki 條目或已知資訊', () => {
+  assert.equal(wikiItemDescriptions.items.length, 47);
+  const scopedEntries = entries.filter(({ category }) => ['artifacts', 'consumables', 'other-items'].includes(category));
+  const byId = new Map(scopedEntries.map((entry) => [entry.id, entry]));
+  for (const expected of wikiItemDescriptions.items) {
+    const entry = byId.get(expected.id);
+    assert.ok(entry, `missing item ${expected.id}`);
+    assert.deepEqual(entry.description, expected.description, `${expected.id} description`);
+    assert.ok(entry.sources.some(({ url }) => url === expected.source), `${expected.id} description source`);
+    assert.ok(['in-game-description', 'wiki-behavior', 'wiki-note'].includes(expected.basis), `${expected.id} source basis`);
+  }
+  const formerPlaceholders = new Set([
+    'The Wiki lists this artifact as unused; it is not implemented in the game.',
+    'A food consumable that gives the hero regeneration; some foods provide an additional positive effect.',
+    'The Wiki lists this food as unused; it is not implemented in the game.',
+    'A potion consumable that provides its corresponding status effect.',
+    'The Wiki lists this potion as unused; it is not implemented in the game.',
+    'An ammunition item that is used and depleted during a mission.',
+    'A consumable used by a mission mechanic.',
+    'The Wiki lists this consumable as unused; it is not implemented in the game.',
+  ]);
+  for (const entry of scopedEntries) {
+    assert.equal(formerPlaceholders.has(entry.description.en), false, `${entry.id} no longer uses a generic placeholder`);
+  }
+});
+
 test('TNT 和 Mystery Banner 保留雙語說明與 Wiki 來源', () => {
   const tnt = entries.find(({ id }) => id === 'tnt');
   const banner = entries.find(({ id }) => id === 'mystery-banner');
@@ -237,7 +301,7 @@ test('近戰、遠程與盔甲完整收錄並依 Wiki 基礎類型及變體相�
   assert.equal(gearMeleeIds.length, 83);
   assert.equal(gearRangedIds.length, 72);
   assert.equal(gearArmorIds.length, 73);
-  const melee = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'melee');
+  const melee = orderedGearEntries('melee');
   assert.equal(melee.filter(({ parentId }) => !parentId).length, 27);
   assert.equal(melee.filter(({ parentId }) => parentId).length, 56);
   const variantsByParent = new Map();
@@ -296,7 +360,7 @@ test('既有 Seasonal 神器有標籤，已實裝神器使用 Wiki 條目原文'
 
 test('近戰分類收錄 83 筆並保留 27 個基礎類型與 56 個變體', () => {
   const melee = listEntries(resolve('#equipment').category, categories, entries);
-  const meleeRoster = gearRoster.entries.filter(({ rosterGroup }) => rosterGroup === 'melee');
+  const meleeRoster = orderedGearEntries('melee');
   assert.equal(melee.length, 83);
   assert.equal(meleeRoster.filter(({ parentId }) => !parentId).length, 27);
   assert.equal(meleeRoster.filter(({ parentId }) => parentId).length, 56);
