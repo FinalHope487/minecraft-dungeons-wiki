@@ -143,7 +143,9 @@ function renderDetailsContent(entry, layout) {
     line.append(icon(trait.icon), label);
     info.append(line);
   }
-  info.append(node('p', 'description', message(entry.description)));
+  if (entry.category !== 'enchantments') {
+    info.append(node('p', 'description', message(entry.description)));
+  }
   if (lang === 'zh-Hant' && entry.category !== 'enchantments') {
     const original = node('details', 'original');
     const quote = node('p', 'description', entry.description.en);

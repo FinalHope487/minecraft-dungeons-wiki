@@ -156,10 +156,65 @@ test('完整附魔名錄有唯一條目、雙語 Wiki 描述、分類與來源',
   assert.deepEqual(actual.filter(({ seasonal }) => seasonal).map(({ id }) => id), ['invisible']);
   assert.equal(actual.find(({ id }) => id === 'withering')?.implemented, true,
     'Withering remains implemented because mobs use it');
-  assert.deepEqual(actual.find(({ id }) => id === 'radiance')?.facts.at(-1), {
+  assert.deepEqual(actual.find(({ id }) => id === 'radiance')?.facts.find(({ label }) => label.en === 'Ranged name'), {
     label: { en: 'Ranged name', 'zh-Hant': '遠程名稱' },
     value: { en: 'Radiance Shot', 'zh-Hant': '遠程武器稱為 Radiance Shot' },
   });
+});
+
+test('124 筆附魔逐項區分玩家與怪物用途並保留可信度與查證來源', () => {
+  const actual = entries.filter(({ category }) => category === 'enchantments');
+  const audienceValues = new Set(['player', 'mob', 'both', 'unused', 'unconfirmed']);
+  const confidenceValues = new Set(['high', 'medium', 'low']);
+  assert.equal(enchantmentRoster.entries.length, 124);
+  for (const expected of enchantmentRoster.entries) {
+    assert.ok(expected.availability, `${expected.id} availability audit`);
+    assert.ok(audienceValues.has(expected.availability.audience), `${expected.id} audience`);
+    assert.ok(confidenceValues.has(expected.availability.confidence), `${expected.id} confidence`);
+    assert.ok(expected.availability.hero, `${expected.id} hero usage`);
+    assert.ok(expected.availability.mobs, `${expected.id} mob usage`);
+    assert.ok(expected.availability.playerEffect, `${expected.id} player effect`);
+    assert.ok(expected.availability.mobEffect, `${expected.id} mob effect`);
+    const entry = actual.find(({ id }) => id === expected.id);
+    const factValue = (label) => entry.facts.find((fact) => fact.label.en === label)?.value;
+    const localizedValue = ([en, zhHant]) => ({ en, 'zh-Hant': zhHant });
+    assert.deepEqual(factValue('Hero availability'), localizedValue(expected.availability.hero), `${expected.id} hero detail`);
+    assert.deepEqual(factValue('Player effect'), localizedValue(expected.availability.playerEffect), `${expected.id} player effect detail`);
+    assert.deepEqual(factValue('Mob availability'), localizedValue(expected.availability.mobs), `${expected.id} mob availability detail`);
+    assert.deepEqual(factValue('Mob effect'), localizedValue(expected.availability.mobEffect), `${expected.id} mob effect detail`);
+    assert.equal(factValue('Audience').en, {
+      player: 'Player only', mob: 'Mob only', both: 'Player and mob',
+      unused: 'Unused; neither is available', unconfirmed: 'Unconfirmed',
+    }[expected.availability.audience], `${expected.id} audience detail`);
+    assert.equal(factValue('Evidence confidence').en.startsWith(expected.availability.confidence[0].toUpperCase()), true,
+      `${expected.id} confidence detail`);
+    assert.ok(entry.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3AEnchanted'),
+      `${expected.id} enchanted-mob source`);
+    for (const url of expected.availability.evidenceSources) {
+      assert.ok(entry.sources.some((source) => source.url === url), `${expected.id} evidence source ${url}`);
+    }
+  }
+
+  const byId = new Map(actual.map((entry) => [entry.id, entry]));
+  const value = (id, label) => byId.get(id).facts.find((fact) => fact.label.en === label).value.en;
+  assert.match(value('critical-hit', 'Player effect'), /10% \/ 15% \/ 20%/);
+  assert.match(value('critical-hit', 'Mob effect'), /always deal triple/);
+  assert.match(value('thorns', 'Player effect'), /100% \/ 150% \/ 200%/);
+  assert.match(value('thorns', 'Mob effect'), /12\.5%/);
+  assert.match(value('protection', 'Player effect'), /6% \/ 11% \/ 15%/);
+  assert.match(value('protection', 'Mob effect'), /50% less damage/);
+  assert.match(value('thundering', 'Player effect'), /30% chance/);
+  assert.match(value('thundering', 'Mob effect'), /after each mob attack/);
+  assert.match(value('echo', 'Player effect'), /5 \/ 4 \/ 3-second cooldowns/);
+  assert.match(value('echo', 'Mob effect'), /immediately/);
+  assert.match(value('radiance', 'Player effect'), /20% chance.*50% chance/);
+  assert.match(value('radiance', 'Mob effect'), /when attacking/);
+  assert.match(value('gravity-pulse', 'Player effect'), /every three seconds/);
+  assert.match(value('gravity-pulse', 'Mob effect'), /every ten seconds/);
+  assert.equal(byId.get('committed').facts.find((fact) => fact.label.en === 'Evidence confidence').value.en.startsWith('Low'), true,
+    'Committed conflict between the mob overview and item article remains explicitly low confidence');
+  assert.equal(byId.get('electrified').facts.find((fact) => fact.label.en === 'Evidence confidence').value.en.startsWith('Low'), true,
+    'Electrified interval conflict remains explicitly low confidence');
 });
 
 test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、特性、來源與圖標', () => {
