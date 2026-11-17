@@ -23,7 +23,7 @@ npm run preview
 
 ## 發布
 
-GitHub repo 的 Settings → Pages → Build and deployment → Source 選 GitHub Actions，執行 [Wiki Pages workflow](.github/workflows/pages.yml)。產物使用相對路徑；條目由網址雜湊定位，專案子路徑下可直接開啟及重新整理。公開站網址以成功部署的 workflow 輸出為準。
+線上圖鑑：[https://finalhope487.github.io/minecraft-dungeons-wiki/](https://finalhope487.github.io/minecraft-dungeons-wiki/)。GitHub repo 的 Settings → Pages → Build and deployment → Source 選 GitHub Actions，執行 [Wiki Pages workflow](.github/workflows/pages.yml)。產物使用相對路徑；條目由網址雜湊定位，專案子路徑下可直接開啟及重新整理。網址以成功部署的 workflow 輸出為準。
 
 ## 聲明
 
