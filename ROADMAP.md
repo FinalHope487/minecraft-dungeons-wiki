@@ -48,14 +48,14 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`f24bb39`（核對並修正神器 Wiki 原文）
+**commit**：`ae14e19`（README 新增 Minecraft Wiki 來源連結）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-17 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 通過，18/18 |
-| 建置 | `npm run build` | 通過，7 個分類、446 筆條目 |
-| user 層 | 本地建置產物檢查 | 通過；`dist/index.html` 使用 loader 且自包含 bundle 存在；45 件已實裝神器的雙語說明與 fixture 一致；資料庫完整性通過、外鍵錯誤 0；未開瀏覽器，實際渲染未驗證 |
+| 內層 | `npm test` | 免測範疇：本輪只改 README 文件 |
+| 建置 | `npm run build` | 免測範疇：本輪只改 README 文件 |
+| user 層 | README 來源連結檢查 | 通過：物品總覽、附魔總表及 repo 來源文件連結存在 |
 | 公開 | GitHub Pages | 未跑 |
 | 文件 | `git diff --check` | 通過，exit 0 |
 
