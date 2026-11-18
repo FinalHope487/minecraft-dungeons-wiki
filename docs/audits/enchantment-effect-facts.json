@@ -151,8 +151,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Consecutive shots increase the hero’s firing speed; the bonus resets one second after firing stops.",
-        "zh-Hant": "英雄連續射擊會逐次提高射速；停止攻擊一秒後重置。"
+        "en": "Increases attack speed for each consecutive shot. Resets one second after the attack.",
+        "zh-Hant": "連續射擊會提高攻擊速度；停止攻擊 1 秒後重置。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -181,8 +181,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "After hitting a hero, ranged mobs briefly increase their firing speed.",
-        "zh-Hant": "遠程怪物命中英雄後會短暫提高射速。"
+        "en": "After hitting a hero, a ranged mob's firing speed increases for one second.",
+        "zh-Hant": "遠程怪物命中英雄後，射速會提高 1 秒。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -788,8 +788,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Ranged mobs fire an additional projectile.",
-        "zh-Hant": "遠程怪物會額外發射一枚投射物。"
+        "en": "Ranged mobs fire an additional projectile when they shoot.",
+        "zh-Hant": "遠程怪物射擊時會額外發射一枚投射物。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -1041,8 +1041,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Each shot has a 10% / 20% / 30% chance (tiers I / II / III) to fire five arrows in all directions on impact.",
-        "zh-Hant": "I／II／III 階每次射擊分別有 10%／20%／30% 機率在命中時向四周射出五支箭。"
+        "en": "Has a chance to fire five arrows in all directions on impact; tiers I / II / III have a 10% / 20% / 30% chance to trigger, respectively.",
+        "zh-Hant": "有機率在命中時向四面八方射出五支箭；I／II／III 階觸發機率分別為 10%／20%／30%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -1136,8 +1136,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "The mob binds the hero and chains the target to nearby allies.",
-        "zh-Hant": "怪物會束縛英雄，並將目標與附近盟友連在一起。"
+        "en": "The mob binds the hero, preventing movement and linking the hero to allies.",
+        "zh-Hant": "怪物會束縛英雄，使其無法移動，並將英雄與盟友連結。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -1226,8 +1226,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Weapon damage increases against mobs according to how much health the target has lost.",
-        "zh-Hant": "目標怪物失去的生命越多，武器造成的傷害越高。"
+        "en": "Deal increased damage against already wounded enemies; tiers I / II / III have 0–50% / 0–75% / 0–100% damage bonuses, respectively.",
+        "zh-Hant": "對已受傷的敵人造成額外傷害；I／II／III 階的傷害加成範圍分別為 0–50%／0–75%／0–100%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -1467,8 +1467,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "10% / 15% / 20% chance (tiers I / II / III) to deal triple damage.",
-        "zh-Hant": "I／II／III 階分別有 10%／15%／20% 機率造成三倍傷害。"
+        "en": "Gives you a chance to inflict critical hits dealing triple damage; tiers I / II / III have a 10% / 15% / 20% chance to trigger, respectively.",
+        "zh-Hant": "有機率造成三倍傷害的暴擊；I／II／III 階觸發機率分別為 10%／15%／20%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -1502,8 +1502,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Mobs always deal triple their normal damage when attacking; the Wiki says this is guaranteed, unlike the player’s 10% / 15% / 20% tier chances.",
-        "zh-Hant": "怪物每次攻擊都造成三倍傷害；Wiki 明確寫為必定觸發，玩家附魔則為 I／II／III 階 10%／15%／20% 機率。"
+        "en": "When a mob attacks, it deals three times its normal damage.",
+        "zh-Hant": "怪物攻擊時會造成平常三倍的傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -1978,8 +1978,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "A hero attack may be followed by an automatic second attack; tiers I / II / III have 5 / 4 / 3-second cooldowns.",
-        "zh-Hant": "英雄攻擊後有機會自動接續第二次攻擊；I／II／III 階冷卻分別為 5／4／3 秒。"
+        "en": "Some of your attacks can be followed up by another attack in quick succession; tiers I / II / III have cooldowns of 5 / 4 / 3 seconds, respectively.",
+        "zh-Hant": "部分攻擊可在短時間內接續發動一次；I／II／III 階的冷卻時間分別為 5／4／3 秒。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -2534,8 +2534,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Hero attacks set mobs on fire for three seconds.",
-        "zh-Hant": "英雄攻擊會使怪物燃燒三秒。"
+        "en": "Sets mobs on fire for three seconds, dealing damage over time.",
+        "zh-Hant": "使怪物著火 3 秒並造成持續傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -2942,8 +2942,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Hero attacks pull nearby mobs toward the weapon’s impact point.",
-        "zh-Hant": "英雄攻擊會將附近怪物拉向武器命中位置。"
+        "en": "This effect pulls mobs in range toward's the weapon's impact point.",
+        "zh-Hant": "將範圍內的怪物拉向武器命中位置。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -3002,8 +3002,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Emits a blast every three seconds that pulls nearby enemies toward the hero.",
-        "zh-Hant": "每三秒釋放一次爆發，將附近敵人拉向英雄。"
+        "en": "A blast occurs every three seconds that pulls nearby enemies towards you.",
+        "zh-Hant": "每 3 秒產生一次爆發，將附近敵人拉向你。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -3499,8 +3499,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Seasonal Trial mobs become invisible and cannot be targeted unless attacking or casting.",
-        "zh-Hant": "季節試煉怪物會隱形，除非正在攻擊或施法，否則無法被鎖定。"
+        "en": "In the Chills and Thrills event trials, enchanted mobs are invisible and cannot be targeted unless they are attacking or casting.",
+        "zh-Hant": "在 Chills and Thrills 活動試煉中，帶有此附魔的怪物會隱形；除非正在攻擊或施法，否則無法被鎖定。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -3646,8 +3646,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Defeating a mob heals the hero for 5% / 7% / 9% of that mob’s maximum health (tiers I / II / III).",
-        "zh-Hant": "擊敗怪物時，依其最大生命值恢復生命：I／II／III 階為 5%／7%／9%。"
+        "en": "Defeating a mob heals you a small portion of the mob's max health; tiers I / II / III heal you for 5% / 7% / 9% of that mob's maximum health, respectively.",
+        "zh-Hant": "擊敗怪物時，依其最大生命值恢復少量生命；I／II／III 階分別恢復該怪物最大生命值的 5%／7%／9%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -4187,8 +4187,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Grants the chance to fire five arrows at once.",
-        "zh-Hant": "有機率一次射出五支箭。"
+        "en": "Grants the chance to fire five arrows at once; tiers I / II / III have a 20% / 30% / 40% chance to trigger, respectively.",
+        "zh-Hant": "有機率一次射出五支箭；I／II／III 階的觸發機率分別為 20%／30%／40%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -4204,6 +4204,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "20%",
+        "30%",
+        "40%"
       ]
     },
     {
@@ -4439,8 +4444,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Mob attacks create a poison cloud where they land.",
-        "zh-Hant": "怪物攻擊命中處會形成毒雲。"
+        "en": "Mob attacks create a poison cloud identical to those that witches throw wherever they land.",
+        "zh-Hant": "怪物攻擊命中處會形成毒雲，與女巫投擲的毒雲相同。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -4691,8 +4696,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Reduces damage taken by 6% / 11% / 15% (tiers I / II / III).",
-        "zh-Hant": "I／II／III 階分別降低受到傷害的 6%／11%／15%。"
+        "en": "Reduces damage taken; tiers I / II / III provide 6% / 11% / 15% damage reduction, respectively.",
+        "zh-Hant": "降低受到的傷害；I／II／III 階的減傷幅度分別為 6%／11%／15%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -4909,8 +4914,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Melee hits have a 20% chance to create a healing aura; ranged attacks use Radiance Shot, which has a 50% chance to create one.",
-        "zh-Hant": "近戰攻擊有 20% 機率生成治療光環；遠程攻擊使用 Radiance Shot，生成光環的機率為 50%。"
+        "en": "Has a 20% chance to spawn a circular area that heals you and all allies within the area; ranged attacks use Radiance Shot, which has a 50% chance to create one.",
+        "zh-Hant": "有 20% 機率生成圓形治療區域，恢復你與隊友的生命；遠程攻擊使用 Radiance Shot，生成治療區域的機率為 50%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -5201,8 +5206,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Defeating a mob reduces your health potion's cooldown time, allowing you to heal again more quickly.",
-        "zh-Hant": "擊敗怪物會縮短生命藥水冷卻時間，讓你更快恢復生命。"
+        "en": "Defeating a mob reduces your health potion's cooldown time, allowing you to heal again more quickly; tiers I / II / III reduce the cooldown by 1 / 2 / 3 seconds, respectively.",
+        "zh-Hant": "擊敗怪物會縮短生命藥水冷卻時間，讓你更快恢復生命；I／II／III 階分別縮短冷卻 1／2／3 秒。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -5218,6 +5223,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "1 second",
+        "2 seconds",
+        "3 seconds"
       ]
     },
     {
@@ -5325,7 +5335,7 @@
       "wikiStatus": "unmarked",
       "claim": {
         "en": "Hits Multiple targets when charged",
-        "zh-Hant": "蓄力箭會在怪物之間彈射，最多命中三次。"
+        "zh-Hant": "蓄力箭可命中多個目標。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -5378,8 +5388,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Small chance for arrows to ricochet off mobs.",
-        "zh-Hant": "箭矢有小機率從怪物身上彈射。"
+        "en": "Small chance for arrows to ricochet off mobs; tiers I / II / III have a 20% / 40% / 60% chance to trigger, respectively.",
+        "zh-Hant": "箭矢有小機率從怪物身上彈射；I／II／III 階的觸發機率分別為 20%／40%／60%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -5395,6 +5405,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "20%",
+        "40%",
+        "60%"
       ]
     },
     {
@@ -5438,8 +5453,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "After rolling, the next ranged shot is charged.",
-        "zh-Hant": "翻滾後，下一次遠程射擊會蓄力。"
+        "en": "When you perform a roll, your next ranged attack within the timing window will automatically be fully charged; tiers I / II / III keep the next shot charged for 1 / 2 / 3 seconds, respectively.",
+        "zh-Hant": "翻滾後，在時限內射出的下一發遠程攻擊會自動完全蓄力；I／II／III 階的自動蓄力時限分別為 1／2／3 秒。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -5455,6 +5470,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "1 second",
+        "2 seconds",
+        "3 seconds"
       ]
     },
     {
@@ -5876,8 +5896,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Makes your weapon sharper, causing it to deal more damage.",
-        "zh-Hant": "使武器更鋒利，造成更多傷害。"
+        "en": "Makes your weapon sharper, causing it to deal more damage; tiers I / II / III increase damage by 10% / 21% / 33%, respectively.",
+        "zh-Hant": "使你的武器更鋒利，造成更多傷害；I／II／III 階分別提高 10%／21%／33% 傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -5893,6 +5913,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "+10%",
+        "+21%",
+        "+33%"
       ]
     },
     {
@@ -6045,8 +6070,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Beams of lightning connect the last few charged arrows fired, which deal lightning damage to enemies who touch a beam.",
-        "zh-Hant": "最近射出的數支蓄力箭會以閃電束相連，接觸電束的敵人會受到閃電傷害。"
+        "en": "Beams of lightning connect the last few charged arrows fired, which deal lightning damage to enemies who touch a beam; tiers I / II / III connect up to 1 / 2 / 3 beams, respectively.",
+        "zh-Hant": "最近射出的數支蓄力箭會以閃電束相連，接觸電束的敵人會受到閃電傷害；I／II／III 階最多可連接 1／2／3 道閃電束。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6062,6 +6087,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "1 beam",
+        "2 beams",
+        "3 beams"
       ]
     },
     {
@@ -6099,8 +6129,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "The last attack in the hero’s weapon combo launches a damaging wave.",
-        "zh-Hant": "英雄武器連擊的最後一擊會發出傷害波。"
+        "en": "The last attack in a combo launches a shockwave, damaging enemies; shockwave damage at tiers I / II / III is X / 1.5X / 2X, respectively.",
+        "zh-Hant": "連擊最後一擊會發出震波並傷害敵人；I／II／III 階的震波傷害分別為 X／1.5X／2X。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6116,6 +6146,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "X",
+        "1.5X",
+        "2X"
       ]
     },
     {
@@ -6159,8 +6194,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Increases damage against the Undead.",
-        "zh-Hant": "對亡靈造成額外傷害。"
+        "en": "Increases damage against the Undead; tiers I / II / III increase damage by 25% / 35% / 45%, respectively.",
+        "zh-Hant": "對亡靈造成額外傷害；I／II／III 階分別提高 25%／35%／45% 傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6176,6 +6211,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "+25%",
+        "+35%",
+        "+45%"
       ]
     },
     {
@@ -6221,8 +6261,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Fires a snowball at a nearby enemy every few seconds, briefly stunning it.",
-        "zh-Hant": "每隔數秒向附近敵人發射雪球，使其短暫暈眩。"
+        "en": "Fires a snowball at a nearby enemy every few seconds, briefly stunning it; tiers I / II / III trigger every 5 / 3 / 1 seconds, respectively.",
+        "zh-Hant": "每隔數秒向附近敵人發射雪球，使其短暫暈眩；I／II／III 階分別每 5／3／1 秒觸發一次。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6238,6 +6278,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "5 seconds",
+        "3 seconds",
+        "1 second"
       ]
     },
     {
@@ -6275,8 +6320,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Increases the amount of soul damage you deal.",
-        "zh-Hant": "提高你造成的靈魂傷害。"
+        "en": "Increases the amount of soul damage you deal; tiers I / II / III increase soul damage by 10% / 20% / 30%, respectively.",
+        "zh-Hant": "提高你造成的靈魂傷害；I／II／III 階分別提高 10%／20%／30% 靈魂傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6292,6 +6337,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "+10%",
+        "+20%",
+        "+30%"
       ]
     },
     {
@@ -6329,8 +6379,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "When you hit an enemy, gain a 20% chance to grant you a bunch of extra souls.",
-        "zh-Hant": "命中敵人時有 20% 機率獲得額外靈魂。"
+        "en": "When you hit an enemy, gain a 20% chance to grant you a bunch of extra souls; tiers I / II / III grant 1 / 3 / 5 extra souls, respectively.",
+        "zh-Hant": "命中敵人時有 20% 機率獲得額外靈魂；I／II／III 階分別獲得 1／3／5 個額外靈魂。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6346,6 +6396,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "1 soul",
+        "3 souls",
+        "5 souls"
       ]
     },
     {
@@ -6383,8 +6438,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "When you gather a soul, you gain a 5% stacking movement speed boost for a short time.",
-        "zh-Hant": "收集靈魂時獲得可疊加的 5% 移動速度加成，持續一小段時間。"
+        "en": "When you gather a soul, you gain a 5% stacking movement speed boost for a short time; tiers I / II / III last 3 / 5 / 7 seconds, respectively.",
+        "zh-Hant": "收集靈魂時獲得可疊加的 5% 移動速度加成，持續一小段時間；I／II／III 階分別持續 3／5／7 秒。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6400,6 +6455,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "3 seconds",
+        "5 seconds",
+        "7 seconds"
       ]
     },
     {
@@ -6437,8 +6497,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "When activating any artifact, you gain +20% movement speed for a short time.",
-        "zh-Hant": "啟動任何神器時，短時間內提高 20% 移動速度。"
+        "en": "When activating any artifact, you gain +20% movement speed for a short time; tiers I / II / III last 1 / 2 / 3 seconds, respectively.",
+        "zh-Hant": "啟動任何神器時，短時間內提高 20% 移動速度；I／II／III 階分別持續 1／2／3 秒。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6454,6 +6514,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "1 second",
+        "2 seconds",
+        "3 seconds"
       ]
     },
     {
@@ -6491,8 +6556,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Chance to temporarily stun enemies.",
-        "zh-Hant": "有機率暫時擊暈敵人。"
+        "en": "Chance to temporarily stun enemies; tiers I / II / III have a 5% / 10% / 15% chance to trigger, respectively.",
+        "zh-Hant": "有機率暫時擊暈敵人；I／II／III 階的觸發機率分別為 5%／10%／15%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6508,6 +6573,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "5%",
+        "10%",
+        "15%"
       ]
     },
     {
@@ -6551,8 +6621,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Charged shots deal more damage and have more pushback.",
-        "zh-Hant": "蓄力射擊會造成更多傷害並提高擊退效果。"
+        "en": "Charged shots deal more damage and have more pushback; tiers I / II / III increase charged-shot damage by 20% / 30% / 40%, respectively.",
+        "zh-Hant": "蓄力射擊會造成更多傷害並提高擊退效果；I／II／III 階分別提高 20%／30%／40% 蓄力射擊傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6568,6 +6638,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "+20%",
+        "+30%",
+        "+40%"
       ]
     },
     {
@@ -6605,8 +6680,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Whenever you use a healing potion, you sometimes create random consumables.",
-        "zh-Hant": "使用治療藥水時，有時也會生成隨機消耗品。"
+        "en": "Whenever you use a healing potion, you sometimes create random consumables; tiers I / II / III have a 50% / 100% / 150% chance to trigger, respectively.",
+        "zh-Hant": "使用治療藥水時，有時也會生成隨機消耗品；I／II／III 階的觸發機率分別為 50%／100%／150%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6622,6 +6697,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "50%",
+        "100%",
+        "150%"
       ]
     },
     {
@@ -6659,8 +6739,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Rolling makes you move faster for three seconds.",
-        "zh-Hant": "翻滾後移動速度提高 3 秒。"
+        "en": "Rolling makes you move faster for three seconds; tiers I / II / III increase movement speed by 30% / 40% / 50%, respectively.",
+        "zh-Hant": "翻滾後移動速度提高 3 秒；I／II／III 階分別提高 30%／40%／50% 移動速度。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6676,6 +6756,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "+30%",
+        "+40%",
+        "+50%"
       ]
     },
     {
@@ -6713,8 +6798,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "The last attack in the hero’s weapon combo triggers a damaging area around the hero.",
-        "zh-Hant": "英雄武器連擊的最後一擊會觸發自身周圍的範圍傷害。"
+        "en": "The last attack in a combo performs a swirling attack, damaging nearby enemies; tiers I / II / III deal X / 1.5X / 2X damage with the swirling attack, respectively.",
+        "zh-Hant": "連擊最後一擊會發動旋渦攻擊，傷害附近敵人；I／II／III 階分別造成 X／1.5X／2X 傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6730,6 +6815,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "X",
+        "1.5X",
+        "2X"
       ]
     },
     {
@@ -6843,8 +6933,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Steals a small amount of a mob's movement speed and gives it to you for four seconds.",
-        "zh-Hant": "竊取怪物少量移動速度，並轉移給你 4 秒。"
+        "en": "Steals a small amount of a mob's movement speed and gives it to you for four seconds; tiers I / II / III steal 17% / 33% / 50% of movement speed, respectively.",
+        "zh-Hant": "竊取怪物少量移動速度並轉移給你，持續 4 秒；I／II／III 階分別竊取 17%／33%／50% 移動速度。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -6860,6 +6950,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "17%",
+        "33%",
+        "50%"
       ]
     },
     {
@@ -6903,8 +6998,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "When the hero takes damage, returns 100% / 150% / 200% of that damage to the attacker (tiers I / II / III).",
-        "zh-Hant": "英雄受到傷害時，I／II／III 階分別會將該傷害的 100%／150%／200% 反彈給攻擊者。"
+        "en": "Whenever you take damage, you deal damage back to the attacker; tiers I / II / III return 100% / 150% / 200% of the damage, respectively.",
+        "zh-Hant": "受到傷害時會對攻擊者造成反擊傷害；I／II／III 階分別反彈該傷害的 100%／150%／200%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -7022,8 +7117,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Hero melee hits have a 30% chance to summon lightning against nearby enemies.",
-        "zh-Hant": "英雄近戰攻擊有 30% 機率召喚閃電攻擊附近敵人。"
+        "en": "Has a 30% chance to summon a lightning strike that damages nearby enemies; tiers I / II / III deal X / 2X / 3X damage with the lightning strike, respectively.",
+        "zh-Hant": "有 30% 機率召喚閃電打擊附近敵人；I／II／III 階分別造成 X／2X／3X 閃電傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -7039,6 +7134,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "X",
+        "2X",
+        "3X"
       ]
     },
     {
@@ -7082,8 +7182,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Chance to summon a bee when you roll, with up to 3 bees joining your side.",
-        "zh-Hant": "翻滾時有機率召喚蜜蜂，最多可有 3 隻加入你的一方。"
+        "en": "Chance to summon a bee when you roll, with up to 3 bees joining your side; tiers I / II / III have a 33% / 67% / 101% chance to trigger, respectively.",
+        "zh-Hant": "翻滾時有機率召喚蜜蜂，最多可有 3 隻加入你的一方；I／II／III 階的召喚機率分別為 33%／67%／101%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -7099,6 +7199,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "33%",
+        "67%",
+        "101%"
       ]
     },
     {
@@ -7136,8 +7241,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Deal more damage to enchanted enemies.",
-        "zh-Hant": "對附魔敵人造成更多傷害。"
+        "en": "Deal more damage to enchanted enemies; tiers I / II / III increase damage by 50% / 75% / 100%, respectively.",
+        "zh-Hant": "對附魔敵人造成更多傷害；I／II／III 階分別提高 50%／75%／100% 傷害。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -7153,6 +7258,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "+50%",
+        "+75%",
+        "+100%"
       ]
     },
     {
@@ -7190,8 +7300,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Hero attacks apply a damage multiplier to the target that grows over time before it is removed.",
-        "zh-Hant": "英雄攻擊會對目標施加傷害倍率；倍率隨時間提高，之後移除。"
+        "en": "Attacking a target applies a damage multiplier that rises steadily to a max level, then is removed; tiers I / II / III have maximum damage multiplier bonuses of +200% / +400% / +600% for melee attacks and +100% / +200% / +300% for ranged attacks, respectively.",
+        "zh-Hant": "攻擊目標會施加逐漸提升的傷害倍率，達到上限後移除；I／II／III 階近戰最大傷害倍率加成分別為 +200%／+400%／+600%，遠程分別為 +100%／+200%／+300%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -7207,6 +7317,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "Melee: +200%; Ranged: +100%",
+        "Melee: +400%; Ranged: +200%",
+        "Melee: +600%; Ranged: +300%"
       ]
     },
     {
@@ -7250,8 +7365,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Your attacks decrease the attack damage of all nearby enemies for five seconds.",
-        "zh-Hant": "你的攻擊會使附近敵人的攻擊傷害降低 5 秒。"
+        "en": "Your attacks decrease the attack damage of all nearby enemies for five seconds; tiers I / II / III reduce enemy attack damage by 20% / 30% / 40%, respectively.",
+        "zh-Hant": "你的攻擊會使附近敵人的攻擊傷害降低 5 秒；I／II／III 階分別降低敵人攻擊傷害 20%／30%／40%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -7267,6 +7382,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "20%",
+        "30%",
+        "40%"
       ]
     },
     {
@@ -7310,8 +7430,8 @@
       "claimOrigin": "source",
       "wikiStatus": "unmarked",
       "claim": {
-        "en": "Hitting an enemy has a chance to send it into a rage, making it hostile towards everyone.",
-        "zh-Hant": "命中敵人時有機率使其狂暴，轉而攻擊所有人。"
+        "en": "Hitting an enemy has a chance to send it into a rage, making it hostile towards everyone; tiers I / II / III have a 20% / 30% / 40% chance to trigger, respectively.",
+        "zh-Hant": "命中敵人時有機率使其狂暴，轉而攻擊所有人；I／II／III 階的觸發機率分別為 20%／30%／40%。"
       },
       "decision": "supported",
       "confidence": "high",
@@ -7327,6 +7447,11 @@
       ],
       "reviewedSources": [
         "enchantment"
+      ],
+      "tableCells": [
+        "20%",
+        "30%",
+        "40%"
       ]
     },
     {

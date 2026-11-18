@@ -204,14 +204,14 @@ test('124 筆附魔逐項區分玩家與怪物用途並保留可信度與查證�
   const byId = new Map(actual.map((entry) => [entry.id, entry]));
   const value = (id, label) => byId.get(id).facts.find((fact) => fact.label.en === label).value.en;
   assert.match(value('critical-hit', 'Player effect'), /10% \/ 15% \/ 20%/);
-  assert.match(value('critical-hit', 'Mob effect'), /always deal triple/);
+  assert.match(value('critical-hit', 'Mob effect'), /three times its normal damage/);
   assert.match(value('thorns', 'Player effect'), /100% \/ 150% \/ 200%/);
   assert.match(value('thorns', 'Mob effect'), /12\.5%/);
   assert.match(value('protection', 'Player effect'), /6% \/ 11% \/ 15%/);
   assert.match(value('protection', 'Mob effect'), /50% less damage/);
   assert.match(value('thundering', 'Player effect'), /30% chance/);
   assert.match(value('thundering', 'Mob effect'), /after each mob attack/);
-  assert.match(value('echo', 'Player effect'), /5 \/ 4 \/ 3-second cooldowns/);
+  assert.match(value('echo', 'Player effect'), /Some of your attacks can be followed up.*5 \/ 4 \/ 3 seconds, respectively/);
   assert.match(value('echo', 'Mob effect'), /immediately/);
   assert.match(value('radiance', 'Player effect'), /20% chance.*50% chance/);
   assert.match(value('radiance', 'Mob effect'), /when attacking/);
