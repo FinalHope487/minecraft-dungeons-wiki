@@ -2,7 +2,7 @@
 
 ## 目標與狀態
 
-進行中，待執行。以 Echo 為句型範例，逐筆審查 124 個附魔，把有來源的玩家與怪物效果寫成可直接理解的雙語短句。每個附魔都要有查核結果。依[附魔效用規格](../specs/enchantment-availability.md)決定顯示哪一側。
+進行中，待執行。以 Chain Reaction 為玩家效果格式範例，逐筆審查 124 個附魔，保留遊戲內說明並附上已查證的階級數值。每個附魔都要有查核結果。依[附魔效用規格](../specs/enchantment-availability.md)決定顯示哪一側。
 
 ## 改動邊界
 
@@ -14,16 +14,19 @@
 
 ### 1. 定稿句型並試寫
 
-每側先寫一個完整句子，依序交代「觸發條件 → 效果 → 目標或限制」。將已確認的機率、倍率、冷卻、持續時間、範圍或階級差異接在效果後。機制較多時可拆成第二句。英文與繁體中文使用同一組條件、數字和單位。階級依 I、II、III 排列，明示各數字代表的量。保留來源的「可能」「最多」「僅限」等限定語。效果列標題由既有畫面提供。
+- **玩家效果**以已查證的遊戲內說明開頭。英文沿用原文措辭，繁中沿用忠實翻譯。有已核實的階級值時，只將原文末尾句點換成分號，再接上階級補充。英文句型為 `[Original in-game description without the final period]; tiers I / II / III have ... respectively.`。繁中用全形分號，數字按階級排列。某些效果適用其他階數或單位時，照來源列出。沒有階級值時保留原句與句點。
+- **怪物效果**獨立描述已查證的觸發條件、行為及限制。只有怪物來源明載階級數值時才附上；玩家數值不能套用到怪物。兩側無遊戲內說明時，依各自來源簡述並記錄來源類型，保留「可能」「最多」「僅限」等限定語。
+- **原文與顯示稿**分開驗收。稽核的原文摘錄與階級表分別保存。複合後的效果文案屬於圖鑑顯示稿，不能用它驗收「Wiki 原文」。若現行「Wiki 原文」區誤收顯示稿，列出該處呈現差異供後續修正。
 
 | 樣本 | 應驗證的輸出 |
 | --- | --- |
+| Chain Reaction（連鎖反應） | 英文以遊戲內說明原句開頭，分號後接 I／II／III 階分別有 10%／20%／30% 的觸發機率。怪物效果獨立記錄命中後分裂為額外五枚投射物，怪物側不補階級機率。 |
 | Echo（回聲） | 玩家攻擊後可能自動補一次攻擊，I／II／III 階冷卻分別為 5／4／3 秒。怪物攻擊後立即補一次攻擊。怪物冷卻與觸發限制未確認，關係維持 `unknown`。 |
 | Critical Hit | 玩家三階機率分別為 10%／15%／20%，觸發時造成三倍傷害。怪物每次攻擊都造成三倍傷害。兩側各有佐證，關係為 `different`。 |
 | Ambush | 保留兩側各自的來源及怪物效果的 `[verify]`，可用性衝突放在「更多資訊」。 |
 | 從現有 profile 各選一筆同效、僅玩家、僅怪物、無直接佐證 | 核對顯示分支。未使用條目仍列入查核清單。 |
 
-Echo 的英文基準為使用者提供的兩句。玩家的階級冷卻出自固定版附魔總表，怪物行為出自固定版附魔怪物頁。後者的原文僅支持補打行為與時機。 [附魔總表固定版](https://minecraft.wiki/w/Dungeons:Enchantment?oldid=3899779) [附魔怪物固定版](https://minecraft.wiki/w/Dungeons:Enchanted?oldid=3747433)
+Chain Reaction 玩家效果驗收字串為 `Has a chance to fire five arrows in all directions on impact; tiers I / II / III have a 10% / 20% / 30% chance to trigger, respectively.`。分號前取自單品頁的遊戲內說明，分號後取自附魔總表的階級欄。Echo 依同一格式補三階冷卻，怪物頁只支持補打行為與時機。 [Chain Reaction 單品頁](https://minecraft.wiki/w/Dungeons%3AChain_Reaction) [附魔總表固定版](https://minecraft.wiki/w/Dungeons:Enchantment?oldid=3899779) [附魔怪物固定版](https://minecraft.wiki/w/Dungeons:Enchanted?oldid=3747433)
 
 ### 2. 逐批查核
 

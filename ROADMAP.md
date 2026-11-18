@@ -48,16 +48,16 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`8c6fce4`（本輪起點，驗證在工作樹執行）
+**commit**：`8f7d163`（本輪起點，驗證在工作樹執行）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-18 實跑 |
 | --- | --- | --- |
 | 內層 | `npm test` | 36/36 通過 |
 | 建置 | `npm run build` | 未跑 |
-| user 層 | 本地 `dist` 檢查 | 未跑，這輪交付改寫計畫 |
+| user 層 | 讀取現有 `dist` 的 Chain Reaction JSON | 核對遊戲內說明與玩家效果顯示稿，未開瀏覽器 |
 | 公開 | GitHub Pages | 未跑 |
-| 文件 | 計畫連結、稽核資料與 `git diff HEAD --check` | 通過，確認 124 筆附魔、253 個效果 facts 與 Echo 引用版次 |
+| 文件 | 核對稽核資料、計畫範例與 `git diff --check` | 通過，確認 Chain Reaction 原文與三階數值 |
 
 ---
 
