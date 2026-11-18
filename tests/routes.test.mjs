@@ -146,10 +146,8 @@ test('完整附魔名錄有唯一條目、雙語 Wiki 描述、分類與來源',
     assert.deepEqual(entry.sources.map(({ label, url }) => ({ label, url })), expected.sources, `${expected.id} source pages`);
     assert.equal(entry.tone, 'violet', `${expected.id} enchantment tone`);
     assert.ok(iconAssets[entry.icon]?.kind === 'enchantment', `${expected.id} icon registration`);
-    assert.equal(entry.sources[0].url, enchantmentRoster.source, `${expected.id} overview source`);
-    assert.equal(entry.sources[1].url,
-      `https://minecraft.wiki/w/Dungeons%3A${encodeURIComponent(expected.pageTitle.replaceAll(' ', '_'))}`,
-      `${expected.id} specific-page source`);
+    assert.equal(entry.sources[0].url, expected.sources[0].url, `${expected.id} overview source`);
+    assert.equal(entry.sources[1].url, expected.sources[1].url, `${expected.id} specific-page source`);
   }
   assert.deepEqual(actual.filter(({ implemented }) => !implemented).map(({ id }) => id), [
     'knockback', 'bows-boon', 'barrier', 'dolphins-grace', 'shielding', 'synergy',
@@ -183,14 +181,20 @@ test('124 筆附魔逐項區分玩家與怪物用途並保留可信度與查證�
     assert.deepEqual(factValue('Hero availability'), localizedValue(expected.availability.hero), `${expected.id} hero detail`);
     assert.deepEqual(factValue('Player effect'), localizedValue(expected.availability.playerEffect), `${expected.id} player effect detail`);
     assert.deepEqual(factValue('Mob availability'), localizedValue(expected.availability.mobs), `${expected.id} mob availability detail`);
-    assert.deepEqual(factValue('Mob effect'), localizedValue(expected.availability.mobEffect), `${expected.id} mob effect detail`);
+    const mobEffectValues = entry.facts.filter((fact) => fact.label.en === 'Mob effect').map(({ value }) => value);
+    const expectedMobEffectValues = [expected.availability.legacyMobEffect, expected.availability.mobEffect]
+      .filter(Boolean).map(localizedValue);
+    assert.deepEqual(mobEffectValues, expectedMobEffectValues, `${expected.id} mob effect detail`);
     assert.equal(factValue('Audience').en, {
       player: 'Player only', mob: 'Mob only', both: 'Player and mob',
       unused: 'Unused; neither is available', unconfirmed: 'Unconfirmed',
     }[expected.availability.audience], `${expected.id} audience detail`);
     assert.equal(factValue('Evidence confidence').en.startsWith(expected.availability.confidence[0].toUpperCase()), true,
       `${expected.id} confidence detail`);
-    assert.ok(entry.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3AEnchanted'),
+    const confidenceLabel = { high: '高', medium: '中', low: '低' }[expected.availability.confidence];
+    assert.equal(factValue('Evidence confidence')['zh-Hant'].startsWith(confidenceLabel), true,
+      `${expected.id} 繁中可信度與結構化判定一致`);
+    assert.ok(entry.sources.some(({ url }) => url === 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433'),
       `${expected.id} enchanted-mob source`);
     for (const url of expected.availability.evidenceSources) {
       assert.ok(entry.sources.some((source) => source.url === url), `${expected.id} evidence source ${url}`);

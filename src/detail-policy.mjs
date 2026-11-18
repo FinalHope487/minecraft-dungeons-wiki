@@ -22,7 +22,7 @@ function effectFor(entry, side, factId) {
 
 function deriveEffects(entry) {
   const profile = entry.enchantmentEffectProfile;
-  if (!profile) return { effects: [], unresolvedRelations: [] };
+  if (!profile) return { effects: [], unresolvedRelations: [], relationAssessment: null };
 
   const sides = [
     ['player', profile.playerAvailability, effectFor(entry, 'player', profile.playerFactId)],
@@ -41,6 +41,7 @@ function deriveEffects(entry) {
       return {
         effects: [player, { ...mob, sameAsPlayer: true }],
         unresolvedRelations: [],
+        relationAssessment: { relation: 'same' },
       };
     }
   }
@@ -48,10 +49,17 @@ function deriveEffects(entry) {
     const player = visible.find(({ side }) => side === 'player');
     const mob = visible.find(({ side }) => side === 'mob');
     if (player && mob) {
-      return { effects: visible, unresolvedRelations: [{ reason: 'relation' }] };
+      return { effects: visible, unresolvedRelations: [{ reason: 'relation' }], relationAssessment: null };
     }
   }
-  return { effects: visible, unresolvedRelations: [] };
+  const hasBothSides = visible.some(({ side }) => side === 'player') && visible.some(({ side }) => side === 'mob');
+  return {
+    effects: visible,
+    unresolvedRelations: [],
+    relationAssessment: hasBothSides && profile.effectRelation === 'different'
+      ? { relation: 'different' }
+      : null,
+  };
 }
 
 export function deriveDetailPresentation(entry, entries) {
@@ -59,7 +67,7 @@ export function deriveDetailPresentation(entry, entries) {
     throw new TypeError('詳情呈現政策需要完整條目資料。');
   }
   const builtIn = buildBuiltInEnchantmentPresentation(entry, entries);
-  const { effects, unresolvedRelations } = deriveEffects(entry);
+  const { effects, unresolvedRelations, relationAssessment } = deriveEffects(entry);
   const effectFacts = entry.facts.filter(({ semanticKey }) => effectKeys.has(semanticKey));
   const hiddenEffectFacts = effectFacts.filter((fact) => {
     const side = fact.semanticKey === 'player_effect' ? 'player' : 'mob';
@@ -85,14 +93,15 @@ export function deriveDetailPresentation(entry, entries) {
     ...hiddenEffectFacts,
   ]);
   const description = entry.category !== 'enchantments' && descriptionIsSource ? entry.description : null;
-  const hasMoreInfo = moreInfoFacts.length > 0 || unresolvedRelations.length > 0 || wikiOriginals.length > 0;
+  const hasMoreInfo = moreInfoFacts.length > 0 || unresolvedRelations.length > 0
+    || relationAssessment !== null || wikiOriginals.length > 0;
   const sections = [
     ...(effects.length ? [{ type: 'effects', items: effects }] : []),
     ...(primaryFacts.length ? [{ type: 'facts', items: primaryFacts }] : []),
     ...(builtIn.traits.length ? [{ type: 'traits', items: builtIn.traits }] : []),
     ...(description ? [{ type: 'description', item: description }] : []),
     ...(builtIn.related.length ? [{ type: 'related', items: builtIn.related }] : []),
-    ...(hasMoreInfo ? [{ type: 'more_info', facts: moreInfoFacts, unresolvedRelations, wikiOriginals }] : []),
+    ...(hasMoreInfo ? [{ type: 'more_info', facts: moreInfoFacts, unresolvedRelations, relationAssessment, wikiOriginals }] : []),
     ...(entry.sources.length ? [{ type: 'sources', items: entry.sources }] : []),
   ];
 
@@ -103,6 +112,7 @@ export function deriveDetailPresentation(entry, entries) {
     related: builtIn.related,
     moreInfoFacts,
     unresolvedRelations,
+    relationAssessment,
     wikiOriginals,
     description,
     sections,

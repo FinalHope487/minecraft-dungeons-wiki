@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { access, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
@@ -8,8 +8,8 @@ import { gunzipSync } from 'node:zlib';
 import { migrateV5Catalog } from '../tools/migrate-v5-to-v6.mjs';
 import { loadCatalog } from '../tools/catalog.mjs';
 
-function readRows(database, query) {
-  return database.prepare(query).all().map((row) => Object.fromEntries(Object.entries(row)));
+function readRows(database, query, ...parameters) {
+  return database.prepare(query).all(...parameters).map((row) => Object.fromEntries(Object.entries(row)));
 }
 
 function readCoreSnapshot(path, version) {
@@ -64,9 +64,30 @@ test('v5 → v6 保留公開內容、排序、關聯、來源與內建附魔列'
 
     const result = await migrateV5Catalog(v5Copy, v6Copy);
     const after = readCoreSnapshot(v6Copy, 6);
-    assert.deepEqual(after, before);
+    const originalFactIds = new Set(before.facts.map(({ id }) => id));
+    const originalSourceIds = new Set(before.sources.map(({ id }) => id));
+    assert.deepEqual({
+      ...after,
+      facts: after.facts.filter(({ id }) => originalFactIds.has(id)),
+      factTranslations: after.factTranslations.filter(({ fact_id: factId }) => originalFactIds.has(factId)),
+      sources: after.sources.filter(({ id }) => originalSourceIds.has(id)),
+    }, before);
+    assert.deepEqual(after.sources.filter(({ id }) => !originalSourceIds.has(id)).sort((left, right) => left.id - right.id), [
+      { id: 4090, entry_id: 'leeching', label: 'Minecraft Wiki · Enchanted Mobs', url: 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433', position: 3 },
+      { id: 4091, entry_id: 'sharpness', label: 'Minecraft Wiki · Enchanted Mobs', url: 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433', position: 3 },
+      { id: 4092, entry_id: 'double-damage', label: 'Minecraft Wiki · Enchanted Mobs', url: 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433', position: 6 },
+      { id: 4093, entry_id: 'fast-attack', label: 'Minecraft Wiki · Enchanted Mobs', url: 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433', position: 6 },
+      { id: 4094, entry_id: 'quick', label: 'Minecraft Wiki · Enchanted Mobs', url: 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433', position: 5 },
+    ]);
+    assert.deepEqual(after.facts.filter(({ id }) => !originalFactIds.has(id)).sort((left, right) => left.id - right.id), [
+      { id: 3074, entry_id: 'leeching', position: 8 },
+      { id: 3075, entry_id: 'sharpness', position: 8 },
+      { id: 3076, entry_id: 'double-damage', position: 8 },
+      { id: 3077, entry_id: 'fast-attack', position: 8 },
+      { id: 3078, entry_id: 'quick', position: 8 },
+    ]);
     assert.equal(result.entries, 446);
-    assert.equal(result.facts, 1320);
+    assert.equal(result.facts, 1325);
     assert.equal(result.relations, 286);
     assert.equal(result.icons, 426);
 
@@ -80,8 +101,14 @@ test('v5 → v6 保留公開內容、排序、關聯、來源與內建附魔列'
     try {
       assert.deepEqual(database.prepare('PRAGMA integrity_check').all().map((row) => row.integrity_check), ['ok']);
       assert.deepEqual(database.prepare('PRAGMA foreign_key_check').all(), []);
-      assert.deepEqual(database.prepare(`SELECT entry_id, semantic_key, count(*) AS n FROM facts
-        GROUP BY entry_id, semantic_key HAVING n > 1`).all(), []);
+      assert.deepEqual(readRows(database, `SELECT entry_id, semantic_key, count(*) AS n FROM facts
+        GROUP BY entry_id, semantic_key HAVING n > 1 ORDER BY entry_id`), [
+        { entry_id: 'double-damage', semantic_key: 'mob_effect', n: 2 },
+        { entry_id: 'fast-attack', semantic_key: 'mob_effect', n: 2 },
+        { entry_id: 'leeching', semantic_key: 'mob_effect', n: 2 },
+        { entry_id: 'quick', semantic_key: 'mob_effect', n: 2 },
+        { entry_id: 'sharpness', semantic_key: 'mob_effect', n: 2 },
+      ]);
       assert.ok(database.prepare('PRAGMA index_list(facts)').all().some(({ name, unique }) =>
         name === 'facts_by_semantic_key' && unique === 0));
       const duplicate = database.prepare(`INSERT INTO facts(entry_id, semantic_key, claim_origin, wiki_status, position)
@@ -90,8 +117,49 @@ test('v5 → v6 保留公開內容、排序、關聯、來源與內建附魔列'
         .get('ambush', 'player_effect').n, 2);
       database.prepare('DELETE FROM facts WHERE id=?').run(duplicate.lastInsertRowid);
       assert.equal(database.prepare('SELECT overlay_percent FROM icon_recipes WHERE id=?').get('built_in_enchantment').overlay_percent, 81);
-      assert.equal(database.prepare("SELECT effect_relation FROM enchantment_effect_profiles WHERE entry_id='critical-hit'").get().effect_relation, 'different');
+      assert.equal(database.prepare("SELECT effect_relation FROM enchantment_effect_profiles WHERE entry_id='critical-hit'").get().effect_relation, 'unknown');
+      const relation = (entryId) => database.prepare('SELECT effect_relation FROM enchantment_effect_profiles WHERE entry_id=?').get(entryId).effect_relation;
+      assert.equal(relation('ambush'), 'unknown');
+      assert.equal(relation('jungle-poison'), 'unknown');
+      assert.equal(database.prepare(`SELECT COUNT(*) AS n FROM enchantment_effect_profiles
+        WHERE effect_relation <> 'unknown'`).get().n, 0,
+        'historical v5 migrations must not seed unaudited same/different relations');
       assert.equal(database.prepare("SELECT count(*) AS n FROM entries WHERE description_status='unknown'").get().n, 0);
+      for (const [entryId, legacyFactId, effectFactId, legacyEn, legacyZh, effectEn, effectZh] of [
+        ['leeching', 2198, 3074, 'Ancient mobs gain a portion of the hero’s health whenever they attack; the Wiki history also mentions Mystery Banner mobs.', '遠古怪物每次攻擊會取得英雄生命值的一部分；Wiki 更新紀錄亦提到神秘旗幟怪物。', 'Mobs gain a percent of the hero’s health every time they attack.', '怪物每次攻擊都會取得英雄生命值的一部分。'],
+        ['sharpness', 2255, 3075, 'Ancient mobs deal increased melee damage; the Wiki history also mentions Mystery Banner mobs.', '遠古怪物會造成額外近戰傷害；Wiki 更新紀錄亦提到神秘旗幟怪物。', 'Mob melee damage increases.', '提高怪物的近戰傷害。'],
+        ['double-damage', 3056, 3076, 'Mobs deal twice as much damage to the hero. Enchanters can apply it to nearby mobs; the Tome can apply it to heroes and summons.', '怪物對英雄造成雙倍傷害。附魔師可施加給附近怪物；附魔師之書可施加給英雄與召喚物。', 'Mobs deal 2 times as much damage to the hero. Similar to the Strength potion.', '怪物對英雄造成 2 倍傷害，效果類似力量藥水。'],
+        ['fast-attack', 3064, 3077, 'Increases the mob’s attack speed. Enchanters can apply it to nearby mobs; the Tome can apply it to heroes and summons.', '提高怪物攻擊速度。附魔師可施加給附近怪物；附魔師之書可施加給英雄與召喚物。', 'Mob attack speed increases.', '提高怪物攻擊速度。'],
+        ['quick', 3072, 3078, 'Increases the mob’s movement speed. The Tome can also apply it to heroes and summoned allies.', '提高怪物移動速度。附魔師之書也可將此效果施加給英雄與召喚盟友。', 'Mobs have higher movement speed. Similar to Swiftness.', '怪物移動速度提高，效果類似迅捷藥水。'],
+      ]) {
+        const legacy = database.prepare(`SELECT facts.claim_origin AS claimOrigin, translation.value
+          FROM facts JOIN fact_translations translation ON translation.fact_id=facts.id
+          WHERE facts.id=? AND translation.language='en'`).get(legacyFactId);
+        assert.equal(legacy.claimOrigin, 'inference', `${entryId} original composite claim origin`);
+        assert.equal(legacy.value, legacyEn, `${entryId} original composite claim text`);
+        assert.deepEqual(readRows(database, `SELECT language, value FROM fact_translations
+          WHERE fact_id=? ORDER BY language`, legacyFactId).map(({ language, value }) => ({ language, value })), [
+          { language: 'en', value: legacyEn }, { language: 'zh-Hant', value: legacyZh },
+        ], `${entryId} original composite translations`);
+        const effect = database.prepare(`SELECT facts.claim_origin AS claimOrigin, translation.value
+          FROM facts JOIN fact_translations translation ON translation.fact_id=facts.id
+          WHERE facts.id=? AND translation.language='en'`).get(effectFactId);
+        assert.equal(effect.claimOrigin, 'source', `${entryId} pure effect claim origin`);
+        assert.equal(effect.value, effectEn, `${entryId} pure effect claim text`);
+        assert.deepEqual(readRows(database, `SELECT language, value FROM fact_translations
+          WHERE fact_id=? ORDER BY language`, effectFactId).map(({ language, value }) => ({ language, value })), [
+          { language: 'en', value: effectEn }, { language: 'zh-Hant', value: effectZh },
+        ], `${entryId} pure effect translations`);
+        assert.equal(database.prepare('SELECT mob_fact_id FROM enchantment_effect_profiles WHERE entry_id=?').get(entryId).mob_fact_id,
+          effectFactId, `${entryId} profile points to the pure effect claim`);
+        assert.equal(database.prepare(`SELECT COUNT(*) AS n FROM fact_evidence
+          WHERE fact_id=? AND relation='supports'`).get(legacyFactId).n, 0, `${entryId} composite has no direct support`);
+        assert.deepEqual(readRows(database, `SELECT source.label, source.url FROM fact_evidence evidence
+          JOIN entry_sources source ON source.id=evidence.source_id
+          WHERE evidence.fact_id=? AND evidence.relation='supports'`, effectFactId), [
+          { label: 'Minecraft Wiki · Enchanted Mobs', url: 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433' },
+        ]);
+      }
       assert.equal(database.prepare("SELECT COUNT(*) AS n FROM fact_evidence WHERE relation='context'").get().n > 0, true);
       assert.equal(database.prepare(`SELECT COUNT(*) AS n FROM facts fact
         WHERE fact.claim_origin='source' AND NOT EXISTS (
@@ -103,6 +171,36 @@ test('v5 → v6 保留公開內容、排序、關聯、來源與內建附魔列'
 
     const original = new DatabaseSync(v5Copy, { readOnly: true });
     try { assert.equal(original.prepare('PRAGMA user_version').get().user_version, 5); } finally { original.close(); }
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+});
+
+test('複合效果原文不符時拒絕遷移且保留 v5 輸入', async () => {
+  const directory = await mkdtemp(join(tmpdir(), 'mcd-catalog-composite-mismatch-'));
+  const v5Copy = join(directory, 'catalog-v5.sqlite');
+  const v6Copy = join(directory, 'catalog-v6.sqlite');
+  await writeFile(v5Copy, gunzipSync(await readFile(new URL('./fixtures/catalog-v5.sqlite.gz', import.meta.url))));
+  const changedValue = 'Edited legacy composite effect for rejection test.';
+  try {
+    const original = new DatabaseSync(v5Copy);
+    try {
+      original.prepare(`UPDATE fact_translations SET value=? WHERE fact_id=? AND language='en'`)
+        .run(changedValue, 2198);
+    } finally {
+      original.close();
+    }
+
+    await assert.rejects(migrateV5Catalog(v5Copy, v6Copy), /fact 2198 與已查核的複合怪物效果原文不符/);
+    await assert.rejects(access(v6Copy), { code: 'ENOENT' }, 'failed migration removes its partial output');
+    const unchangedInput = new DatabaseSync(v5Copy, { readOnly: true });
+    try {
+      assert.equal(unchangedInput.prepare('PRAGMA user_version').get().user_version, 5);
+      assert.equal(unchangedInput.prepare(`SELECT value FROM fact_translations
+        WHERE fact_id=? AND language='en'`).get(2198).value, changedValue);
+    } finally {
+      unchangedInput.close();
+    }
   } finally {
     await rm(directory, { recursive: true, force: true });
   }

@@ -231,6 +231,14 @@ function renderDetailsContent(entry, layout) {
         assessment.append(node('p', 'effect-verification', ui.effectRelationUnconfirmed));
         moreContent.append(assessment);
       }
+      if (section.relationAssessment) {
+        const assessment = node('section', 'assessment');
+        const text = section.relationAssessment.relation === 'same'
+          ? ui.effectRelationSameAssessment
+          : ui.effectRelationDifferentAssessment;
+        assessment.append(node('p', 'effect-verification', text));
+        moreContent.append(assessment);
+      }
       const originals = section.wikiOriginals.filter(() => entry.category === 'enchantments' || lang === 'zh-Hant');
       if (originals.length) {
         const original = node('section', 'original');

@@ -17,6 +17,7 @@
 - 玩家與怪物效果相同且兩側可用：顯示玩家效果，另註怪物同樣使用，不重複全文。
 - 效果不同且兩側可用：以同一層級分別顯示玩家與怪物效果。
 - 效果關係為 `unknown` 且雙側各有來源支持的效果：主欄同層顯示玩家與怪物效果；「更多資訊」標示效果關係未確認，不把未知當成相同或不同。
+- `same`／`different` 是圖鑑比對兩側來源文字所得的判讀，不是 Wiki 提供的關係欄位；在預設收合的「更多資訊」標明判讀結果。只有來源明載的觸發條件、目標、效果及具體數值足以比較時才下結論；來源未提及細節不能視為效果不存在或不同。Wiki 原文仍分別展示於同一欄。
 - 一側明確不可用：只顯示另一側，不輸出不可用一側的效果。另一側可用性未知且效果有來源支持時，仍顯示該效果並標示未確認。
 - 可用性為 `unknown`：有來源支持的效果仍顯示於主欄，並在效果旁標示可用性未確認；沒有來源的推論效果不冒充實際效果。
 - Wiki 有 `[verify]` 標記時，在對應效果及其 Wiki 原文旁保留註記。
@@ -27,8 +28,10 @@
 
 - 對照[附魔總表](https://minecraft.wiki/w/Dungeons%3AEnchantment)、[附魔怪物](https://minecraft.wiki/w/Dungeons%3AEnchanted)、[每日試煉](https://minecraft.wiki/w/Dungeons%3ADaily_Trial)及各附魔條目頁。
 - Wiki 沒寫效果或來源互相衝突時，保留原始說法和來源，效果關係或可用性填 `unknown`；不可從清單缺項推成確定不可用。
+- 兩側描述未提供足夠細節作完整比較時，效果關係填 `unknown`；不得只憑目標角色不同或某一側省略數值判為 `different`／`same`。
 - `fact_evidence` 的 `context` 代表來源與該項目相關，不宣稱該頁明確支持這個 fact。只為逐筆核實的 fact 標 `supports` 或 `conflicts`；禁止由條目名稱或 semantic key 推定。Ambush 的 `mob_effect` 由 Enchanted Mobs 支持，不由 Ambush 單品頁支持。未完成逐筆查核的 facts 保留 `claim_origin='unknown'`，相關來源標為 `context`。
 - Wiki 記載不等於遊戲內實測；沒有實測時不得描述為遊戲驗證結果。
+- 124 筆附魔的 253 個雙側效果 fact 與 124 個效果關係逐筆審核紀錄見[附魔效果來源稽核](../audits/enchantment-effect-facts.json)。該紀錄含固定 Wiki 修訂、原文摘錄、查核判定、可信度和未確認原因；沒有直接來源不代表不可用。
 
 ## 驗收條件
 

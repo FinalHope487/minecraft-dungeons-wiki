@@ -22,12 +22,68 @@ const canonicalKeys = new Map([
   ['Missions found in', 'missions_found_in'],
 ]);
 
-// Historical migration seed: the ten IDs previously marked as equivalent by the
-// reviewed client policy. This list is copied into SQLite once and is not runtime logic.
-const sameEffectSeed = new Set([
-  'burning', 'chilling', 'cowardice', 'fire-aspect', 'growing', 'gravity', 'jungle-poison', 'power',
-  'rapid-fire', 'weakening',
+// These v5 rows combine an effect with mob-access or history details. Preserve
+// the original rows as inference, then create a distinct sourced effect row
+// for the profile to reference. Match the frozen input text before transforming.
+const compositeMobEffects = new Map([
+  [2198, {
+    entryId: 'leeching',
+    original: {
+      en: 'Ancient mobs gain a portion of the hero’s health whenever they attack; the Wiki history also mentions Mystery Banner mobs.',
+      'zh-Hant': '遠古怪物每次攻擊會取得英雄生命值的一部分；Wiki 更新紀錄亦提到神秘旗幟怪物。',
+    },
+    effect: {
+      en: 'Mobs gain a percent of the hero’s health every time they attack.',
+      'zh-Hant': '怪物每次攻擊都會取得英雄生命值的一部分。',
+    },
+  }],
+  [2255, {
+    entryId: 'sharpness',
+    original: {
+      en: 'Ancient mobs deal increased melee damage; the Wiki history also mentions Mystery Banner mobs.',
+      'zh-Hant': '遠古怪物會造成額外近戰傷害；Wiki 更新紀錄亦提到神秘旗幟怪物。',
+    },
+    effect: {
+      en: 'Mob melee damage increases.',
+      'zh-Hant': '提高怪物的近戰傷害。',
+    },
+  }],
+  [3056, {
+    entryId: 'double-damage',
+    original: {
+      en: 'Mobs deal twice as much damage to the hero. Enchanters can apply it to nearby mobs; the Tome can apply it to heroes and summons.',
+      'zh-Hant': '怪物對英雄造成雙倍傷害。附魔師可施加給附近怪物；附魔師之書可施加給英雄與召喚物。',
+    },
+    effect: {
+      en: 'Mobs deal 2 times as much damage to the hero. Similar to the Strength potion.',
+      'zh-Hant': '怪物對英雄造成 2 倍傷害，效果類似力量藥水。',
+    },
+  }],
+  [3064, {
+    entryId: 'fast-attack',
+    original: {
+      en: 'Increases the mob’s attack speed. Enchanters can apply it to nearby mobs; the Tome can apply it to heroes and summons.',
+      'zh-Hant': '提高怪物攻擊速度。附魔師可施加給附近怪物；附魔師之書可施加給英雄與召喚物。',
+    },
+    effect: {
+      en: 'Mob attack speed increases.',
+      'zh-Hant': '提高怪物攻擊速度。',
+    },
+  }],
+  [3072, {
+    entryId: 'quick',
+    original: {
+      en: 'Increases the mob’s movement speed. The Tome can also apply it to heroes and summoned allies.',
+      'zh-Hant': '提高怪物移動速度。附魔師之書也可將此效果施加給英雄與召喚盟友。',
+    },
+    effect: {
+      en: 'Mobs have higher movement speed. Similar to Swiftness.',
+      'zh-Hant': '怪物移動速度提高，效果類似迅捷藥水。',
+    },
+  }],
 ]);
+const effectSourceLabel = 'Minecraft Wiki · Enchanted Mobs';
+const effectSourceUrl = 'https://minecraft.wiki/w/Dungeons%3AEnchanted?oldid=3747433';
 
 // Only audited v5 fact IDs receive non-context evidence. Keep the expected
 // claim beside each ID so edits to the frozen migration input cannot inherit
@@ -319,6 +375,15 @@ function migrateData(db, old) {
   const seenEvidenceOverrides = new Set();
   for (const fact of old.facts) {
     if (!fact.label || !fact.value) throw new Error(`fact ${fact.id} 缺少英文標籤或值。`);
+    const compositeEffect = compositeMobEffects.get(fact.id);
+    if (compositeEffect) {
+      const zh = fact.translations['zh-Hant'];
+      if (fact.entry_id !== compositeEffect.entryId || fact.label !== 'Mob effect'
+        || fact.value !== compositeEffect.original.en || zh?.label !== '怪物效果'
+        || zh?.value !== compositeEffect.original['zh-Hant']) {
+        throw new Error(`fact ${fact.id} 與已查核的複合怪物效果原文不符，拒絕拆分。`);
+      }
+    }
     const entrySources = old.sourcesByEntry.get(fact.entry_id) ?? [];
     const evidenceOverride = factEvidenceById.get(fact.id);
     const explicitRelations = new Map();
@@ -335,7 +400,7 @@ function migrateData(db, old) {
       }
     }
     const hasSupportingSource = [...explicitRelations.values()].includes('supports');
-    const origin = claimOrigin(fact.label, fact.value, hasSupportingSource);
+    const origin = compositeEffect ? 'inference' : claimOrigin(fact.label, fact.value, hasSupportingSource);
     const status = wikiStatus(fact.label, fact.value, old.groupedFacts.get(fact.entry_id) ?? []);
     updateFact.run(semanticKey(fact.label), origin, status, fact.id);
     for (const source of entrySources) {
@@ -345,6 +410,46 @@ function migrateData(db, old) {
   }
   for (const factId of factEvidenceById.keys()) {
     if (!seenEvidenceOverrides.has(factId)) throw new Error(`已查核來源映射指向不存在的 fact：${factId}`);
+  }
+
+  const effectFactIdByEntry = new Map();
+  const insertEffectFact = db.prepare(`INSERT INTO facts(entry_id,semantic_key,claim_origin,wiki_status,position)
+    VALUES(?, 'mob_effect', 'source', 'unmarked', ?)`);
+  const insertEffectTranslation = db.prepare(`INSERT INTO fact_translations(fact_id,language,label,value)
+    VALUES(?,?,?,?)`);
+  const insertEffectSource = db.prepare(`INSERT INTO entry_sources(id,entry_id,label,url,position)
+    VALUES(?,?,?,?,?)`);
+  let nextSourceId = Math.max(0, ...old.sources.map(({ id }) => id)) + 1;
+  for (const [factId, composite] of compositeMobEffects) {
+    const entrySources = old.sourcesByEntry.get(composite.entryId) ?? [];
+    const effectSources = entrySources.filter(({ label }) => label === effectSourceLabel);
+    const pinnedSources = effectSources.filter(({ url }) => url === effectSourceUrl);
+    if (pinnedSources.length > 1 || (pinnedSources.length === 0 && effectSources.length !== 1)) {
+      throw new Error(`${composite.entryId} 找不到唯一的怪物效果來源：${effectSourceLabel}`);
+    }
+    const effectSource = pinnedSources[0] ?? (() => {
+      const source = {
+        id: nextSourceId++,
+        entry_id: composite.entryId,
+        label: effectSourceLabel,
+        url: effectSourceUrl,
+        position: Math.max(-1, ...entrySources.map(({ position }) => position)) + 1,
+      };
+      insertEffectSource.run(source.id, source.entry_id, source.label, source.url, source.position);
+      return source;
+    })();
+    const position = Math.max(...(old.groupedFacts.get(composite.entryId) ?? []).map(({ position: value }) => value)) + 1;
+    const inserted = insertEffectFact.run(composite.entryId, position);
+    const effectFactId = Number(inserted.lastInsertRowid);
+    for (const language of ['en', 'zh-Hant']) {
+      insertEffectTranslation.run(effectFactId, language, language === 'en' ? 'Mob effect' : '怪物效果',
+        language === 'en' ? composite.effect.en : composite.effect['zh-Hant']);
+    }
+    for (const source of [...entrySources, ...(entrySources.some(({ id }) => id === effectSource.id) ? [] : [effectSource])]) {
+      insertEvidence.run(effectFactId, source.id, source.id === effectSource.id ? 'supports' : 'context');
+    }
+    effectFactIdByEntry.set(composite.entryId, effectFactId);
+    if (!old.facts.some(({ id }) => id === factId)) throw new Error(`複合效果 fact 不存在：${factId}`);
   }
 
   const profileInsert = db.prepare(`INSERT INTO enchantment_effect_profiles
@@ -358,9 +463,11 @@ function migrateData(db, old) {
     const mobs = byLabel.get('Mob availability');
     const playerFact = byLabel.get('Player effect');
     const mobFact = byLabel.get('Mob effect');
-    const effectRelation = sameEffectSeed.has(entryId) ? 'same' : entryId === 'critical-hit' ? 'different' : 'unknown';
+    // v5 stores no relation audit. Keep every migrated relation unknown until
+    // the current catalog's fact-level review is applied separately.
+    const effectRelation = 'unknown';
     profileInsert.run(entryId, playerAvailability(hero?.value ?? ''), mobAvailability(mobs?.value ?? ''),
-      effectRelation, playerFact?.id ?? null, mobFact?.id ?? null);
+      effectRelation, playerFact?.id ?? null, effectFactIdByEntry.get(entryId) ?? mobFact?.id ?? null);
   }
 
   const descriptionUpdate = db.prepare(`UPDATE entries SET description_status=? WHERE id=?`);
@@ -395,6 +502,7 @@ function migrateData(db, old) {
   db.exec(`DROP TABLE entry_built_in_enchantments_v5;
     DROP TABLE entry_link_translations_v5;
     DROP TABLE entry_links_v5;`);
+  return { factsAdded: effectFactIdByEntry.size };
 }
 
 function validateMigratedDatabase(db) {
@@ -430,14 +538,20 @@ export async function migrateV5Catalog(inputPath, outputPath) {
     await copyFile(input, output);
     writable = new DatabaseSync(output);
     writable.exec(migrationSql);
-    migrateData(writable, old);
+    const migrationChanges = migrateData(writable, old);
     writable.exec('CREATE INDEX facts_by_semantic_key ON facts(entry_id, semantic_key);');
     writable.exec('PRAGMA user_version = 6;');
     writable.exec('COMMIT; PRAGMA foreign_keys = ON;');
     validateMigratedDatabase(writable);
     writable.close();
     writable = null;
-    return { output, entries: old.entryCategories.size, facts: old.facts.length, relations: old.links.length / 2, icons: iconSeed.length };
+    return {
+      output,
+      entries: old.entryCategories.size,
+      facts: old.facts.length + migrationChanges.factsAdded,
+      relations: old.links.length / 2,
+      icons: iconSeed.length,
+    };
   } catch (error) {
     try { writable?.exec('ROLLBACK; PRAGMA foreign_keys = ON;'); } catch (failure) { rollbackError = failure; }
     try { writable?.close(); } catch (failure) { rollbackError ??= failure; }

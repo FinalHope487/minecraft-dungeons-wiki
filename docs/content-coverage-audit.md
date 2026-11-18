@@ -75,3 +75,11 @@ Wiki 的 Damage 頁提供基礎傷害、傷害區間與傷害加成資料，但�
 | Burning `mob_effect` | [Enchanted Mobs](https://minecraft.wiki/w/Dungeons%3AEnchanted_Mobs) | 附魔怪物條目明載怪物會持續傷害附近英雄。 |
 
 顯示順序：主資料與來源明載效果、相關條目、預設收合的「更多資訊」（Wiki 原文、跨頁衝突與圖鑑判讀）、來源連結。不同的玩家／怪物效果同層級呈現；Wiki 標 `[verify]` 時在效果旁保留註記。決策見[附魔詳情層級](decisions/2026-11-18-enchantment-detail-information-hierarchy.md)。
+
+## 124 筆附魔的效果來源稽核
+
+盤點紀錄：[附魔效果來源稽核](audits/enchantment-effect-facts.json)，逐筆列出 253 個玩家／怪物效果 fact 及 124 個效果關係，含固定 Wiki 修訂、支持摘錄、來源判定和可信度。共有 169 個效果 fact 為來源支持、83 個為推論、1 個未知；效果關係為相同 7、不同 12、未知 105。效果關係是圖鑑依來源文字所作比較，UI 在收合的「更多資訊」標成圖鑑判讀。
+
+Leeching、Sharpness、Double Damage、Fast Attack、Quick 各保留舊複合 claim 與 fact ID，標為推論並收在「更多資訊」；另拆出 5 筆由 Enchanted Mobs 頁逐句支持的純怪物效果 facts，供主要效果顯示與比較。原文中混合的怪物適用範圍、歷史或施加途徑仍由各自欄位記錄，不再冒充單一效果原文。
+
+Wiki 未直接描述效果時，稽核標示在已查閱頁面未找到，不推成不可用。Ambush、Stunning 等 `[verify]` 標記照錄；Committed 與 Electrified 保留跨頁衝突；Jungle Poison 的怪物中毒效果不再當成 Wiki 明載。Ambush 的怪物效果雖有來源句子，但 Wiki 標為 `[verify]`，因此效果關係保留未知。Bonus Shot、Freezing、Radiance、Ricochet、Frenzied、Burning、Chilling、Rush、Tempo Theft、Chain Reaction、Multishot、Poison Cloud、Fuse Shot、Chains、Deflect、Echo 共 16 筆的來源沒有提供足夠細節比較完整效果，例如觸發條件、機率、頻率或持續時間；其中 Frenzied 怪物側另有玩家側未列的 50% 數值。這些關係維持未知，並在主欄保留雙側有來源支持的效果。所有結果均非遊戲內實測。

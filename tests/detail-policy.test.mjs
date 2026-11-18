@@ -30,11 +30,13 @@ test('詳情政策按來源性質分類，固定主要資訊→關聯→更多�
   assert.equal(fact(ambush, 'mob_effect').wikiStatus, 'verify');
   assert.ok(fact(ambush, 'mob_effect').evidence.some(({ relation }) => relation === 'supports'));
   assert.equal(ambush.enchantmentEffectProfile.mobAvailability, 'unknown');
+  assert.equal(ambush.enchantmentEffectProfile.effectRelation, 'unknown');
   assert.deepEqual(ambush.presentation.effects.map(({ side, availabilityUnconfirmed }) => [side, availabilityUnconfirmed]), [
     ['player', false], ['mob', true],
   ]);
   assert.equal(ambush.presentation.unresolvedRelations.length, 1);
   assert.equal(ambush.presentation.unresolvedRelations[0].reason, 'relation');
+  assert.equal(ambush.presentation.relationAssessment, null);
 
   const sectionTypes = ambush.presentation.sections.map(({ type }) => type);
   assert.deepEqual(sectionTypes, ['effects', 'facts', 'related', 'more_info', 'sources']);
@@ -45,19 +47,43 @@ test('詳情政策按來源性質分類，固定主要資訊→關聯→更多�
   assert.deepEqual(critical.presentation.effects.map(({ side, sameAsPlayer }) => [side, sameAsPlayer ?? false]), [
     ['player', false], ['mob', false],
   ]);
+  assert.deepEqual(critical.presentation.relationAssessment, { relation: 'different' });
+  const criticalMoreInfo = critical.presentation.sections.find(({ type }) => type === 'more_info');
+  assert.deepEqual(criticalMoreInfo.relationAssessment, { relation: 'different' });
   const unconfirmed = byId.get('freezing');
   assert.equal(unconfirmed.enchantmentEffectProfile.effectRelation, 'unknown');
   assert.deepEqual(unconfirmed.presentation.effects.map(({ side }) => side), ['player', 'mob']);
   assert.equal(unconfirmed.presentation.unresolvedRelations.length, 1);
-  assert.equal(unconfirmed.presentation.unresolvedRelations[0].reason, 'relation');
-  const same = byId.get('burning');
-  assert.equal(same.enchantmentEffectProfile.effectRelation, 'same');
-  assert.deepEqual(same.presentation.effects.map(({ side, sameAsPlayer }) => [side, sameAsPlayer ?? false]), [
-    ['player', false], ['mob', true],
-  ]);
+  assert.equal(unconfirmed.presentation.relationAssessment, null);
+  for (const id of [
+    'bonus-shot', 'freezing', 'ricochet', 'radiance', 'frenzied',
+    'burning', 'chilling', 'rush', 'tempo-theft',
+    'chain-reaction', 'multishot', 'poison-cloud', 'fuse-shot',
+    'chains', 'deflect', 'echo',
+  ]) {
+    const entry = byId.get(id);
+    assert.equal(entry.enchantmentEffectProfile.effectRelation, 'unknown', `${id} relation stays unconfirmed`);
+    assert.deepEqual(entry.presentation.effects.map(({ side }) => side), ['player', 'mob'], `${id} shows both sourced effects`);
+    assert.equal(entry.presentation.unresolvedRelations.length, 1, `${id} relation warning is visible`);
+  }
+  assert.match(byId.get('frenzied').presentation.effects.find(({ side }) => side === 'mob').fact.value.en, /50%/,
+    'Frenzied mob-specific 50% remains in the primary effect list');
   const inferredMobEffect = fact(byId.get('guarding-strike'), 'mob_effect');
   assert.equal(inferredMobEffect.claimOrigin, 'inference');
   assert.ok(byId.get('guarding-strike').presentation.moreInfoFacts.some(({ id }) => id === inferredMobEffect.id));
+
+  for (const [id, legacyFactId] of [
+    ['leeching', 2198], ['sharpness', 2255], ['double-damage', 3056], ['fast-attack', 3064], ['quick', 3072],
+  ]) {
+    const entry = byId.get(id);
+    const legacy = entry.facts.find(({ id: factId }) => factId === legacyFactId);
+    const profileEffect = entry.facts.find(({ id: factId }) => factId === entry.enchantmentEffectProfile.mobFactId);
+    assert.equal(legacy.claimOrigin, 'inference', `${id} original composite remains an inference`);
+    assert.ok(entry.presentation.moreInfoFacts.some(({ id: factId }) => factId === legacyFactId), `${id} original composite is in collapsed more info`);
+    assert.equal(profileEffect.claimOrigin, 'source', `${id} displayed mob effect uses the separate source fact`);
+    assert.equal(entry.presentation.effects.find(({ side }) => side === 'mob').fact.id, profileEffect.id,
+      `${id} primary effect references the pure source fact`);
+  }
 
   for (const entry of catalog.entries) {
     const primaryPositions = entry.presentation.primaryFacts.map(({ position }) => position);
@@ -106,6 +132,7 @@ test('SQL 資料變更同步到 JSON 與 file:// bundle', async () => {
     const entry = catalog.entries.find(({ id }) => id === 'ambush');
     assert.deepEqual(entry.presentation.primaryFacts.slice(0, 2).map(({ semanticKey }) => semanticKey), ['wiki_section', 'applicable_to']);
     assert.equal(catalog.entries.find(({ id }) => id === 'freezing').presentation.unresolvedRelations.length, 0);
+    assert.deepEqual(catalog.entries.find(({ id }) => id === 'critical-hit').presentation.relationAssessment, { relation: 'different' });
 
     await writeCatalogArtifacts(output, { assetsDirectory: new URL('../assets/', import.meta.url), catalog });
     const index = JSON.parse(await readFile(join(output, 'data', 'catalog-index.json'), 'utf8'));

@@ -2,28 +2,18 @@
 
 ## 目前狀態
 
-SQLite schema v4 收錄 446 筆條目，包含全部神器、消耗品、其他物品、124 個附魔及 228 件武器／盔甲。武器 117 筆內建附魔關聯現已逐筆記錄 Bullet 底圖及階級。124 個附魔已逐條加入英雄／怪物可用性、兩側效果、來源和可信度；低可信條目共 10 筆，詳見[附魔效用規格](docs/specs/enchantment-availability.md)。附魔主欄顯示效果摘要；預設展開的「更多資訊」列出包含 Audience 與可信度的完整判讀 facts、原文、關聯和來源。兩種版型的物品列表欄獨立捲動，詳情欄固定並可內捲；窄版使用詳情抽屜。盤點缺漏見[內容盤點](docs/content-coverage-audit.md)。`file://` 啟動使用 classic loader 與建置生成 bundle。驗收依[詳情呈現規格](docs/specs/detail-presentation.md)和[內建附魔標記計畫](docs/plans/2026-11-17-built-in-enchantment-markers.md)執行；本輪實測數字回寫 ROADMAP。GitHub Pages 尚未發布；後續依 [Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md) 確認素材公開條件與 GitHub 登入／remote。
+- SQLite schema v6 收錄 7 個分類、446 個條目、124 個附魔及 228 件近戰／遠程武器與盔甲。
+- 附魔稽核涵蓋 253 筆效果 facts：source 169、inference 83、unknown 1；效果關係 same 7、different 12、unknown 105。16 筆來源不足以比較完整效果的關係標為 unknown，雙側來源效果同層顯示；完整判讀見[附魔效用規格](docs/specs/enchantment-availability.md)與[稽核資料](docs/audits/enchantment-effect-facts.json)。未作遊戲內實測。
+- 五筆舊複合怪物效果保留原 claim 與 fact ID 為 inference，另有五筆 source facts 用於主欄。v5→v6 遷移會為舊版未固定的怪物效果來源追加固定 Wiki 修訂，原來源與資料保留。
+- 武器 117 筆內建附魔關聯記錄 Bullet 底圖及階級；icon recipe 控制疊圖比例。兩種版型的物品列表欄獨立捲動、詳情欄固定並可內捲；`file://` 使用 classic loader 與建置生成 bundle。
+- 內容缺漏與驗收狀態見[內容盤點](docs/content-coverage-audit.md)、[結構化資料計畫](docs/plans/2026-11-18-structured-catalog-v6.md)及 ROADMAP。GitHub Pages 尚未發布。
 
-## 已完成
+## 本輪驗證
 
-- 物品說明與排序｜47 筆神器、消耗品與其他物品的通用佔位說明已移除；Sword 系列排在 Spear 後、Tempest Knife 前；遠程與盔甲順序已驗收
-- 全部條目與資料契約｜7 個分類、schema v4、446 筆條目；消耗品依食物、藥水、彈藥排序；神器納入「全部裝備」；條目標示實裝與 Seasonal 狀態
-- 附魔雙側效用｜124 筆皆列英雄／怪物可用性與效果、可信度及來源；high 44、medium 70、low 10。Wiki 標待查或來源衝突者低可信，未作遊戲內驗證
-- 詳情呈現｜同效附魔只顯示玩家效果並附怪物同效註記；有差異時保留怪物效果附註；「更多資訊」預設展開，納入推論／查證 facts、原文、關聯與來源
-- 驗證｜`npm test` 21/21；`npm run build` 7 分類、446 條目；`dist/index.html` 3,911 bytes、446 筆資料檔，Critical Hit 雙側差異及附魔 Wiki 原文可查。未開瀏覽器、未驗實際渲染與互動
+- `npm test`：36/36 通過；`npm run build`：7 個分類、446 個條目。
+- 本地 `dist` 靜態檢查：schema v6、1,325 facts、426 icons、572 有向關聯；所有圖標存在，沒有 SQLite／migration 產物。
+- SQLite integrity check 為 `ok`，foreign key check 為空；未開瀏覽器。
 
-## 未完成待辦
+## 下一步
 
-- 公開 GitHub Pages 首版｜素材公開條件與 GitHub 登入／remote 尚未確認，依 `docs/plans/2026-11-15-wiki-launch.md` 繼續
-
-## 待決問題
-
-無。
-
-## 本輪不可碰的範圍
-
-無新增限制；資料庫 schema v1 與內容契約見 `docs/specs/catalog-storage.md`、`docs/specs/content-contract.md`。
-
-## 下一步建議任務
-
-依 Wiki 首版計畫核對素材使用條件與發布設定；擴充其他物品時沿用 `docs/project-rules.md` 的整頁總表→具體項目頁→SQLite、圖標登錄與自動同步流程。
+依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)確認素材公開條件與 GitHub 發布設定，再驗收 GitHub Pages。遠端為 `origin`，目前分支為 `main`。
