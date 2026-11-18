@@ -64,6 +64,8 @@ Chain Reaction 玩家效果驗收字串為 `Has a chance to fire five arrows in 
 | 不可用沿用 | 9 |
 | 未知沿用 | 1 |
 
-剩餘待查關係：Multishot 的玩家與怪物效果關係維持 `unknown`。現行 Wiki 搜尋結果稱怪物每次攻擊固定射出五枚投射物，但尚未在計畫固定版次確認；該證據與待查狀態記在第 6 批，不把候選的 `different` 寫成已確認事實。Wiki 「原文」區目前使用合併後的 fact 文案，與原文摘錄可能不同；依本計畫範圍留待呈現層後續修正。
+剩餘待查關係：Multishot 的玩家與怪物效果關係維持 `unknown`。現行 Wiki 搜尋結果稱怪物每次攻擊固定射出五枚投射物，但尚未在計畫固定版次確認；該證據與待查狀態記在第 6 批，不把候選的 `different` 寫成已確認事實。
+
+呈現差異已確認：`src/detail-policy.mjs:79-86` 將來源支持的 `fact.value.en` 複製至收合的 Wiki 原文區。本輪 44 筆改寫的來源 facts 都會出現在該區；其中 38 筆、共 37 個附魔與來源摘錄不同，33 個附魔會在 Wiki 原文區顯示階級補充。受影響條目：`accelerate`、`bonus-shot`、`chain-reaction`、`chains`、`committed`、`critical-hit`、`echo`、`invisible`、`leeching`、`multishot`、`protection`、`radiance`、`refreshment`、`ricochet`、`roll-charge`、`sharpness`、`shock-web`、`shockwave`、`smiting`、`snowball`、`soul-focus`、`soul-siphon`、`soul-speed`、`speed-synergy`、`stunning`、`supercharge`、`surprise-gift`、`swiftfooted`、`swirling`、`tempo-theft`、`thorns`、`thundering`、`tumblebee`、`unchanting`、`void-strike`、`weakening`、`wild-rage`。逐筆 Wiki 摘錄與顯示稿見[改寫進度稽核](../audits/enchantment-effect-rewrite-progress.json)。呈現層不在本輪改動範圍；後續應讓 Wiki 原文使用來源摘錄，主效果保留本輪顯示稿與階級值。
 
 驗收：`npm test` 47/47 通過；`npm run build` 產出 7 個分類、446 個條目。建置輸出靜態核對 446/446 個條目 JSON、506/506 個雙語效果欄位與本機資料包相同；SQLite integrity 為 `ok`、foreign key violations 為 0，未開瀏覽器。實作提交：`f3af2e23ab3de189e1a0c9fa2004286dee896ec9`。

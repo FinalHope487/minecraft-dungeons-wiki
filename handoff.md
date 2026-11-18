@@ -17,4 +17,4 @@
 
 ## 下一步
 
-先確認 Multishot 的 Wiki 固定版次證據；確認前維持 `unknown`。再依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)確認素材公開條件與 GitHub 發布設定，驗收 GitHub Pages。遠端為 `origin`，目前分支為 `main`。
+依[附魔改寫計畫](docs/plans/2026-11-18-enchantment-effect-rewrite.md)將 Wiki 原文區改為使用來源摘錄，避免階級補充混入原文；再確認 Multishot 的 Wiki 固定版次證據，確認前維持 `unknown`。之後依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)確認素材公開條件與 GitHub 發布設定，驗收 GitHub Pages。遠端為 `origin`，目前分支為 `main`。
