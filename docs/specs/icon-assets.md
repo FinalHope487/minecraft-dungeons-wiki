@@ -22,7 +22,7 @@
 
 依 Wiki 武器總表標記固有效果。普通效果使用灰色菱形 `regular-bullet`（Regular Bullet）與灰色文字；Unique 效果使用橘色菱形 `unique-bullet`（Unique Bullet）與橘色文字。只呈現已核對的效果。
 
-武器內建附魔在對應特性列以 Regular／Unique Bullet 為底，疊上帶橘框的附魔原圖標；底下關聯只顯示附魔原圖標。所有內建附魔都套用此呈現，不依 Bullet 類型區分。關聯中繼資料記錄 Bullet 類型、對應特性列與階級；無階級的 Exclusive 效果顯示「無階級」，不得預設標為 I。
+武器內建附魔在對應特性列以 Regular／Unique Bullet 為底。Regular 疊上帶橘框的附魔圖標，Unique 疊上透明底的附魔圖標。底下關聯只顯示附魔原圖標。關聯中繼資料記錄 Bullet 類型、對應特性列與階級；無階級的 Exclusive 效果顯示「無階級」，不得預設標為 I。
 
 ## 來源、命名與呈現
 
@@ -30,7 +30,7 @@
 - 條目頁沒有可用的單品圖標時使用 Wiki 的 `DungeonsMiscellaneousSprite ?.png`；不要為了避免 placeholder 而改用無關物品圖。
 - 將圖標 ID、相對檔名、種類、已知 Wiki 頁面、Wiki 檔名及來源性質登錄在 `content/catalog.sqlite` 的 `icon_assets`；同一圖檔只登錄一次。`docs/wiki-icon-sync.json` 保存最近一次同步的檔案雜湊與時間，作稽核紀錄，不作執行期登錄表。
 - ID 使用小寫連字號描述素材語意。`src/icon-assets.mjs` 只把已登錄 ID 解析成安全的相對 URL；未知 ID 或缺檔時停止建置並指出引用。
-- 內建附魔構圖由 SQLite 的 `icon_recipes` 提供角色、比例及框樣式。附魔圖片實際寬高為 Bullet 容器的 81%；橘框外寬高比圖片多 2px。Recipe 是唯一比例設定點，普通與 Unique Bullet 都按同一規格組合。
+- 內建附魔構圖由 SQLite 的 `icon_recipes` 提供角色、比例及框樣式。兩種 Bullet 的附魔圖片寬高均為容器的 81%；Regular 的橘框外寬高比圖片多 2px。修改 `built_in_enchantment_unique` 配方並重新建置，即可同步所有 Unique Bullet 疊圖。
 - 執行 `npm run icons:sync:dry-run` 核對資料庫登錄圖標仍出現在指定 Wiki 頁面；確認後執行 `npm run icons:sync`。同步工具從 SQLite 讀來源清單和輸出檔名，再更新素材及稽核紀錄。
 - 記錄條目網址、檔名、取得日期及授權狀態。公開發布前依 Minecraft 使用指南核對素材使用條件。來源同步證據見[素材同步紀錄](../wiki-icon-sync.json)。
 - 大型物品圖可用 WebP。須保留透明背景和像素邊緣的小型標記使用 PNG。保留原圖的色彩、透明度、比例和像素結構；畫面以 `object-fit: contain` 和像素插值呈現。

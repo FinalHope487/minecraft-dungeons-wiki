@@ -6,7 +6,7 @@ import {
   resolveInventoryColumnCount,
 } from './inventory-grid.mjs';
 import { resolveLanguage, uiText } from './locale.mjs';
-import { iconAssetUrl } from './icon-assets.mjs';
+import { builtInIconRecipe, iconAssetUrl, validIconRecipes } from './icon-assets.mjs';
 
 const params = new URLSearchParams(location.search);
 const lang = resolveLanguage(location.search);
@@ -113,10 +113,6 @@ function icon(id, className = 'icon') {
 }
 
 function builtInEnchantmentTraitIcon(enchantmentIcon, propertyIcon, recipe) {
-  if (!recipe || !['none', 'orange'].includes(recipe.frameStyle)
-    || !Number.isInteger(recipe.overlayPercent) || recipe.overlayPercent < 1 || recipe.overlayPercent > 100) {
-    throw new Error('缺少有效的內建附魔圖標配方。');
-  }
   const stack = node('span', 'built-in-enchantment-trait-icon');
   stack.setAttribute('aria-hidden', 'true');
   stack.style.setProperty('--enchantment-overlay-percent', `${recipe.overlayPercent}%`);
@@ -183,8 +179,9 @@ function renderDetailsContent(entry, layout) {
         line.dataset.traitIcon = trait.icon;
         const label = node('span', '', message(trait.label));
         if (trait.builtInEnchantmentIcon) {
-          line.append(builtInEnchantmentTraitIcon(trait.builtInEnchantmentIcon.icon,
-            trait.builtInEnchantmentIcon.propertyIcon, iconRecipeById.built_in_enchantment), label);
+          const { icon: enchantmentIcon, propertyIcon } = trait.builtInEnchantmentIcon;
+          line.append(builtInEnchantmentTraitIcon(enchantmentIcon, propertyIcon,
+            builtInIconRecipe(propertyIcon, iconRecipeById)), label);
         } else {
           line.append(icon(trait.icon), label);
         }
@@ -492,11 +489,7 @@ function validateIndex(payload) {
       || typeof entry.seasonal !== 'boolean')) {
     throw new Error('圖鑑索引包含重複或不完整資料。');
   }
-  const recipe = payload.iconRecipes[0];
-  if (payload.iconRecipes.length !== 1 || recipe?.id !== 'built_in_enchantment'
-    || recipe.baseRole !== 'property_icon' || recipe.overlayRole !== 'target_entry_icon'
-    || !Number.isInteger(recipe.overlayPercent) || recipe.overlayPercent < 1 || recipe.overlayPercent > 100
-    || !['none', 'orange'].includes(recipe.frameStyle)) {
+  if (!validIconRecipes(payload.iconRecipes)) {
     throw new Error('圖鑑索引內的內建附魔圖標配方無效。');
   }
 }

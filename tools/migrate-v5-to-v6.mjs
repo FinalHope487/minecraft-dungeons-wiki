@@ -497,7 +497,8 @@ function migrateData(db, old) {
   for (const asset of iconSeed) iconInsert.run(asset.id, asset.file, asset.kind,
     asset.sourcePage, asset.wikiFileTitle, asset.provenance);
   db.prepare(`INSERT INTO icon_recipes(id,base_role,overlay_role,overlay_percent,frame_style)
-    VALUES('built_in_enchantment','property_icon','target_entry_icon',81,'orange')`).run();
+    VALUES('built_in_enchantment','property_icon','target_entry_icon',81,'orange'),
+          ('built_in_enchantment_unique','property_icon','target_entry_icon',81,'none')`).run();
 
   db.exec(`DROP TABLE entry_built_in_enchantments_v5;
     DROP TABLE entry_link_translations_v5;

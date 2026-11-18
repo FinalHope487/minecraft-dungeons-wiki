@@ -27,4 +27,4 @@
 - 主欄只顯示具 `supports` 證據的 `claimOrigin='source'` 資料及繁中翻譯；推論與未確認資料留在預設收合的「更多資訊」。
 - 詳情順序固定為主要資訊、相關條目、更多資訊、來源。沒有內容的區段不輸出。
 - 附魔主效果依結構化可用性及效果關係呈現；來源支持的效果關係未知時仍同層顯示兩側效果，並標示未確認，不推成不可用或同效。facts 按資料庫 `position` 排序。
-- 內建附魔 icon recipe 存於索引 `iconRecipes`，疊圖大小及框樣式由單一 recipe 提供。
+- 內建附魔疊圖大小及框樣式由索引 `iconRecipes` 提供。Unique Bullet 優先用 `built_in_enchantment_unique`，其餘用 `built_in_enchantment`。只有通用配方的 v6 索引沿用通用配方。

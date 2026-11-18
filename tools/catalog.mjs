@@ -4,6 +4,7 @@ import { join, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { languages } from '../src/locale.mjs';
 import { deriveDetailPresentation } from '../src/detail-policy.mjs';
+import { validIconRecipes } from '../src/icon-assets.mjs';
 
 const databaseFile = fileURLToPath(new URL('../content/catalog.sqlite', import.meta.url));
 const assetDirectory = new URL('../assets/', import.meta.url);
@@ -223,10 +224,7 @@ export function validateCatalog(catalog, assets) {
       throw new Error(`圖標登錄無效：${asset.id}`);
     }
   }
-  const recipe = iconRecipes.find(({ id }) => id === 'built_in_enchantment');
-  if (iconRecipes.length !== 1 || !recipe || recipe.baseRole !== 'property_icon'
-    || recipe.overlayRole !== 'target_entry_icon' || !Number.isInteger(recipe.overlayPercent)
-    || recipe.overlayPercent < 1 || recipe.overlayPercent > 100 || !['none', 'orange'].includes(recipe.frameStyle)) {
+  if (!validIconRecipes(iconRecipes)) {
     throw new Error('內建附魔圖標配方無效。');
   }
 

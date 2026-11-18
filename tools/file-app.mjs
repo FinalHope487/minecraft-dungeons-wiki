@@ -13,7 +13,7 @@ const moduleDefinitions = [
   },
   {
     key: 'iconAssets',
-    names: ['iconAssetUrl'],
+    names: ['builtInIconRecipe', 'iconAssetUrl', 'validIconRecipes'],
   },
 ];
 

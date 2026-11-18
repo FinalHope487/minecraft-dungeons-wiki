@@ -48,15 +48,14 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`5a644c3`（本輪開始的 `main` 基線；本輪驗證在工作樹執行）
-**本輪提交**：`215696e`，已推送至 `origin/main`
+**commit**：`447f94c`（本輪起點，驗證在工作樹執行）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-18 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 通過：36/36，失敗 0；含附魔 253 筆 fact 級來源稽核、124 筆效果關係、呈現政策、v5→v6 遷移、SQLite／JSON／`file://` 契約 |
+| 內層 | `npm test` | 36/36 通過，含 Unique／Regular Bullet 配方與 v5→v6 遷移 |
 | 建置 | `npm run build` | 通過：7 個分類、446 筆條目 |
-| user 層 | 本地 `dist` 檢查 | 通過：`index.html` 3,981 bytes、schema v6、7 個分類、446 個詳情 JSON、1,325 筆 facts、426 個圖標、572 個有向關聯；圖標路徑全存在，file bundle 與 JSON 相同；效果關係 same 7／different 12／unknown 105，來源細節不足的 16 筆關係未確認且雙側效果皆顯示，Frenzied 怪物側 50% 可見；5 個複合效果原 claim 在收合資訊、純效果 fact 用於主欄；無 SQLite／遷移檔；未開瀏覽器 |
+| user 層 | 本地 `dist` 檢查 | 446 筆條目中有 97 筆 Unique 無框與 20 筆 Regular 橘框疊圖，比例皆 81%，疊圖檔案全數存在，HTTP 索引與本機 bundle 配方一致。未開瀏覽器 |
 | 公開 | GitHub Pages | 未跑 |
 | 文件 | `git diff HEAD --check`、暫存差異憑證樣式掃描 | 通過，exit 0；未發現憑證 |
 
