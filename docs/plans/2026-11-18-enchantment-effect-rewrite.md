@@ -66,4 +66,4 @@ Chain Reaction 玩家效果驗收字串為 `Has a chance to fire five arrows in 
 
 剩餘待查關係：Multishot 的玩家與怪物效果關係維持 `unknown`。現行 Wiki 搜尋結果稱怪物每次攻擊固定射出五枚投射物，但尚未在計畫固定版次確認；該證據與待查狀態記在第 6 批，不把候選的 `different` 寫成已確認事實。Wiki 「原文」區目前使用合併後的 fact 文案，與原文摘錄可能不同；依本計畫範圍留待呈現層後續修正。
 
-驗收：`npm test` 47/47 通過；`npm run build` 產出 7 個分類、446 個條目。建置輸出靜態核對 446/446 個條目 JSON、506/506 個雙語效果欄位與本機資料包相同；SQLite integrity 為 `ok`、foreign key violations 為 0，未開瀏覽器。提交 SHA：待提交。
+驗收：`npm test` 47/47 通過；`npm run build` 產出 7 個分類、446 個條目。建置輸出靜態核對 446/446 個條目 JSON、506/506 個雙語效果欄位與本機資料包相同；SQLite integrity 為 `ok`、foreign key violations 為 0，未開瀏覽器。實作提交：`f3af2e23ab3de189e1a0c9fa2004286dee896ec9`。
