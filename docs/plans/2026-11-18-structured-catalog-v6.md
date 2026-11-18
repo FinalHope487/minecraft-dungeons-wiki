@@ -51,4 +51,5 @@ v5→v6 遷移先套用於工作區副本。正式 `content/catalog.sqlite` 僅�
 - 修正序列化循環：相關條目只輸出渲染需要的 ID、分類、名稱與圖標；JSON stringify 契約測試先失敗、修正後通過。
 - 修正已知跨頁來源：回歸測試先發現 Ambush `mob_effect` 被錯誤歸給單品頁，改由既有內容盤點指向 Enchanted Mobs；並為 Ambush、Critical Hit、Freezing、Burning 的個別 facts 設定經查核的來源。遷移會核對 fact ID、英文標籤、值及來源頁，防止重複語意 facts 共用證據或舊證據套到改寫內容。
 - 本次沒有打開本機網站或瀏覽器；建置產物與 `file://` bundle 靜態檢查通過，不代表實際瀏覽器渲染。
+- 本輪實作 commit `215696e` 已推送至 `origin/main`。
 - Commit／push 狀態寫在 [ROADMAP 基線](../../ROADMAP.md#基線)。
