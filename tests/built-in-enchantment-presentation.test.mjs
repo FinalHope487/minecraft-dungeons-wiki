@@ -31,7 +31,7 @@ test('武器 Bullet 特性列索引指向實際 Bullet 圖標', () => {
       assert.equal(entry.traits[propertyTraitIndex]?.icon, propertyIcon, `${entry.id} → ${relation.id}`);
       const recipe = builtInIconRecipe(propertyIcon, recipes);
       assert.equal(recipe.overlayPercent, 81);
-      assert.equal(recipe.frameStyle, propertyIcon === 'unique-bullet' ? 'none' : 'orange');
+      assert.equal(recipe.frameStyle, 'none', propertyIcon);
       counts[propertyIcon]++;
     }
   }

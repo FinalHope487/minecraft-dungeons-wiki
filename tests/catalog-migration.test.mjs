@@ -116,7 +116,10 @@ test('v5 → v6 保留公開內容、排序、關聯、來源與內建附魔列'
       assert.equal(database.prepare('SELECT COUNT(*) AS n FROM facts WHERE entry_id=? AND semantic_key=?')
         .get('ambush', 'player_effect').n, 2);
       database.prepare('DELETE FROM facts WHERE id=?').run(duplicate.lastInsertRowid);
-      assert.equal(database.prepare('SELECT overlay_percent FROM icon_recipes WHERE id=?').get('built_in_enchantment').overlay_percent, 81);
+      const regularRecipe = database.prepare('SELECT overlay_percent, frame_style FROM icon_recipes WHERE id=?')
+        .get('built_in_enchantment');
+      assert.equal(regularRecipe.overlay_percent, 81);
+      assert.equal(regularRecipe.frame_style, 'none');
       assert.equal(database.prepare('SELECT frame_style FROM icon_recipes WHERE id=?')
         .get('built_in_enchantment_unique')?.frame_style, 'none');
       assert.equal(database.prepare("SELECT effect_relation FROM enchantment_effect_profiles WHERE entry_id='critical-hit'").get().effect_relation, 'unknown');

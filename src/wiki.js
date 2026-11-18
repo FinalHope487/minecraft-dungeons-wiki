@@ -178,8 +178,9 @@ function renderDetailsContent(entry, layout) {
         const line = node('p', 'trait');
         line.dataset.traitIcon = trait.icon;
         const label = node('span', '', message(trait.label));
-        if (trait.builtInEnchantmentIcon) {
-          const { icon: enchantmentIcon, propertyIcon } = trait.builtInEnchantmentIcon;
+        const overlay = trait.builtInEnchantmentIcon;
+        if (overlay && iconRegistry[overlay.icon]?.kind === 'enchantment') {
+          const { icon: enchantmentIcon, propertyIcon } = overlay;
           line.append(builtInEnchantmentTraitIcon(enchantmentIcon, propertyIcon,
             builtInIconRecipe(propertyIcon, iconRecipeById)), label);
         } else {
