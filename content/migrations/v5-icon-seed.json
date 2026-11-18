@@ -1,0 +1,3410 @@
+[
+  {
+    "id": "ambush",
+    "file": "ambush.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite ambush.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "anima-conduit",
+    "file": "anima-conduit.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite anima-conduit.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "artifact-synergy",
+    "file": "artifact-synergy.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite artifact-synergy.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "busy-bee",
+    "file": "busy-bee.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite busy-bee.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "chains",
+    "file": "chains.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite chains.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "committed",
+    "file": "committed.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite committed.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dynamo",
+    "file": "dynamo.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite dynamo.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "echo",
+    "file": "echo.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite echo.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "enigma-resonator",
+    "file": "enigma-resonator.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite enigma-resonator.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fire-aspect",
+    "file": "fire-aspect.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite fire-aspect.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "freezing",
+    "file": "freezing.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite freezing.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "gravity",
+    "file": "gravity.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite gravity.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "guarding-strike",
+    "file": "guarding-strike.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite guarding-strike.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "illagers-bane",
+    "file": "illagers-bane.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite illager's-bane.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "leeching",
+    "file": "leeching.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite leeching.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "looting",
+    "file": "looting.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite looting.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "pain-cycle",
+    "file": "pain-cycle.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite pain-cycle.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "poison-cloud",
+    "file": "poison-cloud.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite poison-cloud.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "prospector",
+    "file": "prospector.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite prospector.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "radiance",
+    "file": "radiance.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite radiance-melee.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "rampaging",
+    "file": "rampaging.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite rampaging.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "smiting",
+    "file": "smiting.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite smiting.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-siphon",
+    "file": "soul-siphon.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite soul-siphon.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "stunning",
+    "file": "stunning.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite stunning.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "thundering",
+    "file": "thundering.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite thundering.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "unchanting",
+    "file": "unchanting.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite unchanting.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "weakening",
+    "file": "weakening.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite weakening.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "critical-hit",
+    "file": "critical-hit.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite critical-hit.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "exploding",
+    "file": "exploding.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite exploding.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "refreshment",
+    "file": "refreshment.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite refreshment.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shockwave",
+    "file": "shockwave.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shockwave.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "void-strike",
+    "file": "void-strike.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite void-strike-melee.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "accelerate",
+    "file": "accelerate.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite accelerate.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "artifact-charge",
+    "file": "artifact-charge.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite artifact-charge.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bonus-shot",
+    "file": "bonus-shot.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite bonus-shot.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "burst-bowstring",
+    "file": "burst-bowstring.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite burst-bowstring.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cooldown-shot",
+    "file": "cooldown-shot.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite cooldown-shot.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dipping-poison",
+    "file": "dipping-poison.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite dipping-poison.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fuse-shot",
+    "file": "fuse-shot.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite fuse-shot.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "growing",
+    "file": "growing.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite growing.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "infinity",
+    "file": "infinity.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite infinity.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "multishot",
+    "file": "multishot.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite multishot.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "piercing",
+    "file": "piercing.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite piercing.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "power",
+    "file": "power.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite power.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "punch",
+    "file": "punch.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite punch.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "rapid-fire",
+    "file": "rapid-fire.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite rapid-fire.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ricochet",
+    "file": "ricochet.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite ricochet.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "roll-charge",
+    "file": "roll-charge.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite roll-charge.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "supercharge",
+    "file": "supercharge.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite supercharge.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wild-rage",
+    "file": "wild-rage.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite wild-rage.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "chain-reaction",
+    "file": "chain-reaction.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite chain-reaction.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "levitation-shot",
+    "file": "levitation-shot.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite levitation-shot.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "overcharge",
+    "file": "overcharge.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite overcharge.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shock-web",
+    "file": "shock-web.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shock-web.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "tempo-theft",
+    "file": "tempo-theft.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite tempo-theft.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "acrobat",
+    "file": "acrobat.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite acrobat.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bag-of-souls",
+    "file": "bag-of-souls.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite bag-of-souls.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "beast-boss",
+    "file": "beast-boss.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite beast-boss.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "beast-burst",
+    "file": "beast-burst.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite beast-burst.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "beast-surge",
+    "file": "beast-surge.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite beast-surge.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "burning",
+    "file": "burning.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite burning.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cool-down",
+    "file": "cool-down.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite cool-down.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cowardice",
+    "file": "cowardice.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite cowardice.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "deflect",
+    "file": "deflect.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite deflect.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "electrified",
+    "file": "electrified.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite electrified.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "explorer",
+    "file": "explorer.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite explorer.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fire-trail",
+    "file": "fire-trail.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite fire-trail.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "food-reserves",
+    "file": "food-reserves.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite food-reserves.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "frenzied",
+    "file": "frenzied.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite frenzied.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "health-synergy",
+    "file": "health-synergy.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite health-synergy.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "life-boost",
+    "file": "life-boost.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite life-boost.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "luck-of-the-sea",
+    "file": "luck-of-the-sea.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite luck-of-the-sea.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "lucky-explorer",
+    "file": "lucky-explorer.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite lucky-explorer.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "potion-barrier",
+    "file": "potion-barrier.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite potion-barrier.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "reckless",
+    "file": "reckless.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite reckless.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "recycler",
+    "file": "recycler.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite recycler.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "rush",
+    "file": "rush.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite rush.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-blast",
+    "file": "shadow-blast.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shadow-blast.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-surge",
+    "file": "shadow-surge.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shadow-surge.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "snowball",
+    "file": "snowball.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite snowball.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-speed",
+    "file": "soul-speed.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite soul-speed.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "speed-synergy",
+    "file": "speed-synergy.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite speed-synergy.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "surprise-gift",
+    "file": "surprise-gift.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite surprise-gift.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "swiftfooted",
+    "file": "swiftfooted.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite swiftfooted.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "thorns",
+    "file": "thorns.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite thorns.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "tumblebee",
+    "file": "tumblebee.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite tumblebee.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "chilling",
+    "file": "chilling.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite chilling.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "death-barter",
+    "file": "death-barter.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite death-barter.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "final-shout",
+    "file": "final-shout.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite final-shout.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fire-focus",
+    "file": "fire-focus.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite fire-focus.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "gravity-pulse",
+    "file": "gravity-pulse.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite gravity-pulse.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "lightning-focus",
+    "file": "lightning-focus.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite lightning-focus.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "multi-roll",
+    "file": "multi-roll.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite multi-roll.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "poison-focus",
+    "file": "poison-focus.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite poison-focus.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "protection",
+    "file": "protection.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite protection.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-focus",
+    "file": "soul-focus.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite soul-focus.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "rushdown",
+    "file": "rushdown.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite rushdown.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shared-pain",
+    "file": "shared-pain.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shared-pain.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "reliable-ricochet",
+    "file": "reliable-ricochet.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite reliable-ricochet.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-shot",
+    "file": "shadow-shot.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shadow-shot.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wind-bow-enchantment",
+    "file": "wind-bow-enchantment.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite wind-bow-(enchantment).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "emerald-shield",
+    "file": "emerald-shield.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite emerald-shield.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "environmental-protection",
+    "file": "environmental-protection.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite environmental-protection.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "thrive-under-pressure",
+    "file": "thrive-under-pressure.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite thrive-under-pressure.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "jungle-poison",
+    "file": "jungle-poison.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite jungle-poison.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "knockback",
+    "file": "knockback.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite knockback.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "barrier",
+    "file": "barrier.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite barrier.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "heals-allies",
+    "file": "heals-allies.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite heals-allies.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "regeneration",
+    "file": "regeneration.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite regeneration.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shielding",
+    "file": "shielding.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shielding.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-barb",
+    "file": "shadow-barb.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite shadow-barb.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "withering",
+    "file": "withering.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite withering.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bows-boon",
+    "file": "bows-boon.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite bow's-boon.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dolphins-grace",
+    "file": "dolphins-grace.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite dolphin's-grace.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "synergy",
+    "file": "synergy.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite synergy.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "invisible",
+    "file": "invisible.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite invisible.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "decal-trail",
+    "file": "decal-trail.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite decal-trail.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "huge",
+    "file": "huge.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite huge.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "mob-resurrection-aura",
+    "file": "mob-resurrection-aura.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite mob-resurrection-aura.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "double-damage",
+    "file": "double-damage.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite double-damage.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fast-attack",
+    "file": "fast-attack.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite fast-attack.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "quick",
+    "file": "quick.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchantment",
+    "wikiFileTitle": "File:DungeonsEnchantmentSprite quick.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "anchor",
+    "file": "anchor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AAnchor",
+    "wikiFileTitle": "File:MCD Anchor.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "axe",
+    "file": "axe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AAxe",
+    "wikiFileTitle": "File:MCD Axe.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "backstabber",
+    "file": "backstabber.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABackstabber",
+    "wikiFileTitle": "File:MCD Backstabber.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "battlestaff",
+    "file": "battlestaff.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABattlestaff",
+    "wikiFileTitle": "File:MCD Battlestaff.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "boneclub",
+    "file": "boneclub.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABoneclub",
+    "wikiFileTitle": "File:MCD Boneclub.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "broken-sawblade",
+    "file": "broken-sawblade.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABroken_Sawblade",
+    "wikiFileTitle": "File:MCD Broken Sawblade.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bow",
+    "file": "bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABow",
+    "wikiFileTitle": "File:MCD Bow.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "claymore",
+    "file": "claymore.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AClaymore",
+    "wikiFileTitle": "File:MCD Claymore.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "coral-blade",
+    "file": "coral-blade.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACoral_Blade",
+    "wikiFileTitle": "File:MCD Coral Blade.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cutlass",
+    "file": "cutlass.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACutlass",
+    "wikiFileTitle": "File:MCD Cutlass.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "daggers",
+    "file": "daggers.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADaggers",
+    "wikiFileTitle": "File:MCD Daggers.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "diamond-sword",
+    "file": "diamond-sword.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADiamond_Sword",
+    "wikiFileTitle": "File:Diamond Sword (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "double-axe",
+    "file": "double-axe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADouble_Axe",
+    "wikiFileTitle": "File:MCD Double Axe.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "death-cap-mushroom",
+    "file": "death-cap-mushroom.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADeath_Cap_Mushroom",
+    "wikiFileTitle": "File:Death Cap Mushroom (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "gauntlets",
+    "file": "gauntlets.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGauntlets",
+    "wikiFileTitle": "File:MCD Gauntlets.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "glaive",
+    "file": "glaive.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGlaive",
+    "wikiFileTitle": "File:MCD Glaive.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "great-hammer",
+    "file": "great-hammer.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGreat_Hammer",
+    "wikiFileTitle": "File:MCD Great Hammer.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "hunters-armor",
+    "file": "hunters-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHunter's_Armor",
+    "wikiFileTitle": "File:MCD Hunter's Armor.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "katana",
+    "file": "katana.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AKatana",
+    "wikiFileTitle": "File:MCD Katana.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "mace",
+    "file": "mace.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMace",
+    "wikiFileTitle": "File:MCD Mace.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "mystery-banner",
+    "file": "mystery-banner.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMystery_Banner",
+    "wikiFileTitle": "File:Mystery Captain Banner.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "obsidian-claymore",
+    "file": "obsidian-claymore.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AObsidian_Claymore",
+    "wikiFileTitle": "File:MCD Obsidian Claymore.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "pickaxe",
+    "file": "pickaxe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APickaxe",
+    "wikiFileTitle": "File:MCD Pickaxe.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "rapier",
+    "file": "rapier.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ARapier",
+    "wikiFileTitle": "File:MCD Rapier.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sharpness",
+    "file": "sharpness.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASharpness",
+    "wikiFileTitle": "File:Sharpness.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sickles",
+    "file": "sickles.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASickles",
+    "wikiFileTitle": "File:MCD Sickles.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-knife",
+    "file": "soul-knife.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Knife",
+    "wikiFileTitle": "File:MCD Soul Knife.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-scythe",
+    "file": "soul-scythe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Scythe",
+    "wikiFileTitle": "File:MCD Soul Scythe.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "spear",
+    "file": "spear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASpear",
+    "wikiFileTitle": "File:MCD Spear.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sword",
+    "file": "sword.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASword",
+    "wikiFileTitle": "File:MCD Sword.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "swirling",
+    "file": "swirling.png",
+    "kind": "enchantment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASwirling",
+    "wikiFileTitle": "File:T Swirling Icon.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "tempest-knife",
+    "file": "tempest-knife.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATempest_Knife",
+    "wikiFileTitle": "File:MCD Tempest Knife.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "tnt",
+    "file": "tnt.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATNT",
+    "wikiFileTitle": "File:TNT (Dungeons).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "regular-bullet",
+    "file": "regular-bullet.png",
+    "kind": "built-in-property",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWeapon",
+    "wikiFileTitle": "File:DungeonsMiscellaneousSprite regular-bullet.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "unique-bullet",
+    "file": "unique-bullet.png",
+    "kind": "built-in-property",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADiamond_Sword",
+    "wikiFileTitle": "File:DungeonsMiscellaneousSprite unique-bullet.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "void-touched-blades",
+    "file": "void-touched-blades.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVoid_Touched_Blades",
+    "wikiFileTitle": "File:MCD Void Touched Blades.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "whip",
+    "file": "whip.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWhip",
+    "wikiFileTitle": "File:MCD Whip.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wiki-placeholder",
+    "file": "wiki-placeholder.png",
+    "kind": "placeholder",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsMiscellaneousSprite",
+    "wikiFileTitle": "File:DungeonsMiscellaneousSprite ?.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "apple",
+    "file": "apple.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AApple",
+    "wikiFileTitle": "File:MCD Apple (inventory icon).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "arrow-bundle",
+    "file": "arrow-bundle.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite arrow-bundle.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "blast-fungus",
+    "file": "blast-fungus.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABlast_Fungus",
+    "wikiFileTitle": "File:MCD Blast Fungus.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "boots-of-swiftness",
+    "file": "boots-of-swiftness.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABoots_of_Swiftness",
+    "wikiFileTitle": "File:MCD Boots of Swiftness.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bread",
+    "file": "bread.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABread",
+    "wikiFileTitle": "File:MCD Bread (inventory icon).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "burning-brew",
+    "file": "burning-brew.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABurning_Brew",
+    "wikiFileTitle": "File:MCD Burning Brew.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "buzzy-nest",
+    "file": "buzzy-nest.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABuzzy_Nest",
+    "wikiFileTitle": "File:MCD Buzzy Nest.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "chorus-fruit",
+    "file": "chorus-fruit.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AChorus_Fruit",
+    "wikiFileTitle": "File:MCD Chorus Fruit.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "conduit",
+    "file": "conduit.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite conduit.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cooked-salmon",
+    "file": "cooked-salmon.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite cooked-salmon.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "corrupted-beacon",
+    "file": "corrupted-beacon.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACorrupted_Beacon",
+    "wikiFileTitle": "File:MCD Corrupted Beacon.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "corrupted-pumpkin",
+    "file": "corrupted-pumpkin.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACorrupted_Pumpkin",
+    "wikiFileTitle": "File:MCD Corrupted Pumpkin.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "corrupted-seeds",
+    "file": "corrupted-seeds.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACorrupted_Seeds",
+    "wikiFileTitle": "File:MCD Corrupted Seeds.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dense-brew",
+    "file": "dense-brew.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADense_Brew",
+    "wikiFileTitle": "File:MCD Dense Brew.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dried-kelp",
+    "file": "dried-kelp.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite dried-kelp.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "elytra",
+    "file": "elytra.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AElytra",
+    "wikiFileTitle": "File:MCD Elytra.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "enchanted-grass",
+    "file": "enchanted-grass.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchanted_Grass",
+    "wikiFileTitle": "File:MCD Enchanted Grass.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "enchanters-tome",
+    "file": "enchanters-tome.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnchanter's_Tome",
+    "wikiFileTitle": "File:MCD Enchanter's Tome.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "eye-of-ender",
+    "file": "eye-of-ender.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEye_of_Ender",
+    "wikiFileTitle": "File:Eye of Ender (Dungeons).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "eye-of-the-guardian",
+    "file": "eye-of-the-guardian.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEye_of_the_Guardian",
+    "wikiFileTitle": "File:MCD Eye of the Guardian.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fireworks-arrow",
+    "file": "fireworks-arrow.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFireworks_Arrow",
+    "wikiFileTitle": "File:MCD Fireworks Arrow.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fishing-rod",
+    "file": "fishing-rod.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFishing_Rod",
+    "wikiFileTitle": "File:MCD Fishing Rod.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "flaming-quiver",
+    "file": "flaming-quiver.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFlaming_Quiver",
+    "wikiFileTitle": "File:MCD Flaming Quiver.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ghost-cloak",
+    "file": "ghost-cloak.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGhost_Cloak",
+    "wikiFileTitle": "File:MCD Ghost Cloak.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "golem-kit",
+    "file": "golem-kit.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGolem_Kit",
+    "wikiFileTitle": "File:MCD Golem Kit.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "gong-of-weakening",
+    "file": "gong-of-weakening.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGong_of_Weakening",
+    "wikiFileTitle": "File:MCD Gong of Weakening.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "harpoon-quiver",
+    "file": "harpoon-quiver.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHarpoon_Quiver",
+    "wikiFileTitle": "File:MCD Harpoon Quiver.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "harvester",
+    "file": "harvester.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHarvester",
+    "wikiFileTitle": "File:MCD Harvester.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "health-potion-consumable",
+    "file": "health-potion-consumable.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite health-potion-(consumable).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ice-wand",
+    "file": "ice-wand.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AIce_Wand",
+    "wikiFileTitle": "File:MCD Ice Wand.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "icon-map",
+    "file": "icon-map.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite icon-map.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "iron-hide-amulet",
+    "file": "iron-hide-amulet.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AIron_Hide_Amulet",
+    "wikiFileTitle": "File:MCD Iron Hide Amulet.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "light-feather",
+    "file": "light-feather.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ALight_Feather",
+    "wikiFileTitle": "File:MCD Light Feather.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "lightning-rod",
+    "file": "lightning-rod.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ALightning_Rod",
+    "wikiFileTitle": "File:MCD Lightning Rod.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "love-medallion",
+    "file": "love-medallion.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ALove_Medallion",
+    "wikiFileTitle": "File:MCD Love Medallion.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "melon",
+    "file": "melon.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMelon",
+    "wikiFileTitle": "File:MCD Melon (inventory icon).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "oakwood-brew",
+    "file": "oakwood-brew.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AOakwood_Brew",
+    "wikiFileTitle": "File:MCD Oakwood Brew.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "pork",
+    "file": "pork.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APork",
+    "wikiFileTitle": "File:MCD Pork (inventory icon).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "potion-of-water-breathing",
+    "file": "potion-of-water-breathing.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APotion_of_Water_Breathing",
+    "wikiFileTitle": "File:MCD Potion of Water Breathing.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "powershaker",
+    "file": "powershaker.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APowershaker",
+    "wikiFileTitle": "File:MCD Powershaker.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "satchel-of-elements",
+    "file": "satchel-of-elements.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASatchel_of_Elements",
+    "wikiFileTitle": "File:MCD Satchel of Elements.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "satchel-of-elixirs",
+    "file": "satchel-of-elixirs.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASatchel_of_Elixirs",
+    "wikiFileTitle": "File:MCD Satchel of Elixirs.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "satchel-of-snacks",
+    "file": "satchel-of-snacks.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASatchel_of_Snacks",
+    "wikiFileTitle": "File:MCD Satchel of Snacks.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "scatter-mines",
+    "file": "scatter-mines.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AScatter_Mines",
+    "wikiFileTitle": "File:MCD Scatter Mines.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-brew",
+    "file": "shadow-brew.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShadow_Brew",
+    "wikiFileTitle": "File:MCD Shadow Brew.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-shifter",
+    "file": "shadow-shifter.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite shadow-shifter.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shock-powder",
+    "file": "shock-powder.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShock_Powder",
+    "wikiFileTitle": "File:MCD Shock Powder.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-healer",
+    "file": "soul-healer.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Healer",
+    "wikiFileTitle": "File:MCD Soul Healer.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-lantern",
+    "file": "soul-lantern.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Lantern",
+    "wikiFileTitle": "File:MCD Soul Lantern.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "spinblade",
+    "file": "spinblade.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASpinblade",
+    "wikiFileTitle": "File:MCD Spinblade.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "strength-potion",
+    "file": "strength-potion.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AStrength_Potion",
+    "wikiFileTitle": "File:MCD Strength Potion.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sweet-berries",
+    "file": "sweet-berries.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASweet_Berries",
+    "wikiFileTitle": "File:MCD Sweet Berries (inventory icon).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sweet-brew",
+    "file": "sweet-brew.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASweet_Brew",
+    "wikiFileTitle": "File:MCD Sweet Brew.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "swiftness-potion",
+    "file": "swiftness-potion.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASwiftness_Potion",
+    "wikiFileTitle": "File:MCD Swiftness Potion.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "tasty-bone",
+    "file": "tasty-bone.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATasty_Bone",
+    "wikiFileTitle": "File:MCD Tasty Bone.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "threat-banner",
+    "file": "threat-banner.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsItemSprite",
+    "wikiFileTitle": "File:DungeonsItemSprite threat-banner.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "thundering-quiver",
+    "file": "thundering-quiver.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThundering_Quiver",
+    "wikiFileTitle": "File:MCD Thundering Quiver.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "tome-of-duplication",
+    "file": "tome-of-duplication.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATome_of_Duplication",
+    "wikiFileTitle": "File:MCD Tome of Duplication.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "torment-quiver",
+    "file": "torment-quiver.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATorment_Quiver",
+    "wikiFileTitle": "File:MCD Torment Quiver.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "totem-of-casting",
+    "file": "totem-of-casting.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATotem_of_Casting",
+    "wikiFileTitle": "File:MCD Totem of Casting.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "totem-of-regeneration",
+    "file": "totem-of-regeneration.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATotem_of_Regeneration",
+    "wikiFileTitle": "File:MCD Totem of Regeneration.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "totem-of-shielding",
+    "file": "totem-of-shielding.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATotem_of_Shielding",
+    "wikiFileTitle": "File:MCD Totem of Shielding.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "totem-of-soul-protection",
+    "file": "totem-of-soul-protection.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATotem_of_Soul_Protection",
+    "wikiFileTitle": "File:MCD Totem of Soul Protection.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "trident",
+    "file": "trident.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATrident",
+    "wikiFileTitle": "File:MCD Trident.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "tropical-fish",
+    "file": "tropical-fish.png",
+    "kind": "consumable",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATropical_Fish",
+    "wikiFileTitle": "File:MCD Tropical Fish (item).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "updraft-tome",
+    "file": "updraft-tome.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AUpdraft_Tome",
+    "wikiFileTitle": "File:MCD Updraft Tome.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "vexing-chant",
+    "file": "vexing-chant.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVexing_Chant",
+    "wikiFileTitle": "File:MCD Vexing Chant.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "void-quiver",
+    "file": "void-quiver.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVoid_Quiver",
+    "wikiFileTitle": "File:Void Quiver (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wind-horn",
+    "file": "wind-horn.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWind_Horn",
+    "wikiFileTitle": "File:MCD Wind Horn.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wonderful-wheat",
+    "file": "wonderful-wheat.png",
+    "kind": "artifact",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWonderful_Wheat",
+    "wikiFileTitle": "File:MCD Wonderful Wheat.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "encrusted-anchor",
+    "file": "encrusted-anchor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEncrusted_Anchor",
+    "wikiFileTitle": "File:Encrusted Anchor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "firebrand",
+    "file": "firebrand.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFirebrand",
+    "wikiFileTitle": "File:Firebrand (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "highland-axe",
+    "file": "highland-axe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHighland_Axe",
+    "wikiFileTitle": "File:Highland Axe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "swift-striker",
+    "file": "swift-striker.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASwift_Striker",
+    "wikiFileTitle": "File:Swift Striker (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "battlestaff-of-terror",
+    "file": "battlestaff-of-terror.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABattlestaff_of_Terror",
+    "wikiFileTitle": "File:Battlestaff of Terror (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "growing-staff",
+    "file": "growing-staff.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGrowing_Staff",
+    "wikiFileTitle": "File:Growing Staff (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bone-cudgel",
+    "file": "bone-cudgel.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABone_Cudgel",
+    "wikiFileTitle": "File:Bone Cudgel (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "mechanized-sawblade",
+    "file": "mechanized-sawblade.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMechanized_Sawblade",
+    "wikiFileTitle": "File:Mechanized Sawblade (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "broadsword",
+    "file": "broadsword.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABroadsword",
+    "wikiFileTitle": "File:Broadsword (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "frost-slayer",
+    "file": "frost-slayer.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFrost_Slayer",
+    "wikiFileTitle": "File:Frost Slayer (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "great-axeblade",
+    "file": "great-axeblade.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGreat_Axeblade",
+    "wikiFileTitle": "File:Great Axeblade (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "heartstealer",
+    "file": "heartstealer.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHeartstealer",
+    "wikiFileTitle": "File:Heartstealer (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sponge-striker",
+    "file": "sponge-striker.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASponge_Striker",
+    "wikiFileTitle": "File:Sponge Striker (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dancers-sword",
+    "file": "dancers-sword.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADancer's_Sword",
+    "wikiFileTitle": "File:Dancer's Sword (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "nameless-blade",
+    "file": "nameless-blade.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ANameless_Blade",
+    "wikiFileTitle": "File:MCD Nameless Blade.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sparkler",
+    "file": "sparkler.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASparkler",
+    "wikiFileTitle": "File:Sparkler (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fangs-of-frost",
+    "file": "fangs-of-frost.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFangs_of_Frost",
+    "wikiFileTitle": "File:Fangs of Frost (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "moon-daggers",
+    "file": "moon-daggers.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMoon_Daggers",
+    "wikiFileTitle": "File:Moon Daggers (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sheer-daggers",
+    "file": "sheer-daggers.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASheer_Daggers",
+    "wikiFileTitle": "File:Sheer Daggers (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cursed-axe",
+    "file": "cursed-axe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACursed_Axe",
+    "wikiFileTitle": "File:Cursed Axe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "whirlwind",
+    "file": "whirlwind.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWhirlwind",
+    "wikiFileTitle": "File:Whirlwind (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fighters-bindings",
+    "file": "fighters-bindings.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFighter's_Bindings",
+    "wikiFileTitle": "File:Fighter's Bindings (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "maulers",
+    "file": "maulers.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMaulers",
+    "wikiFileTitle": "File:Maulers (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-fists",
+    "file": "soul-fists.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Fists",
+    "wikiFileTitle": "File:Soul Fists (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cackling-broom",
+    "file": "cackling-broom.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACackling_Broom",
+    "wikiFileTitle": "File:Cackling Broom (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "grave-bane",
+    "file": "grave-bane.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGrave_Bane",
+    "wikiFileTitle": "File:Grave Bane (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "venom-glaive",
+    "file": "venom-glaive.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVenom_Glaive",
+    "wikiFileTitle": "File:MCD Venom Glaive.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bonehead-hammer",
+    "file": "bonehead-hammer.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABonehead_Hammer",
+    "wikiFileTitle": "File:Bonehead Hammer (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "hammer-of-gravity",
+    "file": "hammer-of-gravity.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHammer_of_Gravity",
+    "wikiFileTitle": "File:Hammer of Gravity (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "stormlander",
+    "file": "stormlander.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AStormlander",
+    "wikiFileTitle": "File:Stormlander (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dark-katana",
+    "file": "dark-katana.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADark_Katana",
+    "wikiFileTitle": "File:Dark Katana (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "masters-katana",
+    "file": "masters-katana.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMaster's_Katana",
+    "wikiFileTitle": "File:Master's Katana (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "flail",
+    "file": "flail.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFlail",
+    "wikiFileTitle": "File:MCD Flail.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "suns-grace",
+    "file": "suns-grace.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASun's_Grace",
+    "wikiFileTitle": "File:Sun's Grace (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-starless-night",
+    "file": "the-starless-night.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Starless_Night",
+    "wikiFileTitle": "File:The Starless Night (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "diamond-pickaxe",
+    "file": "diamond-pickaxe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADiamond_Pickaxe",
+    "wikiFileTitle": "File:Diamond Pickaxe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bee-stinger",
+    "file": "bee-stinger.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABee_Stinger",
+    "wikiFileTitle": "File:Bee Stinger (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "freezing-foil",
+    "file": "freezing-foil.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFreezing_Foil",
+    "wikiFileTitle": "File:MCD Freezing Foil.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "nightmares-bite",
+    "file": "nightmares-bite.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ANightmare's_Bite",
+    "wikiFileTitle": "File:Nightmare's Bite (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-last-laugh",
+    "file": "the-last-laugh.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Last_Laugh",
+    "wikiFileTitle": "File:The Last Laugh (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "eternal-knife",
+    "file": "eternal-knife.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEternal_Knife",
+    "wikiFileTitle": "File:Eternal Knife (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "truthseeker",
+    "file": "truthseeker.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATruthseeker",
+    "wikiFileTitle": "File:MCD Truthseeker.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "frost-scythe",
+    "file": "frost-scythe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFrost_Scythe",
+    "wikiFileTitle": "File:Frost Scythe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "jailors-scythe",
+    "file": "jailors-scythe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AJailor's_Scythe",
+    "wikiFileTitle": "File:Jailor's Scythe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "skull-scythe",
+    "file": "skull-scythe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASkull_Scythe",
+    "wikiFileTitle": "File:Skull Scythe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fortune-spear",
+    "file": "fortune-spear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFortune_Spear",
+    "wikiFileTitle": "File:Fortune Spear (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "spine-chill-spear",
+    "file": "spine-chill-spear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASpine-Chill_Spear",
+    "wikiFileTitle": "File:Spine-Chill Spear (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "whispering-spear",
+    "file": "whispering-spear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWhispering_Spear",
+    "wikiFileTitle": "File:Whispering Spear (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "hawkbrand",
+    "file": "hawkbrand.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHawkbrand",
+    "wikiFileTitle": "File:Hawkbrand (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sinister-sword",
+    "file": "sinister-sword.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASinister_Sword",
+    "wikiFileTitle": "File:Sinister Sword (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "chill-gale-knife",
+    "file": "chill-gale-knife.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AChill_Gale_Knife",
+    "wikiFileTitle": "File:Chill Gale Knife (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "resolute-tempest-knife",
+    "file": "resolute-tempest-knife.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AResolute_Tempest_Knife",
+    "wikiFileTitle": "File:Resolute Tempest Knife (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-beginning-and-the-end",
+    "file": "the-beginning-and-the-end.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Beginning_and_The_End",
+    "wikiFileTitle": "File:The Beginning and The End (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "vine-whip",
+    "file": "vine-whip.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVine_Whip",
+    "wikiFileTitle": "File:Vine Whip (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bonebow",
+    "file": "bonebow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABonebow",
+    "wikiFileTitle": "File:Bonebow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "haunted-bow",
+    "file": "haunted-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHaunted_Bow",
+    "wikiFileTitle": "File:Haunted Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "twin-bow",
+    "file": "twin-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATwin_Bow",
+    "wikiFileTitle": "File:Twin Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bubble-bow",
+    "file": "bubble-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABubble_Bow",
+    "wikiFileTitle": "File:Bubble Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bubble-burster",
+    "file": "bubble-burster.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABubble_Burster",
+    "wikiFileTitle": "File:Bubble Burster (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "gloopy-bow",
+    "file": "gloopy-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGloopy_Bow",
+    "wikiFileTitle": "File:Gloopy Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "burst-crossbow",
+    "file": "burst-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABurst_Crossbow",
+    "wikiFileTitle": "File:Burst Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "corrupted-crossbow",
+    "file": "corrupted-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACorrupted_Crossbow",
+    "wikiFileTitle": "File:Corrupted Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-hunter-crossbow",
+    "file": "soul-hunter-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Hunter_Crossbow",
+    "wikiFileTitle": "File:Soul Hunter Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cog-crossbow",
+    "file": "cog-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACog_Crossbow",
+    "wikiFileTitle": "File:Cog Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "pride-of-the-piglins",
+    "file": "pride-of-the-piglins.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APride_of_the_Piglins",
+    "wikiFileTitle": "File:Pride of the Piglins (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "crossbow",
+    "file": "crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACrossbow",
+    "wikiFileTitle": "File:Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "azure-seeker",
+    "file": "azure-seeker.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AAzure_Seeker",
+    "wikiFileTitle": "File:Azure Seeker (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-slicer",
+    "file": "the-slicer.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Slicer",
+    "wikiFileTitle": "File:MCD The Slicer.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dual-crossbows",
+    "file": "dual-crossbows.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADual_Crossbows",
+    "wikiFileTitle": "File:Dual Crossbows (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "baby-crossbows",
+    "file": "baby-crossbows.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABaby_Crossbows",
+    "wikiFileTitle": "File:Baby Crossbows (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "spellbound-crossbows",
+    "file": "spellbound-crossbows.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASpellbound_Crossbows",
+    "wikiFileTitle": "File:MCD Spellbound Crossbows.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "exploding-crossbow",
+    "file": "exploding-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AExploding_Crossbow",
+    "wikiFileTitle": "File:Exploding Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "firebolt-thrower",
+    "file": "firebolt-thrower.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFirebolt_Thrower",
+    "wikiFileTitle": "File:Firebolt Thrower (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "imploding-crossbow",
+    "file": "imploding-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AImploding_Crossbow",
+    "wikiFileTitle": "File:Imploding Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "harpoon-crossbow",
+    "file": "harpoon-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHarpoon_Crossbow",
+    "wikiFileTitle": "File:Harpoon Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "nautical-crossbow",
+    "file": "nautical-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ANautical_Crossbow",
+    "wikiFileTitle": "File:Nautical Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "heavy-crossbow",
+    "file": "heavy-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHeavy_Crossbow",
+    "wikiFileTitle": "File:Heavy Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "doom-crossbow",
+    "file": "doom-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADoom_Crossbow",
+    "wikiFileTitle": "File:Doom Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "slayer-crossbow",
+    "file": "slayer-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASlayer_Crossbow",
+    "wikiFileTitle": "File:Slayer Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "hunting-bow",
+    "file": "hunting-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHunting_Bow",
+    "wikiFileTitle": "File:Hunting Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ancient-bow",
+    "file": "ancient-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AAncient_Bow",
+    "wikiFileTitle": "File:Ancient Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "hunters-promise",
+    "file": "hunters-promise.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHunter's_Promise",
+    "wikiFileTitle": "File:Hunter's Promise (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "masters-bow",
+    "file": "masters-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMaster's_Bow",
+    "wikiFileTitle": "File:Master's Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "longbow",
+    "file": "longbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ALongbow",
+    "wikiFileTitle": "File:Longbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "guardian-bow",
+    "file": "guardian-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGuardian_Bow",
+    "wikiFileTitle": "File:Guardian Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "red-snake",
+    "file": "red-snake.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ARed_Snake",
+    "wikiFileTitle": "File:Red Snake (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "power-bow",
+    "file": "power-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APower_Bow",
+    "wikiFileTitle": "File:Power Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "elite-power-bow",
+    "file": "elite-power-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AElite_Power_Bow",
+    "wikiFileTitle": "File:Elite Power Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "phantom-bow",
+    "file": "phantom-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APhantom_Bow",
+    "wikiFileTitle": "File:Phantom Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sabrewing",
+    "file": "sabrewing.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASabrewing",
+    "wikiFileTitle": "File:Sabrewing (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "rapid-crossbow",
+    "file": "rapid-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ARapid_Crossbow",
+    "wikiFileTitle": "File:Rapid Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "auto-crossbow",
+    "file": "auto-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AAuto_Crossbow",
+    "wikiFileTitle": "File:Auto Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "butterfly-crossbow",
+    "file": "butterfly-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AButterfly_Crossbow",
+    "wikiFileTitle": "File:Butterfly Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "scatter-crossbow",
+    "file": "scatter-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AScatter_Crossbow",
+    "wikiFileTitle": "File:Scatter Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "harp-crossbow",
+    "file": "harp-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHarp_Crossbow",
+    "wikiFileTitle": "File:Harp Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "lightning-harp-crossbow",
+    "file": "lightning-harp-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ALightning_Harp_Crossbow",
+    "wikiFileTitle": "File:Lightning Harp Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-crossbow",
+    "file": "shadow-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShadow_Crossbow",
+    "wikiFileTitle": "File:Shadow Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shrieking-crossbow",
+    "file": "shrieking-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShrieking_Crossbow",
+    "wikiFileTitle": "File:Shrieking Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "veiled-crossbow",
+    "file": "veiled-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVeiled_Crossbow",
+    "wikiFileTitle": "File:Veiled Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shortbow",
+    "file": "shortbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShortbow",
+    "wikiFileTitle": "File:Shortbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "love-spell-bow",
+    "file": "love-spell-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ALove_Spell_Bow",
+    "wikiFileTitle": "File:Love Spell Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "mechanical-shortbow",
+    "file": "mechanical-shortbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMechanical_Shortbow",
+    "wikiFileTitle": "File:Mechanical Shortbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "purple-storm",
+    "file": "purple-storm.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APurple_Storm",
+    "wikiFileTitle": "File:Purple Storm (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "snow-bow",
+    "file": "snow-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASnow_Bow",
+    "wikiFileTitle": "File:Snow Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "webbed-bow",
+    "file": "webbed-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWebbed_Bow",
+    "wikiFileTitle": "File:Webbed Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "winters-touch",
+    "file": "winters-touch.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWinter's_Touch",
+    "wikiFileTitle": "File:Winter's Touch (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-bow",
+    "file": "soul-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Bow",
+    "wikiFileTitle": "File:Soul Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "bow-of-lost-souls",
+    "file": "bow-of-lost-souls.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABow_of_Lost_Souls",
+    "wikiFileTitle": "File:Bow of Lost Souls (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "nocturnal-bow",
+    "file": "nocturnal-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ANocturnal_Bow",
+    "wikiFileTitle": "File:Nocturnal Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shivering-bow",
+    "file": "shivering-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShivering_Bow",
+    "wikiFileTitle": "File:Shivering Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-crossbow",
+    "file": "soul-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Crossbow",
+    "wikiFileTitle": "File:Soul Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "feral-soul-crossbow",
+    "file": "feral-soul-crossbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFeral_Soul_Crossbow",
+    "wikiFileTitle": "File:Feral Soul Crossbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "voidcaller",
+    "file": "voidcaller.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVoidcaller",
+    "wikiFileTitle": "File:Voidcaller (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "trickbow",
+    "file": "trickbow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATrickbow",
+    "wikiFileTitle": "File:Trickbow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-green-menace",
+    "file": "the-green-menace.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Green_Menace",
+    "wikiFileTitle": "File:The Green Menace (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-pink-scoundrel",
+    "file": "the-pink-scoundrel.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Pink_Scoundrel",
+    "wikiFileTitle": "File:The Pink Scoundrel (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sugar-rush",
+    "file": "sugar-rush.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASugar_Rush",
+    "wikiFileTitle": "File:Sugar Rush (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "twisting-vine-bow",
+    "file": "twisting-vine-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATwisting_Vine_Bow",
+    "wikiFileTitle": "File:Twisting Vine Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "weeping-vine-bow",
+    "file": "weeping-vine-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWeeping_Vine_Bow",
+    "wikiFileTitle": "File:Weeping Vine Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "void-bow",
+    "file": "void-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVoid_Bow",
+    "wikiFileTitle": "File:Void Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "call-of-the-void",
+    "file": "call-of-the-void.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACall_of_the_Void",
+    "wikiFileTitle": "File:Call of the Void (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wind-bow",
+    "file": "wind-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWind_Bow",
+    "wikiFileTitle": "File:Wind Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "burst-gale-bow",
+    "file": "burst-gale-bow.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABurst_Gale_Bow",
+    "wikiFileTitle": "File:Burst Gale Bow (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "echo-of-the-valley",
+    "file": "echo-of-the-valley.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEcho_of_the_Valley",
+    "wikiFileTitle": "File:Echo of the Valley (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "battle-robe",
+    "file": "battle-robe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABattle_Robe",
+    "wikiFileTitle": "File:Battle Robe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "splendid-robe",
+    "file": "splendid-robe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASplendid_Robe",
+    "wikiFileTitle": "File:Splendid Robe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "beenest-armor",
+    "file": "beenest-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABeenest_Armor",
+    "wikiFileTitle": "File:Beenest Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "beehive-armor",
+    "file": "beehive-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABeehive_Armor",
+    "wikiFileTitle": "File:Beehive Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "champions-armor",
+    "file": "champions-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AChampion's_Armor",
+    "wikiFileTitle": "File:Champion's Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "heros-armor",
+    "file": "heros-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHero's_Armor",
+    "wikiFileTitle": "File:Hero's Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "climbing-gear",
+    "file": "climbing-gear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AClimbing_Gear",
+    "wikiFileTitle": "File:Climbing Gear (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "goat-gear",
+    "file": "goat-gear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGoat_Gear",
+    "wikiFileTitle": "File:Goat Gear (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "rugged-climbing-gear",
+    "file": "rugged-climbing-gear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ARugged_Climbing_Gear",
+    "wikiFileTitle": "File:Rugged Climbing Gear (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "dark-armor",
+    "file": "dark-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ADark_Armor",
+    "wikiFileTitle": "File:Dark Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "titans-shroud",
+    "file": "titans-shroud.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATitan's_Shroud",
+    "wikiFileTitle": "File:Titan's Shroud (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "emerald-gear",
+    "file": "emerald-gear.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEmerald_Gear",
+    "wikiFileTitle": "File:Emerald Gear (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "gilded-glory",
+    "file": "gilded-glory.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGilded_Glory",
+    "wikiFileTitle": "File:Gilded Glory (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "opulent-armor",
+    "file": "opulent-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AOpulent_Armor",
+    "wikiFileTitle": "File:Opulent Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "entertainers-garb",
+    "file": "entertainers-garb.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEntertainer's_Garb",
+    "wikiFileTitle": "File:Entertainer's Garb (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-troubadour",
+    "file": "the-troubadour.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Troubadour",
+    "wikiFileTitle": "File:The Troubadour (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "evocation-robe",
+    "file": "evocation-robe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEvocation_Robe",
+    "wikiFileTitle": "File:Evocation Robe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ember-robe",
+    "file": "ember-robe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEmber_Robe",
+    "wikiFileTitle": "File:Ember Robe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "verdant-robe",
+    "file": "verdant-robe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AVerdant_Robe",
+    "wikiFileTitle": "File:Verdant Robe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ghostly-armor",
+    "file": "ghostly-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGhostly_Armor",
+    "wikiFileTitle": "File:Ghostly Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cloaked-skull",
+    "file": "cloaked-skull.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACloaked_Skull",
+    "wikiFileTitle": "File:Cloaked Skull (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ghost-kindler",
+    "file": "ghost-kindler.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGhost_Kindler",
+    "wikiFileTitle": "File:Ghost Kindler (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "grim-armor",
+    "file": "grim-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGrim_Armor",
+    "wikiFileTitle": "File:MCD Grim Armor.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "the-spooky-gourdian",
+    "file": "the-spooky-gourdian.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThe_Spooky_Gourdian",
+    "wikiFileTitle": "File:Gourdian Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wither-armor",
+    "file": "wither-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWither_Armor",
+    "wikiFileTitle": "File:Wither Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "guards-armor",
+    "file": "guards-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGuard's_Armor",
+    "wikiFileTitle": "File:Guard's Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ender-armor",
+    "file": "ender-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AEnder_Armor",
+    "wikiFileTitle": "File:Curious Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "archers-armor",
+    "file": "archers-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AArcher's_Armor",
+    "wikiFileTitle": "File:Archer's Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "mercenary-armor",
+    "file": "mercenary-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMercenary_Armor",
+    "wikiFileTitle": "File:Mercenary Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "hungriest-horror",
+    "file": "hungriest-horror.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHungriest_Horror",
+    "wikiFileTitle": "File:Hungriest Horror (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "hungry-horror",
+    "file": "hungry-horror.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHungry_Horror",
+    "wikiFileTitle": "File:Hungry Horror (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "renegade-armor",
+    "file": "renegade-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ARenegade_Armor",
+    "wikiFileTitle": "File:Renegade Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "mystery-armor",
+    "file": "mystery-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AMystery_Armor",
+    "wikiFileTitle": "File:Mystery Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "ocelot-armor",
+    "file": "ocelot-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AOcelot_Armor",
+    "wikiFileTitle": "File:Ocelot Armor.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shadow-walker",
+    "file": "shadow-walker.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShadow_Walker",
+    "wikiFileTitle": "File:Shadow Walker (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "phantom-armor",
+    "file": "phantom-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APhantom_Armor",
+    "wikiFileTitle": "File:Phantom Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "frost-bite",
+    "file": "frost-bite.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFrost_Bite",
+    "wikiFileTitle": "File:Frost Bite (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "piglin-armor",
+    "file": "piglin-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APiglin_Armor",
+    "wikiFileTitle": "File:Piglin Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "golden-piglin-armor",
+    "file": "golden-piglin-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGolden_Piglin_Armor",
+    "wikiFileTitle": "File:Golden Piglin Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "plate-armor",
+    "file": "plate-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3APlate_Armor",
+    "wikiFileTitle": "File:MCD Plate Armor.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cauldron-armor",
+    "file": "cauldron-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACauldron_Armor",
+    "wikiFileTitle": "File:Cauldron Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "full-metal-armor",
+    "file": "full-metal-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFull_Metal_Armor",
+    "wikiFileTitle": "File:Full Metal Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "reinforced-mail",
+    "file": "reinforced-mail.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AReinforced_Mail",
+    "wikiFileTitle": "File:Reinforced Mail (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "stalwart-armor",
+    "file": "stalwart-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AStalwart_Armor",
+    "wikiFileTitle": "File:Stalwart Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "root-rot-armor",
+    "file": "root-rot-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ARoot_Rot_Armor",
+    "wikiFileTitle": "File:Root Rot Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "black-spot-armor",
+    "file": "black-spot-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABlack_Spot_Armor",
+    "wikiFileTitle": "File:Black Spot Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "scale-mail",
+    "file": "scale-mail.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AScale_Mail",
+    "wikiFileTitle": "File:MCD Scale Mail.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "highland-armor",
+    "file": "highland-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AHighland_Armor",
+    "wikiFileTitle": "File:MCD Highland Armor.png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "shulker-armor",
+    "file": "shulker-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AShulker_Armor",
+    "wikiFileTitle": "File:Shulker Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sturdy-shulker-armor",
+    "file": "sturdy-shulker-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASturdy_Shulker_Armor",
+    "wikiFileTitle": "File:Sturdy Shulker Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "snow-armor",
+    "file": "snow-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASnow_Armor",
+    "wikiFileTitle": "File:Snow Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "frost-armor",
+    "file": "frost-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFrost_Armor",
+    "wikiFileTitle": "File:Frost Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-robe",
+    "file": "soul-robe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASoul_Robe",
+    "wikiFileTitle": "File:Soul Robe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "souldancer-robe",
+    "file": "souldancer-robe.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASouldancer_Robe",
+    "wikiFileTitle": "File:Souldancer Robe (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "spelunker-armor",
+    "file": "spelunker-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASpelunker_Armor",
+    "wikiFileTitle": "File:Spelunker Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "cave-crawler",
+    "file": "cave-crawler.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ACave_Crawler",
+    "wikiFileTitle": "File:Cave Crawler (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sweet-tooth",
+    "file": "sweet-tooth.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASweet_Tooth",
+    "wikiFileTitle": "File:Sweet Tooth (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "sprout-armor",
+    "file": "sprout-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASprout_Armor",
+    "wikiFileTitle": "File:Sprout Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "living-vines-armor",
+    "file": "living-vines-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ALiving_Vines_Armor",
+    "wikiFileTitle": "File:Living Vines Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "squid-armor",
+    "file": "squid-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASquid_Armor",
+    "wikiFileTitle": "File:Squid Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "glow-squid-armor",
+    "file": "glow-squid-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AGlow_Squid_Armor",
+    "wikiFileTitle": "File:Glow Squid Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "teleportation-robes",
+    "file": "teleportation-robes.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATeleportation_Robes",
+    "wikiFileTitle": "File:Teleportation Robes (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "unstable-robes",
+    "file": "unstable-robes.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AUnstable_Robes",
+    "wikiFileTitle": "File:Unstable Robes (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "thief-armor",
+    "file": "thief-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AThief_Armor",
+    "wikiFileTitle": "File:Thief Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "spider-armor",
+    "file": "spider-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ASpider_Armor",
+    "wikiFileTitle": "File:Spider Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "turtle-armor",
+    "file": "turtle-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ATurtle_Armor",
+    "wikiFileTitle": "File:Turtle Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "nimble-turtle-armor",
+    "file": "nimble-turtle-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ANimble_Turtle_Armor",
+    "wikiFileTitle": "File:Nimble Turtle Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "wolf-armor",
+    "file": "wolf-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AWolf_Armor",
+    "wikiFileTitle": "File:Wolf Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "arctic-fox-armor",
+    "file": "arctic-fox-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AArctic_Fox_Armor",
+    "wikiFileTitle": "File:Arctic Fox Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "black-wolf-armor",
+    "file": "black-wolf-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3ABlack_Wolf_Armor",
+    "wikiFileTitle": "File:Black Wolf Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "fox-armor",
+    "file": "fox-armor.png",
+    "kind": "equipment",
+    "sourcePage": "https://minecraft.wiki/w/Dungeons%3AFox_Armor",
+    "wikiFileTitle": "File:Fox Armor (MCD).png",
+    "provenance": "wiki"
+  },
+  {
+    "id": "soul-bullet",
+    "file": "soul-bullet.png",
+    "kind": "built-in-property",
+    "sourcePage": "https://minecraft.wiki/w/Template%3ADungeonsMiscellaneousSprite",
+    "wikiFileTitle": "File:DungeonsMiscellaneousSprite soul-bullet.png",
+    "provenance": "wiki"
+  }
+]

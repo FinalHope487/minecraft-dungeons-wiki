@@ -8,7 +8,7 @@ const root = new URL('../', import.meta.url);
 const destination = new URL('dist/', root);
 const assets = new Set(await readdir(new URL('assets/', root)));
 const catalog = loadCatalog();
-validateCatalog(catalog.categories, catalog.entries, assets);
+validateCatalog(catalog, assets);
 
 await mkdir(destination, { recursive: true });
 const workspace = await realpath(root);
@@ -35,7 +35,6 @@ const moduleFiles = {
   inventoryGrid: 'src/inventory-grid.mjs',
   locale: 'src/locale.mjs',
   iconAssets: 'src/icon-assets.mjs',
-  builtInEnchantmentPresentation: 'src/built-in-enchantment-presentation.mjs',
   wiki: 'src/wiki.js',
 };
 const modules = Object.fromEntries(await Promise.all(Object.entries(moduleFiles).map(async ([key, path]) => [

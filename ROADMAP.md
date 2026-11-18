@@ -48,16 +48,16 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`b3c1f90`（本輪測試、建置與本地產物驗收的 commit）
+**commit**：`dd07446`（本輪開始的 `main` 基線；本輪驗證在工作樹執行）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-18 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 通過：23/23，失敗 0；包含 117 筆內建附魔特性列映射及 124 筆附魔來源 fixture 核對 |
+| 內層 | `npm test` | 通過：32/32，失敗 0；包含 v5→v6 等價遷移、未查核來源不自動支持、fact ID 級證據、重複 semantic facts、position 與 JSON／file bundle 傳播 |
 | 建置 | `npm run build` | 通過：7 個分類、446 筆條目 |
-| user 層 | 本地 `dist` 檢查 | 通過：`index.html` 3,981 bytes、446 個條目資料檔、schema v5；Ambush 英文怪物效果及繁中翻譯、`[verify]` 註記與來源衝突資料已輸出；靜態 JS 確認不同效果同層、推論 facts 置於預設收合區、相關條目 → 更多資訊 → 來源順序；未開瀏覽器、未驗實際渲染 |
+| user 層 | 本地 `dist` 檢查 | 通過：`index.html` 3,981 bytes、schema v6、7 個分類、446 個詳情 JSON、1,320 筆 facts、426 筆圖標登錄、572 個有向關聯、117 筆內建附魔；icon 路徑全數存在，file bundle 與 JSON 相同，11 筆 source facts 均有 supports，Ambush 怪物效果由 Enchanted Mobs 支持；產物不含 SQLite／遷移檔；未開瀏覽器 |
 | 公開 | GitHub Pages | 未跑 |
-| 文件 | `git diff --cached --check` | 通過，exit 0；差異檢查無憑證樣式命中 |
+| 文件 | `git diff HEAD --check` | 通過，exit 0；暫存差異憑證樣式掃描無命中 |
 
 ---
 
@@ -65,9 +65,11 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 
 <!-- 條目照本檔開頭的格式。做完的直接刪掉，不留「已完成」條目。 -->
 
+- [now] 逐項查核尚未有 fact 級來源映射的 Wiki 主張，先補齊 124 筆附魔的玩家／怪物效果；只有核實後才將 `claim_origin` 設為 `source` 並在 `fact_evidence` 加 `supports`，無法核實的維持 `unknown/context`。
+
 ### [now] 建立可公開驗收的 Wiki 首版
 
-**具體細節**：神器、消耗品與其他物品已有條目；47 筆通用佔位說明已替換為 Wiki 原文或有來源的已知資訊，未記載效果者標明未知。124 個附魔及 228 件近戰、遠程與盔甲已按 Wiki 名錄收錄；附魔逐條區分英雄／怪物可用性與效果，可信度為 high 44、medium 70、low 10；低可信條目及衝突見[附魔玩家與怪物效用規格](docs/specs/enchantment-availability.md)。近戰 Sword 系列已排在 Spear 後、Tempest Knife 前，遠程與盔甲順序已核對。45 件已實裝神器原文已逐項核對並修正 7 筆。`file://` 本機入口已依[啟動修正計畫](docs/plans/2026-11-17-file-url-bootstrap.md)補上 classic 啟動路徑與自包含資料包。GitHub 登入與公開素材使用條件尚待確認。
-**怎麼做**：依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)核對公開素材使用條件；Wiki 內容缺漏及收錄優先序見[盤點紀錄](docs/content-coverage-audit.md)，詳情呈現及附魔來源篩選見[呈現規格](docs/specs/detail-presentation.md)與[附魔效用規格](docs/specs/enchantment-availability.md)。GitHub CLI 登入與 remote 就緒後，發布並實測。
-**會改變什麼**：公開圖鑑涵蓋 Wiki 列出的附魔、武器與盔甲，並能顯示稀有度、實裝與 Seasonal 標籤。
+**具體細節**：神器、消耗品與其他物品已有條目；47 筆通用佔位說明已替換為 Wiki 原文或有來源的已知資訊，未記載效果者標明未知。124 個附魔及 228 件近戰、遠程與盔甲已按 Wiki 名錄收錄；附魔逐條區分英雄／怪物可用性與效果，可信度為 high 44、medium 70、low 10；低可信條目及衝突見[附魔玩家與怪物效用規格](docs/specs/enchantment-availability.md)。近戰 Sword 系列已排在 Spear 後、Tempest Knife 前，遠程與盔甲順序已核對。45 件已實裝神器原文已逐項核對並修正 7 筆。`file://` 本機入口已依[啟動修正計畫](docs/plans/2026-11-17-file-url-bootstrap.md)補上 classic 啟動路徑與自包含資料包。資料來源已結構化至 SQLite v6，執行結果見[結構化資料計畫](docs/plans/2026-11-18-structured-catalog-v6.md)。GitHub 登入與公開素材使用條件尚待確認。
+**怎麼做**：SQLite v6 schema、呈現政策與匯出契約已依[結構化資料計畫](docs/plans/2026-11-18-structured-catalog-v6.md)完成並驗收；接著依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)核對公開素材使用條件。Wiki 內容缺漏及收錄優先序見[盤點紀錄](docs/content-coverage-audit.md)，附魔來源與呈現見[詳情規格](docs/specs/detail-presentation.md)及[附魔效用規格](docs/specs/enchantment-availability.md)。GitHub CLI 登入與 remote 就緒後，發布並實測。
+**會改變什麼**：公開圖鑑涵蓋 Wiki 列出的附魔、武器與盔甲，並能顯示稀有度、實裝與 Seasonal 標籤；SQLite v6 將內容語意、效果判讀、關聯和圖標規則集中至固定欄位，由匯出政策同步兩種版型。
 **做後回退代價**：擴充分階段提交。若要撤回，回退相關擴充提交並重新部署已驗證的首版，再核對公開連結。

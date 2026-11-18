@@ -2,11 +2,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { loadCatalog } from '../tools/catalog.mjs';
-import { iconAssets } from '../src/icon-assets.mjs';
 import { entryHash, listEntries, resolveRoute } from '../src/routes.mjs';
 import { getInventoryEmptySlotCount, resolveInventoryColumnCount } from '../src/inventory-grid.mjs';
 
-const { categories, entries } = loadCatalog();
+const { categories, entries, iconAssets: iconAssetRows } = loadCatalog();
+const iconAssets = Object.fromEntries(iconAssetRows.map((asset) => [asset.id, asset]));
 const roster = JSON.parse(readFileSync(new URL('./fixtures/wiki-item-roster.json', import.meta.url), 'utf8'));
 const enchantmentRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-enchantment-roster.json', import.meta.url), 'utf8'));
 const gearRoster = JSON.parse(readFileSync(new URL('./fixtures/wiki-gear-roster.json', import.meta.url), 'utf8'));
@@ -142,8 +142,8 @@ test('完整附魔名錄有唯一條目、雙語 Wiki 描述、分類與來源',
     assert.equal(entry.implemented, expected.implemented, `${expected.id} implementation`);
     assert.equal(entry.seasonal, expected.seasonal, `${expected.id} seasonal flag`);
     assert.deepEqual(entry.description, expected.description, `${expected.id} Wiki description`);
-    assert.deepEqual(entry.facts, expected.facts, `${expected.id} applicability and classification`);
-    assert.deepEqual(entry.sources, expected.sources, `${expected.id} source pages`);
+    assert.deepEqual(entry.facts.map(({ label, value }) => ({ label, value })), expected.facts, `${expected.id} applicability and classification`);
+    assert.deepEqual(entry.sources.map(({ label, url }) => ({ label, url })), expected.sources, `${expected.id} source pages`);
     assert.equal(entry.tone, 'violet', `${expected.id} enchantment tone`);
     assert.ok(iconAssets[entry.icon]?.kind === 'enchantment', `${expected.id} icon registration`);
     assert.equal(entry.sources[0].url, enchantmentRoster.source, `${expected.id} overview source`);
@@ -157,7 +157,8 @@ test('完整附魔名錄有唯一條目、雙語 Wiki 描述、分類與來源',
   assert.deepEqual(actual.filter(({ seasonal }) => seasonal).map(({ id }) => id), ['invisible']);
   assert.equal(actual.find(({ id }) => id === 'withering')?.implemented, true,
     'Withering remains implemented because mobs use it');
-  assert.deepEqual(actual.find(({ id }) => id === 'radiance')?.facts.find(({ label }) => label.en === 'Ranged name'), {
+  const rangedNameFact = actual.find(({ id }) => id === 'radiance')?.facts.find(({ label }) => label.en === 'Ranged name');
+  assert.deepEqual({ label: rangedNameFact.label, value: rangedNameFact.value }, {
     label: { en: 'Ranged name', 'zh-Hant': '遠程名稱' },
     value: { en: 'Radiance Shot', 'zh-Hant': '遠程武器稱為 Radiance Shot' },
   });
@@ -248,9 +249,9 @@ test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、
     assert.equal(entry.implemented, expected.implemented, `${expected.id} implementation label`);
     assert.equal(entry.seasonal, expected.seasonal, `${expected.id} Seasonal label`);
     assert.deepEqual(entry.description, expected.description, `${expected.id} in-game description`);
-    assert.deepEqual(entry.facts, [{ label: { en: 'Type', 'zh-Hant': '類型' }, value: expected.type }], `${expected.id} type`);
-    assert.deepEqual(entry.traits, expected.traits.map(({ icon, en, 'zh-Hant': zhHant }) => ({ icon, label: { en, 'zh-Hant': zhHant } })), `${expected.id} fixed properties`);
-    assert.deepEqual(entry.sources, expected.sources, `${expected.id} Wiki source revisions`);
+    assert.deepEqual(entry.facts.map(({ label, value }) => ({ label, value })), [{ label: { en: 'Type', 'zh-Hant': '類型' }, value: expected.type }], `${expected.id} type`);
+    assert.deepEqual(entry.traits.map(({ icon, label }) => ({ icon, label })), expected.traits.map(({ icon, en, 'zh-Hant': zhHant }) => ({ icon, label: { en, 'zh-Hant': zhHant } })), `${expected.id} fixed properties`);
+    assert.deepEqual(entry.sources.map(({ label, url }) => ({ label, url })), expected.sources, `${expected.id} Wiki source revisions`);
     assert.ok(iconAssets[entry.icon], `${expected.id} registered icon`);
     if (entry.icon !== 'wiki-placeholder') assert.equal(iconAssets[entry.icon].kind, 'equipment', `${expected.id} equipment icon kind`);
 
@@ -272,10 +273,12 @@ test('完整裝備名錄逐項符合 Wiki fixture 的名稱、說明、狀態、
     for (const variant of variantsByParent.get(expected.id) ?? []) {
       expectedLinks.push({ id: variant.id, label: { en: 'Unique variant', 'zh-Hant': '獨特變體' } });
     }
-    assert.deepEqual(entry.links, expectedLinks, `${expected.id} gear relations`);
+    assert.deepEqual(entry.links.map(({ id, label, builtInEnchantment }) => ({
+      id, label, ...(builtInEnchantment ? { builtInEnchantment } : {}),
+    })), expectedLinks, `${expected.id} gear relations`);
     for (const enchantment of expected.builtInEnchantments) {
       const reverse = enchantmentsById.get(enchantment.id)?.links.find(({ id }) => id === expected.id);
-      assert.deepEqual(reverse, { id: expected.id, label: { en: 'Gear with this built-in effect', 'zh-Hant': '具有此固有效果的裝備' } }, `${enchantment.id} reverse built-in relation`);
+      assert.deepEqual({ id: reverse?.id, label: reverse?.label }, { id: expected.id, label: { en: 'Gear with this built-in effect', 'zh-Hant': '具有此固有效果的裝備' } }, `${enchantment.id} reverse built-in relation`);
     }
   }
   const weaponBuiltIns = actual.filter(({ category }) => ['equipment', 'ranged'].includes(category))

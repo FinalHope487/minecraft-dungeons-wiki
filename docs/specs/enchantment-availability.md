@@ -1,39 +1,39 @@
 # 附魔玩家與怪物效用
 
-## 資料欄位與呈現
+## 固定資料欄位
 
-124 筆附魔在資料中保留下列雙語欄位，供來源稽核及公開效果篩選：
+124 筆附魔各有一筆 `enchantment_effect_profiles`：
 
-| 欄位 | 用途 |
-| --- | --- |
-| `Audience` | 標記玩家、怪物、兩者、未使用及未確認；屬圖鑑判讀，顯示在「更多資訊」的判讀與查證區。 |
-| `Hero availability` | 記錄英雄能否從裝備附魔選項取得；固有附魔與附魔師之書分開描述。 |
-| `Player effect` | 描述英雄持有裝備或取得增益時的效果；保留 Wiki 有來源支持的觸發條件與階級數值。 |
-| `Mob availability` | 記錄 Wiki 明確列出的怪物來源及種類，包含一般附魔怪物、試煉、遠古生物與季節試煉。 |
-| `Mob effect` | 只記 Wiki 有來源支持的怪物側行為；不得直接複製英雄效果並假設機制相同。 |
-| `Evidence confidence` | 標記查證狀態；顯示在「更多資訊」的判讀與查證區。 |
+| 欄位 | 值 | 用途 |
+| --- | --- | --- |
+| `player_availability`、`mob_availability` | `available`、`unavailable`、`unknown` | 分開保存玩家與怪物可用性。 |
+| `effect_relation` | `same`、`different`、`unknown` | 記錄兩側效果是否相同。未知時不猜測。 |
+| `player_fact_id`、`mob_fact_id` | fact ID 或 `NULL` | 連到對應雙語效果與來源證據。 |
 
-附魔主欄只顯示來源明確支持的效果。玩家效果依明確的英雄可用性顯示；怪物效果依 Wiki 明確記錄的怪物可用性及效果文字顯示，不以內部可信度篩掉有來源內容。玩家不可用時不顯示玩家效果；怪物不可用或未確認時不顯示怪物效果。完整原始 facts（含正負可用性、未確認欄位、Audience、Evidence confidence 和兩側效果）都放在預設展開的「更多資訊」判讀與查證區，讓主要效果摘要與圖鑑的查證判讀層級分開。
+效果文字保留在有穩定 `semantic_key` 的 `facts`。每筆 fact 記錄 `claim_origin`（`source`、`inference`、`unknown`）、Wiki 標記 `wiki_status`（`unmarked`、`verify`、`unknown`）及來源證據關係。`Audience`、`Evidence confidence` 等整理欄位仍保留為 facts；不把可信度與 Wiki 自己的待查標記混成同一狀態。
 
-玩家與怪物效果相同時，以玩家效果作為主要內容，怪物側只顯示相同效果附註，不重複完整文字。兩側效果不同時，以玩家效果為主，怪物差異顯示為次要附註。只有一方明確可用時，只顯示該方效果。
+## 顯示政策
 
-原始 `description` 保留 Wiki 遊戲內描述作為資料。附魔主要詳情改由 `Player effect` 或單一可用側的效果呈現，避免重複。
+- 玩家與怪物效果相同且兩側可用：顯示玩家效果，另註怪物同樣使用，不重複全文。
+- 效果不同且兩側可用：以同一層級分別顯示玩家與怪物效果。
+- 效果關係為 `unknown` 且雙側各有來源支持的效果：主欄同層顯示玩家與怪物效果；「更多資訊」標示效果關係未確認，不把未知當成相同或不同。
+- 一側明確不可用：只顯示另一側，不輸出不可用一側的效果。另一側可用性未知且效果有來源支持時，仍顯示該效果並標示未確認。
+- 可用性為 `unknown`：有來源支持的效果仍顯示於主欄，並在效果旁標示可用性未確認；沒有來源的推論效果不冒充實際效果。
+- Wiki 有 `[verify]` 標記時，在對應效果及其 Wiki 原文旁保留註記。
+- `claim_origin='inference'` 或 `unknown` 的 facts 收在預設收合的「更多資訊」；`source` facts 必須至少有一筆 `supports` 證據，才能作主欄內容。`context` 只表示來源相關，不作支持證據。
+- 完整順序為主效果與事實、相關條目、更多資訊、來源。可信度不作為隱藏已知來源效果的條件。
 
-## 判定與來源
+## 資料查核
 
-- 以 [附魔總表](https://minecraft.wiki/w/Dungeons%3AEnchantment)、[附魔怪物](https://minecraft.wiki/w/Dungeons%3AEnchanted)、[每日試煉](https://minecraft.wiki/w/Dungeons%3ADaily_Trial) 及各附魔條目頁互相比對。
-- `high` 表示 Wiki 明確列出可用對象及效果；`medium` 表示由總表、怪物清單或未列出項目推斷；`low` 表示來源互相衝突、Wiki 標為待查，或怪物效果未有說明。
-- 來源沒有列出的效果不得自行補成確定事實。將怪物效果寫為未列出／未確認，降低可信度並保留具體來源。
-- Wiki 資料不等於遊戲內實測。未實際驗證的機制必須在可信度欄明示。
-- 每筆附魔保留總表、具體條目頁及適用的怪物、試煉或未使用內容來源。
+- 對照[附魔總表](https://minecraft.wiki/w/Dungeons%3AEnchantment)、[附魔怪物](https://minecraft.wiki/w/Dungeons%3AEnchanted)、[每日試煉](https://minecraft.wiki/w/Dungeons%3ADaily_Trial)及各附魔條目頁。
+- Wiki 沒寫效果或來源互相衝突時，保留原始說法和來源，效果關係或可用性填 `unknown`；不可從清單缺項推成確定不可用。
+- `fact_evidence` 的 `context` 代表來源與該項目相關，不宣稱該頁明確支持這個 fact。只為逐筆核實的 fact 標 `supports` 或 `conflicts`；禁止由條目名稱或 semantic key 推定。Ambush 的 `mob_effect` 由 Enchanted Mobs 支持，不由 Ambush 單品頁支持。未完成逐筆查核的 facts 保留 `claim_origin='unknown'`，相關來源標為 `context`。
+- Wiki 記載不等於遊戲內實測；沒有實測時不得描述為遊戲驗證結果。
 
 ## 驗收條件
 
-- `tests/fixtures/wiki-enchantment-roster.json` 中每筆都具有完整 `availability` 稽核資料；玩家、怪物效果、可信度及來源與 SQLite `facts`、`entry_sources` 一致。
-- 詳情主欄不顯示 Audience、Evidence confidence 或可用性推論；「更多資訊」預設展開並完整列出這些欄位及來源。
-- Critical Hit 明確區分玩家 I／II／III 階的 10%／15%／20% 機率與怪物必定造成三倍傷害。
-- Thorns、Protection、Thundering 等 Wiki 有明確差異的附魔保留兩側數值或觸發條件；可信怪物差異以次要附註呈現。
-- 有明確 Wiki 怪物效果文字時，不因內部可信度欄位而隱藏；Wiki 缺少效果文字或只留下「未確認」判定時不顯示該側。
-- 單側可用的附魔只顯示該側效果；雙側相同效果不得重複完整敘述。
-- 確認「更多資訊」預設展開且仍可收合，包含所有 facts、判讀與查證、關聯、英文原文及來源；沒有內容時不建立空區塊。
-- `npm test`、`npm run build` 通過；直接檢查本地 `dist/` 輸出，不開瀏覽器。
+- 124 筆附魔各有一筆效果 profile；玩家／怪物效果 fact ID 必須指向同一條目的相應語意欄位。
+- Critical Hit 分開呈現玩家 I／II／III 階的 10%／15%／20% 機率與怪物每次攻擊都造成三倍傷害。
+- Wiki 明確標為 `[verify]` 的內容保留待查標記。
+- 同效只重複標示怪物同樣適用；不同效果同層顯示；未知不推成不可用或同效。
+- `npm test` 與本地建置驗收確認 HTTP 和 `file://` 使用同一份衍生呈現資料。

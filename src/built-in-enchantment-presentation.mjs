@@ -1,5 +1,7 @@
 export function buildBuiltInEnchantmentPresentation(entry, entries) {
-  const entriesById = new Map(entries.map((candidate) => [candidate.id, candidate]));
+  const entriesById = entries instanceof Map
+    ? entries
+    : new Map(entries.map((candidate) => [candidate.id, candidate]));
   const enchantmentByTrait = new Map();
   const related = entry.links.map((relation) => {
     const target = entriesById.get(relation.id);
@@ -19,7 +21,11 @@ export function buildBuiltInEnchantmentPresentation(entry, entries) {
       });
     }
 
-    return { target, label: relation.label, builtInEnchantment: metadata ?? null };
+    return {
+      target: { id: target.id, category: target.category, name: target.name, icon: target.icon },
+      label: relation.label,
+      builtInEnchantment: metadata ?? null,
+    };
   });
 
   return {

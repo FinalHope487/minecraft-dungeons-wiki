@@ -7,7 +7,6 @@ import {
 } from './inventory-grid.mjs';
 import { resolveLanguage, uiText } from './locale.mjs';
 import { iconAssetUrl } from './icon-assets.mjs';
-import { buildBuiltInEnchantmentPresentation } from './built-in-enchantment-presentation.mjs';
 
 const params = new URLSearchParams(location.search);
 const lang = resolveLanguage(location.search);
@@ -54,6 +53,8 @@ const dataDirectory = new URL('../data/', import.meta.url);
 const detailCache = new Map();
 let categories = [];
 let entries = [];
+let iconRegistry = {};
+let iconRecipeById = {};
 let catalogReady = false;
 let detailRequestToken = 0;
 for (const count of inventoryColumnCounts) {
@@ -107,14 +108,20 @@ function icon(id, className = 'icon') {
   image.loading = className === 'item-art' ? 'eager' : 'lazy';
   image.decoding = 'async';
   if (className === 'item-art') image.fetchPriority = 'high';
-  image.src = iconAssetUrl(id).href;
+  image.src = iconAssetUrl(id, iconRegistry).href;
   return image;
 }
 
-function builtInEnchantmentTraitIcon(enchantmentIcon, propertyIcon) {
+function builtInEnchantmentTraitIcon(enchantmentIcon, propertyIcon, recipe) {
+  if (!recipe || !['none', 'orange'].includes(recipe.frameStyle)
+    || !Number.isInteger(recipe.overlayPercent) || recipe.overlayPercent < 1 || recipe.overlayPercent > 100) {
+    throw new Error('缺少有效的內建附魔圖標配方。');
+  }
   const stack = node('span', 'built-in-enchantment-trait-icon');
   stack.setAttribute('aria-hidden', 'true');
-  const frame = node('span', 'built-in-enchantment-overlay-frame');
+  stack.style.setProperty('--enchantment-overlay-percent', `${recipe.overlayPercent}%`);
+  const frameClass = recipe.frameStyle === 'none' ? 'built-in-enchantment-overlay-frame is-frameless' : 'built-in-enchantment-overlay-frame';
+  const frame = node('span', frameClass);
   frame.append(icon(enchantmentIcon, 'built-in-enchantment-overlay'));
   stack.append(icon(propertyIcon, 'built-in-property-icon'), frame);
   return stack;
@@ -126,59 +133,8 @@ function link(href, label, className) {
   return anchor;
 }
 
-// Collapse only pairs whose player and mob effects share the same core effect.
-const sameEffectEnchantments = new Set([
-  'burning', 'chilling', 'cowardice', 'fire-aspect', 'growing', 'gravity', 'jungle-poison', 'power',
-  'rapid-fire', 'weakening',
-]);
-
-function factValue(entry, label) {
-  return entry.facts.find((fact) => fact.label.en === label)?.value.en ?? '';
-}
-
-function renderEnchantmentEffects(entry, info) {
-  const heroAvailability = factValue(entry, 'Hero availability');
-  const mobAvailability = factValue(entry, 'Mob availability');
-  const playerEffect = entry.facts.find((fact) => fact.label.en === 'Player effect');
-  const mobEffect = entry.facts.find((fact) => fact.label.en === 'Mob effect');
-  const wikiVerification = /\[verify\]/i.test(factValue(entry, 'Evidence confidence'));
-  const playerAvailable = heroAvailability
-    && !/^(Unavailable|Unconfirmed|Not available)/i.test(heroAvailability);
-  const mobAvailable = mobAvailability
-    && !/^(No enemy|No mob|Unconfirmed)/i.test(mobAvailability);
-  const showPlayer = playerAvailable && playerEffect
-    && !/not available to heroes|unavailable to heroes/i.test(playerEffect.value.en);
-  const showMob = mobAvailable && mobEffect
-    && !/no mob-side effect is listed|unconfirmed/i.test(mobEffect.value.en);
-
-  if (showPlayer) {
-    const effect = node('p', 'enchantment-effect');
-    effect.append(node('strong', 'effect-label', ui.playerEffect),
-      document.createTextNode(' '), document.createTextNode(playerEffect.value[lang]));
-    info.append(effect);
-  }
-  if (showMob) {
-    const sameEffect = showPlayer && sameEffectEnchantments.has(entry.id);
-    const effect = node('p', sameEffect ? 'effect-note' : 'enchantment-effect');
-    if (sameEffect) {
-      effect.append(node('strong', 'effect-label', ui.mobNote),
-        document.createTextNode(' '), document.createTextNode(ui.sameMobEffect));
-    } else {
-      effect.append(node('strong', 'effect-label', ui.mobEffect),
-        document.createTextNode(' '), document.createTextNode(mobEffect.value[lang]));
-      if (wikiVerification) effect.append(document.createTextNode(' '),
-        node('small', 'effect-verification', ui.wikiVerify));
-    }
-    info.append(effect);
-  }
-}
-
-function isWikiDescription(entry) {
-  return !/^Wiki does not provide an in-game description\.?$/i.test(entry.description.en.trim());
-}
-
 function renderDetailsContent(entry, layout) {
-  const presentation = buildBuiltInEnchantmentPresentation(entry, entries);
+  const presentation = entry.presentation;
   const heading = node('header', 'detail-heading');
   const identity = node('div', 'identity');
   const badge = node('span', 'rarity', message(entry.badge));
@@ -191,111 +147,144 @@ function renderDetailsContent(entry, layout) {
   identity.append(name);
   heading.append(identity, icon(entry.icon, 'item-art'));
 
+  const renderFacts = (facts) => {
+    const list = node('dl', 'facts');
+    for (const fact of facts) {
+      const pair = node('div', 'fact');
+      const label = node('dt', '', message(fact.label));
+      if (fact.suffix) label.append(node('small', 'effect-verification', ` ${fact.suffix}`));
+      pair.append(label, node('dd', '', message(fact.value)));
+      list.append(pair);
+    }
+    return list;
+  };
+  const renderSection = (section) => {
+    if (section.type === 'effects') {
+      const block = node('div', 'effects');
+      for (const effect of section.items) {
+        const sameEffect = effect.sameAsPlayer === true;
+        const line = node('p', sameEffect ? 'effect-note' : 'enchantment-effect');
+        const label = sameEffect ? ui.mobNote : effect.side === 'player' ? ui.playerEffect : ui.mobEffect;
+        line.append(node('strong', 'effect-label', label), document.createTextNode(' '),
+          document.createTextNode(sameEffect ? ui.sameMobEffect : message(effect.fact.value)));
+        if (effect.availabilityUnconfirmed) line.append(document.createTextNode(' '),
+          node('small', 'effect-verification', ui.availabilityUnconfirmed));
+        if (effect.wikiStatus === 'verify') line.append(document.createTextNode(' '),
+          node('small', 'effect-verification', ui.wikiVerify));
+        block.append(line);
+      }
+      return block;
+    }
+    if (section.type === 'facts') return renderFacts(section.items);
+    if (section.type === 'traits') {
+      const block = node('div', 'traits');
+      for (const trait of section.items) {
+        const line = node('p', 'trait');
+        line.dataset.traitIcon = trait.icon;
+        const label = node('span', '', message(trait.label));
+        if (trait.builtInEnchantmentIcon) {
+          line.append(builtInEnchantmentTraitIcon(trait.builtInEnchantmentIcon.icon,
+            trait.builtInEnchantmentIcon.propertyIcon, iconRecipeById.built_in_enchantment), label);
+        } else {
+          line.append(icon(trait.icon), label);
+        }
+        block.append(line);
+      }
+      return block;
+    }
+    if (section.type === 'description') return node('p', 'description', message(section.item));
+    if (section.type === 'related') {
+      const block = node('div', 'related');
+      block.append(node('h3', '', ui.related));
+      const list = node('ul', 'related-list');
+      for (const relation of section.items) {
+        const { target } = relation;
+        const item = node('li');
+        const anchor = link(entryHash(target, layout), '', 'related-link');
+        anchor.dataset.focusTarget = `entry-${target.id}`;
+        const label = node('span');
+        label.append(node('strong', '', message(target.name)), node('small', '', message(relation.label)));
+        anchor.append(icon(target.icon));
+        if (relation.builtInEnchantment) {
+          const rankLabel = relation.builtInEnchantment.tier === null
+            ? ui.unranked
+            : ui.tier(relation.builtInEnchantment.tier);
+          label.append(node('small', 'relation-tier', rankLabel));
+        }
+        anchor.append(label);
+        item.append(anchor);
+        list.append(item);
+      }
+      block.append(list);
+      return block;
+    }
+    if (section.type === 'more_info') {
+      const moreContent = node('div', 'more-info-content');
+      const assessmentRows = section.facts;
+      if (assessmentRows.length) {
+        const assessment = node('section', 'assessment');
+        assessment.append(node('h3', 'assessment-title', ui.assessment), renderFacts(assessmentRows));
+        moreContent.append(assessment);
+      }
+      if (section.unresolvedRelations.length) {
+        const assessment = node('section', 'assessment');
+        assessment.append(node('p', 'effect-verification', ui.effectRelationUnconfirmed));
+        moreContent.append(assessment);
+      }
+      const originals = section.wikiOriginals.filter(() => entry.category === 'enchantments' || lang === 'zh-Hant');
+      if (originals.length) {
+        const original = node('section', 'original');
+        original.append(node('h3', 'assessment-title', ui.wikiOriginal));
+        for (const sourceText of originals) {
+          const quote = node('p', 'description');
+          quote.lang = 'en';
+          const label = sourceText.key === 'description'
+            ? (entry.category === 'enchantments' ? ui.wikiDescription : ui.original)
+            : sourceText.key === 'player_effect' ? ui.playerEffect : ui.mobEffect;
+          quote.append(node('strong', 'effect-label', `${label}: `), document.createTextNode(sourceText.value));
+          if (sourceText.wikiStatus === 'verify') quote.append(document.createTextNode(' '),
+            node('small', 'effect-verification', ui.wikiVerify));
+          original.append(quote);
+        }
+        moreContent.append(original);
+      }
+      if (!moreContent.children.length) return null;
+      const details = node('details', 'more-info');
+      details.append(node('summary', '', ui.moreInfo), moreContent);
+      return details;
+    }
+    if (section.type === 'sources') {
+      const block = node('div', 'sources');
+      block.append(node('span', 'source-caption', ui.sources));
+      for (const source of section.items) {
+        const anchor = link(source.url, source.label, 'source');
+        anchor.lang = 'en';
+        block.append(anchor);
+      }
+      return block;
+    }
+    throw new Error(`未知的詳情區段：${section.type}`);
+  };
+
+  const content = [heading];
   const info = node('div', 'info');
-  const moreContent = node('div', 'more-info-content');
-  const primaryFacts = node('dl', 'facts');
-  const assessmentFacts = node('dl', 'facts');
-  const inferredFactLabels = new Set(['Audience', 'Evidence confidence', 'Mob availability']);
-  for (const fact of entry.facts) {
-    const isEffect = entry.category === 'enchantments'
-      && ['Player effect', 'Mob effect'].includes(fact.label.en);
-    const pair = node('div', 'fact');
-    pair.append(node('dt', '', message(fact.label)), node('dd', '', message(fact.value)));
-    if (entry.category === 'enchantments' && inferredFactLabels.has(fact.label.en)) {
-      assessmentFacts.append(pair);
-    } else if (!isEffect) {
-      primaryFacts.append(pair);
-    }
-  }
-  if (entry.category === 'enchantments') renderEnchantmentEffects(entry, info);
-  if (primaryFacts.children.length) info.append(primaryFacts);
-  for (const trait of presentation.traits) {
-    const line = node('p', 'trait');
-    line.dataset.traitIcon = trait.icon;
-    const label = node('span', '', message(trait.label));
-    if (trait.builtInEnchantmentIcon) {
-      line.append(builtInEnchantmentTraitIcon(trait.builtInEnchantmentIcon.icon,
-        trait.builtInEnchantmentIcon.propertyIcon), label);
+  let infoFinished = false;
+  for (const section of presentation.sections) {
+    const rendered = renderSection(section);
+    if (!rendered) continue;
+    if (['effects', 'facts', 'traits', 'description', 'related'].includes(section.type)) {
+      if (infoFinished) throw new Error('詳情呈現政策將主要資訊排在判讀或來源之後。');
+      info.append(rendered);
     } else {
-      line.append(icon(trait.icon), label);
-    }
-    info.append(line);
-  }
-  if (entry.category !== 'enchantments' && isWikiDescription(entry)) {
-    info.append(node('p', 'description', message(entry.description)));
-  }
-  if (entry.category === 'enchantments' || (isWikiDescription(entry) && lang === 'zh-Hant')) {
-    const original = node('section', 'original');
-    original.append(node('h3', 'assessment-title', entry.category === 'enchantments' ? ui.wikiDescription : ui.original));
-    const addQuote = (label, value, verified = false) => {
-      const quote = node('p', 'description');
-      quote.lang = 'en';
-      quote.append(node('strong', 'effect-label', `${label}: `), document.createTextNode(value));
-      if (verified) quote.append(document.createTextNode(' [verify]'));
-      original.append(quote);
-    };
-    if (entry.category === 'enchantments') {
-      const playerEffect = entry.facts.find((fact) => fact.label.en === 'Player effect');
-      const mobEffect = entry.facts.find((fact) => fact.label.en === 'Mob effect');
-      if (isWikiDescription(entry)) addQuote('In-game description', entry.description.en);
-      if (playerEffect && (!isWikiDescription(entry) || playerEffect.value.en !== entry.description.en)) {
-        addQuote('Player effect', playerEffect.value.en);
+      if (!infoFinished) {
+        if (info.children.length) content.push(info);
+        infoFinished = true;
       }
-      if (mobEffect && !/no mob-side effect is listed|unconfirmed/i.test(mobEffect.value.en)) {
-        addQuote('Mob effect', mobEffect.value.en, /\[verify\]/i.test(factValue(entry, 'Evidence confidence')));
-      }
-    } else if (isWikiDescription(entry)) {
-      addQuote('Original', entry.description.en);
+      content.push(rendered);
     }
-    if (original.children.length > 1) moreContent.append(original);
   }
-
-  if (assessmentFacts.children.length) {
-    const assessment = node('section', 'assessment');
-    assessment.append(node('h3', 'assessment-title', ui.assessment), assessmentFacts);
-    moreContent.append(assessment);
-  }
-
-  const related = node('div', 'related');
-  if (entry.links.length) {
-    related.append(node('h3', '', ui.related));
-    const list = node('ul', 'related-list');
-    for (const relation of presentation.related) {
-      const { target } = relation;
-      const item = node('li');
-      const anchor = link(entryHash(target, layout), '', 'related-link');
-      anchor.dataset.focusTarget = `entry-${target.id}`;
-      const label = node('span');
-      const targetName = node('strong', '', message(target.name));
-      label.append(targetName, node('small', '', message(relation.label)));
-      anchor.append(icon(target.icon));
-      if (relation.builtInEnchantment) {
-        const rankLabel = relation.builtInEnchantment.tier === null
-          ? ui.unranked
-          : ui.tier(relation.builtInEnchantment.tier);
-        label.append(node('small', 'relation-tier', rankLabel));
-      }
-      anchor.append(label);
-      item.append(anchor);
-      list.append(item);
-    }
-    related.append(list);
-    info.append(related);
-  }
-  const sources = node('div', 'sources');
-  sources.append(node('span', 'source-caption', ui.sources));
-  for (const source of entry.sources) {
-    const anchor = link(source.url, source.label, 'source');
-    anchor.lang = 'en';
-    sources.append(anchor);
-  }
-  const hasSources = sources.children.length > 1;
-  const moreInfo = node('details', 'more-info');
-  if (moreContent.children.length) moreInfo.append(node('summary', '', ui.moreInfo), moreContent);
+  if (!infoFinished && info.children.length) content.push(info);
   elements.details.dataset.tone = entry.tone;
-  const content = [heading, info];
-  if (moreInfo.children.length) content.push(moreInfo);
-  if (hasSources) content.push(sources);
   elements.details.replaceChildren(...content);
 }
 
@@ -313,11 +302,15 @@ async function loadEntryDetails(id, retry = false) {
         if (!response.ok) throw new Error(`HTTP ${response.status}：${url}`);
         payload = await response.json();
       }
-      if (payload?.schemaVersion !== 5 || payload.entry?.id !== id
+      if (payload?.schemaVersion !== 6 || payload.entry?.id !== id
         || typeof payload.entry.implemented !== 'boolean'
         || typeof payload.entry.seasonal !== 'boolean'
         || !Array.isArray(payload.entry.facts) || !Array.isArray(payload.entry.traits)
-        || !Array.isArray(payload.entry.links) || !Array.isArray(payload.entry.sources)) {
+        || !Array.isArray(payload.entry.links) || !Array.isArray(payload.entry.sources)
+        || !payload.entry.presentation || !Array.isArray(payload.entry.presentation.primaryFacts)
+        || !Array.isArray(payload.entry.presentation.effects) || !Array.isArray(payload.entry.presentation.related)
+        || !Array.isArray(payload.entry.presentation.moreInfoFacts)
+        || !Array.isArray(payload.entry.presentation.sections)) {
         throw new Error(`條目 JSON 格式或 ID 不符：${id}`);
       }
       return payload.entry;
@@ -369,7 +362,7 @@ function render() {
   const { category, entry, layout, missing } = resolveRoute(location.hash, categories, entries);
   mobileItemIcon.hidden = !entry;
   if (entry) {
-    mobileItemIcon.src = iconAssetUrl(entry.icon).href;
+    mobileItemIcon.src = iconAssetUrl(entry.icon, iconRegistry).href;
     mobileItemName.textContent = message(entry.name);
   } else {
     mobileItemIcon.removeAttribute('src');
@@ -472,20 +465,31 @@ document.getElementById('skip').addEventListener('click', (event) => {
   document.getElementById('catalog').focus();
 });
 function validateIndex(payload) {
-  if (payload?.schemaVersion !== 5 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)) {
+  if (payload?.schemaVersion !== 6 || !Array.isArray(payload.categories) || !Array.isArray(payload.entries)
+    || !Array.isArray(payload.iconAssets) || !Array.isArray(payload.iconRecipes)) {
     throw new Error('圖鑑索引 schema 不符。');
   }
   const categoryIds = new Set(payload.categories.map((category) => category?.id));
   const entryIds = new Set(payload.entries.map((entry) => entry?.id));
+  const iconIds = new Set(payload.iconAssets.map((asset) => asset?.id));
   const hasLocalizedText = (value) => ['zh-Hant', 'en'].every((language) => typeof value?.[language] === 'string' && value[language].trim());
   if (!categoryIds.size || !entryIds.size || categoryIds.size !== payload.categories.length
     || entryIds.size !== payload.entries.length
-    || payload.categories.some((category) => !category?.id || !hasLocalizedText(category.label) || !category?.icon)
+    || iconIds.size !== payload.iconAssets.length
+    || payload.iconAssets.some((asset) => !asset?.id || !/^[^/\\]+\.png$/i.test(asset.file))
+    || payload.categories.some((category) => !category?.id || !hasLocalizedText(category.label) || !iconIds.has(category.icon))
     || payload.entries.some((entry) => !entry?.id || !categoryIds.has(entry.category)
-      || !hasLocalizedText(entry.name) || !hasLocalizedText(entry.badge) || !entry?.icon
+      || !hasLocalizedText(entry.name) || !hasLocalizedText(entry.badge) || !iconIds.has(entry.icon)
       || !['steel', 'gold', 'violet'].includes(entry.tone) || typeof entry.implemented !== 'boolean'
       || typeof entry.seasonal !== 'boolean')) {
     throw new Error('圖鑑索引包含重複或不完整資料。');
+  }
+  const recipe = payload.iconRecipes[0];
+  if (payload.iconRecipes.length !== 1 || recipe?.id !== 'built_in_enchantment'
+    || recipe.baseRole !== 'property_icon' || recipe.overlayRole !== 'target_entry_icon'
+    || !Number.isInteger(recipe.overlayPercent) || recipe.overlayPercent < 1 || recipe.overlayPercent > 100
+    || !['none', 'orange'].includes(recipe.frameStyle)) {
+    throw new Error('圖鑑索引內的內建附魔圖標配方無效。');
   }
 }
 
@@ -520,6 +524,8 @@ async function initializeCatalog() {
     validateIndex(payload);
     categories = payload.categories;
     entries = payload.entries;
+    iconRegistry = Object.fromEntries(payload.iconAssets.map((asset) => [asset.id, asset]));
+    iconRecipeById = Object.fromEntries(payload.iconRecipes.map((recipe) => [recipe.id, recipe]));
     catalogReady = true;
     render();
     syncDetailsPlacement();

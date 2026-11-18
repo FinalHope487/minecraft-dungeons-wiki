@@ -15,10 +15,6 @@ const moduleDefinitions = [
     key: 'iconAssets',
     names: ['iconAssetUrl'],
   },
-  {
-    key: 'builtInEnchantmentPresentation',
-    names: ['buildBuiltInEnchantmentPresentation'],
-  },
 ];
 
 function removeImports(source, label) {
@@ -41,8 +37,9 @@ function replaceRequired(source, pattern, replacement, label) {
 }
 
 export function createFileAppSource({ modules, catalog }) {
-  if (!modules || !catalog?.index || !catalog?.entries || catalog.index.schemaVersion !== 5) {
-    throw new TypeError('file:// 圖鑑 bundle 缺少 schema v5 分類索引或詳情資料。');
+  if (!modules || !catalog?.index || !catalog?.entries || catalog.index.schemaVersion !== 6
+    || !Array.isArray(catalog.index.iconAssets) || !Array.isArray(catalog.index.iconRecipes)) {
+    throw new TypeError('file:// 圖鑑 bundle 缺少 schema v6 分類索引、圖標登錄或詳情資料。');
   }
 
   const bundledModules = moduleDefinitions.map(({ key, names }) => {
@@ -51,8 +48,8 @@ export function createFileAppSource({ modules, catalog }) {
     if (key === 'iconAssets') {
       source = replaceRequired(
         source,
-        /new URL\(`\.\.\/assets\/\$\{file\}`, import\.meta\.url\)/,
-        'new URL(`./assets/${file}`, document.baseURI)',
+        /new URL\(`\.\.\/assets\/\$\{asset\.file\}`, import\.meta\.url\)/,
+        'new URL(`./assets/${asset.file}`, document.baseURI)',
         key,
       );
     }

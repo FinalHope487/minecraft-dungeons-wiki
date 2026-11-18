@@ -28,6 +28,9 @@
 
 - 優先使用條目頁可核對的 Wiki 原圖，其次使用可確認版本的遊戲原始圖檔。無獨立原圖時可從有版本證據的遊戲畫面裁切，並記錄截圖網址與裁切說明。不得手繪、生成或以幾何形狀替代圖標。
 - 條目頁沒有可用的單品圖標時使用 Wiki 的 `DungeonsMiscellaneousSprite ?.png`；不要為了避免 placeholder 而改用無關物品圖。
-- 記錄條目網址、檔名、取得日期及授權狀態。公開發布前依 Minecraft 使用指南核對素材使用條件。登錄、同步與驗證步驟見[查找與收錄流程](../project-rules.md#查找與收錄流程)，同步證據見[素材同步紀錄](../wiki-icon-sync.json)。
-- ID 使用小寫連字號描述素材語意；同一圖檔只登錄一次。SQLite 和 JSON 存圖標 ID；建置與瀏覽器透過[圖標登錄表](../../src/icon-assets.mjs)解析類型、路徑與副檔名。未知 ID 或缺檔時停止建置並指出引用。
+- 將圖標 ID、相對檔名、種類、已知 Wiki 頁面、Wiki 檔名及來源性質登錄在 `content/catalog.sqlite` 的 `icon_assets`；同一圖檔只登錄一次。`docs/wiki-icon-sync.json` 保存最近一次同步的檔案雜湊與時間，作稽核紀錄，不作執行期登錄表。
+- ID 使用小寫連字號描述素材語意。`src/icon-assets.mjs` 只把已登錄 ID 解析成安全的相對 URL；未知 ID 或缺檔時停止建置並指出引用。
+- 內建附魔構圖由 SQLite 的 `icon_recipes` 提供角色、比例及框樣式。附魔圖片實際寬高為 Bullet 容器的 81%；橘框外寬高比圖片多 2px。Recipe 是唯一比例設定點，普通與 Unique Bullet 都按同一規格組合。
+- 執行 `npm run icons:sync:dry-run` 核對資料庫登錄圖標仍出現在指定 Wiki 頁面；確認後執行 `npm run icons:sync`。同步工具從 SQLite 讀來源清單和輸出檔名，再更新素材及稽核紀錄。
+- 記錄條目網址、檔名、取得日期及授權狀態。公開發布前依 Minecraft 使用指南核對素材使用條件。來源同步證據見[素材同步紀錄](../wiki-icon-sync.json)。
 - 大型物品圖可用 WebP。須保留透明背景和像素邊緣的小型標記使用 PNG。保留原圖的色彩、透明度、比例和像素結構；畫面以 `object-fit: contain` 和像素插值呈現。

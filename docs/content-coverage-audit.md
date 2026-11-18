@@ -52,7 +52,7 @@ Wiki 的 Damage 頁提供基礎傷害、傷害區間與傷害加成資料，但�
 
 | 頁面資訊 | 來源性質 | 說明 |
 | --- | --- | --- |
-| 名稱 Ambush、Common、Melee Weapon | Wiki 明載；繁中為翻譯 | Ambush 頁直接列出名稱、稀有度與適用類別。 |
+| 名稱 Ambush、Common、Melee Weapon；Hero-accessible 分類 | Wiki 明載；繁中為翻譯 | Ambush 頁直接列出名稱、稀有度與適用類別；附魔總表將 Ambush 列在 Hero-accessible 的 Melee 區段。 |
 | 玩家效果 | Wiki 原文；繁中為翻譯 | In-game description 寫明攻擊未主動鎖定玩家的怪物會增加傷害。 |
 | 怪物效果 | Wiki 原文；繁中為翻譯，來源標 `[verify]` | Enchanted Mobs 寫 `Mob inflicts extra damage on unsuspecting heroes.`；待查標記也必須保留。中文應譯為「怪物會對未察覺的英雄造成額外傷害」，不能改成「尚未鎖定英雄」。 |
 | 固有效果裝備 Backstabber、Swift Striker 與階級 I | Wiki 明載；關聯提示為圖鑑翻譯 | Ambush 頁的 Built-into 區段直接列出這兩件武器及 Tier I。 |
@@ -63,5 +63,15 @@ Wiki 的 Damage 頁提供基礎傷害、傷害區間與傷害加成資料，但�
 | 已實裝 | 圖鑑狀態分類 | Wiki 條目明載可在近戰武器附魔槽出現；`implemented` 是本圖鑑資料欄，不是 Wiki 原文欄位。 |
 | 非 Seasonal | 由清單標記狀態判定 | Wiki 沒有在此頁明載「非季節限定」；本圖鑑未發現季節標記，因此 `seasonal=false` 是目錄分類，不是原文。 |
 | 英文原文、相關條目、來源連結 | Wiki 原文或引用資料 | 英文效果原文置於收合的「更多資訊」；Backstabber 與 Swift Striker 列於相關條目；來源連結置於整個詳情最後。 |
+
+## 其他逐筆來源對應
+
+| Fact | 支持來源 | 查核內容 |
+| --- | --- | --- |
+| Critical Hit `player_effect`、`mob_effect` | [Critical Hit](https://minecraft.wiki/w/Dungeons%3ACritical_Hit) | 條目逐級列出玩家 10%／15%／20% 機率；同頁 Usage 明載怪物必定造成三倍傷害。 |
+| Freezing `player_effect` | [Freezing](https://minecraft.wiki/w/Dungeons%3AFreezing) | 條目明載玩家命中後使怪物緩速三秒。 |
+| Freezing `mob_effect` | [Enchanted Mobs](https://minecraft.wiki/w/Dungeons%3AEnchanted_Mobs) | 附魔怪物條目明載攻擊英雄會降低英雄攻擊速度。 |
+| Burning `player_effect` | [Burning](https://minecraft.wiki/w/Dungeons%3ABurning) | 條目明載每 0.5 秒傷害附近敵人。 |
+| Burning `mob_effect` | [Enchanted Mobs](https://minecraft.wiki/w/Dungeons%3AEnchanted_Mobs) | 附魔怪物條目明載怪物會持續傷害附近英雄。 |
 
 顯示順序：主資料與來源明載效果、相關條目、預設收合的「更多資訊」（Wiki 原文、跨頁衝突與圖鑑判讀）、來源連結。不同的玩家／怪物效果同層級呈現；Wiki 標 `[verify]` 時在效果旁保留註記。決策見[附魔詳情層級](decisions/2026-11-18-enchantment-detail-information-hierarchy.md)。
