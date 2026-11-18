@@ -48,16 +48,16 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`8e6a438`（本輪起點，驗證在工作樹執行）
+**commit**：`8c6fce4`（本輪起點，驗證在工作樹執行）
 **CI run**：未跑
 
 | 層 | 指令 | 2026-11-18 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 36/36 通過，含 Unique／Regular Bullet 配方與 v5→v6 遷移 |
-| 建置 | `npm run build` | 通過：7 個分類、446 筆條目 |
-| user 層 | 本地 `dist` 檢查 | 446 筆條目中有 97 筆 Unique 與 20 筆 Regular 無框疊圖，比例皆 81%，疊圖檔案全數存在，297 列只顯示 Bullet。靜態索引、條目與本機 bundle 一致。未開瀏覽器 |
+| 內層 | `npm test` | 36/36 通過 |
+| 建置 | `npm run build` | 未跑 |
+| user 層 | 本地 `dist` 檢查 | 未跑，這輪交付改寫計畫 |
 | 公開 | GitHub Pages | 未跑 |
-| 文件 | `git diff HEAD --check`、暫存差異憑證樣式掃描 | 通過，exit 0；未發現憑證 |
+| 文件 | 計畫連結、稽核資料與 `git diff HEAD --check` | 通過，確認 124 筆附魔、253 個效果 facts 與 Echo 引用版次 |
 
 ---
 
@@ -69,5 +69,6 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 
 **具體細節**：神器、消耗品與其他物品已有條目；47 筆通用佔位說明已替換為 Wiki 原文或有來源的已知資訊，未記載效果者標明未知。124 個附魔及 228 件近戰、遠程與盔甲已按 Wiki 名錄收錄；附魔逐條區分英雄／怪物可用性與效果，條目可信度為 high 39、medium 76、low 9；低可信條目及衝突見[附魔玩家與怪物效用規格](docs/specs/enchantment-availability.md)及[來源稽核](docs/audits/enchantment-effect-facts.json)。近戰 Sword 系列已排在 Spear 後、Tempest Knife 前，遠程與盔甲順序已核對。45 件已實裝神器原文已逐項核對並修正 7 筆。`file://` 本機入口已依[啟動修正計畫](docs/plans/2026-11-17-file-url-bootstrap.md)補上 classic 啟動路徑與自包含資料包。資料來源已結構化至 SQLite v6，執行結果見[結構化資料計畫](docs/plans/2026-11-18-structured-catalog-v6.md)。GitHub 登入與公開素材使用條件尚待確認。
 **怎麼做**：SQLite v6 schema、呈現政策與匯出契約已依[結構化資料計畫](docs/plans/2026-11-18-structured-catalog-v6.md)完成並驗收；接著依[Wiki 首版計畫](docs/plans/2026-11-15-wiki-launch.md)核對公開素材使用條件。Wiki 內容缺漏及收錄優先序見[盤點紀錄](docs/content-coverage-audit.md)，附魔來源與呈現見[詳情規格](docs/specs/detail-presentation.md)及[附魔效用規格](docs/specs/enchantment-availability.md)。GitHub CLI 登入與 remote 就緒後，發布並實測。
+附魔雙語文案依[Luna 改寫計畫](docs/plans/2026-11-18-enchantment-effect-rewrite.md)逐項查核。
 **會改變什麼**：公開圖鑑涵蓋 Wiki 列出的附魔、武器與盔甲，並能顯示稀有度、實裝與 Seasonal 標籤；SQLite v6 將內容語意、效果判讀、關聯和圖標規則集中至固定欄位，由匯出政策同步兩種版型。
 **做後回退代價**：擴充分階段提交。若要撤回，回退相關擴充提交並重新部署已驗證的首版，再核對公開連結。
