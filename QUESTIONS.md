@@ -2,7 +2,7 @@
 
 **一題 ＝ user 看一次、答一次就結案的問題。** 這裡只寫問題本身與它為什麼存在，不寫選項。
 
-user 答完的題當場刪除，內容依性質搬進 `docs/decisions/` 或 `SOP/`。
+user 答完的題當場刪除，內容依性質搬進 `DECISIONS.md` 或 `docs/troubleshooting.md`。
 user 答得不清楚時，刪掉原題，把未決的問題點寫成新的問題。
 
 總是使用 AskUserQuestion 問，不要用純文字。

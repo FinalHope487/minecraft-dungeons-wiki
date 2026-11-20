@@ -1,7 +1,7 @@
 <!--
 本專案專屬規則：規則檔的通用規則在本專案代入的值。
 放：專案目錄、各層驗證指令、真依賴與替身、開發服務埠、專案專屬工具的執行方式。新增內容時列出命名、位置、必填欄位、可仿作範例、索引更新方式，以及應跑的驗證指令。
-不放：通用規則（寫規則檔）、測試數字（寫 ROADMAP.md〈基線〉）、決策（寫 docs/decisions/）、公開契約與驗收（寫 docs/spec.md）。
+不放：通用規則（寫規則檔）、測試數字（寫 commit message）、決策（寫 DECISIONS.md）、公開契約與驗收（寫 docs/spec.md）、專案現況（寫 STATE.md）。
 與規則檔衝突時以規則檔為準，並修正這份。
 -->
 
@@ -24,3 +24,19 @@
 3. **保留雙語與完整來源。** `en` 欄逐字保留核對到的 Wiki 原文；`zh-Hant` 欄用圖鑑翻譯，未核實遊戲繁中用語時不要標成官方譯名。每把近戰與遠程武器都必須同時記錄 [Dungeons:Weapon](https://minecraft.wiki/w/Dungeons%3AWeapon) 總表及正確的具體武器項目頁，無論效果由哪一頁核對；所有多筆來源依範圍由大至小排列，總表／分類頁在前、具體物品頁在後。只有單一來源的非武器條目維持原樣。詳情來源標題使用繁中全形冒號 `來源：`、英文半形冒號 `Sources:`。同步更新 [`docs/sources.md`](sources.md)，說明哪些資料取自彙整頁與項目頁。
 4. **從來源頁同步原圖。** 先在 `content/catalog.sqlite` 的 `icon_assets` 登記語意 ID、檔名、素材類型、Wiki 頁面及檔名；固有效果標記使用 `built-in-property`。執行 `npm run icons:sync:dry-run` 核對資料庫登記的圖檔仍出現在來源頁，確認後執行 `npm run icons:sync`；同步工具從 SQLite 讀來源和檔名，處理 MediaWiki continuation 分頁、下載 Wiki 目前提供的 PNG，並更新 `docs/wiki-icon-sync.json`。以 Wiki 來源取得的檔案視為最新版，不與舊圖逐位元比對。`src/icon-assets.mjs` 僅負責把已登記 ID 解析為 URL。完整素材規則見[圖標素材規範](specs/icon-assets.md)。
 5. **鎖定清單與呈現驗收。** 更新 `tests/routes.test.mjs`，明列本輪收錄項目及應有的固有效果，讓漏列和多列都會失敗。執行 `npm test`、`npm run build`，直接檢查 `dist/index.html`、`dist/src/`、`dist/data/` 與 `dist/assets/`：確認名稱、稀有度、效果標記、描述、來源連結及圖標路徑；若改了版型，核對建置後的 HTML、CSS 與 JavaScript 結構。不要啟動瀏覽器；靜態產物無法證明的互動或實際渲染結果標為未驗證。增加神器時另確認神器分類只有神器，神器條目同時出現在「全部裝備」。
+
+## 發布授權
+
+- 放行 push `main`：user 2026-11-20 選「允許直推 main」，接受推 `main` 即觸發 GitHub Pages 部署（`.github/workflows/pages.yml`）。agent 可直接推 `main`，不必先問。
+- 推之前只推綠的：先跑 `npm test` 與 `npm run build`。
+- 放行不含 `git push --force`／`--force-with-lease`，這兩個仍要先問 user。
+- 已部署的內容不能靠還原這段規則收回。
+
+## 工作慣例
+
+來源：user 2026-11-20 重裝時逐條回答舊 `AGENTS.md` 的去向清單，選「搬進專案」。
+
+- 規格與實作不一致時，查驗收、原始碼與 `DECISIONS.md`，確認是實作偏離還是需求變更。
+- 會阻塞主行程、又能和其他工作平行的事（等算繪、等外部 job、跑很久的測試）一律開背景任務，完成通知來了再處理結果。
+- `claude-decisions.json` 和 `DECISIONS.jsonl` 由使用它們的整合維護，不手改、不清除。
+- 直接在 `main` 上 commit，不開分支、不開 PR。推送授權只看上方〈發布授權〉。

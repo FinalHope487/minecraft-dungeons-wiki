@@ -1,0 +1,9 @@
+# collab-kit-init 安裝清單：kit 擁有、每次整份覆寫的檔（md5，去 CR）。專案不要改這個檔
+f0a170c3b549617376c076250c875a35  .collab-kit-version
+1e8a5f60758ec250ae9bf83016252f0a  AGENTS.md
+23fe63d0c9f46c2df898144c1c8a7ee5  docs/procedures/chores.md
+0604f0f899ef579bbeb066936a8eea58  docs/procedures/close-round.md
+761dfd91bdf09a3ae32b3149ad4775a1  docs/procedures/data-format.md
+0c0a62f5e8abfa996cd4b5b6fc5f083c  docs/procedures/delegation.md
+05fad54b327e082a656e1817338672cc  docs/procedures/questions.md
+b0a822647e31c832eeba7dc4a159aada  docs/procedures/verification.md
