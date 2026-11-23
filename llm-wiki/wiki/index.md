@@ -13,18 +13,19 @@
 | R5 | [05-enchantment.md](../raw/05-enchantment.md) | Dungeons:Enchantment（oldid 3899779） |
 | R6 | [06-consumable.md](../raw/06-consumable.md) | Dungeons:Consumable |
 | R7 | [07-enchanted-mobs.md](../raw/07-enchanted-mobs.md) | Dungeons:Enchanted ＋ Daily Trial |
+| R8 | [08-gameplay.md](../raw/08-gameplay.md) | Minecraft Dungeons（oldid 3909743）＋ Dungeons:Gameplay（oldid 3402528） |
 
 ## 概念頁（wiki）
 
 | ID | 頁面 | 一句話 | 用到的 raw |
 |---|---|---|---|
-| W1 | [overview.md](overview.md) | 遊戲是什麼、裝備欄、收錄規模 | R1–R6 |
+| W1 | [overview.md](overview.md) | 遊戲是什麼、裝備欄、收錄規模 | R1–R6 R8 |
 | W2 | [equipment-types.md](equipment-types.md) | 近戰、遠程、盔甲；固有特性 vs 附魔 | R1 R2 R3 R5 |
 | W3 | [rarity-and-unique.md](rarity-and-unique.md) | 普通／稀有／獨特，橘色特性 | R1 R2 R3 |
-| W4 | [enchantments.md](enchantments.md) | 附魔三概念與五個代表附魔 | R5 |
-| W5 | [artifacts-and-consumables.md](artifacts-and-consumables.md) | 神器冷卻 vs 消耗品 | R4 R6 |
+| W4 | [enchantments.md](enchantments.md) | 附魔三概念、怎麼啟用、五個代表附魔 | R5 R8 |
+| W5 | [artifacts-and-consumables.md](artifacts-and-consumables.md) | 神器冷卻 vs 消耗品 | R4 R6 R8 |
 | W6 | [player-vs-mob.md](player-vs-mob.md) | 同名附魔在怪物身上的差異與來源衝突 | R5 R7 |
-| W7 | [glossary.md](glossary.md) | 名詞表 | W2–W6 |
+| W7 | [glossary.md](glossary.md) | 名詞表，每個定義附來源 | R1–R8 |
 
 ## 簡報對照
 
@@ -32,8 +33,8 @@
 
 | 投影片 | 標題 | Wiki 頁 | raw |
 |---|---|---|---|
-| 1–2 | 封面、學習目標 | W1 | — |
-| 3 | 沒有職業，裝備就是你的職業 | W1 | 〔推論〕 |
+| 1–2 | 封面、學習目標 | W1 | R8-6 |
+| 3 | 沒有職業，裝備就是你的職業 | W1 | R8-1~6，標語為〔推論〕 |
 | 4 | 到底有多少東西 | W1 | R1–R6 |
 | 5 | 近戰、遠程、盔甲 | W2 | R2 R3 |
 | 6 | 固有特性 ≠ 附魔 | W2 | R2-6 |
@@ -46,5 +47,5 @@
 | 13 | 玩家 vs 怪物對照表 | W6 | R5 R7 |
 | 14 | 查不到 ≠ 不存在 | W6 | R5 問題段 |
 | 15 | 小測驗 2 | W6 | — |
-| 16 | 總結 | W7 | — |
+| 16 | 總結 | W7 | R2 R5 R7 R8 |
 | 17 | 附錄：流程 | [workflow](../../docs/llm-wiki-workflow.md) | — |

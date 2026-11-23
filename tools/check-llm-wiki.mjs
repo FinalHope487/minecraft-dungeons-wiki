@@ -26,6 +26,17 @@ export function untaggedNumberLines(markdown) {
     && !/\[W\d\]/.test(line));
 }
 
+export function unsourcedGlossaryRows(markdown) {
+  // 名詞表的定義沒有數字，C-03 抓不到；每個名詞列都要有 〔R…〕。
+  const rows = markdown.split('\n').filter((line) => line.startsWith('|'));
+  return rows.slice(2).filter((line) => !/〔R\d/.test(line));
+}
+
+export function baselessInferences(markdown) {
+  // 〔推論〕 要寫出從哪幾篇 raw 推得，例如 〔推論，由 R2-2 推得〕。
+  return [...markdown.matchAll(/〔推論[^〕]*〕/g)].map((m) => m[0]).filter((tag) => !/由 ?R\d/.test(tag));
+}
+
 export function slideSources(html) {
   return [...html.matchAll(/data-src="([^"]+)"/g)].map((m) => m[1]);
 }
@@ -66,6 +77,14 @@ export function run() {
   for (const f of pages) {
     const bad = untaggedNumberLines(read(wikiDir + f));
     check(`C-03 ${f} 數字行皆有來源`, bad.length === 0, bad.join(' ⏎ '));
+  }
+
+  // C-07：名詞定義有來源；〔推論〕寫出依據（沒有數字的句子 C-03 管不到）
+  const glossaryBad = unsourcedGlossaryRows(read(wikiDir + 'glossary.md'));
+  check('C-07 glossary.md 每個名詞都有來源', glossaryBad.length === 0, glossaryBad.join(' ⏎ '));
+  for (const f of pages) {
+    const bad = baselessInferences(read(wikiDir + f));
+    check(`C-07 ${f} 的〔推論〕都寫出依據`, bad.length === 0, bad.join(' '));
   }
 
   // C-04：每張投影片都指到存在的 wiki 頁或文件

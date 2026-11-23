@@ -24,7 +24,7 @@ npm run preview
 ## 教學簡報與 LLM Wiki
 
 - [教學簡報](https://finalhope487.github.io/minecraft-dungeons-wiki/slides/)（原始檔 `slides/index.html`，建置時一併輸出）
-- [LLM Wiki](llm-wiki/README.md)：7 份來源整理（`raw/`）、7 頁概念頁（`wiki/`）、[索引](llm-wiki/wiki/index.md)與[執行紀錄](llm-wiki/wiki/log.md)
+- [LLM Wiki](llm-wiki/README.md)：8 份來源整理（`raw/`）、7 頁概念頁（`wiki/`）、[索引](llm-wiki/wiki/index.md)與[執行紀錄](llm-wiki/wiki/log.md)
 - [流程圖、檢查點與反思](docs/llm-wiki-workflow.md)
 - `node tools/check-llm-wiki.mjs` 跑 C-01～C-06 檢查（`npm test` 已包含）
 
