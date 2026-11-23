@@ -23,8 +23,8 @@ const types = {
 
 createServer(async (request, response) => {
   const path = new URL(request.url, 'http://127.0.0.1').pathname;
-  const file = path === '/' ? 'index.html' : path === '/slides/' ? 'slides/index.html' : path.slice(1);
-  if (file !== 'index.html' && file !== 'slides/index.html' && !/^(assets(?:\/fonts)?|src|data(?:\/entries)?)\/[a-z0-9-]+\.(css|js|mjs|svg|png|webp|ttf|woff2|txt|json)$/i.test(file)) {
+  const file = path === '/' ? 'index.html' : path === '/slides/' ? 'slides/index.html' : path === '/llm-wiki/' ? 'llm-wiki/index.html' : path.slice(1);
+  if (file !== 'index.html' && file !== 'slides/index.html' && !/^llm-wiki\/(?:raw\/)?[a-z0-9-]+\.html$/.test(file) && !/^(assets(?:\/fonts)?|src|data(?:\/entries)?)\/[a-z0-9-]+\.(css|js|mjs|svg|png|webp|ttf|woff2|txt|json)$/i.test(file)) {
     response.writeHead(404).end('Not found');
     return;
   }
