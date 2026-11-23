@@ -39,6 +39,11 @@ test('網頁標題與目錄去掉內部編號，目錄仍依 W／R 順序並附�
   assert.doesNotMatch(nav, />[WR]\d+ ·/);
   const concept = [...nav.split('原始來源')[0].matchAll(/href="([\w-]+)\.html"/g)].map((m) => m[1]);
   assert.deepEqual(concept.slice(0, 3), ['index', 'overview', 'equipment-types']);
-  assert.match(nav, /href="slides\.html"/);
-  assert.match(pages.find((p) => p.path === 'llm-wiki/slides.html').html, /<iframe class="slides" src="\.\.\/slides\/"/);
+  assert.match(nav, /href="slides.html"[^>]*>教學簡報（17 頁）/);
+  assert.match(pages.find((p) => p.path === 'llm-wiki/slides.html').html, /<iframe class="slides" src="\.\.\/slides\/index\.html"/);
+});
+
+test('Wiki 裡指向簡報的連結留在站內，斜體轉成 <em>', () => {
+  assert.equal(resolveHref('../../slides/index.html', 'llm-wiki/wiki/index.md'), 'slides.html');
+  assert.match(renderMarkdown('看 *Extra damage* 與 **粗**'), /<em>Extra damage<\/em> 與 <strong>粗<\/strong>/);
 });

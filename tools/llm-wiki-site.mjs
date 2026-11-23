@@ -10,6 +10,7 @@ const escapeHtml = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').r
 
 // 來源檔（repo 相對路徑）→ 網站路徑（dist/ 相對路徑）；不在站上的檔回 null。
 export function sitePath(repoPath) {
+  if (repoPath === 'slides/index.html') return slidesPage;
   const m = repoPath.match(/^llm-wiki\/(wiki|raw)\/([\w-]+)\.md$/);
   if (!m) return null;
   return m[1] === 'wiki' ? `llm-wiki/${m[2]}.html` : `llm-wiki/raw/${m[2]}.html`;
@@ -31,6 +32,7 @@ function inline(text, link) {
   let html = escapeHtml(text).replace(/`([^`]+)`/g, (_, code) => `\u0000${codes.push(code) - 1}\u0000`);
   html = html
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, href) => `<a href="${escapeHtml(link(href.replace(/&amp;/g, '&')))}">${label}</a>`)
     .replace(/&lt;(https?:\/\/[^\s&]+)&gt;/g, (_, url) => `<a href="${url}">${url}</a>`)
     .replace(/〔[^〕]*〕/g, (tag) => `<span class="tag">${tag}</span>`);
@@ -117,7 +119,7 @@ function layout({ title, body, nav, depth, current }) {
 </head>
 <body>
   <header class="bar">
-    <a class="home" href="${up}">← 地城圖鑑</a>
+    <a class="home" href="${up}index.html">← 地城圖鑑</a>
     <span class="bar-title" lang="en">LLM Wiki</span>
   </header>
   <div class="layout">
@@ -146,20 +148,21 @@ export function buildLlmWikiPages(root) {
     const markdown = original.replace(/^# (.+)/m, (_, title) => `# ${stripPageNumber(title)}`);
     return { repoPath, markdown, order, path: sitePath(repoPath), title: pageTitle(markdown) };
   });
+  const slideCount = (read('slides/index.html').match(/<section class="slide[ "]/g) ?? []).length;
   const group = (test) => docs.filter((d) => test(d.repoPath)).sort((a, b) => a.order - b.order)
     .map(({ path, title }) => ({ path, title }));
   const nav = [
     { label: '概念頁', pages: group((p) => p.includes('/wiki/') && !p.endsWith('log.md')) },
     { label: '原始來源', pages: group((p) => p.includes('/raw/')) },
     { label: '執行紀錄', pages: group((p) => p.endsWith('log.md')) },
-    { label: '教學簡報', pages: [{ path: slidesPage, title: '教學簡報（17 頁）' }] },
+    { label: '教學簡報', pages: [{ path: slidesPage, title: `教學簡報（${slideCount} 頁）` }] },
   ];
   const slides = {
     path: slidesPage,
     html: layout({
       title: '教學簡報',
-      body: '<div class="slides-head"><h1>教學簡報</h1><a class="home" href="../slides/">全螢幕開啟 ↗</a></div>\n'
-        + '<iframe class="slides" src="../slides/" title="教學簡報：用 ← → 換頁"></iframe>',
+      body: '<div class="slides-head"><h1>教學簡報</h1><a class="home" href="../slides/index.html">全螢幕開啟 ↗</a></div>\n'
+        + '<iframe class="slides" src="../slides/index.html" title="教學簡報：用 ← → 換頁"></iframe>',
       nav,
       depth: 1,
       current: slidesPage,

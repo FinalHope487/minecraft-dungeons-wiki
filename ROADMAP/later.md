@@ -18,3 +18,9 @@
 **怎麼做**：Wiki 改寫法或有人手動編輯時再收緊 `tools/check-llm-wiki.mjs` 的 `unsourcedGlossaryRows`、`baselessInferences`，並各補一條反例測試
 **會改變什麼**：C-07 對手寫格式更寬容或更嚴格；現行 Wiki 結果不變
 **做後回退代價**：`git revert` 該 commit；不影響資料
+
+### [later] LLM Wiki 網頁內文的內部編號與開發模式
+**具體細節**：2026-11-24 冷審查：網頁標題與目錄已去 W／R 編號，但內文仍有 `〔R2-3〕`、目錄頁 ID 欄、log 的「生成 W1–W7」、連結文字「W2」，讀者無法對回頁名；`npm run dev` 不渲染 llm-wiki，頁首「LLM Wiki」連結 404（`npm run preview` 與線上正常）；`<https://…&…>` 自動連結不會轉成連結（現行檔案沒有）；目錄頁連結文字顯示檔名（`log.md`）。
+**怎麼做**：在 `tools/llm-wiki-site.mjs` 把連結文字中的 W／R 編號換成頁名、raw 頁副標寫出 R 編號供〔R…〕對照；`tools/serve.mjs` 非 dist 模式即時呼叫 `buildLlmWikiPages`
+**會改變什麼**：LLM Wiki 網頁內文更易讀；dev 模式可直接看 LLM Wiki
+**做後回退代價**：`git revert` 該 commit；不影響資料
