@@ -28,8 +28,11 @@ export function untaggedNumberLines(markdown) {
 
 export function unsourcedGlossaryRows(markdown) {
   // 名詞表的定義沒有數字，C-03 抓不到；每個名詞列都要有 〔R…〕。
-  const rows = markdown.split('\n').filter((line) => line.startsWith('|'));
-  return rows.slice(2).filter((line) => !/〔R\d/.test(line));
+  // 每張表的表頭是分隔列（|---|、|:---|）的上一行；表頭與分隔列都不算資料列。
+  const lines = markdown.split('\n').map((line) => line.trim());
+  const isSep = (line) => /^\|[\s:|-]+\|$/.test(line);
+  return lines.filter((line, k) => line.startsWith('|') && !isSep(line) && !isSep(lines[k + 1] ?? ''))
+    .filter((line) => !/〔R\d/.test(line));
 }
 
 export function baselessInferences(markdown) {

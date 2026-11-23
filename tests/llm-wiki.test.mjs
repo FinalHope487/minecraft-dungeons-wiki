@@ -19,6 +19,8 @@ test('slideNumbers 只取可見文字裡的百分比與秒數', () => {
 test('unsourcedGlossaryRows 抓出沒有 〔R…〕 的名詞列，略過表頭與分隔列', () => {
   const md = '| 名詞 | 意思 | 來源 |\n|---|---|---|\n| 英雄 | 外觀 | |\n| 神器 | 主動道具 | 〔R4-1〕 |\n| 冷卻 | 要等多久 | |';
   assert.deepEqual(unsourcedGlossaryRows(md), ['| 英雄 | 外觀 | |', '| 冷卻 | 要等多久 | |']);
+  const twoTables = '| a | s |\n|:---|---|\n| x | 〔R1〕 |\n\n| h | s |\n|---|---|\n| y | |';
+  assert.deepEqual(unsourcedGlossaryRows(twoTables), ['| y | |']);
 });
 
 test('baselessInferences 只放行寫出依據的〔推論〕', () => {
