@@ -3,7 +3,7 @@ import { resolve } from 'node:path';
 import { loadCatalog, validateCatalog, writeCatalogArtifacts } from './catalog.mjs';
 import { createFileAppSource } from './file-app.mjs';
 
-const siteFiles = ['index.html', 'assets', 'src'];
+const siteFiles = ['index.html', 'assets', 'src', 'slides'];
 const root = new URL('../', import.meta.url);
 const destination = new URL('dist/', root);
 const assets = new Set(await readdir(new URL('assets/', root)));

@@ -21,6 +21,13 @@ npm run preview
 
 編輯 `content/catalog.sqlite`（可用 [DB Browser for SQLite](https://sqlitebrowser.org/)），先讀 [SQLite 資料庫規範](docs/specs/catalog-storage.md) 與 [內容契約](docs/specs/content-contract.md)。新增資料後用 `npm run dev` 預覽或 `npm run build` 檢查；JSON 是建置產物，不要手動編輯。網站只在選取條目時讀取該條目的 JSON，離屏圖片由瀏覽器延遲載入。圖示、英文遊戲原文和來源狀態見 [素材與資料來源](docs/sources.md)。
 
+## 教學簡報與 LLM Wiki
+
+- [教學簡報](https://finalhope487.github.io/minecraft-dungeons-wiki/slides/)（原始檔 `slides/index.html`，建置時一併輸出）
+- [LLM Wiki](llm-wiki/README.md)：7 份來源整理（`raw/`）、7 頁概念頁（`wiki/`）、[索引](llm-wiki/index.md)與[執行紀錄](llm-wiki/log.md)
+- [流程圖、檢查點與反思](docs/llm-wiki-workflow.md)
+- `node tools/check-llm-wiki.mjs` 跑 C-01～C-06 檢查（`npm test` 已包含）
+
 ## 發布
 
 線上圖鑑：[https://finalhope487.github.io/minecraft-dungeons-wiki/](https://finalhope487.github.io/minecraft-dungeons-wiki/)。GitHub repo 的 Settings → Pages → Build and deployment → Source 選 GitHub Actions，執行 [Wiki Pages workflow](.github/workflows/pages.yml)。產物使用相對路徑；條目由網址雜湊定位，專案子路徑下可直接開啟及重新整理。網址以成功部署的 workflow 輸出為準。

@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { overviewCounts, untaggedNumberLines, slideNumbers, run } from '../tools/check-llm-wiki.mjs';
+
+test('overviewCounts 讀出概覽表的三欄數字', () => {
+  assert.deepEqual(overviewCounts('| 近戰 | 83 | 1 | 7 | 〔R1〕 |\n| 類別 | 筆數 |'), { 近戰: { n: 83, unimpl: 1, seasonal: 7 } });
+});
+
+test('untaggedNumberLines 抓出沒有來源標記的數字行', () => {
+  const md = '- 冷卻 30 秒\n- 冷卻 30 秒〔R4-3〕\n- 攻速 +100%〔推論〕\n一般段落 20% 不算';
+  assert.deepEqual(untaggedNumberLines(md), ['- 冷卻 30 秒']);
+});
+
+test('slideNumbers 只取可見文字裡的百分比與秒數', () => {
+  const html = '<style>.a{width:50%}</style><p>+33% 與 3 秒</p><script>x=10%</script>';
+  assert.deepEqual(slideNumbers(html), ['+33%', '3 秒']);
+});
+
+test('LLM Wiki 與簡報通過全部檢查節點', () => {
+  const failed = run().filter((r) => !r.ok);
+  assert.deepEqual(failed, []);
+});
