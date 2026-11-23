@@ -20,3 +20,10 @@ test('LLM Wiki 與簡報通過全部檢查節點', () => {
   const failed = run().filter((r) => !r.ok);
   assert.deepEqual(failed, []);
 });
+
+test('簡報圖示與標題字型內嵌，單獨開檔也顯示得出來', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const html = await readFile(new URL('../slides/index.html', import.meta.url), 'utf8');
+  const relative = html.match(/\.\.\/assets\/[^")\s]+/g) ?? [];
+  assert.deepEqual(relative, ['../assets/fonts/noto-sans-tc.woff2']);
+});
