@@ -48,16 +48,16 @@ commit 與 CI run 的 SHA 與狀態寫在〈基線〉。
 **只有一份，覆寫不追加，≤40 行。** 數字取自本輪實跑；沒跑的層寫「未跑」，
 不得沿用上一輪的數字。
 
-**commit**：`f3af2e23ab3de189e1a0c9fa2004286dee896ec9`（附魔改寫與驗收提交）
+**commit**：`c1eef27`（LLM Wiki、教學簡報與檢查節點）
 **CI run**：未跑
 
-| 層 | 指令 | 2026-11-18 實跑 |
+| 層 | 指令 | 2026-11-23 實跑 |
 | --- | --- | --- |
-| 內層 | `npm test` | 47/47 通過 |
-| 建置 | `npm run build` | 7 個分類、446 個條目 |
-| user 層 | 靜態檢查 `dist` 的條目 JSON 與 file bundle | 446/446 條目及 506/506 個雙語效果欄位相同，未開瀏覽器 |
+| 內層 | `npm test` | 51/51 通過 |
+| 檢查節點 | `node tools/check-llm-wiki.mjs` | 61/61 通過 |
+| 建置 | `npm run build` | 7 個分類、446 個條目；`dist/slides/index.html` 存在 |
+| user 層 | 內建瀏覽器開 `127.0.0.1:4173/slides/` | 翻頁、hash 跳頁、小測驗作答、375px 寬無橫向捲動 |
 | 公開 | GitHub Pages | 未跑 |
-| 文件 | 核對附魔稽核資料、計畫與 `git diff --check` | 124/124 附魔、253/253 effects 有逐筆紀錄；SQLite integrity `ok`、foreign key violations 0 |
 
 ---
 
