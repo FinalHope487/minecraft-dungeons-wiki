@@ -10,10 +10,10 @@
 
 | 欄位 | 數量 | 對應頁 |
 |---|---|---|
-| 近戰武器 | 1 | [W2 裝備種類](equipment-types.md) |
-| 遠程武器 | 1 | [W2](equipment-types.md) |
-| 盔甲 | 1 | [W2](equipment-types.md) |
-| 神器 | 3 | [W5 神器與消耗品](artifacts-and-consumables.md) |
+| 近戰武器 | 1 | [W2 裝備種類](equipment-types.md)〔R8-6〕 |
+| 遠程武器 | 1 | [W2](equipment-types.md)〔R8-6〕 |
+| 盔甲 | 1 | [W2](equipment-types.md)〔R8-6〕 |
+| 神器 | 3 | [W5 神器與消耗品](artifacts-and-consumables.md)〔R8-6〕 |
 
 欄位數來自 〔R8-6〕。來源原文寫「a weapon, a bow」，但遠程欄也能裝弩〔R2-1〕，所以寫成「遠程武器」。裝備分類來自 〔R1〕。
 

@@ -21,5 +21,6 @@
 4. 「查不到」不等於「不存在」：Wiki 沒寫的就寫「來源未列出」。
 5. 不混入《Minecraft Dungeons II》或 Minecraft 本傳的資料。
 6. 數字一律和 repo 已驗收的資料（`content/catalog.sqlite`、`tests/fixtures/`、`docs/audits/`）交叉核對，對不上就退回重寫。
+7. 新增概念頁不必新增投影片，但要做到：標題用 `# W<編號> · 名稱`；每個含數字的行都有同一行的來源標記（`〔R…〕`、`〔推論，由 R… 推得〕`、`〔來源未列出〕`，或指到其他 W 頁的連結），標記不能寫壞（未閉合、`〔R5-abc〕`、放在行內程式碼裡都算失敗），標的 raw 與事實編號要真的存在（C-03）；`index.md` 的 W 列與「用到的 raw」和頁面實際引用一致（C-05）；`log.md` 有一筆 D 紀錄在 `**涉及概念頁**` 列出它，並寫明受眾、核心問題、範圍（C-08）。
 
 整個流程（loop／graph）、實跑紀錄與反思見 [`docs/llm-wiki-workflow.md`](../docs/llm-wiki-workflow.md)。
